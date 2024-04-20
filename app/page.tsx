@@ -1,9 +1,17 @@
-import Image from "next/image";
+import HomePage from "./WebsitePages/Home";
+import SLPage from "./WebsitePages/SL";
+import IconPack from "./WebsitePages/IconPack";
+import Contact from "./WebsitePages/Contact";
+
+import Header from "./WebsiteHeaders/Header";
+import Footer from "./WebsiteHeaders/Footer";
 
 export default function Home() {
   return (
-    <h1 className="text-3xl font-bold underline text-pink-500">
-      Hello world!
-    </h1>
+    <>
+      <Header />
+      <HomePage />
+      <Footer />
+    </>
   );
 }
