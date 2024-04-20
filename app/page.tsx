@@ -8,10 +8,10 @@ import Footer from "./WebsiteHeaders/Footer";
 
 export default function Home() {
   return (
-    <>
+    <main className="bg-slate-100">
       <Header />
       <HomePage />
       <Footer />
-    </>
+    </main>
   );
 }

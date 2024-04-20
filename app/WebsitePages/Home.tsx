@@ -1,11 +1,9 @@
-import navbar from "../WebsiteHeaders/navbar";
+import HomeHeader from "../WebsiteHeaders/home_header"
 
 export default function Home() {
     return (
         <>
-            <h1 className="text-3xl font-bold underline text-pink-500">
-                Hello!!!!
-            </h1>
+            <HomeHeader />
         </>
     );
 }
