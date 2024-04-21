@@ -1,4 +1,4 @@
-export default function IconPack() {
+export default function Description() {
     return (
         <>
         </>
