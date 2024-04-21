@@ -1,3 +1,5 @@
+import Head from 'next/head';
+
 import HomePage from "./WebsitePages/Home";
 import SLPage from "./WebsitePages/SL";
 import IconPack from "./WebsitePages/Icons";
@@ -8,10 +10,16 @@ import Footer from "./WebsiteHeaders/Footer";
 
 export default function Home() {
   return (
-    <main className="bg-slate-100">
-      <Header />
-      <HomePage />
-      <Footer />
-    </main>
+    <>
+      <Head>
+        <title>Rajveer Sodhi</title>
+        <link rel="icon" href="/favicon.ico" />
+      </Head>
+      <main className="bg-slate-100">
+        <Header />
+        <HomePage />
+        <Footer />
+      </main>
+    </>
   );
 }
