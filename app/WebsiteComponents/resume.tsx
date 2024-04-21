@@ -4,7 +4,7 @@ export default function Resume() {
             <iframe
                 title="Resume"
                 src="/resume.pdf"
-                style={{ width: "65%", height: "1000px" }}
+                style={{ width: "65%", height: "1122px" }}
             ></iframe>
         </div>
     );
