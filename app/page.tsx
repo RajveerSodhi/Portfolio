@@ -16,12 +16,12 @@ export default function Home() {
         <title>Rajveer Sodhi</title>
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <ComingSoon />
-      {/* <main className="bg-slate-100">
+      {/* <ComingSoon /> */}
+      <main className="bg-slate-100">
         <Header />
         <HomePage />
         <Footer />
-      </main> */}
+      </main>
     </>
   );
 }
