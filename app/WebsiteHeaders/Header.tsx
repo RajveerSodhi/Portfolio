@@ -1,22 +1,33 @@
-import Link from 'next/link';
-const pages = ["Home", "SL", "Icons", "Contact"];
+"use client";
+import { useState } from "react";
 
 export default function Header() {
-    return (
-        <div className="h-20 bg-black flex flex-row justify-between items-center">
-            <a href="/">
-                <img src="/portfolio_logo.svg" alt="logo" className="h-14 ml-8" />
-            </a>
+    const [isNavCollapsed, setIsNavCollapsed] = useState(true);
+    const handleNavCollapse = () => setIsNavCollapsed(!isNavCollapsed);
 
-            <ul className="absolute right-8 flex flex-row space-x-6">
-                {pages.map((page, index) => (
-                    <li key={index} className="text-xl text-white hover:text-slate-300 font-semibold">
-                        <Link href={`/${page}`}>
-                            {page}
-                        </Link>
-                    </li>
-                ))}
-            </ul>
-        </div>
+    return (
+        <nav className="navbar navbar-expand-lg navbar-dark bg-dark">
+            <a className="navbar-brand mx-2" href="#">
+                <img src="/portfolio_logo.svg" width="30" height="30" alt="" />
+            </a>
+            <button
+                className="navbar-toggler"
+                type="button"
+                onClick={handleNavCollapse}
+                aria-controls="navbarNavAltMarkup"
+                aria-expanded={isNavCollapsed ? "false" : "true"}  // Convert boolean to string
+                aria-label="Toggle navigation"
+            >
+                <span className="navbar-toggler-icon"></span>
+            </button>
+            <div className={`${isNavCollapsed ? 'collapse' : ''} navbar-collapse`} id="navbarNavAltMarkup">
+                <div className="navbar-nav justify-content-end w-100">
+                    <a className="nav-item nav-link active" href="#">Home <span className="sr-only">(current)</span></a>
+                    <a className="nav-item nav-link" href="#">SL</a>
+                    <a className="nav-item nav-link" href="#">Icons</a>
+                    <a className="nav-item nav-link" href="#">Contact</a>
+                </div>
+            </div>
+        </nav>
     );
 }
