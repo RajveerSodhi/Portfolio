@@ -7,8 +7,8 @@ export default function Header() {
     const handleNavCollapse = () => setIsNavCollapsed(!isNavCollapsed);
 
     return (
-        <nav className="navbar navbar-expand-lg navbar-dark bg-dark mb-4">
-            <Link className="navbar-brand mx-2" href="/">
+        <nav className="navbar navbar-expand-lg navbar-dark bg-dark">
+            <Link className="navbar-brand mx-2.5" href="/">
                 <img src="/portfolio_logo.svg" width="30" height="30" alt="Rajveer Sodhi Logo" />
             </Link>
             <button
