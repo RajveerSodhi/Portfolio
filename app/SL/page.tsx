@@ -1,7 +1,7 @@
 export default function SL() {
     return (
         <>
-            <h1>Supplemental Learning</h1>
+            <h1>Coming Soon!</h1>
         </>
     );
 }

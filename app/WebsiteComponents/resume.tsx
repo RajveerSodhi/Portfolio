@@ -1,11 +1,13 @@
+import { Container } from "react-bootstrap";
+
 export default function Resume() {
     return (
-        <div>
+        <Container className="d-flex justify-content-center">
             <iframe
                 title="Resume"
                 src="/resume.pdf"
-                style={{ width: "65%", height: "1122px" }}
+                style={{ width: "70%", height: "1000px" }}
             ></iframe>
-        </div>
+        </Container>
     );
 }

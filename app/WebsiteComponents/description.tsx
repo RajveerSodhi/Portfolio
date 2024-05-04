@@ -2,7 +2,7 @@ import { Container } from "react-bootstrap";
 
 export default function Description() {
     return (
-        <Container className="text-center">
+        <Container className="w-100 text-center">
             <p className="lead">
                 I am a fourth-year student at the University of British Columbia pursuing an Honours in Computer Science. I am highly interested in the domains of Human-Computer Interaction, Extended Reality, and Artificial Intelligence.
             </p>

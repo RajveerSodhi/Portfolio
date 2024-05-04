@@ -8,7 +8,7 @@ export default function Header() {
 
     return (
         <nav className="navbar navbar-expand-lg navbar-dark bg-dark">
-            <Link className="navbar-brand mx-2.5" href="/">
+            <Link className="navbar-brand mx-2" href="/">
                 <img src="/portfolio_logo.svg" width="30" height="30" alt="Rajveer Sodhi Logo" />
             </Link>
             <button
@@ -26,7 +26,6 @@ export default function Header() {
                     <Link className="nav-item nav-link mx-2 active" href="/">Home</Link>
                     <Link className="nav-item nav-link mx-2 active" href="/SL">Supplemental Learning</Link>
                     <Link className="nav-item nav-link mx-2 active" href="/Icons">Icon Pack</Link>
-                    <Link className="nav-item nav-link mx-2 active" href="/Contact">Contact</Link>
                 </div>
             </div>
         </nav>

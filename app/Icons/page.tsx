@@ -1,7 +1,7 @@
 export default function Icons() {
     return (
         <>
-            <h1>Icons!</h1>
+            <h1>Coming Soon!</h1>
         </>
     );
 }
