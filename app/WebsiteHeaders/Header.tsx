@@ -23,7 +23,7 @@ export default function Header() {
             </button>
             <div className={`${isNavCollapsed ? 'collapse' : ''} navbar-collapse`} id="navbarNavAltMarkup">
                 <div className="navbar-nav justify-content-end w-100" style={{ "fontSize": "1.2rem" }}>
-                    <Link className="nav-item nav-link mx-2 active" href="/">Home</Link>
+                    <Link className="nav-item nav-link mx-2 active" href="/">Profile</Link>
                     <Link className="nav-item nav-link mx-2 active" href="/SL">Supplemental Learning</Link>
                     <Link className="nav-item nav-link mx-2 active" href="/Icons">Icon Pack</Link>
                 </div>
