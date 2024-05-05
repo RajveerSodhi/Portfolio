@@ -1,3 +1,4 @@
+import "../styles/projects.css";
 import { Container, Row, Col, Card } from "react-bootstrap";
 
 export default function Projects() {
@@ -5,8 +6,8 @@ export default function Projects() {
         <Container className="w-100 my-5 text-center">
             <Row className="justify-content-center">
                 <Col xs={12} md={8} className="mb-4">
-                    <Card className="p-4 shadow" style={{ borderRadius: "20px" }}>
-                        <h4 className="fw-bold mb-4"><a href="https://www.rajveersodhi.com" target="_blank" style={{ color: "#78aaf6" }}>Personal Website</a></h4>
+                    <Card className="p-4 shadow card-radius">
+                        <h4 className="fw-bold mb-4"><a href="https://www.rajveersodhi.com" target="_blank" className="link">Personal Website</a></h4>
                         <h6 className="text-muted fw-bold">Next.ts, Bootstrap, Tailwind CSS, TypeScript</h6>
                         <p className="text-muted mb-2">May 2024</p>
                         <hr className="mb-4" />
@@ -18,8 +19,8 @@ export default function Projects() {
                 </Col>
 
                 <Col xs={12} md={8} className="mb-4">
-                    <Card className="p-4 shadow" style={{ borderRadius: "20px" }}>
-                        <h4 className="fw-bold mb-4"><a href="https://github.com/RajveerSodhi/EduPool" target="_blank" style={{ color: "#78aaf6" }}>EduPool: E-Learning Platform</a></h4>
+                    <Card className="p-4 shadow card-radius">
+                        <h4 className="fw-bold mb-4"><a href="https://github.com/RajveerSodhi/EduPool" target="_blank" className="link">EduPool: E-Learning Platform</a></h4>
                         <h6 className="text-muted fw-bold">Python, HTML, CSS, JavaScript, SQL</h6>
                         <p className="text-muted mb-2">Apr 2024</p>
                         <hr className="mb-4" />
@@ -31,8 +32,8 @@ export default function Projects() {
                 </Col>
 
                 <Col xs={12} md={8} className="mb-4">
-                    <Card className="p-4 shadow" style={{ borderRadius: "20px" }}>
-                        <h4 className="fw-bold mb-4"><a href="https://github.com/RajveerSodhi/Gestura" target="_blank" style={{ color: "#78aaf6" }}>Gestura: Sign Langauge to English Converter</a></h4>
+                    <Card className="p-4 shadow card-radius">
+                        <h4 className="fw-bold mb-4"><a href="https://github.com/RajveerSodhi/Gestura" target="_blank" className="link">Gestura: Sign Langauge to English Converter</a></h4>
                         <h6 className="text-muted fw-bold">Python, HTML, CSS, JavaScript</h6>
                         <p className="text-muted mb-2">Jan 2024</p>
                         <hr className="mb-4" />
@@ -45,8 +46,8 @@ export default function Projects() {
                 </Col>
 
                 <Col xs={12} md={8} className="mb-4">
-                    <Card className="p-4 shadow" style={{ borderRadius: "20px" }}>
-                        <h4 className="fw-bold mb-4"><a href="https://github.com/RajveerSodhi/TransitMate" target="_blank" style={{ color: "#78aaf6" }}>TransitMate: Ride Sharing App Prototype</a></h4>
+                    <Card className="p-4 shadow card-radius">
+                        <h4 className="fw-bold mb-4"><a href="https://github.com/RajveerSodhi/TransitMate" target="_blank" className="link">TransitMate: Ride Sharing App Prototype</a></h4>
                         <h6 className="text-muted fw-bold">Java, XML</h6>
                         <p className="text-muted mb-2">Dec 2023</p>
                         <hr className="mb-4" />
