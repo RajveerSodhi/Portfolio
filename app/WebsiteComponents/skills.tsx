@@ -1,4 +1,3 @@
-import "../styles/skills.css"
 import { Row, Container, Card } from "react-bootstrap";
 
 export default function Skills() {

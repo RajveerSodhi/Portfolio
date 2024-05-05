@@ -5,7 +5,7 @@ export default function WorkEx() {
         <Container className="w-100 my-5 text-center">
             <Row className="justify-content-center">
                 <Col xs={12} md={8} className="mb-4">
-                    <Card className="p-4 shadow" style={{ borderRadius: "20px" }}>
+                    <Card className="p-4 shadow card-radius">
                         <h4 className="fw-bold mb-4">Software Developer Intern</h4>
                         <h6 className="text-muted fw-bold">Data Poem</h6>
                         <p className="text-muted mb-2">Santa Clara, California, USA (Remote)  |  May 2024 - Present</p>
@@ -18,7 +18,7 @@ export default function WorkEx() {
                 </Col>
 
                 <Col xs={12} md={8} className="mb-4">
-                    <Card className="p-4 shadow" style={{ borderRadius: "20px" }}>
+                    <Card className="p-4 shadow card-radius">
                         <h4 className="fw-bold mb-4">Undergraduate Researcher</h4>
                         <h6 className="text-muted fw-bold">University of British Columbia</h6>
                         <p className="text-muted mb-2">Kelowna, BC  |  Sep 2023 - Present</p>
@@ -32,7 +32,7 @@ export default function WorkEx() {
                 </Col>
 
                 <Col xs={12} md={8} className="mb-4">
-                    <Card className="p-4 shadow" style={{ borderRadius: "20px" }}>
+                    <Card className="p-4 shadow card-radius">
                         <h4 className="fw-bold mb-4">Website Administrator</h4>
                         <h6 className="text-muted fw-bold">Niteo Africa</h6>
                         <p className="text-muted mb-2">Kelowna, BC  |  Sep 2023 - Present</p>
@@ -45,7 +45,7 @@ export default function WorkEx() {
                 </Col>
 
                 <Col xs={12} md={8} className="mb-4">
-                    <Card className="p-4 shadow" style={{ borderRadius: "20px" }}>
+                    <Card className="p-4 shadow card-radius">
                         <h4 className="fw-bold mb-4">Software Developer Intern</h4>
                         <h6 className="text-muted fw-bold">University of British Columbia</h6>
                         <p className="text-muted mb-2">Kelowna, BC  |  Sep 2023 - Dec 2023</p>

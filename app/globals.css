@@ -1,3 +1,36 @@
 /* @tailwind base;
 @tailwind components;
 @tailwind utilities; */
+
+.card-radius {
+    border-radius: 20px !important;
+}
+
+.link {
+    color: #78aaf6;
+}
+
+.card-hover-shadow {
+    transition: box-shadow 0.3s ease-in-out;
+}
+
+.card-hover-shadow:hover {
+    box-shadow: 0 6px 6px rgba(0, 0, 0, 0.1);
+}
+
+.contact-button {
+    width: 9rem !important;
+    border: none !important;
+}
+
+.email {
+    background-color: #c71610 !important;
+}
+
+.linkedin {
+    background-color: #0a66c2 !important;
+}
+
+.github {
+    background-color: #303a50 !important;
+}
