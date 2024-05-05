@@ -8,7 +8,7 @@ export default function Education() {
                     <Card className="p-4 shadow" style={{ borderRadius: "20px" }}>
                         <h4 className="fw-bold mb-4">University of British Columbia</h4>
                         <h6 className="text-muted fw-bold">Batchelor of Science (Honours in Computer Science, Minor in Data Science)</h6>
-                        <p className="text-muted mb-2">Kelowna, BC, Canada  |  2021 - 2026</p>
+                        <p className="text-muted mb-2">Kelowna, BC  |  2021 - 2026</p>
                         <hr className="mb-4" />
                         <p className="text-muted mb-2"><strong>GPA: </strong>4.33</p>
                         <p className="text-muted mb-2"><strong>Notable Coursework: </strong>Data Structures, Software Engineering, Machine Learning, Artificial Intelligence, Introduction to Data Analysis, Human-Computer Interaction, Database Systems</p>
