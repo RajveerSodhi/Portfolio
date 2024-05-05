@@ -1,0 +1,52 @@
+Phone
+Email
+Settings
+Netflix
+Amazon
+Prime Video
+Canvas
+Browser
+Letterboxd
+FaceTime
+Spotify
+Calendar
+To Do List
+WhatsApp
+Messages
+Maps
+YouTube
+Instagram
+BeReal
+SnapChat
+Photos
+TikTok
+Clock
+App Store
+Audible
+Authenticator
+Calculator
+Camera
+ChatGPT
+Crossy Road
+Discord
+Disney+
+Docs
+DoorDash
+Drive
+ESPN
+Facebook
+Files
+Fruit Ninja
+Angry Birds
+GitHub
+Home
+Notes
+Health
+LinkedIn
+Messenger
+Poparide
+Reddit
+Signal
+Slack
+Apple Music
+Apple TV
