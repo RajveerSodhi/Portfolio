@@ -6,7 +6,7 @@ export default function Resume() {
             <iframe
                 title="Resume"
                 src="/resume.pdf"
-                style={{ width: "70%", height: "800px", borderRadius: "20px" }}
+                style={{ width: "70%", height: "900px", borderRadius: "20px" }}
             ></iframe>
         </Container>
     );
