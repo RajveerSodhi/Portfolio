@@ -6,8 +6,14 @@
     border-radius: 20px !important;
 }
 
-.link {
-    color: #78aaf6;
+.project-link {
+    background-color: #5884c6 !important;
+    border-radius: 10px !important;
+    color: #FFF !important;
+}
+
+.project-link:hover {
+    background-color: #3b5998 !important;
 }
 
 .card-hover-shadow {
