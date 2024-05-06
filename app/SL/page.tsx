@@ -1,7 +1,7 @@
 export default function SL() {
     return (
         <>
-            <h1>Coming Soon!</h1>
+            <h1 className="text-center m-4">Supplemental Learning Material: Coming Soon!</h1>
         </>
     );
 }
