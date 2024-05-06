@@ -1,10 +1,14 @@
-export default function home_header() {
+import { Container, Col, Row } from "react-bootstrap";
+import Image from "../WebsiteComponents/title_image";
+import Title from "../WebsiteComponents/title";
+
+export default function HomeHeader() {
     return (
-        <>
-            <div className="align-middle text-center">
-                <h1 className="text-6xl font-bold text-black mt-20">Rajveer Sodhi</h1>
-                <h2 className="text-4xl font-semibold text-black mt-10 mb-4">Software Developer</h2>
-            </div>
-        </>
+        <Container style={{ marginTop: "4rem", marginBottom: "4rem" }}>
+            <Row className="align-items-center text-center text-md-left">
+                <Image />
+                <Title />
+            </Row>
+        </Container>
     );
 }

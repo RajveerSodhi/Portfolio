@@ -1,4 +1,5 @@
 "use client";
+import Link from "next/link";
 import { useState } from "react";
 
 export default function Header() {
@@ -7,25 +8,24 @@ export default function Header() {
 
     return (
         <nav className="navbar navbar-expand-lg navbar-dark bg-dark">
-            <a className="navbar-brand mx-2" href="#">
-                <img src="/portfolio_logo.svg" width="30" height="30" alt="" />
-            </a>
+            <Link className="navbar-brand mx-2" href="/">
+                <img src="/portfolio_logo.svg" width="30" height="30" alt="Rajveer Sodhi Logo" />
+            </Link>
             <button
                 className="navbar-toggler"
                 type="button"
                 onClick={handleNavCollapse}
                 aria-controls="navbarNavAltMarkup"
-                aria-expanded={isNavCollapsed ? "false" : "true"}  // Convert boolean to string
+                aria-expanded={isNavCollapsed ? "false" : "true"}
                 aria-label="Toggle navigation"
             >
                 <span className="navbar-toggler-icon"></span>
             </button>
             <div className={`${isNavCollapsed ? 'collapse' : ''} navbar-collapse`} id="navbarNavAltMarkup">
-                <div className="navbar-nav justify-content-end w-100">
-                    <a className="nav-item nav-link active" href="#">Home <span className="sr-only">(current)</span></a>
-                    <a className="nav-item nav-link" href="#">SL</a>
-                    <a className="nav-item nav-link" href="#">Icons</a>
-                    <a className="nav-item nav-link" href="#">Contact</a>
+                <div className="navbar-nav justify-content-end w-100" style={{ "fontSize": "1.2rem" }}>
+                    <Link className="nav-item nav-link mx-2 active" href="/">Profile</Link>
+                    <Link className="nav-item nav-link mx-2 active" href="/SL">Supplemental Learning</Link>
+                    <Link className="nav-item nav-link mx-2 active" href="/Icons">Icon Pack</Link>
                 </div>
             </div>
         </nav>

@@ -1,9 +1,10 @@
 export default function Footer() {
     return (
         <>
-            <div className="h-20 flex flex-row justify-center items-center mt-10 bg-black">
-                <p className="text-white">Last Updated: April 20, 2024</p>
-            </div>
+            <div className="bg-dark text-center p-3 mt-4">
+                <p className="text-white m-1">Last Updated: May 5, 2024</p>
+            </div >
         </>
+
     );
 }
