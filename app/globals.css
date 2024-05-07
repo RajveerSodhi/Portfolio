@@ -55,6 +55,15 @@
     box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
 }
 
+.home-header {
+    cursor: pointer;
+    transition: text-shadow 0.3s ease-in-out;
+}
+
+.home-header:hover {
+    text-shadow: 0 6px 6px rgba(0, 0, 0, 0.2);
+}
+
 /* .header-image-div {
     width: "400px";
     height: "400px";
