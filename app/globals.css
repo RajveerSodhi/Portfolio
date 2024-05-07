@@ -64,6 +64,14 @@
     text-shadow: 0 6px 6px rgba(0, 0, 0, 0.2);
 }
 
+.sticky-nav {
+    position: fixed !important;
+    top: 0 !important;
+    width: 100% !important;
+    z-index: 1000 !important;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+}
+
 /* .header-image-div {
     width: "400px";
     height: "400px";
