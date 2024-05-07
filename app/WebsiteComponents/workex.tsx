@@ -38,7 +38,7 @@ export default function WorkEx() {
                         <p className="text-muted mb-2">Kelowna, BC  |  Sep 2023 - Present</p>
                         <hr className="mb-4" />
                         <ul className="text-muted mb-2">
-                            <li>Administered Niteo Africa's WordPress-based website, incorporating blog posts and event information and diligently updating website plugins, resulting in a 150% increase in website viewership since assuming the role.</li>
+                            <li>Administered Niteo Africa&apos;s WordPress-based website, incorporating blog posts and event information and diligently updating website plugins, resulting in a 150% increase in website viewership since assuming the role.</li>
                             <li>Communicated concerns and insights to the Executive Director through detailed monthly reports to ensure regular progress.</li>
                         </ul>
                     </Card>
