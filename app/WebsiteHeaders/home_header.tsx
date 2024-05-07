@@ -4,7 +4,7 @@ import Title from "../WebsiteComponents/title";
 
 export default function HomeHeader() {
     return (
-        <Container style={{ marginTop: "4rem", marginBottom: "4rem" }}>
+        <Container style={{ marginTop: "8rem", marginBottom: "4rem" }}>
             <Row className="align-items-center text-center text-md-left">
                 <Image />
                 <Title />
