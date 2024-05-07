@@ -1,5 +1,6 @@
-import "../globals.css"
 import { Container, Row, Col, Card } from "react-bootstrap";
+import { FaArrowRight } from "react-icons/fa";
+import ProjectButton from "./project_button";
 
 export default function Projects() {
     return (
@@ -15,7 +16,7 @@ export default function Projects() {
                             <li>Created a personal website showcasing my technical skills, work experience, research, and more.</li>
                             <li>Developed using the Next.ts framework in TypeScript and styled with Bootstrap Tailwind CSS.</li>
                         </ul>
-                        <a className="btn btn-light project-link mt-3" rel="noopener noreferrer" target="_blank" href="https://github.com/RajveerSodhi/Portfolio">View on GitHub</a>
+                        <ProjectButton link="Portfolio" />
                     </Card>
                 </Col>
 
@@ -29,7 +30,7 @@ export default function Projects() {
                             <li>Collaborated in developing a Flask-based e-learning platform, employing Agile methodologies, CI/CD practices, UML for system design, and Test-Driven Development (TDD) with Selenium for automated testing and deployment to ensure quality and performance.</li>
                             <li>Implemented core features like user authentication, course management, discussion portals, assignment submissions, and grading.</li>
                         </ul>
-                        <a className="btn btn-light project-link mt-3" rel="noopener noreferrer" target="_blank" href="https://github.com/RajveerSodhi/EduPool">View on GitHub</a>
+                        <ProjectButton link="EduPool" />
                     </Card>
                 </Col>
 
@@ -42,9 +43,9 @@ export default function Projects() {
                         <ul className="text-muted mb-2">
                             <li>BC Hacks 5.0 Hackathon Winner</li>
                             <li>Led a cross-functional team in developing a full-stack website, using Node.js to translate American Sign Language into English, integrating a gesture-recognition machine learning model developed with Keras and OpenCV.</li>
-                            <li>Implemented the Google Translate and Text-to-Speech API to enhance the project's capabilities by generating multilingual text and speech outputs for the translations.</li>
+                            <li>Implemented the Google Translate and Text-to-Speech API to enhance the project&apos;s capabilities by generating multilingual text and speech outputs for the translations.</li>
                         </ul>
-                        <a className="btn btn-light project-link mt-3" rel="noopener noreferrer" target="_blank" href="https://github.com/RajveerSodhi/Gestura">View on GitHub</a>
+                        <ProjectButton link="Gestura" />
                     </Card>
                 </Col>
 
@@ -59,7 +60,7 @@ export default function Projects() {
                             <li>Applied HCI fundamentals by conducting multiple rounds of requirements gathering and user testing to refine the user experience.</li>
                             <li>Utilized object-oriented principles to ensure efficient code organization, enhancing maintainability and scalability of the app.</li>
                         </ul>
-                        <a className="btn btn-light project-link mt-3" rel="noopener noreferrer" target="_blank" href="https://github.com/RajveerSodhi/TransitMate">View on GitHub</a>
+                        <ProjectButton link="TransitMate" />
                     </Card>
                 </Col>
             </Row>
