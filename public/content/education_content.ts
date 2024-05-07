@@ -1,4 +1,4 @@
-const education = [
+export const education = [
     {
         institute: "University of British Columbia",
         degree: "Bachelor of Science (Honours in Computer Science, Minor in Data Science)",

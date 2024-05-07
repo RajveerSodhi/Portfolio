@@ -1,6 +1,6 @@
-const workex = [
+export const workex = [
     {
-        title: "Software Developer Intern",
+        position: "Software Developer Intern",
         company: "Data Poem",
         location: "Santa Clara, California, USA (Remote)",
         date: "May 2024 - Present",
@@ -10,7 +10,7 @@ const workex = [
         ]
     },
     {
-        title: "Undergraduate Researcher",
+        position: "Undergraduate Researcher",
         company: "University of British Columbia",
         location: "Kelowna, BC",
         date: "Sep 2023 - Present",
@@ -21,7 +21,7 @@ const workex = [
         ]
     },
     {
-        title: "Website Administrator",
+        position: "Website Administrator",
         company: "Niteo Africa",
         location: "Kelowna, BC",
         date: "Sep 2023 - Present",
@@ -31,7 +31,7 @@ const workex = [
         ]
     },
     {
-        title: "Software Developer Intern",
+        position: "Software Developer Intern",
         company: "University of British Columbia",
         location: "Kelowna, BC",
         date: "Sep 2023 - Dec 2023",

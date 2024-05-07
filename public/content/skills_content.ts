@@ -1,4 +1,4 @@
-const skills = [
+export const skills = [
     {
         title: "Languages",
         skills: [

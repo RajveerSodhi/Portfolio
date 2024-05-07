@@ -1,4 +1,4 @@
-const projects = [
+export const projects = [
     {
         title: "Personal Website",
         link: "Portfolio",
@@ -18,7 +18,7 @@ const projects = [
             "Collaborated in developing a Flask-based e-learning platform, employing Agile methodologies, CI/CD practices, UML for system design, and Test-Driven Development (TDD) with Selenium for automated testing and deployment to ensure quality and performance.",
             "Implemented core features like user authentication, course management, discussion portals, assignment submissions, and grading."
         ]
-    }
+    },
     {
         title: "Gestura: Sign Langauge to English Converter",
         link: "Gestura",
