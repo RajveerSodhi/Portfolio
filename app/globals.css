@@ -94,6 +94,10 @@
     box-shadow: inset 0 0 12px rgba(0, 0, 0, 0.3);
 }
 
+.icons-container:hover * {
+    animation-play-state: paused;
+}
+
 .scrolling-icon {
     width: 105px;
     aspect-ratio: 1;
@@ -104,7 +108,7 @@
 .scrolling-icons {
     white-space: nowrap;
     position: relative;
-    margin: 0.5em 0;
+    margin: 0.35em 0;
 }
 
 .forward {
@@ -139,14 +143,14 @@
     .scrolling-icon {
         width: 80px;
         aspect-ratio: 1;
-        margin: 0.5em;
+        margin: 0.35em;
     }
 }
 
 @media (max-width: 480px) {
     .scrolling-icon {
-        width: 60px;
+        width: 50px;
         aspect-ratio: 1;
-        margin: 0.4em;
+        margin: 0.25em;
     }
 }
