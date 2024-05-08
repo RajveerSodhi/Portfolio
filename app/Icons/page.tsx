@@ -4,6 +4,7 @@ import IconHeader from "../WebsiteHeaders/icons_header";
 import IconsDescription from "../WebsiteHeaders/icons_description";
 import IconsButton from "../WebsiteComponents/IconsButton";
 import IconsTutorial from "../WebsiteHeaders/icons_tutorial";
+import ScrollingIcons from "../WebsiteComponents/scrollingIcons";
 
 export default function Icons() {
     return (
@@ -12,6 +13,7 @@ export default function Icons() {
             <IconsButton />
             <IconsDescription />
             <IconsTutorial />
+            <ScrollingIcons />
         </Container>
     );
 }
