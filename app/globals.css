@@ -33,17 +33,31 @@
     background-color: #c71610 !important;
 }
 
+.email:hover {
+    background-color: #980f0a !important;
+
+}
+
 .linkedin {
     background-color: #0a66c2 !important;
+}
+
+.linkedin:hover {
+    background-color: #105294 !important;
 }
 
 .github {
     background-color: #303a50 !important;
 }
 
+.github:hover {
+    background-color: #262f43 !important;
+}
+
 .project-image {
     width: 100%;
-    height: 350px;
+    height: auto;
+    max-height: 350px;
     border-radius: 20px;
     overflow: hidden;
     object-fit: cover;

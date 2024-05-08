@@ -5,7 +5,9 @@ Netflix
 Amazon
 Prime Video
 Canvas
-Browser
+Safari
+Chrome
+Arc
 Letterboxd
 FaceTime
 Spotify
