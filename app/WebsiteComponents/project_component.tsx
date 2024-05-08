@@ -10,7 +10,7 @@ export default function ProjectComponent(props: { title: string, link: string, t
                 <p className="text-muted mb-2">{props.date}</p>
                 <hr className="mb-4" />
                 <img src={`../../content/project_photos/${props.link}.png`} alt={`Project Image - ${props.title}`} className="mb-4 project-image" />
-                <ul className="text-muted mb-2">
+                <ul className="text-muted my-2" style={{ textAlign: "left" }}>
                     {props.description.map((item, index) => (
                         <li key={index}>{item}</li>
                     ))}

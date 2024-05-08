@@ -13,7 +13,7 @@ export default function EducationComponent(props: { institute: string, degree: s
                 <p className="text-muted mb-2">{props.location}  |  {props.date}</p>
                 <hr className="mb-4" />
                 {props.details.map((item, index) => (
-                    <p key={index} className="text-muted mb-2"><strong>{item[0]}: </strong> {item[1]}</p>
+                    <p key={index} className="text-muted mb-2" style={{ textAlign: "left" }}><strong>{item[0]}: </strong> {item[1]}</p>
                 ))}
             </Card>
         </Col>

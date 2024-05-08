@@ -8,7 +8,7 @@ export default function WorkExComponent(props: { company: string, position: stri
                 <h6 className="text-muted fw-bold">{props.company}</h6>
                 <p className="text-muted mb-2">{props.location}  |  {props.date}</p>
                 <hr className="mb-4" />
-                <ul className="text-muted mb-2">
+                <ul className="text-muted mb-2" style={{ textAlign: "left" }}>
                     {props.description.map((item, index) => (
                         <li key={index}>{item}</li>
                     ))}
