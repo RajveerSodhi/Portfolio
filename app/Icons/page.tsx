@@ -8,12 +8,12 @@ import ScrollingIcons from "../WebsiteComponents/scrollingIcons";
 
 export default function Icons() {
     return (
-        <Container className="text-center" style={{ marginTop: "8rem" }}>
+        <Container className="text-center" style={{ marginTop: "8rem", maxWidth: "100%" }}>
             <IconHeader />
+            <ScrollingIcons />
             <IconsButton />
             <IconsDescription />
             <IconsTutorial />
-            <ScrollingIcons />
         </Container>
     );
 }
