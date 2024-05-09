@@ -2,11 +2,6 @@
 @tailwind components;
 @tailwind utilities; */
 
-main {
-    width: 100vw !important;
-    padding: 0 !important;
-}
-
 .card-radius {
     border-radius: 20px !important;
 }
@@ -111,6 +106,12 @@ main {
     aspect-ratio: 1;
     margin: 0.65em;
     border-radius: 20%;
+    -webkit-user-drag: none;
+    user-drag: none;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
 }
 
 .scrolling-icons {
