@@ -42,8 +42,8 @@ export default function ScrollingIcons() {
                 <img src="./icons/icons_light/to_do_light.jpg" alt="" className="scrolling-icon" />
                 <img src="./icons/icons_dark/chrome_dark.jpg" alt="" className="scrolling-icon" />
                 <img src="./icons/icons_light/youtube_light.jpg" alt="" className="scrolling-icon" />
-                <img src="./icons/icons_light/slack_light.jpg" alt="" className="scrolling-icon" />
                 <img src="./icons/icons_dark/clock_dark.jpg" alt="" className="scrolling-icon" />
+                <img src="./icons/icons_light/slack_light.jpg" alt="" className="scrolling-icon" />
 
                 <img src="./icons/icons_dark/spotify_dark.jpg" alt="" className="scrolling-icon" />
                 <img src="./icons/icons_light/phone_light.jpg" alt="" className="scrolling-icon" />
@@ -55,8 +55,8 @@ export default function ScrollingIcons() {
                 <img src="./icons/icons_light/to_do_light.jpg" alt="" className="scrolling-icon" />
                 <img src="./icons/icons_dark/chrome_dark.jpg" alt="" className="scrolling-icon" />
                 <img src="./icons/icons_light/youtube_light.jpg" alt="" className="scrolling-icon" />
-                <img src="./icons/icons_light/slack_light.jpg" alt="" className="scrolling-icon" />
                 <img src="./icons/icons_dark/clock_dark.jpg" alt="" className="scrolling-icon" />
+                <img src="./icons/icons_light/slack_light.jpg" alt="" className="scrolling-icon" />
             </Container>
 
             <Container className="scrolling-icons forward">
@@ -98,8 +98,8 @@ export default function ScrollingIcons() {
                 <img src="./icons/icons_light/canvas_light.jpg" alt="" className="scrolling-icon" />
                 <img src="./icons/icons_dark/disney+_dark.jpg" alt="" className="scrolling-icon" />
                 <img src="./icons/icons_light/settings_light.jpg" alt="" className="scrolling-icon" />
-                <img src="./icons/icons_light/disney+_light.jpg" alt="" className="scrolling-icon" />
                 <img src="./icons/icons_dark/canvas_dark.jpg" alt="" className="scrolling-icon" />
+                <img src="./icons/icons_light/disney+_light.jpg" alt="" className="scrolling-icon" />
 
                 <img src="./icons/icons_dark/youtube_dark.jpg" alt="" className="scrolling-icon" />
                 <img src="./icons/icons_light/chrome_light.jpg" alt="" className="scrolling-icon" />
@@ -111,8 +111,8 @@ export default function ScrollingIcons() {
                 <img src="./icons/icons_light/canvas_light.jpg" alt="" className="scrolling-icon" />
                 <img src="./icons/icons_dark/disney+_dark.jpg" alt="" className="scrolling-icon" />
                 <img src="./icons/icons_light/settings_light.jpg" alt="" className="scrolling-icon" />
-                <img src="./icons/icons_light/disney+_light.jpg" alt="" className="scrolling-icon" />
                 <img src="./icons/icons_dark/canvas_dark.jpg" alt="" className="scrolling-icon" />
+                <img src="./icons/icons_light/disney+_light.jpg" alt="" className="scrolling-icon" />
             </Container>
         </Container>
     );
