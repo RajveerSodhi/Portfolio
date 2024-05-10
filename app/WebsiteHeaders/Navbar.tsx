@@ -2,7 +2,7 @@
 import Link from "next/link";
 import { useState } from "react";
 
-export default function Header() {
+export default function Navbar() {
     const [isNavCollapsed, setIsNavCollapsed] = useState(true);
     const handleNavCollapse = () => setIsNavCollapsed(!isNavCollapsed);
 
@@ -24,7 +24,7 @@ export default function Header() {
             <div className={`${isNavCollapsed ? 'collapse' : ''} navbar-collapse`} id="navbarNavAltMarkup">
                 <div className="navbar-nav justify-content-end w-100" style={{ "fontSize": "1.2rem" }}>
                     <Link className="nav-item nav-link mx-2 active" href="/">Profile</Link>
-                    <Link className="nav-item nav-link mx-2 active" href="/SL">Supplemental Learning</Link>
+                    {/* <Link className="nav-item nav-link mx-2 active" href="/SL">Supplemental Learning</Link> */}
                     <Link className="nav-item nav-link mx-2 active" href="/Icons">Icon Pack</Link>
                 </div>
             </div>

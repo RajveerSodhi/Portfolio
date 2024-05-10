@@ -4,7 +4,7 @@ import { Inter } from "next/font/google";
 import "./globals.css";
 import "bootstrap/dist/css/bootstrap.min.css";
 import InstallBootstrap from "./components/InstallBoostrap";
-import Header from "./WebsiteHeaders/Header";
+import Navbar from "./WebsiteHeaders/Navbar";
 import Footer from "./WebsiteHeaders/Footer";
 import Head from "next/head";
 
@@ -28,7 +28,7 @@ export default function RootLayout({
       </Head>
       <body className={inter.className}>
         <InstallBootstrap />
-        <Header />
+        <Navbar />
         <main className="bg-slate-100">
           {children}
         </main>
