@@ -89,11 +89,12 @@
 .icons-container {
     overflow: hidden;
     background-color: rgba(100, 116, 139, 0.2);
-    margin: 2rem 0;
+    margin: 1rem 0;
+    margin-bottom: 2rem;
     border-radius: 30px;
     box-shadow: inset 0 0 20px rgba(0, 0, 0, 0.4);
-    width: 100% !important;
-    max-width: 100% !important;
+    width: 97% !important;
+    max-width: 97% !important;
     border: 5px solid rgb(74, 86, 105);
 }
 
@@ -123,11 +124,11 @@
 }
 
 .forward {
-    animation: moveforward 26s linear infinite;
+    animation: moveforward 32s linear infinite;
 }
 
 .backward {
-    animation: movebackward 24s linear infinite;
+    animation: movebackward 30s linear infinite;
 }
 
 @keyframes moveforward {
@@ -164,4 +165,16 @@
         aspect-ratio: 1;
         margin: 0.2em;
     }
+}
+
+.icons-button {
+    /* padding: 0 5em; */
+    width: 100%;
+    background-color: rgb(47, 47, 47);
+    border-radius: 15px;
+    font-size: 1.25em;
+}
+
+::selection {
+    background: rgba(255, 128, 128, 0.75);
 }
