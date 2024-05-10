@@ -2,15 +2,15 @@
 import { CardElement, useElements, useStripe } from "@stripe/react-stripe-js";
 import axios from "axios";
 import React, { useState } from "react";
-import PaymentSuccess from "./PaymentSuccess"; // Import your custom PaymentSuccess component
+import PaymentSuccess from "./PaymentSuccess";
 
 export default function PaymentForm() {
     const stripe = useStripe();
     const elements = useElements();
-    const [loading, setLoading] = useState(false); // Track loading state
+    const [loading, setLoading] = useState(false);
     const [errorMessage, setErrorMessage] = useState<string | null>(null);
     const [cardholderName, setCardholderName] = useState("");
-    const [donationAmount, setDonationAmount] = useState(10); // Default donation value
+    const [donationAmount, setDonationAmount] = useState(1);
     const [paymentSucceeded, setPaymentSucceeded] = useState(false);
 
     const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {

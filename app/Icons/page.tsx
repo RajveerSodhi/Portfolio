@@ -5,6 +5,7 @@ import IconsDescription from "../WebsiteHeaders/icons_description";
 import IconsTutorial from "../WebsiteHeaders/icons_tutorial";
 import ScrollingIcons from "../WebsiteComponents/scrollingIcons";
 import IconPayment from "../WebsiteComponents/icons_payment";
+import DownloadButton from "../WebsiteComponents/PaymentForm/DownloadButton";
 
 export default function Icons() {
     return (
@@ -13,6 +14,7 @@ export default function Icons() {
             <ScrollingIcons />
             <IconsDescription />
             <IconsTutorial />
+            <DownloadButton />
             <IconPayment />
         </Container>
     );

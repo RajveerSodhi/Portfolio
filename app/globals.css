@@ -124,11 +124,11 @@
 }
 
 .forward {
-    animation: moveforward 32s linear infinite;
+    animation: moveforward 42s linear infinite;
 }
 
 .backward {
-    animation: movebackward 30s linear infinite;
+    animation: movebackward 40s linear infinite;
 }
 
 @keyframes moveforward {
@@ -167,12 +167,23 @@
     }
 }
 
-.icons-button {
-    /* padding: 0 5em; */
+.download {
     width: 100%;
-    background-color: rgb(47, 47, 47);
+    background-color: rgb(58, 58, 58);
     border-radius: 15px;
     font-size: 1.25em;
+    padding: 0.8em;
+    margin: 2rem 0;
+    cursor: pointer;
+}
+
+.download:hover {
+    background-color: rgb(38, 38, 38);
+}
+
+.download-button {
+    text-decoration: none;
+    color: #FFF;
 }
 
 ::selection {
