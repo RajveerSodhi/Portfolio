@@ -1,11 +1,11 @@
 import Link from "next/link";
 import { Container } from "react-bootstrap";
-import IconHeader from "../WebsiteHeaders/icons_header";
-import IconsDescription from "../WebsiteHeaders/icons_description";
-import IconsTutorial from "../WebsiteHeaders/icons_tutorial";
-import ScrollingIcons from "../WebsiteComponents/IconsComponents/scrollingIcons";
-import IconPayment from "../WebsiteComponents/IconsComponents/icons_payment";
+import IconHeader from "../WebsiteHeaders/IconsHeaders/icons_header";
+import IconsDescription from "../WebsiteHeaders/IconsHeaders/icons_description";
+import IconsTutorial from "../WebsiteHeaders/IconsHeaders/icons_tutorial";
 import PaymentSuccess from "../WebsiteComponents/PaymentForm/PaymentSuccess";
+import ScrollingIcons from "../WebsiteComponents/IconsComponents/scrolling_icons";
+import IconsPayment from "../WebsiteComponents/IconsComponents/icons_payment";
 
 export default function Icons() {
     return (
@@ -15,7 +15,7 @@ export default function Icons() {
             <IconsDescription />
             <IconsTutorial />
             <PaymentSuccess />
-            <IconPayment />
+            <IconsPayment />
         </Container>
     );
 }
