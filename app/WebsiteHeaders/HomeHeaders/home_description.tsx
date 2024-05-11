@@ -1,5 +1,5 @@
+import Description from "../../WebsiteComponents/HomeComponents/Description/description";
 import { Container } from "react-bootstrap";
-import Description from "../../WebsiteComponents/description";
 
 export default function HomeDescription() {
     return (
