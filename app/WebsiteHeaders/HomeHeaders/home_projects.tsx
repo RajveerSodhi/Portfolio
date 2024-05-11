@@ -1,7 +1,7 @@
 "use client";
 import { useState } from "react";
 import { Container } from "react-bootstrap";
-import Projects from "../../WebsiteComponents/Proj/projects";
+import Projects from "../../WebsiteComponents/HomeComponents/Proj/projects";
 import { MdKeyboardArrowDown } from "react-icons/md";
 import { MdKeyboardArrowRight } from "react-icons/md";
 

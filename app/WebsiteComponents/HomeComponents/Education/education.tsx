@@ -1,6 +1,6 @@
 import { Container, Row } from "react-bootstrap";
 import EducationComponent from "./education_component";
-import { education } from "../../../public/content/education_content";
+import { education } from "../../../../public/content/education_content";
 
 export default function Education() {
     return (

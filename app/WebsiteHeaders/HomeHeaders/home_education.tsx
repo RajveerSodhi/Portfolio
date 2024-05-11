@@ -1,7 +1,7 @@
 "use client";
 import { useState } from "react";
 import { Container } from "react-bootstrap";
-import Education from "../../WebsiteComponents/Education/education";
+import Education from "../../WebsiteComponents/HomeComponents/Education/education";
 import { MdKeyboardArrowDown } from "react-icons/md";
 import { MdKeyboardArrowRight } from "react-icons/md";
 

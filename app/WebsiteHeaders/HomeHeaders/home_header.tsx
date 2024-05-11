@@ -1,6 +1,6 @@
 import { Container, Col, Row } from "react-bootstrap";
-import Image from "../../WebsiteComponents/Title/title_image";
-import Title from "../../WebsiteComponents/Title/title";
+import Image from "../../WebsiteComponents/HomeComponents/Title/title_image";
+import Title from "../../WebsiteComponents/HomeComponents/Title/title";
 
 export default function HomeHeader() {
     return (

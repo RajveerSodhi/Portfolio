@@ -1,7 +1,7 @@
 "use client";
 import { Elements } from "@stripe/react-stripe-js";
 import { loadStripe } from "@stripe/stripe-js";
-import PaymentForm from "../PaymentForm/PaymentForm";
+import PaymentForm from "./PaymentForm/PaymentForm";
 import { Container } from "react-bootstrap";
 
 const stripePromise = loadStripe(

@@ -1,7 +1,7 @@
 "use client";
 import { useState } from "react";
 import { Container } from "react-bootstrap";
-import WorkEx from "../../WebsiteComponents/Workex/workex";
+import WorkEx from "../../WebsiteComponents/HomeComponents/Workex/workex";
 import { MdKeyboardArrowDown } from "react-icons/md";
 import { MdKeyboardArrowRight } from "react-icons/md";
 

@@ -1,6 +1,6 @@
 import { Container, Row } from "react-bootstrap";
 import WorkExComponent from "./workex_component";
-import { workex } from "../../../public/content/workex_content";
+import { workex } from "../../../../public/content/workex_content";
 
 export default function WorkEx() {
     return (

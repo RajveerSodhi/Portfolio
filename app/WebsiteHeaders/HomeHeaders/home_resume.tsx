@@ -1,7 +1,7 @@
 "use client";
 import { useState } from "react";
 import { Container } from "react-bootstrap";
-import Resume from "../../WebsiteComponents/resume";
+import Resume from "../../WebsiteComponents/HomeComponents/Resume/resume";
 import { MdKeyboardArrowDown } from "react-icons/md";
 import { MdKeyboardArrowRight } from "react-icons/md";
 

@@ -1,6 +1,6 @@
 import { Container, Row, Col, Card } from "react-bootstrap";
 import ResearchComponent from "./research_component";
-import { research } from "../../../public/content/research_content";
+import { research } from "../../../../public/content/research_content";
 
 export default function Research() {
     return (
