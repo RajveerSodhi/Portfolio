@@ -98,9 +98,9 @@
     border: 3px solid rgb(131, 131, 131);
 }
 
-/* .icons-container:hover * {
+.icons-container:hover * {
     animation-play-state: paused;
-} */
+}
 
 .scrolling-icon {
     width: 75px;
