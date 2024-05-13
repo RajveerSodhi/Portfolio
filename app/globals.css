@@ -183,3 +183,18 @@
 ::selection {
     background: rgba(255, 128, 128, 0.75);
 }
+
+.my-switch label,
+.my-switch input {
+    transition: transform 0.2s ease-in-out;
+
+}
+
+.my-switch:hover * {
+    cursor: pointer;
+    transform: scale(1.05);
+}
+
+.my-switch input:checked {
+    background-color: black;
+}
