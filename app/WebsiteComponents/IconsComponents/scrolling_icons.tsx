@@ -2,7 +2,7 @@ import { Container, Col } from "react-bootstrap";
 
 export default function ScrollingIcons() {
     return (
-        <Col className="icons-container">
+        <Col className="icons-container" style={{ marginBottom: "0px" }}>
             <Container className="scrolling-icons forward">
                 <img src="./icons/icons_light/whatsapp_light.jpg" alt="" className="scrolling-icon" />
                 <img src="./icons/icons_dark/email_dark.jpg" alt="" className="scrolling-icon" />
@@ -114,6 +114,6 @@ export default function ScrollingIcons() {
                 <img src="./icons/icons_dark/canvas_dark.jpg" alt="" className="scrolling-icon" />
                 <img src="./icons/icons_light/disney+_light.jpg" alt="" className="scrolling-icon" />
             </Container>
-        </Col>
+        </Col >
     );
 }

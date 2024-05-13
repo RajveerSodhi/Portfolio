@@ -187,7 +187,15 @@
 .my-switch label,
 .my-switch input {
     transition: transform 0.2s ease-in-out;
+}
 
+.my-switch label img {
+    -webkit-user-drag: none;
+    user-drag: none;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
 }
 
 .my-switch:hover * {
