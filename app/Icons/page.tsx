@@ -1,9 +1,9 @@
 import { Container } from "react-bootstrap";
 import IconHeader from "../WebsiteHeaders/IconsHeaders/icons_header";
 import IconsTutorial from "../WebsiteHeaders/IconsHeaders/icons_tutorial";
-import IconsPayment from "../WebsiteComponents/IconsComponents/icons_payment";
 import Section1 from "../WebsiteHeaders/IconsHeaders/IconsSection1";
 import Section2 from "../WebsiteHeaders/IconsHeaders/IconsSection2";
+import PaymentSection from "../WebsiteHeaders/IconsHeaders/paymentSection";
 
 export default function Icons() {
     return (
@@ -12,7 +12,7 @@ export default function Icons() {
             <Section1 />
             <Section2 />
             <IconsTutorial />
-            <IconsPayment />
+            <PaymentSection />
         </Container>
     );
 }
