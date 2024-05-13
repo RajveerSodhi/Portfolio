@@ -11,7 +11,7 @@ const stripePromise = loadStripe(
 export default function IconsPayment() {
     return (
         <Elements stripe={stripePromise}>
-            <Container>
+            <Container style={{ width: "100%" }}>
                 <PaymentForm />
             </Container>
         </Elements>
