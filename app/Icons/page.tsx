@@ -1,6 +1,6 @@
 import { Container } from "react-bootstrap";
 import IconHeader from "../WebsiteHeaders/IconsHeaders/icons_header";
-import IconsTutorial from "../WebsiteHeaders/IconsHeaders/icons_tutorial";
+import TutorialSection from "../WebsiteHeaders/IconsHeaders/tutorial_section";
 import Section1 from "../WebsiteHeaders/IconsHeaders/IconsSection1";
 import Section2 from "../WebsiteHeaders/IconsHeaders/IconsSection2";
 import PaymentSection from "../WebsiteHeaders/IconsHeaders/paymentSection";
@@ -11,7 +11,7 @@ export default function Icons() {
             <IconHeader />
             <Section1 />
             <Section2 />
-            <IconsTutorial />
+            <TutorialSection />
             <PaymentSection />
         </Container>
     );
