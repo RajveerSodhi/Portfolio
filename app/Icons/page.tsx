@@ -1,7 +1,18 @@
+import { Container } from "react-bootstrap";
+import IconHeader from "../WebsiteHeaders/IconsHeaders/icons_header";
+import TutorialSection from "../WebsiteHeaders/IconsHeaders/tutorial_section";
+import Section1 from "../WebsiteHeaders/IconsHeaders/IconsSection1";
+import Section2 from "../WebsiteHeaders/IconsHeaders/IconsSection2";
+import PaymentSection from "../WebsiteHeaders/IconsHeaders/paymentSection";
+
 export default function Icons() {
     return (
-        <>
-            <h1 className="text-center" style={{ marginTop: "8rem" }}>Custom iOS Icon Pack: Coming Soon!</h1>
-        </>
+        <Container className="text-center" style={{ marginTop: "8rem", maxWidth: "100%", padding: "0px" }}>
+            <IconHeader />
+            <Section1 />
+            <Section2 />
+            <TutorialSection />
+            <PaymentSection />
+        </Container>
     );
 }
