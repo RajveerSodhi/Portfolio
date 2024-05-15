@@ -1,4 +1,4 @@
-import IconsPayment from "@/app/WebsiteComponents/IconsComponents/icons_payment";
+import IconsPayment from "@/app/WebsiteComponents/IconsComponents/PaymentForm/icons_payment";
 import { Container, Row } from "react-bootstrap";
 
 export default function PaymentSection() {

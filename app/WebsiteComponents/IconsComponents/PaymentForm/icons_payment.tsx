@@ -2,8 +2,8 @@
 import { useState } from "react";
 import { Elements } from "@stripe/react-stripe-js";
 import { loadStripe } from "@stripe/stripe-js";
-import PaymentForm from "./PaymentForm/PaymentForm";
-import OrderSuccess from "./PaymentForm/OrderSuccess"; // Ensure correct path
+import PaymentForm from "./PaymentForm";
+import OrderSuccess from "./OrderSuccess"; // Ensure correct path
 import { Container, Button } from "react-bootstrap";
 
 const stripePromise = loadStripe(process.env.NEXT_PUBLIC_STRIPE_PUBLISHABLE_KEY!);

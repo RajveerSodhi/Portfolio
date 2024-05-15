@@ -29,7 +29,7 @@ const CheckoutForm: React.FC<CheckoutFormProps> = ({ stripe, elements, loading, 
         const result = await stripe.confirmPayment({
             elements,
             confirmParams: {
-                return_url: "https://rajveersodhi.com/icons/order-complete",
+                return_url: "https://rajveersodhi.com/icons/order_complete",
             },
         });
 
