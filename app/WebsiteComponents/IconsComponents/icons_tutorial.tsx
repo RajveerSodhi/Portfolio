@@ -11,7 +11,7 @@ export default function IconsTutorial() {
                 <li>Customize the name of the app (I like to leave it blank!)</li>
                 <li>Select Choose File for the app icon</li>
                 <li>Find the appropriate icon from the folder you downloaded and select it</li>
-                <li>Click Add, and that's it!</li>
+                <li>Click Add, and that&apos;s it!</li>
             </ul>
             <a href="https://youtu.be/AEGI3GRemDY?si=vYcjU7WiWEkIE8zW" target="_blank" rel="noopener noreferrer" className="lead" style={{ textDecoration: "none", color: "#000", backgroundColor: "#FFF", padding: "1rem", borderRadius: "15px" }}>Click here for a tutorial on YouTube!</a>
         </ Container>
