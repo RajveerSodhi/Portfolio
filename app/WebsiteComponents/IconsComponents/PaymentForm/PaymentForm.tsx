@@ -1,98 +1,104 @@
 "use client";
-import { CardElement, useElements, useStripe } from "@stripe/react-stripe-js";
+import { Elements, ElementsConsumer, PaymentElement } from "@stripe/react-stripe-js";
+import { loadStripe, Stripe, StripeElements } from "@stripe/stripe-js";
+import React, { useState, useEffect } from "react";
 import axios from "axios";
-import React, { useState } from "react";
-import PaymentSuccess from "./PaymentSuccess";
+import OrderSuccess from "./OrderSuccess";
+import { Container } from "react-bootstrap";
 
-export default function PaymentForm() {
-    const stripe = useStripe();
-    const elements = useElements();
-    const [loading, setLoading] = useState(false);
-    const [errorMessage, setErrorMessage] = useState<string | null>(null);
-    const [cardholderName, setCardholderName] = useState("");
-    const [donationAmount, setDonationAmount] = useState(1);
-    const [paymentSucceeded, setPaymentSucceeded] = useState(false);
+// Load the Stripe.js script
+const stripePromise = loadStripe(process.env.NEXT_PUBLIC_STRIPE_PUBLISHABLE_KEY!);
 
-    const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
-        e.preventDefault();
+interface CheckoutFormProps {
+    stripe: Stripe | null;
+    elements: StripeElements | null;
+    loading: boolean;
+    setLoading: React.Dispatch<React.SetStateAction<boolean>>;
+    setPaymentSucceeded: React.Dispatch<React.SetStateAction<boolean>>;
+}
+
+const CheckoutForm: React.FC<CheckoutFormProps> = ({ stripe, elements, loading, setLoading, setPaymentSucceeded }) => {
+    const handleSubmit = async (event: React.FormEvent<HTMLFormElement>) => {
+        event.preventDefault();
+
+        if (!stripe || !elements) {
+            return;
+        }
+
         setLoading(true);
-        setErrorMessage(null);
-        const cardElement = elements?.getElement(CardElement);
+        const result = await stripe.confirmPayment({
+            elements,
+            confirmParams: {
+                return_url: "https://rajveersodhi.com/icons/order-complete",
+            },
+        });
 
-        try {
-            if (!stripe || !cardElement) {
-                setLoading(false);
-                return;
-            }
-
-            // Ensure the donation amount is valid
-            if (donationAmount <= 0) {
-                setErrorMessage("Please enter a valid donation amount.");
-                setLoading(false);
-                return;
-            }
-
-            // Create payment intent on the server using the donation amount
-            const { data } = await axios.post("/api/create-payment-intent", {
-                data: { amount: donationAmount },
-            });
-            const clientSecret = data;
-
-            // Confirm payment, including cardholder name
-            const { error } = await stripe.confirmCardPayment(clientSecret, {
-                payment_method: {
-                    card: cardElement,
-                    billing_details: {
-                        name: cardholderName, // Include cardholder name
-                    },
-                },
-            });
-
-            if (error) {
-                setErrorMessage(error.message || "Payment failed");
-            } else {
-                // Payment succeeded, set the success state
-                setPaymentSucceeded(true);
-            }
-        } catch (error) {
-            console.error(error);
-            setErrorMessage("An unexpected error occurred. Please try again.");
-        } finally {
+        if (result.error) {
+            console.log(result.error.message);
             setLoading(false);
+        } else {
+            setPaymentSucceeded(true);
         }
     };
 
-    // If the payment has succeeded, render the custom component
-    if (paymentSucceeded) {
-        return <PaymentSuccess />;
-    }
-
     return (
         <form onSubmit={handleSubmit}>
-            <label>
-                Name:
-                <input
-                    type="text"
-                    value={cardholderName}
-                    onChange={(e) => setCardholderName(e.target.value)}
-                    required
-                />
-            </label>
-            <label>
-                Donation Amount (CAD):
-                <input
-                    type="number"
-                    value={donationAmount}
-                    onChange={(e) => setDonationAmount(Number(e.target.value))}
-                    min="1"
-                    required
-                />
-            </label>
-            <CardElement />
-            {errorMessage && <p style={{ color: "red" }}>{errorMessage}</p>}
-            <button type="submit" disabled={loading}>
+            <PaymentElement />
+            <button disabled={!stripe || loading} className="lead" style={{ backgroundColor: "#FFF", color: "#000", borderRadius: "15px", padding: "0.5rem 2rem", border: "none", marginTop: "1rem" }}>
                 {loading ? "Processing..." : "Submit"}
             </button>
         </form>
     );
+};
+
+interface InjectedCheckoutFormProps {
+    donationAmount: number;
 }
+
+const InjectedCheckoutForm: React.FC<InjectedCheckoutFormProps> = ({ donationAmount }) => {
+    const [loading, setLoading] = useState(false);
+    const [paymentSucceeded, setPaymentSucceeded] = useState(false);
+    const [clientSecret, setClientSecret] = useState<string | null>(null);
+
+    useEffect(() => {
+        const createPaymentIntent = async () => {
+            try {
+                const { data } = await axios.post('/api/create-payment-intent', { amount: donationAmount });
+                setClientSecret(data.clientSecret);
+            } catch (error) {
+                console.error('Failed to create payment intent:', error);
+            }
+        };
+
+        createPaymentIntent();
+    }, [donationAmount]);
+
+    if (paymentSucceeded) {
+        return <OrderSuccess />;
+    }
+
+    return (
+        clientSecret && (
+            <Elements stripe={stripePromise} options={{ clientSecret }}>
+                <ElementsConsumer>
+                    {({ stripe, elements }) => (
+                        <Container style={{ backgroundColor: "#E0E0E0", borderRadius: "20px", marginTop: "0.5rem", padding: "2rem" }}>
+                            <p className="lead">Amount: ${donationAmount.toFixed(2)}</p>
+                            <p className="lead">Enter your payment information:</p>
+                            <hr />
+                            <CheckoutForm
+                                stripe={stripe}
+                                elements={elements}
+                                loading={loading}
+                                setLoading={setLoading}
+                                setPaymentSucceeded={setPaymentSucceeded}
+                            />
+                        </Container>
+                    )}
+                </ElementsConsumer>
+            </Elements>
+        )
+    );
+};
+
+export default InjectedCheckoutForm;

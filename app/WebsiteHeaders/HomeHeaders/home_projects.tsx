@@ -14,7 +14,7 @@ export default function HomeProjects() {
 
     return (
         <Container style={{ marginBottom: "4rem" }}>
-            <h2 className="text-center display-4 home-header" onClick={toggleProjectsVisibility}>
+            <h2 className="text-center display-4 home-header" onClick={toggleProjectsVisibility} style={{ fontSize: "2.5rem" }}>
                 Projects {projectsVisible ? <MdKeyboardArrowDown /> : <MdKeyboardArrowRight />}
             </h2>
             {projectsVisible && <Projects />}

@@ -26,7 +26,7 @@ export default function RootLayout({
         <title>Rajveer Sodhi</title>
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <body className={inter.className}>
+      <body className={inter.className} style={{ overflowX: "hidden" }}>
         <InstallBootstrap />
         <Navbar />
         <main className="bg-slate-100">

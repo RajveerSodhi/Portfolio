@@ -14,7 +14,7 @@ export default function HomeEducation() {
 
     return (
         <Container style={{ marginBottom: "4rem" }}>
-            <h2 className="text-center display-4 home-header" onClick={toggleEducationVisibility}>
+            <h2 className="text-center display-4 home-header" onClick={toggleEducationVisibility} style={{ fontSize: "2.5rem" }}>
                 Education {educationVisible ? <MdKeyboardArrowDown /> : <MdKeyboardArrowRight />}
             </h2>
             {educationVisible && <Education />}

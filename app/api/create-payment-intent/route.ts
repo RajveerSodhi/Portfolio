@@ -1,30 +1,23 @@
-import { NextResponse, NextRequest } from "next/server";
-import Stripe from "stripe";
+import { NextRequest, NextResponse } from 'next/server';
+import Stripe from 'stripe';
 
 const stripe = new Stripe(process.env.STRIPE_SECRET_KEY!, {
+    apiVersion: '2024-04-10',
     typescript: true,
-    apiVersion: "2024-04-10",
 });
 
 export async function POST(req: NextRequest) {
-    const { data } = await req.json();
-    const { amount } = data;
+    const { amount } = await req.json();
 
     try {
-        // Validate that the amount is a positive number
-        if (!amount || amount <= 0) {
-            return new NextResponse("Invalid amount provided.", { status: 400 });
-        }
-
-        // Create a payment intent
+        // Create a PaymentIntent with the specified amount
         const paymentIntent = await stripe.paymentIntents.create({
-            amount: Math.floor(Number(amount) * 100), // Convert to cents
-            currency: "CAD",
+            amount: Math.round(Number(amount) * 100), // Amount is in cents
+            currency: 'CAD',
         });
 
-        return NextResponse.json(paymentIntent.client_secret, { status: 200 });
-    } catch (error: any) {
-        console.error(error);
-        return new NextResponse(error.message, { status: 400 });
+        return NextResponse.json({ clientSecret: paymentIntent.client_secret });
+    } catch (error) {
+        return NextResponse.json({ error: (error as Error).message }, { status: 400 });
     }
 }

@@ -21,7 +21,7 @@ export default function IPhone() {
     return (
         <div>
             <div>
-                <img src={imageSrc} alt="iphone_framed_screenshot iphone" style={{ width: "40%" }} />
+                <img src={imageSrc} alt="iphone_framed_screenshot" className="iphone" style={{ width: "40%" }} />
             </div>
             <div className="d-flex justify-content-center mt-3">
                 <div className="form-check form-switch d-flex align-items-center my-switch" style={{ padding: "0px" }}>

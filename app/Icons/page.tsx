@@ -7,7 +7,7 @@ import PaymentSection from "../WebsiteHeaders/IconsHeaders/paymentSection";
 
 export default function Icons() {
     return (
-        <Container className="text-center" style={{ marginTop: "8rem", maxWidth: "100%" }}>
+        <Container className="text-center" style={{ marginTop: "8rem", maxWidth: "100%", padding: "0px" }}>
             <IconHeader />
             <Section1 />
             <Section2 />

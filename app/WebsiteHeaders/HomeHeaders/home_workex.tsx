@@ -14,7 +14,7 @@ export default function HomeWorkEx() {
 
     return (
         <Container style={{ marginBottom: "4rem" }}>
-            <h2 className="text-center display-4 home-header" onClick={toggleWorkExVisibility}>
+            <h2 className="text-center display-4 home-header" onClick={toggleWorkExVisibility} style={{ fontSize: "2.5rem" }}>
                 Work Experience {workexVisible ? <MdKeyboardArrowDown /> : <MdKeyboardArrowRight />}
             </h2>
             {workexVisible && <WorkEx />}

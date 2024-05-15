@@ -14,7 +14,7 @@ export default function HomeSkills() {
 
     return (
         <Container style={{ marginBottom: "4rem" }}>
-            <h2 className="text-center display-4 home-header" onClick={toggleSkillsVisibility}>
+            <h2 className="text-center display-4 home-header" onClick={toggleSkillsVisibility} style={{ fontSize: "2.5rem" }}>
                 Skills {skillsVisible ? <MdKeyboardArrowDown /> : <MdKeyboardArrowRight />}
             </h2>
             {skillsVisible && <Skills />}

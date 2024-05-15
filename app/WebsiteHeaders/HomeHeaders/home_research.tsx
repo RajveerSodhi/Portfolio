@@ -14,7 +14,7 @@ export default function HomeResearch() {
 
     return (
         <Container style={{ marginBottom: "4rem" }}>
-            <h2 className="text-center display-4 home-header" onClick={toggleResearchVisibility}>
+            <h2 className="text-center display-4 home-header" onClick={toggleResearchVisibility} style={{ fontSize: "2.5rem" }}>
                 Research {researchVisible ? <MdKeyboardArrowDown /> : <MdKeyboardArrowRight />}
             </h2>
             {researchVisible && <Research />}
