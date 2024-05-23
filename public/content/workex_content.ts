@@ -1,12 +1,11 @@
 export const workex = [
     {
         position: "Software Developer Intern",
-        company: "Data Poem",
+        company: "Data POEM",
         location: "Santa Clara, California, USA (Remote)",
         date: "May 2024 - Present",
         description: [
-            "Coming Soon",
-            "Coming Soon"
+            "Build connector APIs to retrieve website analytics data from various sources for an ML modelling pipeline and store the information in AWS S3 data storage."
         ]
     },
     {
