@@ -5,7 +5,7 @@ export const workex = [
         location: "Santa Clara, California, USA (Remote)",
         date: "May 2024 - Present",
         description: [
-            "Build connector APIs to retrieve website analytics data from various sources for an ML modelling pipeline and store the information in AWS S3 data storage."
+            "Build connector APIs using FastAPI in Python for PostgreSQL to retrieve and transform website analytics data from various sources for an ML modelling pipeline.",
         ]
     },
     {
@@ -14,7 +14,7 @@ export const workex = [
         location: "Kelowna, BC",
         date: "Sep 2023 - Present",
         description: [
-            "Conducted a study in Human-Computer Interaction (HCI) with 18 participants to compare cutting-edge command selection techniques using head-mounted displays, such as Hand-Proximate User Interface (HPUI) and gaze-tracked input.",
+            "Conducted a study in Human-Computer Interaction (HCI) with 20 participants to compare cutting-edge command selection techniques using head-mounted displays, such as Hand-Proximate User Interface (HPUI) and gaze-tracked input.",
             "Explored the principles of In-Vehicle Infotainment Systems and built implementations of HPUI with C# and the Unity XR Toolkit.",
             "Investigated the usablity of unencumbered interaction techniques for head mounted displays while walking."
         ]
