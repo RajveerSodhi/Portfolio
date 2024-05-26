@@ -6,7 +6,7 @@ export default function Contact() {
     return (
         <Col className="mt-4 d-flex flex-column align-items-center text-center">
             <div>
-                <p className="mb-4">rajveersodhi03@gmail.com | +1 (778)583-6645</p>
+                <p className="mb-4">rajveersodhi03@gmail.com | Kelowna, BC</p>
             </div>
             <div className="d-flex flex-column flex-md-row justify-content-center">
                 <a href="mailto:rajveersodhi03@gmail.com" rel="noopener noreferrer" target="_blank" className="btn btn-primary mx-3 mb-2 contact-button email">
