@@ -1,5 +1,5 @@
 import { Row, Container } from "react-bootstrap";
-import Skill from "./Skill";
+import Skill from "./skill";
 import { skills } from "../../../../public/content/skills_content";
 
 export default function Skills() {
