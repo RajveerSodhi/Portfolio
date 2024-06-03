@@ -10,7 +10,14 @@ const nextConfig = {
                 headers: [
                     {
                         key: 'Content-Security-Policy',
-                        value: "default-src 'self'; script-src 'self' 'unsafe-inline' https://js.stripe.com; style-src 'self' 'unsafe-inline'; frame-src https://js.stripe.com; img-src 'self'; connect-src 'self' https://api.stripe.com",
+                        value: `
+                            default-src 'self';
+                            script-src 'self' 'unsafe-inline' 'unsafe-eval' https://js.stripe.com;
+                            style-src 'self' 'unsafe-inline';
+                            img-src 'self' data:;
+                            frame-src 'self' https://js.stripe.com http://localhost:3000;
+                            connect-src 'self' https://api.stripe.com;
+                        `.replace(/\s{2,}/g, ' ').trim()
                     },
                 ],
             },
