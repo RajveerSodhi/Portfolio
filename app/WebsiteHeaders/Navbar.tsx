@@ -9,7 +9,7 @@ export default function Navbar() {
     return (
         <nav className="navbar navbar-expand-lg navbar-dark bg-dark sticky-nav">
             <Link className="navbar-brand mx-2" href="/">
-                <img src="/portfolio_logo.svg" width="30" height="30" alt="Rajveer Sodhi Logo" />
+                <img src="/logo.svg" width="30" height="30" alt="Rajveer Sodhi Logo" />
             </Link>
             <button
                 className="navbar-toggler"
