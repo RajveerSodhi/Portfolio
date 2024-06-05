@@ -32,9 +32,9 @@ export default function RootLayout({
         <title>Rajveer Sodhi</title>
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <body style={{ overflowX: "hidden" }}>
+      <body className="bg-zinc-800" style={{ overflowX: "hidden" }}>
         <Navbar />
-        <main>
+        <main >
           {children}
         </main>
         <Footer />
