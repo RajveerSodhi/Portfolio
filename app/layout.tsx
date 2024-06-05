@@ -1,14 +1,20 @@
 import type { Metadata } from "next";
-import { Inter } from "next/font/google";
+import localFont from "next/font/local"
 
 import "./globals.css";
 import "bootstrap/dist/css/bootstrap.min.css";
-import InstallBootstrap from "./components/InstallBoostrap";
 import Navbar from "./WebsiteHeaders/Navbar";
 import Footer from "./WebsiteHeaders/Footer";
 import Head from "next/head";
 
-const inter = Inter({ subsets: ["latin"] });
+const point = localFont({
+  src: [
+    { path: "../public/fonts/point/PointRegular.otf", weight: "400" },
+    { path: "../public/fonts/point/PointBold.otf", weight: "700" },
+    { path: "../public/fonts/point/PointMediumItalic.otf", style: "italic" },
+  ],
+  variable: '--font-point',
+});
 
 export const metadata: Metadata = {
   title: "Rajveer Sodhi",
@@ -21,15 +27,14 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
+    <html lang="en" className={`${point.variable} font-sans`}>
       <Head>
         <title>Rajveer Sodhi</title>
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <body className={inter.className} style={{ overflowX: "hidden" }}>
-        <InstallBootstrap />
+      <body style={{ overflowX: "hidden" }}>
         <Navbar />
-        <main className="bg-slate-100">
+        <main>
           {children}
         </main>
         <Footer />
