@@ -1,32 +1,61 @@
 "use client";
 import Link from "next/link";
-import { useState } from "react";
+import Image from "next/image";
+// import { useState } from "react";
+import { usePathname } from "next/navigation";
 
 export default function Navbar() {
-    const [isNavCollapsed, setIsNavCollapsed] = useState(true);
-    const handleNavCollapse = () => setIsNavCollapsed(!isNavCollapsed);
+    const pathname = usePathname();
 
     return (
-        <nav className="navbar navbar-expand-lg navbar-dark bg-dark sticky-nav">
-            <Link className="navbar-brand mx-2" href="/">
-                <img src="/logo.svg" width="30" height="30" alt="Rajveer Sodhi Logo" />
-            </Link>
-            <button
-                className="navbar-toggler"
-                type="button"
-                onClick={handleNavCollapse}
-                aria-controls="navbarNavAltMarkup"
-                aria-expanded={isNavCollapsed ? "false" : "true"}
-                aria-label="Toggle navigation"
-            >
-                <span className="navbar-toggler-icon"></span>
-            </button>
-            <div className={`${isNavCollapsed ? 'collapse' : ''} navbar-collapse`} id="navbarNavAltMarkup">
-                <div className="navbar-nav justify-content-end w-100" style={{ "fontSize": "1.2rem" }}>
-                    <Link className="nav-item nav-link mx-2 active" href="/">Profile</Link>
-                    <Link className="nav-item nav-link mx-2 active" href="/Icons">Icon Pack</Link>
-                </div>
-            </div>
-        </nav >
+        <div className="flex justify-center mt-2">
+            <nav className="flex items-center px-4 py-2 border-1 border-solid rounded-full bg-[#252525] border-[#454545] shadow-md mt-4 font-light transform transition duration-300 hover:scale-105 ease-in-out">
+                <Link
+                    href="/Icons"
+                    className={`navLink ${pathname === "/Icons" ? "activeNavLink" : ""}`}
+                >
+                    Icons
+                </Link>
+                <Link
+                    href="#Research"
+                    className={`navLink ${pathname === "#Research" ? "activeNavLink" : ""}`}
+                >
+                    Research
+                </Link>
+                <Link
+                    href="#About"
+                    className={`navLink ${pathname === "#About" ? "activeNavLink" : ""}`}
+                >
+                    About
+                </Link>
+                <Link href="/">
+                    <Image
+                        className="inline-block mx-4 my-1"
+                        src="/logo.svg"
+                        width={24}
+                        height={24}
+                        alt="Rajveer Sodhi Logo"
+                    />
+                </Link>
+                <Link
+                    href="#Projects"
+                    className={`navLink ${pathname === "#Projects" ? "activeNavLink" : ""}`}
+                >
+                    Projects
+                </Link>
+                <Link
+                    href="#Work"
+                    className={`navLink ${pathname === "#Work" ? "activeNavLink" : ""}`}
+                >
+                    Work
+                </Link>
+                <Link
+                    href="#Contact"
+                    className={`navLink ${pathname === "#Contact" ? "activeNavLink" : ""}`}
+                >
+                    Contact
+                </Link>
+            </nav>
+        </div>
     );
 }
