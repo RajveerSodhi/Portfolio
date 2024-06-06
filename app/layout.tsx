@@ -33,7 +33,7 @@ export default function RootLayout({
                 <title>Rajveer Sodhi</title>
                 <link rel="icon" href="/favicon.ico" />
             </Head>
-            <body className={`bg-zinc-800 overflow-x-hidden ${point.className}`}>
+            <body className={`bg-myblack overflow-x-hidden ${point.className}`}>
                 <Navbar />
                 <main>{children}</main>
                 <Footer />
