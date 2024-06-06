@@ -1,14 +1,13 @@
-import { Container, Col, Row } from "react-bootstrap";
-import Image from "../../WebsiteComponents/HomeComponents/Title/title_image";
-import Title from "../../WebsiteComponents/HomeComponents/Title/title";
+import ImageCard from "../../WebsiteComponents/HomeComponents/Title/title_image_card";
+import TitleBottom from "../../WebsiteComponents/HomeComponents/Title/title_bottom";
+import TitleTop from "../../WebsiteComponents/HomeComponents/Title/title_top";
 
 export default function HomeHeader() {
     return (
-        <Container style={{ marginTop: "8rem", marginBottom: "4rem" }}>
-            <Row className="align-items-center text-center text-md-left">
-                <Image />
-                <Title />
-            </Row>
-        </Container>
+        <section className="flex justify-center flex-col items-center h-screen">
+            <TitleTop />
+            <ImageCard />
+            <TitleBottom />
+        </section>
     );
 }

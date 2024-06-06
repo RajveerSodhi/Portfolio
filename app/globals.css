@@ -10,6 +10,28 @@
     @apply text-zinc-800 bg-zinc-200 rounded-full px-4 py-1
 }
 
+.curved-text {
+    -webkit-animation: spin 12s linear infinite;
+    -moz-animation: spin 12s linear infinite;
+    animation: spin 12s linear infinite;
+    }
+    @-moz-keyframes spin {
+    100% {
+        -moz-transform: rotate(360deg);
+    }
+    }
+    @-webkit-keyframes spin {
+    100% {
+        -webkit-transform: rotate(360deg);
+    }
+    }
+    @keyframes spin {
+    100% {
+        -webkit-transform: rotate(360deg);
+        transform: rotate(360deg);
+    }
+    }
+
 .card-radius {
     border-radius: 20px !important;
 }
@@ -194,7 +216,7 @@
 }
 
 ::selection {
-    background: rgba(255, 128, 128, 0.75);
+    background: #526CF5;
 }
 
 .my-switch label,
