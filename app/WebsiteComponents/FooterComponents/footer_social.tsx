@@ -3,7 +3,7 @@ import { FaGithub, FaLinkedin } from "react-icons/fa";
 
 export default function Contact() {
     return (
-        <div className="flex flex-row">
+        <div className="flex flex-row items-center justify-center px-6 sm:py-2 md:py-0">
             <a
                 href="mailto:rajveersodhi03@gmail.com"
                 rel="noopener noreferrer"
