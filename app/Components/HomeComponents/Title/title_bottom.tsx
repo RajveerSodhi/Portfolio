@@ -3,7 +3,7 @@ import { ReactTyped } from "react-typed";
 
 export default function TitleBottom() {
     return (
-        <div className="text-mywhite flex justify-center flex-col items-center">
+        <div className="flex justify-center flex-col items-center">
             <h2 className="mt-4 text-[2.75rem]">
                 <ReactTyped
                     strings={["Full Stack Developer", "HCI Researcher", "Mobile App Developer"]}

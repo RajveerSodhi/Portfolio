@@ -1,4 +1,4 @@
-import ScrollingIcons from "@/app/WebsiteComponents/IconsComponents/scrolling_icons";
+import ScrollingIcons from "@/app/Components/IconsComponents/scrolling_icons";
 import { Container, Row, Col } from "react-bootstrap";
 import IconsDescription from "./icons_description";
 

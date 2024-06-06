@@ -3,8 +3,8 @@ import localFont from "next/font/local";
 
 import "./globals.css";
 import "bootstrap/dist/css/bootstrap.min.css";
-import Navbar from "./WebsiteHeaders/Navbar";
-import Footer from "./WebsiteHeaders/Footer";
+import Navbar from "./Components/NavbarComponents/navbar";
+import Footer from "./Components/FooterComponents/footer";
 import Head from "next/head";
 
 const point = localFont({

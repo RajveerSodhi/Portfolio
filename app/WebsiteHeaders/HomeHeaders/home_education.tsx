@@ -1,7 +1,7 @@
 "use client";
 import { useState } from "react";
 import { Container } from "react-bootstrap";
-import Education from "../../WebsiteComponents/HomeComponents/Education/education";
+import Education from "../../Components/HomeComponents/Education/education";
 import { MdKeyboardArrowDown } from "react-icons/md";
 import { MdKeyboardArrowRight } from "react-icons/md";
 
@@ -14,7 +14,11 @@ export default function HomeEducation() {
 
     return (
         <Container style={{ marginBottom: "4rem" }}>
-            <h2 className="text-center display-4 home-header" onClick={toggleEducationVisibility} style={{ fontSize: "2.5rem" }}>
+            <h2
+                className="text-center display-4 home-header"
+                onClick={toggleEducationVisibility}
+                style={{ fontSize: "2.5rem" }}
+            >
                 Education {educationVisible ? <MdKeyboardArrowDown /> : <MdKeyboardArrowRight />}
             </h2>
             {educationVisible && <Education />}

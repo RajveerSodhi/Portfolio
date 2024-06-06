@@ -1,7 +1,7 @@
 "use client";
 import { useState } from "react";
 import { Container } from "react-bootstrap";
-import Projects from "../../WebsiteComponents/HomeComponents/Proj/projects";
+import Projects from "../../Components/HomeComponents/Proj/projects";
 import { MdKeyboardArrowDown } from "react-icons/md";
 import { MdKeyboardArrowRight } from "react-icons/md";
 
@@ -14,7 +14,11 @@ export default function HomeProjects() {
 
     return (
         <Container style={{ marginBottom: "4rem" }}>
-            <h2 className="text-center display-4 home-header" onClick={toggleProjectsVisibility} style={{ fontSize: "2.5rem" }}>
+            <h2
+                className="text-center display-4 home-header"
+                onClick={toggleProjectsVisibility}
+                style={{ fontSize: "2.5rem" }}
+            >
                 Projects {projectsVisible ? <MdKeyboardArrowDown /> : <MdKeyboardArrowRight />}
             </h2>
             {projectsVisible && <Projects />}
