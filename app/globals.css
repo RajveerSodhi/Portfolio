@@ -2,6 +2,10 @@
 @tailwind components;
 @tailwind utilities;
 
+::selection {
+    background: #526CF5;
+}
+
 .navLink {
     @apply text-zinc-50 no-underline font-sans text-lg mx-4
 }
@@ -213,10 +217,6 @@
 .download-button {
     text-decoration: none;
     color: #FFF;
-}
-
-::selection {
-    background: #526CF5;
 }
 
 .my-switch label,

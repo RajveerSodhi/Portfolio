@@ -17,13 +17,13 @@ export default function ImageCard() {
     }
 
     return (
-        <Tilt trackOnWindow={!isFlipped} tiltReverse={true} tiltMaxAngleX={8} tiltMaxAngleY={8}>
-            <div onMouseOver={flipToBack} onMouseLeave={flipToFront} className="my-4">
+        <div onMouseOver={flipToBack} onMouseLeave={flipToFront} className="my-4">
+            <Tilt trackOnWindow={!isFlipped} tiltReverse={true} tiltMaxAngleX={8} tiltMaxAngleY={8}>
                 <ReactCardFlip isFlipped={isFlipped} flipDirection="horizontal">
                     <ImageFrontCard />
                     <ImageBackCard />
                 </ReactCardFlip>
-            </div>
-        </Tilt>
+            </Tilt>
+        </div>
     );
 }

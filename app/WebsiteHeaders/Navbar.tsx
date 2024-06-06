@@ -8,8 +8,8 @@ export default function Navbar() {
     const pathname = usePathname();
 
     return (
-        <div className="flex justify-center mt-2">
-            <nav className="flex items-center px-4 py-2 border-1 border-solid rounded-full bg-[#252525] border-[#454545] shadow-md mt-4 font-light transform transition duration-300 hover:scale-105 ease-in-out">
+        <div className="flex justify-center fixed top-1 left-0 right-0 z-50">
+            <nav className="flex items-center px-4 py-2 border-1 border-solid rounded-full bg-[#252525] border-[#454545] shadow-lg mt-4 font-light transform transition duration-300 hover:scale-105 ease-in-out">
                 <Link
                     href="/Icons"
                     className={`navLink ${pathname === "/Icons" ? "activeNavLink" : ""}`}
