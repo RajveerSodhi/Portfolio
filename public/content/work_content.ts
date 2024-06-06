@@ -1,4 +1,4 @@
-export const workex = [
+export const work = [
     {
         position: "Software Developer Intern",
         company: "Data POEM",
