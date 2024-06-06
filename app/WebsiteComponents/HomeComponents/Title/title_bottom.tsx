@@ -13,7 +13,7 @@ export default function TitleBottom() {
                 />
             </h2>
 
-            <p className="text-center w-[65%] mt-[4rem] text-xl leading-loose">
+            <p className="text-center w-[75%] lg:w-[60%] mt-[4rem] text-xl leading-loose">
                 I am a final-year Computer Science Honours student at the University of British
                 Columbia. I am interested in Human-Computer Interaction, Extended Reality, and
                 Artificial Intelligence.
