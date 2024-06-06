@@ -18,7 +18,17 @@ export default function ImageCard() {
 
     return (
         <div onMouseOver={flipToBack} onMouseLeave={flipToFront} className="my-4">
-            <Tilt trackOnWindow={!isFlipped} tiltReverse={true} tiltMaxAngleX={8} tiltMaxAngleY={8}>
+            <Tilt
+                trackOnWindow={!isFlipped}
+                tiltReverse={true}
+                tiltMaxAngleX={8}
+                tiltMaxAngleY={8}
+                gyroscope={true}
+                glareEnable={true}
+                glareReverse={true}
+                glareMaxOpacity={0.2}
+                glareBorderRadius="2.8rem"
+            >
                 <ReactCardFlip isFlipped={isFlipped} flipDirection="horizontal">
                     <ImageFrontCard />
                     <ImageBackCard />
