@@ -39,9 +39,9 @@ export default function WorkComponent(props: {
                 >
                     <div className="px-6 pt-10 pb-3 bg-[#e7e7e7] dark:bg-[#454545] rounded-b-3xl">
                         {description.map((desc, index) => (
-                            <p key={index} className="mb-3">
-                                {`• ${desc}`}
-                            </p>
+                            <li key={index} className="mb-3">
+                                {desc}
+                            </li>
                         ))}
                         <div className="text-zinc-500 dark:text-zinc-400 flex justify-between mt-4 mb-2">
                             <span>{location}</span>
