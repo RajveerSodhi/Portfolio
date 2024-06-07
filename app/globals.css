@@ -32,6 +32,10 @@
     @apply mx-1 p-2 text-myblack dark:text-mywhite rounded-full w-auto h-auto aspect-square max-w-8 max-h-8 bg-zinc-300 dark:bg-zinc-600 hover:scale-90 transition-transform duration-300 ease-in-out
 }
 
+.szh-accordion__item-content {
+    transition: height 0.25s cubic-bezier(0, 0, 0, 1);
+}
+
 .curved-text {
     -webkit-animation: spin 12s linear infinite;
     -moz-animation: spin 12s linear infinite;
