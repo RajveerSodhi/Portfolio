@@ -21,23 +21,23 @@ export default function PhoneNavbar() {
                     <Link href="/" className="py-1">
                         <LogoButton />
                     </Link>
-                    <Link href="#About" className="navLink py-1">
-                        About
-                    </Link>
-                    <Link href="#Contact" className="navLink py-1">
-                        Contact
-                    </Link>
-                    <Link href="/Icons" className="navLink py-1">
-                        Icons
-                    </Link>
-                    <Link href="#Research" className="navLink py-1">
-                        Research
+                    <Link href="#Work" className="navLink py-1">
+                        Work
                     </Link>
                     <Link href="#Projects" className="navLink py-1">
                         Projects
                     </Link>
-                    <Link href="#Work" className="navLink py-1">
-                        Work
+                    <Link href="#Research" className="navLink py-1">
+                        Research
+                    </Link>
+                    <Link href="#About" className="navLink py-1">
+                        About
+                    </Link>
+                    <Link href="/Icons" className="navLink py-1">
+                        Icons
+                    </Link>
+                    <Link href="#Contact" className="navLink py-1">
+                        Contact
                     </Link>
                 </span>
                 <span className="absolute top-0 right-0 p-4">
