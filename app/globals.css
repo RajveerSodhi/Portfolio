@@ -3,13 +3,11 @@
 @tailwind utilities;
 
 ::selection {
-    background: #526CF5;
+    @apply bg-[#E8853E] dark:bg-[#526CF5];
 }
 
 .blurry {
-    background-color: rgba(39, 39, 42, 0.5);
-    backdrop-filter: blur(20px);
-    -webkit-backdrop-filter: blur(20px);
+    @apply backdrop-blur-xl bg-opacity-50
 }
 
 .blurry-nav-edge {
@@ -23,15 +21,15 @@
 }
 
 .navLink {
-    @apply text-mywhite no-underline font-sans text-lg mx-4 hover:scale-90 transition-transform duration-300 ease-in-out
+    @apply text-myblack dark:text-mywhite no-underline font-sans text-lg mx-4 hover:scale-90 transition-transform duration-300 ease-in-out
 }
 
 .activeNavLink {
-    @apply text-myblack bg-zinc-200 rounded-full px-4 py-1
+    @apply text-mywhite dark:text-myblack bg-zinc-600 dark:bg-zinc-200 rounded-full px-4 py-1
 }
 
 .footer-social {
-    @apply mx-1 p-2 text-mywhite rounded-full w-auto h-auto aspect-square max-w-8 max-h-8 bg-zinc-600 hover:scale-90 transition-transform duration-300 ease-in-out
+    @apply mx-1 p-2 text-myblack dark:text-mywhite rounded-full w-auto h-auto aspect-square max-w-8 max-h-8 bg-zinc-300 dark:bg-zinc-600 hover:scale-90 transition-transform duration-300 ease-in-out
 }
 
 .curved-text {
@@ -57,7 +55,7 @@
     }
 
 section {
-    @apply flex justify-center flex-col items-center text-mywhite
+    @apply flex justify-center flex-col items-center text-myblack dark:text-mywhite
 }
 
 /* Old Styles */

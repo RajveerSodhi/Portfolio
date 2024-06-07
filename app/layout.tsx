@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import localFont from "next/font/local";
-
+import { Providers } from "./providers";
 import "./globals.css";
 import "bootstrap/dist/css/bootstrap.min.css";
 import Navbar from "./Components/NavbarComponents/navbar";
@@ -28,15 +28,17 @@ export default function RootLayout({
     children: React.ReactNode;
 }>) {
     return (
-        <html lang="en">
+        <html lang="en" suppressHydrationWarning>
             <Head>
                 <title>Rajveer Sodhi</title>
                 <link rel="icon" href="/favicon.ico" />
             </Head>
-            <body className={`bg-myblack overflow-x-hidden ${point.className}`}>
-                <Navbar />
-                <main>{children}</main>
-                <Footer />
+            <body className={`bg-mywhite dark:bg-myblack overflow-x-hidden ${point.className}`}>
+                <Providers>
+                    <Navbar />
+                    <main>{children}</main>
+                    <Footer />
+                </Providers>
             </body>
         </html>
     );
