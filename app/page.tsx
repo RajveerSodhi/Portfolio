@@ -1,9 +1,9 @@
-import Research from "./WebsiteHeaders/HomeHeaders/home_research";
-import Skills from "./WebsiteHeaders/HomeHeaders/home_skills";
+import Research from "./Components/HomeComponents/Research/research";
 import Header from "./Components/HomeComponents/Title/title";
-import Resume from "./WebsiteHeaders/HomeHeaders/home_resume";
 import Work from "./Components/HomeComponents/Work/work";
 import Projects from "./Components/HomeComponents/Proj/projects";
+import About from "./Components/HomeComponents/About/about";
+import Contact from "./Components/HomeComponents/Contact/contact";
 
 export default function Home() {
     return (
@@ -12,8 +12,8 @@ export default function Home() {
             <Work />
             <Projects />
             <Research />
-            {/* <Skills /> */}
-            {/* <Resume /> */}
+            <About />
+            <Contact />
         </>
     );
 }
