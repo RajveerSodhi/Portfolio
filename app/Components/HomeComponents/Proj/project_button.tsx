@@ -22,7 +22,7 @@ export default function ProjectButton(props: { link: string }) {
                         : "max-w-0 opacity-0 mx-0 invisible"
                 }`}
             >
-                View on GitHub
+                View
             </span>
         </a>
     );
