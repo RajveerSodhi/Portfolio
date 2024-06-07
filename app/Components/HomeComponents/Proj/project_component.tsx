@@ -23,7 +23,7 @@ export default function ProjectComponent(props: {
             <h2 className="mb-2">{title}</h2>
             <h5 className="text-center mb-2 text-myblack/85 dark:text-mywhite/85">{subtitle}</h5>
             <h6 className="text-myblack/75 dark:text-mywhite/75">{tech}</h6>
-            <div className="text-myblack dark:text-mywhite my-2 text-left text-lg">
+            <div className="text-myblack dark:text-mywhite mt-3 mb-1 text-left text-lg">
                 {description.map((item, index) => (
                     <li className="mb-3">{item}</li>
                 ))}

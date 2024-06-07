@@ -8,7 +8,7 @@ export default function Work() {
         <section>
             <h1>Work Experience</h1>
             <div className="mx-auto my-4 w-[60rem] flex items-center justify-center">
-                <Accordion transition transitionTimeout={250}>
+                <Accordion transition transitionTimeout={500}>
                     {work.map((item, index) => (
                         <WorkComponent key={index} {...item} />
                     ))}
