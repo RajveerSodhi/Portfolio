@@ -1,6 +1,6 @@
 import Research from "./WebsiteHeaders/HomeHeaders/home_research";
 import Skills from "./WebsiteHeaders/HomeHeaders/home_skills";
-import Header from "./WebsiteHeaders/HomeHeaders/home_header";
+import Header from "./Components/HomeComponents/Title/title";
 import Resume from "./WebsiteHeaders/HomeHeaders/home_resume";
 import Education from "./WebsiteHeaders/HomeHeaders/home_education";
 import Work from "./WebsiteHeaders/HomeHeaders/home_work";
