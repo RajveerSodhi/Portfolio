@@ -12,7 +12,7 @@ export default function PhoneNavbar() {
 
     return (
         <div id="collapsed-navbar" className="md:hidden">
-            <nav className="flex fixed top-0 left-0 right-0 z-50 blurry blurry-nav-edge pt-4 pb-[5rem] px-2">
+            <nav className="flex fixed top-0 left-0 right-0 z-50 blurry blurry-nav-edge pt-4 pb-[5rem] px-2 select-none">
                 <span
                     className={`flex-col lg:flex-row items-left md:min-w-60 ${
                         isCollapsed ? "hidden" : "flex"

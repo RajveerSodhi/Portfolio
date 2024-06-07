@@ -3,7 +3,7 @@
 @tailwind utilities;
 
 ::selection {
-    @apply bg-[#E8853E] dark:bg-[#526CF5];
+    @apply dark:bg-[#e8853e99] bg-[#526df599];
 }
 
 .blurry {

@@ -7,15 +7,15 @@ import { useTheme } from "next-themes";
 export default function BackCard() {
     const theme = useTheme();
 
-    const [logoSrc, setLogoSrc] = useState("/logo.svg");
+    const [logoSrc, setLogoSrc] = useState("/images/logo/light.svg");
     const [textColor, setTextColor] = useState("#000000");
 
     useEffect(() => {
         if (theme.resolvedTheme === "dark") {
-            setLogoSrc("/logo_dark.svg");
+            setLogoSrc("/images/logo/dark.svg");
             setTextColor("#000000");
         } else {
-            setLogoSrc("/logo.svg");
+            setLogoSrc("/images/logo/light.svg");
             setTextColor("#FFFFFF");
         }
     }, [theme.resolvedTheme]);
