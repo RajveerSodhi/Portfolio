@@ -2,18 +2,16 @@ import Research from "./WebsiteHeaders/HomeHeaders/home_research";
 import Skills from "./WebsiteHeaders/HomeHeaders/home_skills";
 import Header from "./Components/HomeComponents/Title/title";
 import Resume from "./WebsiteHeaders/HomeHeaders/home_resume";
-import Education from "./WebsiteHeaders/HomeHeaders/home_education";
-import Work from "./WebsiteHeaders/HomeHeaders/home_work";
-import Projects from "./WebsiteHeaders/HomeHeaders/home_projects";
+import Work from "./Components/HomeComponents/Work/work";
+import Projects from "./Components/HomeComponents/Proj/projects";
 
 export default function Home() {
     return (
         <>
             <Header />
-            {/* <Education /> */}
             <Work />
-            {/* <Projects /> */}
-            {/* <Research /> */}
+            <Projects />
+            <Research />
             {/* <Skills /> */}
             {/* <Resume /> */}
         </>
