@@ -33,7 +33,9 @@ export default function RootLayout({
                 <title>Rajveer Sodhi</title>
                 <link rel="icon" href="/favicon.ico" />
             </Head>
-            <body className={`bg-mywhite dark:bg-myblack overflow-x-hidden ${point.className}`}>
+            <body
+                className={`bg-mywhite dark:bg-myblack overflow-x-hidden transition-color duration-500 ease-in-out ${point.className}`}
+            >
                 <Providers>
                     <Navbar />
                     <main>{children}</main>
