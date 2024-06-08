@@ -31,7 +31,7 @@ export default function ProjectComponent(props: {
                 <Lightbox
                     open={openImage}
                     close={() => setOpenImage(false)}
-                    slides={[{ src: `/images/project_photos/${link}.png` }]}
+                    slides={[{ src: `/images/project_photos/${link}-full.png` }]}
                 />
                 <h2 className="mb-2">{title}</h2>
                 <h5 className="text-center mb-2 text-myblack/85 dark:text-mywhite/85">
