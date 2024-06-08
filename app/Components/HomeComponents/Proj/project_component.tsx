@@ -21,7 +21,7 @@ export default function ProjectComponent(props: {
         <Tilt tiltReverse={false} tiltMaxAngleX={1} tiltMaxAngleY={1}>
             <div className="p-4 flex flex-col text-center items-center shadow-lg bg-[#fefefe] dark:bg-[#252525] border-1 border-solid border-[#e7e7e7] dark:border-[#454545] text-myblack dark:text-mywhite rounded-3xl w-[30rem] m-3 hover:scale-[1.01] duration-500 transition-transform ease-in-out">
                 <Image
-                    src={`/images/project_photos/${link}.png`}
+                    src={`/images/project_photos/thumbnail/${link}.png`}
                     alt={`Project Image - ${title}`}
                     width={400}
                     height={400}
@@ -31,7 +31,7 @@ export default function ProjectComponent(props: {
                 <Lightbox
                     open={openImage}
                     close={() => setOpenImage(false)}
-                    slides={[{ src: `/images/project_photos/${link}-full.png` }]}
+                    slides={[{ src: `/images/project_photos/lightbox/${link}.png` }]}
                 />
                 <h2 className="mb-2">{title}</h2>
                 <h5 className="text-center mb-2 text-myblack/85 dark:text-mywhite/85">
