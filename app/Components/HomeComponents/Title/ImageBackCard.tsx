@@ -36,8 +36,8 @@ export default function BackCard() {
                 height={300}
                 cx={150}
                 cy={150}
-                rx={70}
-                ry={70}
+                rx={69}
+                ry={69}
                 reversed={true}
                 textProps={{ style: { fontSize: "23", color: "#123ABC" } }}
                 textPathProps={{ fill: textColor }}
