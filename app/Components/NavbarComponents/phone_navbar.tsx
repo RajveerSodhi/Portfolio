@@ -48,7 +48,7 @@ export default function PhoneNavbar() {
                         {isCollapsed ? <RiMenu4Fill /> : <RiCloseFill />}
                     </button>
                     <span
-                        className={`text-3xl text-myblack/70 hover:text-myblack dark:text-mywhite/70 dark:hover:text-mywhite transition-colors duration-300 ease-in-out pt-2 ${
+                        className={`text-3xl text-myblack/70 hover:text-myblack dark:text-mywhite/70 dark:hover:text-mywhite transition-colors duration-500 ease-in-out pt-2 ${
                             isCollapsed ? "hidden" : ""
                         }`}
                     >

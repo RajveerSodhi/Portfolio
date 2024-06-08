@@ -15,11 +15,11 @@ export default function WorkComponent(props: {
 
     return (
         <Tilt tiltReverse={false} tiltMaxAngleX={1} tiltMaxAngleY={1}>
-            <div className="hover:scale-[0.99] transition-transform duration-500 ease-in-out">
+            <div className="hover:scale-[0.99] transition-transform duration-500 ease-in-out shadow-lg">
                 <AccordionItem
                     header={
                         <div className="flex items-center p-4 text-myblack dark:text-mywhite rounded-3xl bg-[#fefefe] dark:bg-[#252525] w-full min-w-[60rem] mb-[-1rem] mt-[2.5rem] border-1 border-solid border-[#e7e7e7] dark:border-[#454545] shadow-md">
-                            <div className="bg-mywhite w-auto h-auto min-w-[90px] min-h-[90px] aspect-square p-1 rounded-full flex items-center justify-center shadow-md hover:scale-105 transition-transform ease-in-out duration-300">
+                            <div className="bg-mywhite w-auto h-auto min-w-[90px] min-h-[90px] aspect-square p-1 rounded-full flex items-center justify-center shadow-md hover:scale-105 transition-transform ease-in-out duration-500">
                                 <Image
                                     src={`/images/work_photos/${img}.png`}
                                     alt={company}
