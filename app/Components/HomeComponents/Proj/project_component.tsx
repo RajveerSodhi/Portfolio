@@ -2,10 +2,9 @@
 import ProjectButton from "./project_button";
 import Image from "next/image";
 import Tilt from "react-parallax-tilt";
-import Lightbox from "yet-another-react-lightbox";
-import "yet-another-react-lightbox/styles.css";
 import { Accordion, AccordionItem } from "@szhsin/react-accordion";
-import { useState } from "react";
+import { useState, useRef } from "react";
+import Lightbox from "./lightbox";
 
 export default function ProjectComponent(props: {
     title: string;
@@ -16,6 +15,7 @@ export default function ProjectComponent(props: {
 }) {
     const { title, subtitle, link, tech, description } = props;
     const [openImage, setOpenImage] = useState(false);
+    const zoomRef = useRef(null);
 
     return (
         <Tilt tiltReverse={false} tiltMaxAngleX={1} tiltMaxAngleY={1}>
@@ -26,13 +26,9 @@ export default function ProjectComponent(props: {
                     width={400}
                     height={400}
                     onClick={() => setOpenImage(true)}
-                    className="mb-4 select-none min-w-full aspect-auto shadow-md rounded-t-2xl rounded-b-md object-cover cursor-pointer hover:scale-[1.01] duration-500 transition-transform ease-in-out"
+                    className="mb-4 select-none min-w-full aspect-auto shadow-lg rounded-t-2xl rounded-b-md object-cover cursor-pointer hover:scale-[1.01] duration-500 transition-transform ease-in-out"
                 />
-                <Lightbox
-                    open={openImage}
-                    close={() => setOpenImage(false)}
-                    slides={[{ src: `/images/project_photos/lightbox/${link}.png` }]}
-                />
+                <Lightbox openImage={openImage} setOpenImage={setOpenImage} link={link} />
                 <h2 className="mb-2">{title}</h2>
                 <h5 className="text-center mb-2 text-myblack/85 dark:text-mywhite/85">
                     {subtitle}
