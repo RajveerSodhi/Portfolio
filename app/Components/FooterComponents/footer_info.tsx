@@ -10,7 +10,7 @@ export default function FooterInfo() {
             </span>
             <span className="mx-2 hidden xl:inline-block w-[2px] h-[60%] bg-[#777777]"></span>
             <span className="hover:text-zinc-700 dark:hover:text-zinc-300 py-1 xl:py-0 transition-colors duration-500 ease-in-out">
-                Last Updated: June 6, 2024
+                Last Updated: June 8, 2024
             </span>
         </span>
     );
