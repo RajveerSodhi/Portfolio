@@ -38,7 +38,7 @@ export default function ProjectComponent(props: {
                                     width={400}
                                     height={400}
                                     onClick={() => setOpenImage(true)}
-                                    className="mb-4 select-none min-w-full aspect-auto shadow-md hover:shadow-xl rounded-t-2xl rounded-b-md object-cover cursor-pointer hover:scale-[1.01] duration-500 transition-all ease-in-out"
+                                    className="mb-4 select-none min-w-full aspect-auto shadow-md hover:shadow-xl rounded-t-2xl rounded-b-md object-cover hover:scale-[1.01] duration-500 transition-all ease-in-out"
                                 />
                             </Tilt>
                             <Lightbox
