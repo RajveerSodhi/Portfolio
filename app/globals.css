@@ -69,7 +69,13 @@
     }
 
 section {
-    @apply flex justify-center flex-col items-center text-myblack dark:text-mywhite
+    @apply flex justify-center flex-col items-center text-myblack dark:text-mywhite mx-4
+}
+
+.szh-accordion__item-btn,
+.szh-accordion__item-heading {
+    width: auto;
+    min-width: 100%;
 }
 
 /* MY CURSOR  */
