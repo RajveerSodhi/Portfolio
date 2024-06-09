@@ -6,6 +6,7 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import Navbar from "./Components/NavbarComponents/navbar";
 import Footer from "./Components/FooterComponents/footer";
 import Head from "next/head";
+import MyCursor from "./Components/my-cursor";
 
 const point = localFont({
     src: [
@@ -36,6 +37,7 @@ export default function RootLayout({
             <body
                 className={`bg-mywhite dark:bg-myblack overflow-x-hidden transition-color duration-500 ease-in-out ${point.className}`}
             >
+                <MyCursor />
                 <Providers>
                     <Navbar />
                     <main>{children}</main>
