@@ -2,6 +2,7 @@ export const work = [
     {
         position: "Software Developer Intern",
         company: "Data POEM",
+        tld: "com",
         location: "Santa Clara, California, USA (Remote)",
         date: "May 2024 - Present",
         img: "datapoem",
@@ -12,6 +13,7 @@ export const work = [
     {
         position: "Undergraduate Researcher",
         company: "University of British Columbia",
+        tld: "ca",
         location: "Kelowna, BC",
         date: "Sep 2023 - Present",
         img: "ubc",
@@ -24,6 +26,7 @@ export const work = [
     {
         position: "Website Administrator",
         company: "Niteo Africa",
+        tld: "org",
         location: "Kelowna, BC",
         date: "Sep 2023 - Present",
         img: "niteo",
@@ -35,6 +38,7 @@ export const work = [
     {
         position: "Software Developer Intern",
         company: "University of British Columbia",
+        tld: "ca",
         location: "Kelowna, BC",
         date: "Sep 2023 - Dec 2023",
         img: "ubc",
