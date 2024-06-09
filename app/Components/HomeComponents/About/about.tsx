@@ -1,5 +1,4 @@
 import Description from "./description";
-import Resume from "./resume";
 import Skills from "./skills";
 
 export default function About() {
@@ -8,7 +7,6 @@ export default function About() {
             <h1 className="title">About Me</h1>
             <Description />
             <Skills />
-            <Resume />
         </section>
     );
 }

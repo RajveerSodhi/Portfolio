@@ -4,7 +4,7 @@ import FooterSocial from "./footer_social";
 
 export default function Footer() {
     return (
-        <div className="p-3 pt-4 mt-4 text-[#777777] d-flex justify-content-between flex-col md:flex-row blurry blurry-footer-edge">
+        <div className="p-3 pt-4 mt-20 text-[#777777] d-flex justify-content-between flex-col md:flex-row blurry blurry-footer-edge">
             <FooterInfo />
             <FooterSocial />
             <FooterNavbar />
