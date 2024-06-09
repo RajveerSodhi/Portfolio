@@ -10,7 +10,7 @@ export default function Projects() {
             <Accordion transition transitionTimeout={500}>
                 <div className="grid grid-flow-row grid-cols-1 md:grid-cols-2 gap-4 mx-4">
                     {projects.map((project, index) => (
-                        <span className="md:item">
+                        <span className="project-item">
                             <ProjectComponent key={index} {...project} />
                         </span>
                     ))}
