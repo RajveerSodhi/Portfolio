@@ -42,7 +42,8 @@ export const projects = [
         ]
     },
     {
-        title: "TransitMate: Ride Sharing App Prototype",
+        title: "TransitMate",
+        subtitle: "Ride Sharing App Prototype",
         link: "TransitMate",
         tech: "Java, XML",
         description: [

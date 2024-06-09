@@ -14,11 +14,12 @@ export default function WorkComponent(props: {
     const { company, position, date, img, location, description } = props;
 
     return (
-        <div className="hover:scale-[0.99] transition-transform duration-500 ease-in-out mt-[2.5rem]">
+        <div className="hover:scale-[1.01] transition-transform duration-500 ease-in-out mt-[2.5rem]">
             <Tilt
                 tiltReverse={false}
                 tiltMaxAngleX={1}
                 tiltMaxAngleY={1}
+                gyroscope={true}
                 glareEnable={false}
                 glareReverse={true}
                 glareMaxOpacity={0.05}
@@ -26,8 +27,8 @@ export default function WorkComponent(props: {
             >
                 <AccordionItem
                     header={
-                        <div className="flex items-center p-4 text-myblack dark:text-mywhite rounded-3xl bg-[#fefefe] shadow-lg dark:bg-[#252525] w-full min-w-[60rem] mb-[-1rem] border-1 border-solid border-[#e7e7e7] dark:border-[#454545] shadow-md">
-                            <div className="bg-mywhite w-auto h-auto min-w-[90px] min-h-[90px] aspect-square p-1 rounded-full flex items-center justify-center shadow-md hover:scale-105 transition-transform ease-in-out duration-500">
+                        <div className="flex items-center p-4 text-myblack dark:text-mywhite rounded-3xl bg-[#fefefe] shadow-md hover:shadow-lg transition-shadow duration-500 ease-in-out dark:bg-[#252525] w-full min-w-[60rem] mb-[-1rem] border-1 border-solid border-[#e7e7e7] dark:border-[#454545] shadow-md">
+                            <div className="bg-mywhite w-auto h-auto min-w-[90px] min-h-[90px] aspect-square p-1 rounded-full flex items-center justify-center shadow-md hover:shadow-lg hover:scale-105 transition-all ease-in-out duration-500">
                                 <Image
                                     src={`/images/work_photos/${img}.png`}
                                     alt={company}
@@ -52,8 +53,12 @@ export default function WorkComponent(props: {
                             </li>
                         ))}
                         <div className="text-zinc-500 dark:text-zinc-400 flex justify-between mt-4 mb-2">
-                            <span>{location}</span>
-                            <span>{date}</span>
+                            <span className="hover:text-myblack dark:hover:text-mywhite transition-color duration-500 ease-in-out">
+                                {location}
+                            </span>
+                            <span className="hover:text-myblack dark:hover:text-mywhite transition-color duration-500 ease-in-out">
+                                {date}
+                            </span>
                         </div>
                     </div>
                 </AccordionItem>
