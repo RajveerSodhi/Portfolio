@@ -7,13 +7,15 @@ export default function Work() {
     return (
         <section>
             <h1>Work Experience</h1>
-            <div className="mx-auto my-4 w-[60rem] flex items-center justify-center">
-                <Accordion transition transitionTimeout={500}>
-                    {work.map((item, index) => (
-                        <WorkComponent key={index} {...item} />
-                    ))}
-                </Accordion>
-            </div>
+            <Accordion
+                transition
+                transitionTimeout={500}
+                className="mx-auto my-4 max-w-[60rem] flex flex-col w-full items-center justify-center"
+            >
+                {work.map((item, index) => (
+                    <WorkComponent key={index} {...item} />
+                ))}
+            </Accordion>
         </section>
     );
 }
