@@ -57,7 +57,7 @@ export default function DesktopNavbar() {
                         </Link>
                     </nav>
                 </Tilt>
-                <span className="text-3xl text-myblack/70 hover:text-myblack dark:text-mywhite/70 dark:hover:text-mywhite absolute right-0 pr-6 pt-2 transition-colors duration-500 ease-in-out">
+                <span className="text-3xl text-myblack/70 hover:scale-90 dark:text-mywhite/70 absolute right-0 pr-6 pt-2 transition-transform duration-500 ease-in-out">
                     <ThemeSwitch />
                 </span>
             </div>

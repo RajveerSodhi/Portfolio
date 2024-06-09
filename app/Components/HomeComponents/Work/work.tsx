@@ -5,12 +5,12 @@ import { Accordion } from "@szhsin/react-accordion";
 
 export default function Work() {
     return (
-        <section>
+        <section className="appear-animated">
             <h1>Work Experience</h1>
             <Accordion
                 transition
                 transitionTimeout={500}
-                className="mx-auto my-4 max-w-[60rem] flex flex-col w-full items-center justify-center"
+                className="mx-auto max-w-[60rem] flex flex-col w-full items-center justify-center"
             >
                 {work.map((item, index) => (
                     <WorkComponent key={index} {...item} />

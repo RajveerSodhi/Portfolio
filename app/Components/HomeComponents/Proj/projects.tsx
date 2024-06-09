@@ -5,13 +5,13 @@ import { Accordion } from "@szhsin/react-accordion";
 
 export default function Projects() {
     return (
-        <section>
-            <h1 className="mb-4 mt-12">Projects</h1>
+        <section className="appear-animated">
+            <h1 className="title">Projects</h1>
             <Accordion transition transitionTimeout={500}>
                 <div className="grid grid-flow-row grid-cols-1 md:grid-cols-2 gap-4">
                     {projects.map((project, index) => (
-                        <span className="project-item">
-                            <ProjectComponent key={index} {...project} />
+                        <span className="grid-item" key={index}>
+                            <ProjectComponent {...project} />
                         </span>
                     ))}
                 </div>
