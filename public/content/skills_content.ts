@@ -25,7 +25,8 @@ export const skills = [
             "Node.js",
             "Express.js",
             "Axios",
-            "Mongoose"
+            "Mongoose",
+            "Netlify",
         ]
     },
     {
@@ -47,7 +48,6 @@ export const skills = [
             "Unity",
             "GitHub",
             "Tableau",
-            "Power BI",
             "Firebase",
             "Android Studio",
             "MySQL",
