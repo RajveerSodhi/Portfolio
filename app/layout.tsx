@@ -35,7 +35,7 @@ export default function RootLayout({
                 <link rel="icon" href="/favicon.ico" />
             </Head>
             <body
-                className={`bg-mywhite dark:bg-myblack overflow-x-hidden transition-color duration-500 ease-in-out ${point.className}`}
+                className={`bg-mywhite dark:bg-myblack overflow-x-hidden transition-color transition-configuration ${point.className}`}
             >
                 <MyCursor />
                 <Providers>

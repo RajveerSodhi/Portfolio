@@ -1,6 +1,6 @@
 export default function Description() {
     return (
-        <section className="text-center w-[75%] lg:w-[60%] text-xl leading-loose">
+        <section className="text-center w-[75%] lg:w-[60%] text-xl leading-loose mt-0">
             <p className="appear-animated">
                 Lorem ipsum dolor sit amet consectetur adipisicing elit. Officia ad tempore veniam
                 quod consectetur autem modi sint laborum praesentium iste accusamus dicta optio

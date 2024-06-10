@@ -18,7 +18,7 @@ export default function LogoButton() {
 
     return (
         <Image
-            className="inline-block mx-4 my-1 hover:scale-90 transition-transform duration-500 ease-in-out"
+            className="inline-block mx-4 my-1 hover:scale-90 transition-transform transition-configuration"
             src={logoSrc}
             width={24}
             height={24}

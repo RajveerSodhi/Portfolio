@@ -27,11 +27,11 @@ export default function WorkComponent(props: {
             glareMaxOpacity={0.05}
             glareBorderRadius="1.5rem"
         >
-            <div className="hover:scale-[1.01] transition-transform duration-500 ease-in-out mt-[2.5rem] min-w-full w-auto flex flex-col justify-center items-center appear-animated">
+            <div className="hover:scale-[1.01] transition-transform transition-configuration mt-[2.5rem] min-w-full w-auto flex flex-col justify-center items-center appear-animated">
                 <AccordionItem
                     className="w-full"
                     header={
-                        <div className="flex items-center p-4 text-myblack dark:text-mywhite rounded-3xl bg-[#fefefe] shadow-md hover:shadow-lg transition-shadow duration-500 ease-in-out dark:bg-[#252525] w-full mb-[-1rem] border-1 border-solid border-[#e7e7e7] dark:border-[#454545]">
+                        <div className="flex items-center p-4 text-myblack dark:text-mywhite rounded-3xl bg-[#fefefe] shadow-md hover:shadow-lg transition-shadow transition-configuration dark:bg-[#252525] w-full mb-[-1rem] border-1 border-solid border-[#e7e7e7] dark:border-[#454545]">
                             <WorkImage img={img} company={company} tld={tld} />
                             <div className="ml-8 text-left">
                                 <h2 className="text-3xl">{position}</h2>
@@ -49,10 +49,10 @@ export default function WorkComponent(props: {
                             </li>
                         ))}
                         <div className="text-zinc-500 dark:text-zinc-400 flex justify-between mt-4 mb-2">
-                            <span className="hover:text-myblack dark:hover:text-mywhite transition-color duration-500 ease-in-out">
+                            <span className="hover:text-myblack dark:hover:text-mywhite transition-color transition-configuration">
                                 {location}
                             </span>
-                            <span className="hover:text-myblack dark:hover:text-mywhite transition-color duration-500 ease-in-out">
+                            <span className="hover:text-myblack dark:hover:text-mywhite transition-color transition-configuration">
                                 {date}
                             </span>
                         </div>

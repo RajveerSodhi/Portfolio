@@ -19,7 +19,7 @@ export default function ProjectComponent(props: {
     return (
         <Tilt tiltReverse={false} tiltMaxAngleX={1} tiltMaxAngleY={1} gyroscope={true}>
             <AccordionItem
-                className="appear-animated flex flex-col text-center items-center shadow-lg bg-[#fefefe] dark:bg-[#252525] border-1 border-solid border-[#e7e7e7] dark:border-[#454545] text-myblack dark:text-mywhite rounded-3xl max-w-[29rem] w-auto hover:scale-[1.01] duration-500 transition-transform ease-in-out"
+                className="appear-animated flex flex-col text-center items-center shadow-lg bg-[#fefefe] dark:bg-[#252525] border-1 border-solid border-[#e7e7e7] dark:border-[#454545] text-myblack dark:text-mywhite rounded-3xl max-w-[29rem] w-auto hover:scale-[1.01] transition-transform transition-configuration"
                 header={
                     <div className="p-4">
                         <Tilt
@@ -38,7 +38,7 @@ export default function ProjectComponent(props: {
                                 width={400}
                                 height={400}
                                 onClick={() => setOpenImage(true)}
-                                className="mb-4 select-none min-w-full aspect-auto shadow-md hover:shadow-xl rounded-t-2xl rounded-b-md object-cover hover:scale-[1.01] duration-500 transition-all ease-in-out"
+                                className="mb-4 select-none min-w-full aspect-auto shadow-md hover:shadow-xl rounded-t-2xl rounded-b-md object-cover hover:scale-[1.01] transition-configuration transition-all"
                             />
                         </Tilt>
                         <Lightbox openImage={openImage} setOpenImage={setOpenImage} link={link} />

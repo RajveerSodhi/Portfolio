@@ -12,10 +12,10 @@ export default function DesktopNavbar() {
         <div className="hidden md:block">
             <div
                 id="full-navbar"
-                className="flex justify-center fixed top-0 left-0 right-0 z-50 blurry blurry-nav-edge pt-4 pb-12 select-none bg-mywhite/50 dark:bg-myblack/50 transition-color duration-500 ease-in-out"
+                className="flex justify-center fixed top-0 left-0 right-0 z-50 blurry blurry-nav-edge pt-4 pb-12 select-none bg-mywhite/50 dark:bg-myblack/50 transition-color transition-configuration"
             >
                 <Tilt tiltReverse={false} tiltMaxAngleX={0} tiltMaxAngleY={2}>
-                    <nav className="flex items-center px-4 py-2 border-1 border-solid rounded-full bg-[#fefefe] dark:bg-[#252525] border-[#e7e7e7] dark:border-[#454545] font-light transform transition duration-500 hover:scale-[1.01] ease-in-out">
+                    <nav className="flex items-center px-4 py-2 border-1 border-solid rounded-full bg-[#fefefe] dark:bg-[#252525] border-[#e7e7e7] dark:border-[#454545] font-light transform transition transition-configuration hover:scale-[1.01]">
                         <Link
                             href="#Work"
                             className={`navLink ${pathname === "#Work" ? "activeNavLink" : ""}`}
@@ -57,7 +57,7 @@ export default function DesktopNavbar() {
                         </Link>
                     </nav>
                 </Tilt>
-                <span className="text-3xl text-myblack/70 hover:scale-90 dark:text-mywhite/70 absolute right-0 pr-6 pt-2 transition-transform duration-500 ease-in-out">
+                <span className="text-3xl text-myblack/70 hover:scale-90 dark:text-mywhite/70 absolute right-0 pr-6 pt-2 transition-transform transition-configuration">
                     <ThemeSwitch />
                 </span>
             </div>
