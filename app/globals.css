@@ -4,6 +4,11 @@
 
 /* Website Wide */
 
+/* temporary solution to remove the ad */
+div:nth-of-type(5) {
+    display: none;
+}
+
 html {
     --scroll-behavior: smooth !important;
     scroll-behavior: smooth !important;
@@ -23,7 +28,7 @@ html {
 }
 
 section {
-    @apply flex justify-center flex-col items-center text-myblack dark:text-mywhite mx-4 mt-20 scroll-mt-[10rem]
+    @apply flex justify-center flex-col items-center text-myblack dark:text-mywhite mx-4 mt-24 scroll-mt-[10rem]
 }
 
 @keyframes appear {
@@ -42,7 +47,7 @@ section {
 .appear-animated {
     animation: appear ease-in-out;
     animation-timeline: view();
-    animation-range: entry 0% cover 40%;
+    animation-range: entry 0% cover 30%;
 }
 
 /* Navbar and Footer */

@@ -1,5 +1,4 @@
 "use client";
-
 import { useState, useEffect } from "react";
 
 export default function MyCursor() {
@@ -24,8 +23,8 @@ export default function MyCursor() {
             className={`my-cursor ${isPointer ? "pointer" : ""}`}
             style={{
                 ...cursorStyle,
-                left: `${position.x + 5}px`,
-                top: `${position.y + 5}px`,
+                left: `${position.x}px`,
+                top: `${position.y}px`,
             }}
         ></div>
     );

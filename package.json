@@ -11,9 +11,12 @@
   "dependencies": {
     "@stripe/react-stripe-js": "^2.7.1",
     "@stripe/stripe-js": "^3.4.0",
+    "@syncfusion/ej2-react-popups": "^25.2.7",
     "@szhsin/react-accordion": "^1.2.4",
     "axios": "^1.6.8",
     "bootstrap": "^5.3.3",
+    "clsx": "^2.1.1",
+    "framer-motion": "^11.2.10",
     "mdb-react-ui-kit": "^8.0.0",
     "next": "^14.2.3",
     "next-themes": "^0.3.0",
@@ -28,6 +31,7 @@
     "react-pdf": "^7.7.1",
     "react-typed": "^2.0.12",
     "stripe": "^15.6.0",
+    "tailwind-merge": "^2.3.0",
     "yet-another-react-lightbox": "^3.19.0"
   },
   "devDependencies": {
