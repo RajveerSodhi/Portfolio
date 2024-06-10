@@ -5,7 +5,7 @@ import { Accordion } from "@szhsin/react-accordion";
 
 export default function Projects() {
     return (
-        <section className="appear-animated">
+        <section className="appear-animated" id="projects">
             <h1 className="title">Projects</h1>
             <Accordion transition transitionTimeout={500}>
                 <div className="grid grid-flow-row grid-cols-1 md:grid-cols-2 gap-4">

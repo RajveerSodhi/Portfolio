@@ -5,7 +5,7 @@ import { Accordion } from "@szhsin/react-accordion";
 
 export default function Work() {
     return (
-        <section className="appear-animated">
+        <section className="appear-animated" id="work">
             <h1>Work Experience</h1>
             <Accordion
                 transition
