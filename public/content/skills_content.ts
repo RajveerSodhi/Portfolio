@@ -8,7 +8,8 @@ export const skills = [
             "Kotlin",
             "JavaScript",
             "TypeScript",
-            "R"
+            "R",
+            "Swift",
         ]
     },
     {
