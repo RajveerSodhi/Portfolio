@@ -4,11 +4,6 @@
 
 /* Website Wide */
 
-/* temporary solution to remove the ad */
-div:nth-of-type(5) {
-    display: none;
-}
-
 html {
     --scroll-behavior: smooth !important;
     scroll-behavior: smooth !important;
