@@ -12,7 +12,7 @@ export default function DesktopNavbar() {
         <div className="hidden md:block">
             <div
                 id="full-navbar"
-                className="flex justify-center fixed top-0 left-0 right-0 z-50 blurry blurry-nav-edge pt-4 pb-12 select-none bg-mywhite/50 dark:bg-myblack/50 transition-color transition-configuration"
+                className="flex justify-center fixed top-0 left-0 right-0 z-50 blurry blurry-nav-edge pt-4 pb-12 select-none  transition-color transition-configuration"
             >
                 <Tilt tiltReverse={false} tiltMaxAngleX={0} tiltMaxAngleY={2}>
                     <nav className="flex items-center px-4 py-2 border-1 border-solid rounded-full bg-[#fefefe] dark:bg-[#252525] border-[#e7e7e7] dark:border-[#454545] font-light transform transition transition-configuration hover:scale-[1.01]">
