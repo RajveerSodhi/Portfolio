@@ -6,23 +6,23 @@ export default function FooterNavbar() {
             <Link href="/" className="navLink">
                 Home
             </Link>
-            <Link href="#Work" className="navLink">
+            <Link href="/#work" className="navLink">
                 Work
             </Link>
-            <Link href="#Projects" className="navLink">
+            <Link href="/#projects" className="navLink">
                 Projects
             </Link>
-            <Link href="#Research" className="navLink">
+            <Link href="/#research" className="navLink">
                 Research
             </Link>
-            <Link href="#About" className="navLink">
+            <Link href="/#about" className="navLink">
                 About
+            </Link>
+            <Link href="/#contact" className="navLink">
+                Contact
             </Link>
             <Link href="/Icons" className="navLink">
                 Icons
-            </Link>
-            <Link href="#Contact" className="navLink">
-                Contact
             </Link>
         </span>
     );

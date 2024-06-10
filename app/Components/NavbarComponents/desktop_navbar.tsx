@@ -17,19 +17,19 @@ export default function DesktopNavbar() {
                 <Tilt tiltReverse={false} tiltMaxAngleX={0} tiltMaxAngleY={2}>
                     <nav className="flex items-center px-4 py-2 border-1 border-solid rounded-full bg-[#fefefe] dark:bg-[#252525] border-[#e7e7e7] dark:border-[#454545] font-light transform transition transition-configuration hover:scale-[1.01]">
                         <Link
-                            href="#Work"
+                            href="/#work"
                             className={`navLink ${pathname === "#Work" ? "activeNavLink" : ""}`}
                         >
                             Work
                         </Link>
                         <Link
-                            href="#Projects"
+                            href="/#projects"
                             className={`navLink ${pathname === "#Projects" ? "activeNavLink" : ""}`}
                         >
                             Projects
                         </Link>
                         <Link
-                            href="#Research"
+                            href="/#research"
                             className={`navLink ${pathname === "#Research" ? "activeNavLink" : ""}`}
                         >
                             Research
@@ -38,22 +38,22 @@ export default function DesktopNavbar() {
                             <LogoButton />
                         </Link>
                         <Link
-                            href="#About"
+                            href="/#about"
                             className={`navLink ${pathname === "#About" ? "activeNavLink" : ""}`}
                         >
                             About
+                        </Link>
+                        <Link
+                            href="/#contact"
+                            className={`navLink ${pathname === "#Contact" ? "activeNavLink" : ""}`}
+                        >
+                            Contact
                         </Link>
                         <Link
                             href="/Icons"
                             className={`navLink ${pathname === "/Icons" ? "activeNavLink" : ""}`}
                         >
                             Icons
-                        </Link>
-                        <Link
-                            href="#Contact"
-                            className={`navLink ${pathname === "#Contact" ? "activeNavLink" : ""}`}
-                        >
-                            Contact
                         </Link>
                     </nav>
                 </Tilt>
