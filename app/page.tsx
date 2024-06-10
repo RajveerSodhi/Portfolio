@@ -1,5 +1,5 @@
 import Research from "./Components/HomeComponents/Research/research";
-import Header from "./Components/HomeComponents/Title/title";
+import Title from "./Components/HomeComponents/Title/title";
 import Work from "./Components/HomeComponents/Work/work";
 import Projects from "./Components/HomeComponents/Proj/projects";
 import About from "./Components/HomeComponents/About/about";
@@ -8,7 +8,7 @@ import Contact from "./Components/HomeComponents/Contact/contact";
 export default function Home() {
     return (
         <>
-            <Header />
+            <Title />
             <Work />
             <Projects />
             <Research />

@@ -1,18 +1,15 @@
-import { Container } from "react-bootstrap";
-import IconHeader from "../WebsiteHeaders/IconsHeaders/icons_header";
-import TutorialSection from "../WebsiteHeaders/IconsHeaders/tutorial_section";
-import Section1 from "../WebsiteHeaders/IconsHeaders/IconsSection1";
-import Section2 from "../WebsiteHeaders/IconsHeaders/IconsSection2";
-import PaymentSection from "../WebsiteHeaders/IconsHeaders/paymentSection";
+import Title from "../Components/IconsComponents/title";
+import Section1 from "../Components/IconsComponents/section_1";
+import Section2 from "../Components/IconsComponents/section_2";
+import PaymentSection from "../Components/IconsComponents/payment_section";
 
 export default function Icons() {
     return (
-        <Container className="text-center" style={{ marginTop: "8rem", maxWidth: "100%", padding: "0px" }}>
-            <IconHeader />
+        <>
+            <Title />
             <Section1 />
             <Section2 />
-            <TutorialSection />
             <PaymentSection />
-        </Container>
+        </>
     );
 }
