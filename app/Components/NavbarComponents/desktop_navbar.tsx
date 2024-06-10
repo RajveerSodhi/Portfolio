@@ -18,19 +18,23 @@ export default function DesktopNavbar() {
                     <nav className="flex items-center px-4 py-2 border-1 border-solid rounded-full bg-[#fefefe] dark:bg-[#252525] border-[#e7e7e7] dark:border-[#454545] font-light transform transition transition-configuration hover:scale-[1.01]">
                         <Link
                             href="/#work"
-                            className={`navLink ${pathname === "#Work" ? "activeNavLink" : ""}`}
+                            className={`navLink ${pathname === "/#work" ? "activeNavLink" : ""}`}
                         >
                             Work
                         </Link>
                         <Link
                             href="/#projects"
-                            className={`navLink ${pathname === "#Projects" ? "activeNavLink" : ""}`}
+                            className={`navLink ${
+                                pathname === "/#projects" ? "activeNavLink" : ""
+                            }`}
                         >
                             Projects
                         </Link>
                         <Link
                             href="/#research"
-                            className={`navLink ${pathname === "#Research" ? "activeNavLink" : ""}`}
+                            className={`navLink ${
+                                pathname === "/#research" ? "activeNavLink" : ""
+                            }`}
                         >
                             Research
                         </Link>
@@ -39,13 +43,13 @@ export default function DesktopNavbar() {
                         </Link>
                         <Link
                             href="/#about"
-                            className={`navLink ${pathname === "#About" ? "activeNavLink" : ""}`}
+                            className={`navLink ${pathname === "/#about" ? "activeNavLink" : ""}`}
                         >
                             About
                         </Link>
                         <Link
                             href="/#contact"
-                            className={`navLink ${pathname === "#Contact" ? "activeNavLink" : ""}`}
+                            className={`navLink ${pathname === "/#contact" ? "activeNavLink" : ""}`}
                         >
                             Contact
                         </Link>
