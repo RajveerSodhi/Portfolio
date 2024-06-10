@@ -1,21 +1,25 @@
 export default function Description() {
     return (
         <section className="text-center w-[75%] lg:w-[60%] text-xl leading-loose mt-0">
-            <p className="appear-animated">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Officia ad tempore veniam
-                quod consectetur autem modi sint laborum praesentium iste accusamus dicta optio
-                ipsam, dolorum voluptatibus, eius et voluptatem? Numquam. Tempora, rerum magnam
-                molestias sed exercitationem mollitia aspernatur numquam ipsam? Cum voluptatum vero
-                quibusdam nobis dolorum adipisci a voluptas nam, nesciunt odio ratione laboriosam
-                obcaecati quam eligendi assumenda recusandae corporis.
+            <p className="appear-animated mb-4">
+                I'm Rajveer Sodhi, a final-year Computer Science Honours student at the University
+                of British Columbia, also minoring in Data Science. I am passionate about research
+                in Computer Science and love being an active member of my community. I am conducting
+                research on innovative interaction techniques for AR/VR headesets and explored
+                in-vehicle infotainment systems, leveraging tools like C# and Unity. At UBC, I am
+                the President of the Film Society. I have also worked as a Supplemental Learning
+                Leader and Teaching Assistant, and created content for a Bolylwood dance club.
             </p>
-            <p className="appear-animated">
-                Lorem, ipsum dolor sit amet consectetur adipisicing elit. Eos architecto facere quis
-                doloribus facilis ratione sunt nesciunt aut non culpa sed provident iusto, minus
-                aperiam omnis obcaecati. Sed, vitae nemo? Officia, consectetur. Non eligendi fugit
-                corrupti. Autem tempore voluptas sed ad ipsum doloremque natus nisi, dolore, quasi
-                reiciendis ex temporibus magnam perferendis ea necessitatibus, ullam architecto
-                possimus harum debitis? Aspernatur.
+            <p className="appear-animated mb-4">
+                I am currently a Software Development Intern at Data POEM, where I develop APIs to
+                retrieve and transform website analytics data. My experiences and roles as an SWDev
+                have taught me a lot about user-centric design, teamwork and leadership, and agile
+                programming practices.
+            </p>
+            <p className="appear-animated mb-4">
+                I am always eager to connect with like-minded individuals, whether it’s to discuss
+                the latest cars and smartphones, cinema, or potential collaborations. Feel free to
+                reach out to me — I would love to chat and explore new opportunities!
             </p>
         </section>
     );
