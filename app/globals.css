@@ -4,6 +4,11 @@
 
 /* Website Wide */
 
+html {
+    --scroll-behavior: smooth !important;
+    scroll-behavior: smooth !important;
+}
+
 ::selection {
     @apply dark:bg-[#e8853e99] bg-[#526df599];
 }
@@ -142,6 +147,12 @@ body,
     backdrop-filter: blur(8px) grayscale();
     -webkit-backdrop-filter: blur(8px) grayscale();
     padding: 0.5rem;
+}
+
+/* Description */
+
+.highlight{
+    @apply text-white dark:text-black bg-gradient-to-r from-[#5353D0] to-[#DD6B6B] p-1 rounded-md
 }
 
 /* Icons Page */
