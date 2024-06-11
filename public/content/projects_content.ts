@@ -13,10 +13,10 @@ export const projects = [
         title: "Portfolio",
         subtitle: "Personal Website",
         link: "Portfolio",
-        tech: "Next.js, Bootstrap, Tailwind CSS, TypeScript",
+        tech: "Next.js, Tailwind CSS, TypeScript",
         description: [
             "Created a personal website showcasing my technical skills and work experience. Also added a page showcasing iOS icon designs.",
-            "Developed using the Next.ts framework in TypeScript and styled with Bootstrap. Implemented the Stripe API for payments."
+            "Developed using the Next.ts framework in TypeScript. Implemented the Stripe API for payments."
 
         ]
     },

@@ -2,7 +2,6 @@ import type { Metadata } from "next";
 import localFont from "next/font/local";
 import { Providers } from "./providers";
 import "./globals.css";
-import "bootstrap/dist/css/bootstrap.min.css";
 import Navbar from "./Components/NavbarComponents/navbar";
 import Footer from "./Components/FooterComponents/footer";
 import Head from "next/head";
