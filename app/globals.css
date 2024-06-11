@@ -14,7 +14,7 @@ html {
 }
 
 .title {
-    @apply mb-10
+    @apply mb-10 text-[3rem]
 }
 
 .transition-configuration {

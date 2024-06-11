@@ -16,7 +16,7 @@ export default function Projects() {
         <section className="appear-animated" id="projects">
             <h1 className="title">Projects</h1>
             <Accordion transition transitionTimeout={500}>
-                <div className="grid grid-flow-row grid-cols-1 md:grid-cols-2 gap-4">
+                <div className="grid grid-flow-row grid-cols-1 md:grid-cols-2 gap-6">
                     {projects.map((project, index) => (
                         <ProjectComponent key={index} {...project} />
                     ))}

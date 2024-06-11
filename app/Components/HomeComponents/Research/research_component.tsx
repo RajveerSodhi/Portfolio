@@ -7,16 +7,16 @@ export default function ResearchComponent(props: { title: string; status: string
     return (
         <Tilt
             tiltReverse={false}
-            tiltMaxAngleX={1}
-            tiltMaxAngleY={1}
+            tiltMaxAngleX={2}
+            tiltMaxAngleY={2}
             gyroscope={true}
             className="appear-animated"
         >
-            <div className="p-4 h-100 flex flex-col text-center items-center shadow-lg bg-[#fefefe] dark:bg-[#252525] border-1 border-solid border-[#e7e7e7] dark:border-[#454545] text-myblack dark:text-mywhite rounded-3xl max-w-[29rem] w-auto hover:scale-[1.01] transition-configuration transition-transform">
-                <div className="grow">
-                    <h3 className="mb-4">{title}</h3>
+            <div className="cursor-research py-6 px-4 h-100 flex flex-col text-center items-center shadow-lg bg-[#fefefe] dark:bg-[#252525] border-1 border-solid border-[#e7e7e7] dark:border-[#454545] text-myblack dark:text-mywhite rounded-3xl max-w-[29rem] w-auto hover:scale-[1.01] transition-configuration transition-transform">
+                <div className="cursor-research grow">
+                    <h3 className="cursor-research mb-4 text-2xl">{title}</h3>
                 </div>
-                <h5 className="text-zinc-500 dark:text-zinc-400 hover:text-myblack dark:hover:text-mywhite transition-color transition-configuration">
+                <h5 className="cursor-research text-lg text-zinc-500 dark:text-zinc-400 hover:text-myblack dark:hover:text-mywhite transition-color transition-configuration">
                     {status}
                 </h5>
             </div>

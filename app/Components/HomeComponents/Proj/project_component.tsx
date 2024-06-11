@@ -42,8 +42,8 @@ export default function ProjectComponent(props: {
                             />
                         </Tilt>
                         <Lightbox openImage={openImage} setOpenImage={setOpenImage} link={link} />
-                        <h2 className="cursor-details mb-2">{title}</h2>
-                        <h5 className="cursor-details text-center mb-2 text-myblack/85 dark:text-mywhite/85">
+                        <h2 className="cursor-details mb-2 text-3xl">{title}</h2>
+                        <h5 className="text-xl cursor-details text-center mb-2 text-myblack/85 dark:text-mywhite/85">
                             {subtitle}
                         </h5>
                     </div>

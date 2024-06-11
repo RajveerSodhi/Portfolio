@@ -31,7 +31,7 @@ export default function IPhone() {
                 className="rounded-[3.2rem] z-40 w-auto aspect-ratio h-auto max-h-[42rem] transition-configuration hover:scale[1.01]"
             />
             <div className="flex flex-row justify-center items-center mt-3">
-                <div className="my-switch">
+                <div className="my-switch flex flex-row">
                     <span>
                         <label htmlFor="iconsSwitch">
                             <Image
@@ -66,7 +66,7 @@ export default function IPhone() {
                         </label>
                     </span>
                 </div>
-                <div className="pl-8 flex items-center justift-center my-switch">
+                <div className="pl-8 flex flex-row items-center justift-center my-switch">
                     <span>
                         <label htmlFor="wallpaperSwitch">
                             <Image

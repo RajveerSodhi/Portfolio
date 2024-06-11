@@ -4,7 +4,7 @@ export default function Section1() {
     return (
         <section className="flex flex-col md:flex-row justify-evenly appear-animated">
             <IPhone />
-            <div className="flex flex-col items-center justify-center w-50 text-center">
+            <div className="flex flex-col items-center justify-center md:w-[50%] text-center">
                 <h2 className="mb-4 text-[3rem] z-40">
                     For Lovers of <strong>Monochrome Minimalism</strong>
                 </h2>

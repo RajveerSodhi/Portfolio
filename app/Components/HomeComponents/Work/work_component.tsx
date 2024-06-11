@@ -26,7 +26,7 @@ export default function WorkComponent(props: {
             glareMaxOpacity={0.05}
             glareBorderRadius="1.5rem"
         >
-            <div className="p-4 hover:scale-[1.01] transition-all text-myblack dark:text-mywhite rounded-3xl bg-[#fefefe] shadow-md hover:shadow-lg transition-configuration dark:bg-[#252525] transition-configuration mt-[2.5rem] min-w-full w-auto flex flex-col justify-center items-center appear-animated border-1 border-solid border-[#e7e7e7] dark:border-[#454545]">
+            <div className="p-6 hover:scale-[1.02] transition-shaodw transition-transform text-myblack dark:text-mywhite rounded-3xl bg-[#fefefe] shadow-md hover:shadow-lg transition-configuration dark:bg-[#252525] mt-[2.5rem] min-w-full w-auto flex flex-col justify-center items-center appear-animated border-1 border-solid border-[#e7e7e7] dark:border-[#454545]">
                 <AccordionItem
                     className="w-full"
                     header={

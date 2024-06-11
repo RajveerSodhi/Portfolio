@@ -10,7 +10,7 @@ export default function Skills() {
                     key={index}
                     className="appear-animated justify-center flex items-center flex-col mb-4"
                 >
-                    <h4 className="text-center">{skillCategory.category}</h4>
+                    <h4 className="text-center text-2xl mb-4">{skillCategory.category}</h4>
                     <div className="flex flex-row flex-wrap justify-center text-lg">
                         {skillCategory.skills.map((skill, index) => (
                             <Skill key={index} name={skill} />

@@ -1,6 +1,6 @@
 "use client";
 import { useState, useEffect, useRef } from "react";
-import { FaExternalLinkAlt, FaExpand, FaArrowDown } from "react-icons/fa";
+import { FaExternalLinkAlt, FaExpand, FaArrowDown, FaRegClock, FaGamepad } from "react-icons/fa";
 
 export default function MyCursor() {
     const [position, setPosition] = useState({ x: 0, y: 0 });
@@ -34,6 +34,24 @@ export default function MyCursor() {
                 <>
                     Open Site
                     <FaExternalLinkAlt className="ml-2 text-md" />
+                </>
+            ),
+        },
+        {
+            className: "cursor-research",
+            content: (
+                <>
+                    Available Soon
+                    <FaRegClock className="ml-2 text-md" />
+                </>
+            ),
+        },
+        {
+            className: "cursor-placeholder",
+            content: (
+                <>
+                    brb gaming
+                    <FaGamepad className="ml-2 text-md" />
                 </>
             ),
         },
