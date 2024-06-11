@@ -28,7 +28,7 @@ export default function IPhone() {
                 width={375}
                 height={812}
                 priority={true}
-                className="rounded-[3.2rem] w-auto aspect-ratio h-auto max-h-[42rem] transition-configuration hover:scale[1.01]"
+                className="rounded-[3.2rem] z-40 w-auto aspect-ratio h-auto max-h-[42rem] transition-configuration hover:scale[1.01]"
             />
             <div className="flex flex-row justify-center items-center mt-3">
                 <div className="my-switch">
@@ -39,7 +39,7 @@ export default function IPhone() {
                                 alt="black_icons"
                                 width={24}
                                 height={24}
-                                className="aspect-ratio w-5"
+                                className="aspect-ratio w-5 z-40"
                             />
                         </label>
                     </span>
@@ -52,7 +52,7 @@ export default function IPhone() {
                         height={16}
                         width={30}
                         handleDiameter={12}
-                        className="mx-1"
+                        className="mx-1 z-40"
                     />
                     <span>
                         <label htmlFor="iconsSwitch">
@@ -61,7 +61,7 @@ export default function IPhone() {
                                 alt="white_icons"
                                 width={24}
                                 height={24}
-                                className="aspect-ratio w-5"
+                                className="aspect-ratio w-5 z-40"
                             />
                         </label>
                     </span>
@@ -74,7 +74,7 @@ export default function IPhone() {
                                 alt="black_wallpaper"
                                 width={24}
                                 height={48}
-                                className="aspect-ratio w-5"
+                                className="aspect-ratio w-5 z-40"
                             />
                         </label>
                     </span>
@@ -87,7 +87,7 @@ export default function IPhone() {
                         height={16}
                         width={30}
                         handleDiameter={12}
-                        className="mx-1"
+                        className="mx-1 z-40"
                     />
                     <span>
                         <label htmlFor="wallpaperSwitch">
@@ -96,7 +96,7 @@ export default function IPhone() {
                                 alt="white_wallpaper"
                                 width={24}
                                 height={48}
-                                className="aspect-ratio w-5"
+                                className="aspect-ratio w-5 z-40"
                             />
                         </label>
                     </span>

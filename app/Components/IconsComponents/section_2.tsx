@@ -3,7 +3,7 @@ import IconsDescription from "./description";
 
 export default function Section2() {
     return (
-        <section className="flex flex-col md:flex-row justify-evenly px-4 py-16">
+        <section className="flex flex-col md:flex-row justify-evenly px-4 py-16 appear-animated">
             <IconsDescription />
             <ScrollingIcons />
         </section>

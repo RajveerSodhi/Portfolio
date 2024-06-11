@@ -2,7 +2,7 @@ import Image from "next/image";
 
 export default function ScrollingIcons() {
     return (
-        <div className="icons-container flex flex-col w-[100%] md:max-w-[45rem]">
+        <div className="icons-container flex flex-col w-[100%] md:max-w-[45rem] backdrop-blur-3xl bg-mywhite/50 dark:bg-myblack/50 z-40">
             <div className="flex flex-row scrolling-icons forward">
                 <Image
                     src="/icons/icons_light/whatsapp_light.jpg"

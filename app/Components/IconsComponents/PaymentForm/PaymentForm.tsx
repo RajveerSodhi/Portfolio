@@ -92,7 +92,7 @@ const InjectedCheckoutForm: React.FC<InjectedCheckoutFormProps> = ({ donationAmo
             <Elements stripe={stripePromise} options={{ clientSecret }}>
                 <ElementsConsumer>
                     {({ stripe, elements }) => (
-                        <div className="p-8 mt-2 shadow-lg bg-[#fefefe] dark:bg-[#252525] border-1 border-solid border-[#e7e7e7] dark:border-[#454545] text-myblack dark:text-mywhite rounded-3xl md:w-[45rem] lg:w-[60rem] text-xl">
+                        <div className="p-8 mt-2 z-40 shadow-lg bg-[#fefefe] dark:bg-[#252525] border-1 border-solid border-[#e7e7e7] dark:border-[#454545] text-myblack dark:text-mywhite rounded-3xl md:w-[45rem] lg:w-[60rem] text-xl">
                             <p>Amount: ${donationAmount.toFixed(2)}</p>
                             <p>Enter your payment information:</p>
                             <hr />
