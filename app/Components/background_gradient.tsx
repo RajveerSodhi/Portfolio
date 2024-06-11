@@ -9,7 +9,7 @@ export const BackgroundGradientAnimation = ({
     fourthColor = "200, 50, 50",
     fifthColor = "180, 180, 50",
     pointerColor = "140, 100, 255",
-    size = "80%",
+    size = "100%",
     blendingValue = "hard-light",
     children,
     className,
@@ -76,10 +76,10 @@ export const BackgroundGradientAnimation = ({
 
     return (
         <div
-            className={cn(
+            className={`blur-[86px] opacity-60 ${cn(
                 "h-screen w-screen fixed overflow-hidden top-0 left-0 bg-[linear-gradient(40deg,var(--gradient-background-start),var(--gradient-background-end))] z-[0]",
                 containerClassName
-            )}
+            )}`}
         >
             <svg className="hidden">
                 <defs>
