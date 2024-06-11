@@ -1,4 +1,6 @@
 "use client";
+import Image from "next/image";
+import Switch from "react-switch";
 import React, { useState, useEffect } from "react";
 
 export default function IPhone() {
@@ -20,66 +22,81 @@ export default function IPhone() {
 
     return (
         <div className="flex flex-col justify-center items-center">
-            <div>
-                <img
-                    src={`images/icons_framed_screenshots/${imageSrc}.png`}
-                    alt="iPhone"
-                    className="w-40 transition-configuration hover:scale[1.01]"
-                />
-            </div>
-            <div className="d-flex justify-content-center mt-3">
-                <div className="form-check form-switch flex items-center my-switch p-0">
+            <Image
+                src={`/images/icons_framed_screenshots/${imageSrc}.png`}
+                alt="iPhone"
+                width={375}
+                height={812}
+                priority={true}
+                className="rounded-[3.2rem] w-auto aspect-ratio h-auto max-h-[42rem] transition-configuration hover:scale[1.01]"
+            />
+            <div className="flex flex-row justify-center items-center mt-3">
+                <div>
                     <span>
                         <label htmlFor="iconsSwitch">
-                            <img
-                                src="images/iphone_switch_labels/black_icons.png"
+                            <Image
+                                src="/images/iphone_switch_labels/black_icons.png"
                                 alt="black_icons"
-                                className="w-6"
+                                width={24}
+                                height={24}
+                                className="aspect-ratio w-5"
                             />
                         </label>
                     </span>
-                    <input
-                        className="form-check-input mx-2"
-                        type="checkbox"
-                        role="switch"
+                    <Switch
                         id="iconsSwitch"
-                        checked={iconsSwitch}
                         onChange={() => setIconsSwitch(!iconsSwitch)}
+                        uncheckedIcon={false}
+                        checkedIcon={false}
+                        checked={iconsSwitch}
+                        height={16}
+                        width={30}
+                        handleDiameter={12}
+                        className="mx-1"
                     />
                     <span>
                         <label htmlFor="iconsSwitch">
-                            <img
-                                src="images/iphone_switch_labels/white_icons.png"
+                            <Image
+                                src="/images/iphone_switch_labels/white_icons.png"
                                 alt="white_icons"
-                                className="w-6"
+                                width={24}
+                                height={24}
+                                className="aspect-ratio w-5"
                             />
                         </label>
                     </span>
                 </div>
-                <div className="form-check form-switch d-flex align-items-center my-switch pl-10">
+                <div className="pl-8 flex items-center justift-center">
                     <span>
                         <label htmlFor="wallpaperSwitch">
-                            <img
-                                src="images/iphone_switch_labels/black_wallpaper.png"
+                            <Image
+                                src="/images/iphone_switch_labels/black_wallpaper.png"
                                 alt="black_wallpaper"
-                                style={{ width: "1.25em" }}
+                                width={24}
+                                height={48}
+                                className="aspect-ratio w-5"
                             />
                         </label>
                     </span>
-                    <input
-                        className="form-check-input mx-2"
-                        type="checkbox"
-                        role="switch"
-                        id="wallpaperSwitch"
-                        checked={wallpaperSwitch}
+                    <Switch
+                        id="iconsSwitch"
                         onChange={() => setWallpaperSwitch(!wallpaperSwitch)}
+                        uncheckedIcon={false}
+                        checkedIcon={false}
+                        checked={wallpaperSwitch}
+                        height={16}
+                        width={30}
+                        handleDiameter={12}
+                        className="mx-1"
                     />
                     <span>
                         <label htmlFor="wallpaperSwitch">
-                            <img
-                                src="images/iphone_switch_labels/white_wallpaper.png"
+                            <Image
+                                src="/images/iphone_switch_labels/white_wallpaper.png"
                                 alt="white_wallpaper"
-                                style={{ width: "1.25em" }}
+                                width={24}
+                                height={48}
+                                className="aspect-ratio w-5"
                             />
                         </label>
                     </span>
