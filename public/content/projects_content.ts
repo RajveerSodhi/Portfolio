@@ -5,7 +5,7 @@ export const projects = [
         link: "Custom-Tudum",
         tech: "JavaScript, HTML, CSS, Manifest V3",
         description: [
-            "Developed a Chrome extension with MV3 that allows users to customize the Netflix 'Tudum' sound with their own audio files.",
+            "Developed a Chrome extension with MV3 that allows users to customize the Netflix Tudum sound with their own audio files.",
             "Implemented a user-friendly interface for uploading and managing audio files using the Chrome Storage and Offscreen API."
         ]
     },
