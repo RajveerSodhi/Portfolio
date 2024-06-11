@@ -67,18 +67,6 @@ section {
     @apply mx-1 p-2 text-myblack dark:text-mywhite rounded-full w-auto h-auto aspect-square max-w-8 max-h-8 bg-zinc-300 dark:bg-zinc-600 hover:scale-90 transition-transform duration-500 ease-in-out
 }
 
-/* Grid Items */
-
-@media (min-width: 768px) {
-    .grid-item {
-        column-span: 2;
-    }
-    .grid-item:last-child:nth-of-type(odd) {
-        grid-column-end: span 2;
-        justify-self: center;
-    }
-}
-
 /* Title Image Card - Logo */
 
 .curved-text {
