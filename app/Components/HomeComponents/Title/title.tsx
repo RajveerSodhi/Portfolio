@@ -4,7 +4,7 @@ import TitleTop from "./title_top";
 
 export default function Title() {
     return (
-        <section className="h-screen">
+        <section className="h-screen" id="title">
             <TitleTop />
             <ImageCard />
             <TitleBottom />

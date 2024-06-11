@@ -1,5 +1,5 @@
 "use client";
-import { useState, useEffect } from "react";
+import { useState, useEffect, useRef } from "react";
 import { FaExternalLinkAlt, FaExpand, FaArrowDown } from "react-icons/fa";
 
 export default function MyCursor() {
@@ -7,6 +7,7 @@ export default function MyCursor() {
     const [isPointer, setIsPointer] = useState(false);
     const [isHoveringSpecialComponent, setIsHoveringSpecialComponent] = useState(false);
     const [tooltipContent, setTooltipContent] = useState<React.ReactNode>(null);
+    const tooltipRef = useRef<HTMLDivElement>(null);
 
     const specialComponents = [
         {
@@ -31,7 +32,7 @@ export default function MyCursor() {
             className: "cursor-website",
             content: (
                 <>
-                    Open Website
+                    Open Site
                     <FaExternalLinkAlt className="ml-2 text-md" />
                 </>
             ),
@@ -59,9 +60,21 @@ export default function MyCursor() {
     };
 
     useEffect(() => {
+        let requestId: number;
+        const updatePosition = () => {
+            if (tooltipRef.current) {
+                tooltipRef.current.style.left = `${position.x + 15}px`;
+                tooltipRef.current.style.top = `${position.y + 15}px`;
+            }
+            requestId = requestAnimationFrame(updatePosition);
+        };
+        requestId = requestAnimationFrame(updatePosition);
         window.addEventListener("mousemove", handleMouseMove);
-        return () => window.removeEventListener("mousemove", handleMouseMove);
-    }, []);
+        return () => {
+            window.removeEventListener("mousemove", handleMouseMove);
+            cancelAnimationFrame(requestId);
+        };
+    }, [position]);
 
     return (
         <>
@@ -76,13 +89,15 @@ export default function MyCursor() {
             ></div>
             {tooltipContent && (
                 <div
-                    className="tooltip-text fixed bg-myblack dark:bg-mywhite text-mywhite dark:text-myblack px-4 py-2 rounded-full w-46 flex items-center justify-center shadow:lg"
+                    ref={tooltipRef}
+                    className={`tooltip-text fixed transition-opacity duration-300 ${
+                        isHoveringSpecialComponent ? "opacity-100" : "opacity-0"
+                    } bg-myblack dark:bg-mywhite text-mywhite dark:text-myblack px-4 py-2 rounded-full w-44 flex items-center justify-center shadow-lg`}
                     style={{
-                        left: `${position.x + 15}px`,
-                        top: `${position.y + 15}px`,
                         zIndex: 999999,
                         pointerEvents: "none",
                         whiteSpace: "nowrap",
+                        transform: "translate(-62%, -62%)",
                     }}
                 >
                     {tooltipContent}
