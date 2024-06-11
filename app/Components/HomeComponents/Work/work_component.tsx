@@ -26,11 +26,11 @@ export default function WorkComponent(props: {
             glareMaxOpacity={0.05}
             glareBorderRadius="1.5rem"
         >
-            <div className="hover:scale-[1.01] transition-transform transition-configuration mt-[2.5rem] min-w-full w-auto flex flex-col justify-center items-center appear-animated">
+            <div className="p-4 hover:scale-[1.01] transition-all text-myblack dark:text-mywhite rounded-3xl bg-[#fefefe] shadow-md hover:shadow-lg transition-configuration dark:bg-[#252525] transition-configuration mt-[2.5rem] min-w-full w-auto flex flex-col justify-center items-center appear-animated border-1 border-solid border-[#e7e7e7] dark:border-[#454545]">
                 <AccordionItem
                     className="w-full"
                     header={
-                        <div className="cursor-details flex items-center p-4 text-myblack dark:text-mywhite rounded-3xl bg-[#fefefe] shadow-md hover:shadow-lg transition-shadow transition-configuration dark:bg-[#252525] w-full mb-[-1rem] border-1 border-solid border-[#e7e7e7] dark:border-[#454545]">
+                        <div className="cursor-details flex items-center w-full">
                             <WorkImage img={img} company={company} tld={tld} />
                             <div className="cursor-details ml-8 text-left">
                                 <h2 className="cursor-details text-3xl">{position}</h2>
@@ -41,7 +41,7 @@ export default function WorkComponent(props: {
                         </div>
                     }
                 >
-                    <div className="px-6 pt-10 pb-3 bg-[#e7e7e7] dark:bg-[#454545] rounded-b-3xl">
+                    <div className="pt-8">
                         {description.map((desc, index) => (
                             <li key={index} className="mb-3">
                                 {desc}
