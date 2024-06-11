@@ -1,13 +1,10 @@
 "use client";
 import Link from "next/link";
-import { usePathname } from "next/navigation";
 import Tilt from "react-parallax-tilt";
 import LogoButton from "./logo_button";
 import ThemeSwitch from "./theme_switch";
 
 export default function DesktopNavbar() {
-    const pathname = usePathname();
-
     return (
         <div className="hidden md:block">
             <div
@@ -16,47 +13,25 @@ export default function DesktopNavbar() {
             >
                 <Tilt tiltReverse={false} tiltMaxAngleX={0} tiltMaxAngleY={2}>
                     <nav className="flex items-center px-4 py-2 border-1 border-solid rounded-full bg-[#fefefe] dark:bg-[#252525] border-[#e7e7e7] dark:border-[#454545] font-light transform transition transition-configuration hover:scale-[1.01]">
-                        <Link
-                            href="/#work"
-                            className={`navLink ${pathname === "/#work" ? "activeNavLink" : ""}`}
-                        >
+                        <Link href="/#work" className="navLink">
                             Work
                         </Link>
-                        <Link
-                            href="/#projects"
-                            className={`navLink ${
-                                pathname === "/#projects" ? "activeNavLink" : ""
-                            }`}
-                        >
+                        <Link href="/#projects" className="navLink">
                             Projects
                         </Link>
-                        <Link
-                            href="/#research"
-                            className={`navLink ${
-                                pathname === "/#research" ? "activeNavLink" : ""
-                            }`}
-                        >
+                        <Link href="/#research" className="navLink">
                             Research
                         </Link>
                         <Link href="/">
                             <LogoButton />
                         </Link>
-                        <Link
-                            href="/#about"
-                            className={`navLink ${pathname === "/#about" ? "activeNavLink" : ""}`}
-                        >
+                        <Link href="/#about" className="navLink">
                             About
                         </Link>
-                        <Link
-                            href="/#contact"
-                            className={`navLink ${pathname === "/#contact" ? "activeNavLink" : ""}`}
-                        >
+                        <Link href="/#contact" className="navLink">
                             Contact
                         </Link>
-                        <Link
-                            href="/Icons"
-                            className={`navLink ${pathname === "/Icons" ? "activeNavLink" : ""}`}
-                        >
+                        <Link href="/Icons" className="navLink">
                             Icons
                         </Link>
                     </nav>
