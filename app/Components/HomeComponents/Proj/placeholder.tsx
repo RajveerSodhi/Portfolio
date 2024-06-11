@@ -36,14 +36,14 @@ export default function Placeholder(props: { visible: boolean }) {
                                 src="/images/memoji/front.jpeg"
                                 width={200}
                                 height={200}
-                                alt="Rajveer's Memoji Working"
+                                alt="Rajveers Memoji Working"
                                 className="rounded-full shadow-lg border-1 border-solid border-[#e7e7e7] dark:border-[#454545]"
                             ></Image>
                             <Image
                                 src="/images/memoji/back.jpeg"
                                 width={200}
                                 height={200}
-                                alt="Rajveer's Memoji Yawning"
+                                alt="Rajveers Memoji Yawning"
                                 className="rounded-full shadow-lg border-1 border-solid border-[#e7e7e7] dark:border-[#454545]"
                             ></Image>
                         </ReactCardFlip>
@@ -52,7 +52,7 @@ export default function Placeholder(props: { visible: boolean }) {
 
                 <h2 className="text-3xl mt-4 mb-2">More Coming Soon!</h2>
                 <h5 className="text-center mb-2 text-myblack/85 dark:text-mywhite/85">
-                    I'm always up to something.
+                    I&apos;m always up to something.
                 </h5>
             </div>
         </Tilt>
