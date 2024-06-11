@@ -1,16 +1,11 @@
 import ScrollingIcons from "@/app/Components/IconsComponents/scrolling_icons";
-import { Container, Row, Col } from "react-bootstrap";
 import IconsDescription from "./description";
 
-export default function Section1() {
+export default function Section2() {
     return (
-        <section>
-            <div>
-                <div className="d-flex align-items-center">
-                    <IconsDescription />
-                </div>
-                <ScrollingIcons />
-            </div>
+        <section className="flex flex-col md:flex-row justify-evenly p-4">
+            <IconsDescription />
+            <ScrollingIcons />
         </section>
     );
 }
