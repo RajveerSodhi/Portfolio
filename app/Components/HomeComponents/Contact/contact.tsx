@@ -1,6 +1,4 @@
 import ResumeButton from "./resume_button";
-import { FaMapMarkerAlt } from "react-icons/fa";
-import { MdEmail } from "react-icons/md";
 import ContactButton from "./contact_button";
 
 export default function Contact() {
