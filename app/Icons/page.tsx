@@ -6,13 +6,10 @@ import PaymentSection from "../Components/IconsComponents/payment_section";
 export default function Icons() {
     return (
         <>
-            <h1 className="text-myblack dark:text-mywhite text-4xl flex justify-center items-center m-auto h-[100vh]">
-                Under Construction!
-            </h1>
-            {/* <Title />
+            <Title />
             <Section1 />
             <Section2 />
-            <PaymentSection /> */}
+            <PaymentSection />
         </>
     );
 }

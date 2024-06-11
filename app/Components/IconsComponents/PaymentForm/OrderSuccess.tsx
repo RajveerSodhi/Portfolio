@@ -1,12 +1,15 @@
-import { Container } from "react-bootstrap";
-import DownloadButton from "./DownloadButton";
-
-export default function PaymentComplete() {
+export default function OrderSuccess() {
     return (
-        <Container className="text-center lead">
-            <h1 className="display-4 my-4" > Thank You!</h1>
-            <p> You can download your icons by clicking the button below.</p>
-            <DownloadButton />
-        </Container>
+        <div className="text-center text-xl">
+            <h2 className="my-4 text-[2.75rem]"> Thank You</h2>
+            <p className="mb-16"> You can download your icons by clicking the button below.</p>
+            <a
+                download
+                href="/icons.zip"
+                className="px-16 py-3 no-underline shadow-lg bg-[#fefefe] dark:bg-[#252525] border-1 border-solid border-[#e7e7e7] dark:border-[#454545] text-myblack dark:text-mywhite rounded-full w-auto hover:scale-95 transition-configuration transition-transform"
+            >
+                Dowload Now
+            </a>
+        </div>
     );
 }

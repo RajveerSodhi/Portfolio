@@ -4,7 +4,6 @@ import { Elements } from "@stripe/react-stripe-js";
 import { loadStripe } from "@stripe/stripe-js";
 import PaymentForm from "./PaymentForm";
 import OrderSuccess from "./OrderSuccess"; // Ensure correct path
-import { Container, Button } from "react-bootstrap";
 
 const stripePromise = loadStripe(process.env.NEXT_PUBLIC_STRIPE_PUBLISHABLE_KEY!);
 
@@ -22,43 +21,45 @@ export default function IconsPayment() {
 
     return (
         <Elements stripe={stripePromise}>
-            <Container style={{ width: "100%" }}>
-                {!showComponent && (
-                    <>
-                        <label>
-                            Amount (CAD):
-                            <input
-                                type="number"
-                                value={donationAmount}
-                                onChange={(e) => setDonationAmount(Number(e.target.value))}
-                                min="0.00"
-                                required
-                                style={{ margin: "0.5rem", borderRadius: "15px", border: "1px solid #AAA", padding: "5px" }}
-                            />
-                        </label>
-                        <div>
-                            <Button className="payment-button" onClick={handleDisplayComponent}>
-                                Proceed
-                            </Button>
-                        </div>
-                    </>
-                )}
+            {!showComponent && (
+                <>
+                    <label className="text-xl">
+                        Amount (CAD):
+                        <input
+                            type="number"
+                            value={donationAmount}
+                            onChange={(e) => setDonationAmount(Number(e.target.value))}
+                            min="0.00"
+                            required
+                            className="m-2 py-2 px-3 rounded-full border-1 border-solid border-[#e7e7e7] dark:border-[#454545]"
+                        />
+                    </label>
+                    <button
+                        className="my-4 px-16 py-3 shadow-lg bg-[#fefefe] dark:bg-[#252525] border-1 border-solid border-[#e7e7e7] dark:border-[#454545] text-center text-xl rounded-full hover:scale-95 transition-configuration transition-transform"
+                        onClick={handleDisplayComponent}
+                    >
+                        Proceed
+                    </button>
+                </>
+            )}
 
-                {showComponent && (
-                    <>
-                        {donationAmount > 0 && (
-                            <Button onClick={handleBack} className="payment-button">
-                                Edit Payment Amount
-                            </Button>
-                        )}
-                        {donationAmount > 0 ? (
-                            <PaymentForm donationAmount={donationAmount} />
-                        ) : (
-                            <OrderSuccess />
-                        )}
-                    </>
-                )}
-            </Container>
+            {showComponent && (
+                <>
+                    {donationAmount > 0 && (
+                        <button
+                            onClick={handleBack}
+                            className="my-4 px-16 py-3 shadow-lg bg-[#fefefe] dark:bg-[#252525] border-1 border-solid border-[#e7e7e7] dark:border-[#454545] text-center text-xl hover:scale-95 transition-configuration transition-transform rounded-full"
+                        >
+                            Edit Payment Amount
+                        </button>
+                    )}
+                    {donationAmount > 0 ? (
+                        <PaymentForm donationAmount={donationAmount} />
+                    ) : (
+                        <OrderSuccess />
+                    )}
+                </>
+            )}
         </Elements>
     );
 }

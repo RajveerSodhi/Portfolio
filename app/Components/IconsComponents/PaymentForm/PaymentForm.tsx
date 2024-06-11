@@ -4,7 +4,6 @@ import { loadStripe, Stripe, StripeElements } from "@stripe/stripe-js";
 import React, { useState, useEffect } from "react";
 import axios from "axios";
 import OrderSuccess from "./OrderSuccess";
-import { Container } from "react-bootstrap";
 
 // Load the Stripe.js script
 const stripePromise = loadStripe(process.env.NEXT_PUBLIC_STRIPE_PUBLISHABLE_KEY!);
@@ -17,7 +16,13 @@ interface CheckoutFormProps {
     setPaymentSucceeded: React.Dispatch<React.SetStateAction<boolean>>;
 }
 
-const CheckoutForm: React.FC<CheckoutFormProps> = ({ stripe, elements, loading, setLoading, setPaymentSucceeded }) => {
+const CheckoutForm: React.FC<CheckoutFormProps> = ({
+    stripe,
+    elements,
+    loading,
+    setLoading,
+    setPaymentSucceeded,
+}) => {
     const handleSubmit = async (event: React.FormEvent<HTMLFormElement>) => {
         event.preventDefault();
 
@@ -44,7 +49,10 @@ const CheckoutForm: React.FC<CheckoutFormProps> = ({ stripe, elements, loading, 
     return (
         <form onSubmit={handleSubmit}>
             <PaymentElement />
-            <button disabled={!stripe || loading} className="lead" style={{ backgroundColor: "#FFF", color: "#000", borderRadius: "15px", padding: "0.5rem 2rem", border: "none", marginTop: "1rem" }}>
+            <button
+                disabled={!stripe || loading}
+                className="mt-4 rounded-full py-3 px-16 shadow-lg dark:bg-[#fefefe] bg-[#252525] border-1 border-solid dark:border-[#e7e7e7] border-[#454545] dark:text-myblack text-mywhite hover:scale-95 transition-configuration transition-transform"
+            >
                 {loading ? "Processing..." : "Submit"}
             </button>
         </form>
@@ -63,10 +71,12 @@ const InjectedCheckoutForm: React.FC<InjectedCheckoutFormProps> = ({ donationAmo
     useEffect(() => {
         const createPaymentIntent = async () => {
             try {
-                const { data } = await axios.post('/api/create-payment-intent', { amount: donationAmount });
+                const { data } = await axios.post("/api/create-payment-intent", {
+                    amount: donationAmount,
+                });
                 setClientSecret(data.clientSecret);
             } catch (error) {
-                console.error('Failed to create payment intent:', error);
+                console.error("Failed to create payment intent:", error);
             }
         };
 
@@ -82,9 +92,9 @@ const InjectedCheckoutForm: React.FC<InjectedCheckoutFormProps> = ({ donationAmo
             <Elements stripe={stripePromise} options={{ clientSecret }}>
                 <ElementsConsumer>
                     {({ stripe, elements }) => (
-                        <Container style={{ backgroundColor: "#E0E0E0", borderRadius: "20px", marginTop: "0.5rem", padding: "2rem" }}>
-                            <p className="lead">Amount: ${donationAmount.toFixed(2)}</p>
-                            <p className="lead">Enter your payment information:</p>
+                        <div className="p-8 mt-2 shadow-lg bg-[#fefefe] dark:bg-[#252525] border-1 border-solid border-[#e7e7e7] dark:border-[#454545] text-myblack dark:text-mywhite rounded-3xl md:w-[45rem] lg:w-[60rem] text-xl">
+                            <p>Amount: ${donationAmount.toFixed(2)}</p>
+                            <p>Enter your payment information:</p>
                             <hr />
                             <CheckoutForm
                                 stripe={stripe}
@@ -93,7 +103,7 @@ const InjectedCheckoutForm: React.FC<InjectedCheckoutFormProps> = ({ donationAmo
                                 setLoading={setLoading}
                                 setPaymentSucceeded={setPaymentSucceeded}
                             />
-                        </Container>
+                        </div>
                     )}
                 </ElementsConsumer>
             </Elements>
