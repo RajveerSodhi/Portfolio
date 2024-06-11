@@ -3,8 +3,6 @@ import { useEffect, useRef, useState } from "react";
 import { cn } from "../utils/cn";
 
 export const BackgroundGradientAnimation = ({
-    gradientBackgroundStart = "rgb(108, 0, 162)",
-    gradientBackgroundEnd = "rgb(0, 17, 82)",
     firstColor = "18, 113, 255",
     secondColor = "221, 74, 255",
     thirdColor = "100, 220, 255",
@@ -18,8 +16,6 @@ export const BackgroundGradientAnimation = ({
     interactive = true,
     containerClassName,
 }: {
-    gradientBackgroundStart?: string;
-    gradientBackgroundEnd?: string;
     firstColor?: string;
     secondColor?: string;
     thirdColor?: string;
@@ -40,8 +36,6 @@ export const BackgroundGradientAnimation = ({
     const [tgX, setTgX] = useState(0);
     const [tgY, setTgY] = useState(0);
     useEffect(() => {
-        document.body.style.setProperty("--gradient-background-start", gradientBackgroundStart);
-        document.body.style.setProperty("--gradient-background-end", gradientBackgroundEnd);
         document.body.style.setProperty("--first-color", firstColor);
         document.body.style.setProperty("--second-color", secondColor);
         document.body.style.setProperty("--third-color", thirdColor);
