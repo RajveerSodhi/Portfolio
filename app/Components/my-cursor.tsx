@@ -95,7 +95,7 @@ export default function MyCursor() {
     }, [position]);
 
     return (
-        <>
+        <div className="hidden md:block">
             <div
                 className={`my-cursor ${isPointer ? "pointer" : ""} ${
                     isHoveringSpecialComponent ? "special-hover" : ""
@@ -121,6 +121,6 @@ export default function MyCursor() {
                     {tooltipContent}
                 </div>
             )}
-        </>
+        </div>
     );
 }
