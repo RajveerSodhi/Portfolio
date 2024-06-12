@@ -3,7 +3,7 @@ export const work = [
         position: "Software Developer Intern",
         company: "Data POEM",
         tld: "com",
-        location: "Santa Clara, California, USA (Remote)",
+        location: "Santa Clara, CA (Remote)",
         date: "May 2024 - Present",
         img: "datapoem",
         description: [

@@ -1,3 +1,5 @@
+import Link from "next/link";
+
 export default function Description() {
     return (
         <section className="text-center w-full md:w-[75%] lg:w-[60%] text-sm md:text-xl leading-loose mt-0">
@@ -19,9 +21,13 @@ export default function Description() {
                 leadership, and agile programming practices.
             </p>
             <p className="appear-animated mb-4">
-                I am always eager to connect with like-minded individuals, whether it&apos;s to
-                discuss the latest cars and smartphones, cinema, or potential collaborations. Feel
-                free to reach out to me — I would love to chat and explore new opportunities!
+                I am always eager to{" "}
+                <Link href="/#contact" className="underline">
+                    connect
+                </Link>{" "}
+                with like-minded individuals, whether it&apos;s to discuss the latest cars and
+                smartphones, cinema, or potential collaborations. Feel free to reach out to me — I
+                would love to chat and explore new opportunities!
             </p>
         </section>
     );

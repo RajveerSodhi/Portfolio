@@ -1,4 +1,5 @@
 import ResumeButton from "./resume_button";
+import ResumeView from "./resume_view";
 import ContactButton from "./contact_button";
 
 export default function Contact() {
@@ -11,6 +12,7 @@ export default function Contact() {
                 <ContactButton href="https://www.github.com/rajveersodhi" text="GitHub" />
             </div>
             <ResumeButton />
+            <ResumeView />
         </section>
     );
 }

@@ -20,6 +20,8 @@ export default function ContactButton(props: { href: string; text: string }) {
     return (
         <a
             href={href}
+            rel="noopener noreferrer"
+            target="_blank"
             className="md:scale-100 scale-90 relative no-underline text-2xl text-center items-center hover:scale-90 transition-transform transition-configuration text-myblack dark:text-mywhite"
         >
             <Image
