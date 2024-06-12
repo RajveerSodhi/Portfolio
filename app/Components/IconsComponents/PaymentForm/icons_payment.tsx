@@ -23,7 +23,7 @@ export default function IconsPayment() {
         <Elements stripe={stripePromise}>
             {!showComponent && (
                 <>
-                    <label className="text-xl z-40">
+                    <label className="text-xl text-center z-40">
                         Amount (CAD):
                         <input
                             type="number"
@@ -50,7 +50,7 @@ export default function IconsPayment() {
                             onClick={handleBack}
                             className="my-4 z-40 px-16 py-3 shadow-lg bg-[#fefefe] dark:bg-[#252525] border-1 border-solid border-[#e7e7e7] dark:border-[#454545] text-center text-xl hover:scale-95 transition-configuration transition-transform rounded-full"
                         >
-                            Edit Payment Amount
+                            Edit Amount
                         </button>
                     )}
                     {donationAmount > 0 ? (

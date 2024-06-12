@@ -23,7 +23,7 @@ html {
 }
 
 section {
-    @apply flex justify-center flex-col items-center text-myblack dark:text-mywhite mx-4 mt-24 scroll-mt-[10rem]
+    @apply flex justify-center flex-col items-center text-myblack dark:text-mywhite mx-4 mt-16 md:mt-24 scroll-mt-[10rem] px-1 md:px-4
 }
 
 @keyframes appear {
@@ -60,7 +60,7 @@ section {
 }
 
 .navLink {
-    @apply text-myblack text-center dark:text-mywhite no-underline font-sans text-lg mx-4 hover:scale-90 transition-transform transition-configuration
+    @apply text-myblack dark:text-mywhite no-underline font-sans text-lg mx-4 hover:scale-90 transition-transform transition-configuration
 }
 
 .footer-social {

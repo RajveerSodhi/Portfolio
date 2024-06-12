@@ -6,7 +6,7 @@ import React, { useState, useEffect } from "react";
 export default function IPhone() {
     const [iconsSwitch, setIconsSwitch] = useState(false);
     const [wallpaperSwitch, setWallpaperSwitch] = useState(true);
-    const [imageSrc, setImageSrc] = useState("icons_framed_screenshots/1.png");
+    const [imageSrc, setImageSrc] = useState("1");
 
     useEffect(() => {
         if (!iconsSwitch && !wallpaperSwitch) {
@@ -28,7 +28,7 @@ export default function IPhone() {
                 width={375}
                 height={812}
                 priority={true}
-                className="rounded-[3.2rem] z-40 w-auto aspect-ratio h-auto max-h-[42rem] transition-configuration hover:scale[1.01]"
+                className="rounded-[2.16rem] md:rounded-[3.2rem] z-40 w-auto aspect-ratio h-auto max-h-[30rem] md:max-h-[42rem] transition-configuration hover:scale[1.01]"
             />
             <div className="flex flex-row justify-center items-center mt-3">
                 <div className="my-switch flex flex-row">
