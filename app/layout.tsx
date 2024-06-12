@@ -32,7 +32,7 @@ export default function RootLayout({
         <html lang="en" suppressHydrationWarning>
             <Head>
                 <title>Rajveer Sodhi</title>
-                <link rel="icon" href="/images/favicon.ico" />
+                <link rel="icon" href="/favicon.ico" />
             </Head>
             <body
                 className={`bg-mywhite dark:bg-myblack overflow-x-hidden transition-color transition-configuration ${point.className}`}
