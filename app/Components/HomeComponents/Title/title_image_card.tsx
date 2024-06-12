@@ -17,7 +17,7 @@ export default function ImageCard() {
     }
 
     return (
-        <div onMouseOver={flipToBack} onMouseLeave={flipToFront} className="my-4">
+        <div onMouseOver={flipToBack} onMouseLeave={flipToFront} className="my-8">
             <Tilt
                 trackOnWindow={!isFlipped}
                 tiltReverse={true}

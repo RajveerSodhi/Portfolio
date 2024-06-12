@@ -14,7 +14,7 @@ html {
 }
 
 .title {
-    @apply mb-10 text-[3rem]
+    @apply mb-6 md:mb-10 text-[1.7rem] md:text-[3rem] text-center
 }
 
 .transition-configuration {
@@ -142,7 +142,7 @@ body,
 /* Description */
 
 .highlight{
-    @apply text-white dark:text-black bg-gradient-to-r from-[#8a2be9] to-[#E8853E] p-1 rounded-md shadow-lg
+    @apply md:text-white md:dark:text-black md:bg-gradient-to-r from-[#8a2be9] to-[#E8853E] md:p-1 md:rounded-md md:shadow-lg
 }
 
 /* Scrolling Icons */

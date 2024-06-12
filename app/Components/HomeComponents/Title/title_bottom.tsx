@@ -4,7 +4,7 @@ import { ReactTyped } from "react-typed";
 export default function TitleBottom() {
     return (
         <div className="flex justify-center flex-col items-center z-10">
-            <h2 className="mt-4 text-[2.75rem]">
+            <h2 className="text-center w-full text-[1.75rem] md:text-[2.75rem]">
                 <ReactTyped
                     strings={[
                         "Full Stack Developer",
@@ -18,10 +18,14 @@ export default function TitleBottom() {
                 />
             </h2>
 
-            <p className="text-center w-[75%] lg:w-[60%] mt-[4rem] text-xl leading-loose">
-                I am a final-year Computer Science Honours student at the University of British
-                Columbia. I am interested in Human-Computer Interaction, Extended Reality, and
-                Artificial Intelligence.
+            <p className="text-center md:w-[75%] lg:w-[60%] mt-[4rem] text-xl leading-loose">
+                I am a final-year Computer Science Honours student at{" "}
+                <span className="hidden md:inline">the University of British Columbia</span>
+                <span className="md:hidden inline">UBC</span>, interested in{" "}
+                <span className="hidden md:inline">Human-Computer Interaction</span>
+                <span className="md:hidden inline">HCI</span> and{" "}
+                <span className="hidden md:inline">Artificial Intelligence</span>
+                <span className="md:hidden inline">AI</span>.
             </p>
         </div>
     );

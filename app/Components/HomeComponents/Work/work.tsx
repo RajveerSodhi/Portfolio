@@ -10,7 +10,7 @@ export default function Work() {
             <Accordion
                 transition
                 transitionTimeout={500}
-                className="mx-auto max-w-[60rem] flex flex-col w-full items-center justify-center mt-[-2.5rem]"
+                className="mx-auto max-w-[60rem] flex flex-col w-full items-center justify-center md:mt-[-2.5rem]"
             >
                 {work.map((item, index) => (
                     <WorkComponent key={index} {...item} />

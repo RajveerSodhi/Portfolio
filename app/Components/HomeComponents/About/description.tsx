@@ -1,6 +1,6 @@
 export default function Description() {
     return (
-        <section className="text-center w-[75%] lg:w-[60%] text-xl leading-loose mt-0">
+        <section className="text-center w-full md:w-[75%] lg:w-[60%] text-sm md:text-xl leading-loose mt-0">
             <p className="appear-animated mb-4">
                 I&apos;m Rajveer Sodhi, a final-year Computer Science Honours student at the{" "}
                 <span className="highlight">University of British Columbia</span>, also minoring in

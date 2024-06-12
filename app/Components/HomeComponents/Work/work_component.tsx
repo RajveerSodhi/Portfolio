@@ -26,15 +26,15 @@ export default function WorkComponent(props: {
             glareMaxOpacity={0.05}
             glareBorderRadius="1.5rem"
         >
-            <div className="p-6 hover:scale-[1.02] transition-shaodw transition-transform text-myblack dark:text-mywhite rounded-3xl bg-[#fefefe] shadow-md hover:shadow-lg transition-configuration dark:bg-[#252525] mt-[2.5rem] min-w-full w-auto flex flex-col justify-center items-center appear-animated border-1 border-solid border-[#e7e7e7] dark:border-[#454545]">
+            <div className="p-6 hover:scale-[1.02] transition-shaodw transition-transform text-myblack dark:text-mywhite rounded-3xl bg-[#fefefe] shadow-md hover:shadow-lg transition-configuration dark:bg-[#252525] mt-[1.3rem] md:mt-[2.5rem] min-w-full w-auto flex flex-col justify-center items-center appear-animated border-1 border-solid border-[#e7e7e7] dark:border-[#454545]">
                 <AccordionItem
                     className="w-full"
                     header={
                         <div className="cursor-details flex items-center w-full">
                             <WorkImage img={img} company={company} tld={tld} />
-                            <div className="cursor-details ml-8 text-left">
-                                <h2 className="cursor-details text-3xl">{position}</h2>
-                                <h2 className="cursor-details text-xl text-zinc-600 dark:text-zinc-300">
+                            <div className="cursor-details ml-4 md:ml-8 text-left">
+                                <h2 className="cursor-details text-xl md:text-3xl">{position}</h2>
+                                <h2 className="cursor-details text-base md:text-xl text-zinc-600 dark:text-zinc-300">
                                     {company}
                                 </h2>
                             </div>
@@ -43,15 +43,15 @@ export default function WorkComponent(props: {
                 >
                     <div className="pt-8">
                         {description.map((desc, index) => (
-                            <li key={index} className="mb-3">
+                            <li key={index} className="mb-3 text-sm md:text-base">
                                 {desc}
                             </li>
                         ))}
-                        <div className="text-zinc-500 dark:text-zinc-400 flex justify-between mt-4 mb-2">
-                            <span className="hover:text-myblack dark:hover:text-mywhite transition-color transition-configuration">
+                        <div className="text-zinc-500 dark:text-zinc-400 text-sm md:text-base flex justify-between mt-6 mb-2">
+                            <span className="md:hover:text-myblack md:dark:hover:text-mywhite transition-color transition-configuration">
                                 {location}
                             </span>
-                            <span className="hover:text-myblack dark:hover:text-mywhite transition-color transition-configuration">
+                            <span className="md:hover:text-myblack md:dark:hover:text-mywhite transition-color transition-configuration">
                                 {date}
                             </span>
                         </div>

@@ -42,16 +42,16 @@ export default function ProjectComponent(props: {
                             />
                         </Tilt>
                         <Lightbox openImage={openImage} setOpenImage={setOpenImage} link={link} />
-                        <h2 className="cursor-details mb-2 text-3xl">{title}</h2>
-                        <h5 className="text-xl cursor-details text-center mb-2 text-myblack/85 dark:text-mywhite/85">
+                        <h2 className="cursor-details mb-2 text-xl md:text-3xl">{title}</h2>
+                        <h5 className="text-base md:text-xl cursor-details text-center md:mb-2 text-myblack/85 dark:text-mywhite/85">
                             {subtitle}
                         </h5>
                     </div>
                 }
             >
-                <div id="project-description" className="p-4 max-w-[448px]">
+                <div id="project-description" className="p-4 max-w-[448px] text-sm md:text-base">
                     <h6 className="text-myblack/75 dark:text-mywhite/75">{tech}</h6>
-                    <div className="text-myblack dark:text-mywhite mt-3 mb-1 text-left text-lg">
+                    <div className="text-myblack dark:text-mywhite mt-3 mb-4 md:mb-1 text-left md:text-lg">
                         {description.map((item, index) => (
                             <li className="mb-3" key={index}>
                                 {item}

@@ -7,7 +7,7 @@ export default function Resume() {
 
     return (
         <a
-            className="no-underline text-2xl py-4 px-12 text-center flex flex-row items-center rounded-full shadow-md hover:scale-[0.95] transition-transform transition-configuration dark:bg-[#fefefe] bg-[#252525] border-1 border-solid dark:border-[#e7e7e7] border-[#454545] dark:text-myblack text-mywhite"
+            className="no-underline text-xl md:text-2xl py-4 px-12 text-center flex flex-row items-center rounded-full shadow-md hover:scale-[0.95] transition-transform transition-configuration dark:bg-[#fefefe] bg-[#252525] border-1 border-solid dark:border-[#e7e7e7] border-[#454545] dark:text-myblack text-mywhite"
             download
             href="/resume.pdf"
             onMouseEnter={() => setHovered(true)}
