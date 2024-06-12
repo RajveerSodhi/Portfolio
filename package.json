@@ -26,7 +26,6 @@
     "react-dom": "^18.3.1",
     "react-icons": "^5.2.0",
     "react-parallax-tilt": "^1.7.227",
-    "react-pdf": "^7.7.1",
     "react-switch": "^7.0.0",
     "react-typed": "^2.0.12",
     "stripe": "^15.6.0",
@@ -36,6 +35,7 @@
   "devDependencies": {
     "@types/node": "^20",
     "@types/react": "^18",
+    "@types/react-curved-text": "^2.0.3",
     "@types/react-dom": "^18",
     "autoprefixer": "^10.4.19",
     "eslint": "^8",
