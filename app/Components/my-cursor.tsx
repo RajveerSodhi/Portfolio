@@ -1,5 +1,5 @@
 "use client";
-import { useState, useEffect, useRef } from "react";
+import { useState, useEffect } from "react";
 import { FaExternalLinkAlt, FaExpand, FaArrowDown, FaRegClock, FaGamepad } from "react-icons/fa";
 import debounce from "lodash/debounce";
 
@@ -7,7 +7,6 @@ export default function MyCursor() {
     const [position, setPosition] = useState({ x: 0, y: 0 });
     const [isHoveringSpecialComponent, setIsHoveringSpecialComponent] = useState(false);
     const [tooltipContent, setTooltipContent] = useState<React.ReactNode>(null);
-    const tooltipRef = useRef<HTMLDivElement>(null);
 
     const specialComponents = [
         {
@@ -75,42 +74,30 @@ export default function MyCursor() {
     }, 10);
 
     useEffect(() => {
-        let requestId: number;
-        const updatePosition = () => {
-            if (tooltipRef.current) {
-                tooltipRef.current.style.transform = `translate(${position.x - 90}px, ${
-                    position.y - 110
-                }px)`;
-            }
-            requestId = requestAnimationFrame(updatePosition);
-        };
-        requestId = requestAnimationFrame(updatePosition);
         window.addEventListener("mousemove", handleMouseMove);
         return () => {
             window.removeEventListener("mousemove", handleMouseMove);
-            cancelAnimationFrame(requestId);
         };
     }, [position]);
 
     return (
         <div className="hidden md:block">
             <div
-                className="my-cursor"
+                className={`pointer-events-none will-change-transform z-[999999] fixed rounded-full
+                    ${
+                        isHoveringSpecialComponent
+                            ? " whitespace-nowrap bg-myblack dark:bg-mywhite text-mywhite dark:text-myblack px-4 py-2 w-44 flex items-center justify-center shadow-lg transition-transform ease-out duration-700"
+                            : "cursor-blur border-2 border-solid border-[#ffffff2b] mix-blend-difference bg-white p-2"
+                    }
+                `}
                 style={{
-                    left: `${position.x}px`,
-                    top: `${position.y}px`,
+                    transform: `translate3d(${
+                        position.x - (isHoveringSpecialComponent ? 90 : 10)
+                    }px, ${position.y - 105}px, 0px)`,
                 }}
-            ></div>
-            {tooltipContent && (
-                <div
-                    ref={tooltipRef}
-                    className={`z-[999999] pointer-events-none whitespace-nowrap will-change-transform tooltip-text fixed transition-opacity duration-300 ${
-                        isHoveringSpecialComponent ? "opacity-100" : "opacity-0"
-                    } bg-myblack dark:bg-mywhite text-mywhite dark:text-myblack px-4 py-2 rounded-full w-44 flex items-center justify-center shadow-lg`}
-                >
-                    {tooltipContent}
-                </div>
-            )}
+            >
+                {tooltipContent}
+            </div>
         </div>
     );
 }
