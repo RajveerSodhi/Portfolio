@@ -3,12 +3,12 @@ import { useEffect, useRef, useState } from "react";
 import { cn } from "../utils/cn";
 
 export const BackgroundGradientAnimation = ({
-    firstColor = "56, 136, 255",
-    secondColor = "220, 99, 255",
-    thirdColor = "129, 252, 198",
-    fourthColor = "255, 177, 77",
-    fifthColor = "255, 88, 88",
-    pointerColor = "134, 118, 255",
+    firstColor = "76, 156, 255",
+    secondColor = "236, 115, 255",
+    thirdColor = "149, 255, 208",
+    fourthColor = "255, 197, 90",
+    fifthColor = "255, 99, 99",
+    pointerColor = "147, 134, 255",
     size = "100%",
     blendingValue = "hard-light",
     children,
@@ -51,8 +51,8 @@ export const BackgroundGradientAnimation = ({
             if (!interactiveRef.current) {
                 return;
             }
-            setCurX(curX + (tgX - curX) / 55);
-            setCurY(curY + (tgY - curY) / 55);
+            setCurX(curX + (tgX - curX) / 45);
+            setCurY(curY + (tgY - curY) / 45);
             interactiveRef.current.style.transform = `translate(${Math.round(curX)}px, ${Math.round(
                 curY
             )}px)`;

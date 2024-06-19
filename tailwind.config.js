@@ -15,11 +15,11 @@ module.exports = {
         myblack: "#27272A",
       },
       animation: {
-        first: "moveVertical 60s ease infinite",
-        second: "moveInCircle 40s reverse infinite",
-        third: "moveInCircle 80s linear infinite",
-        fourth: "moveHorizontal 80s ease infinite",
-        fifth: "moveInCircle 40s ease infinite",
+        first: "moveVertical 50s ease infinite",
+        second: "moveInCircle 30s reverse infinite",
+        third: "moveInCircle 70s linear infinite",
+        fourth: "moveHorizontal 70s ease infinite",
+        fifth: "moveInCircle 30s ease infinite",
       },
       keyframes: {
         moveHorizontal: {

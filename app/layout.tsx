@@ -13,7 +13,6 @@ const point = localFont({
         { path: "../public/fonts/point/PointRegular.otf", weight: "400", style: "normal" },
         { path: "../public/fonts/point/PointBook.otf", weight: "300", style: "normal" },
         { path: "../public/fonts/point/PointBold.otf", weight: "700", style: "normal" },
-        { path: "../public/fonts/point/PointMediumItalic.otf", weight: "400", style: "italic" },
     ],
     variable: "--font-point",
 });
