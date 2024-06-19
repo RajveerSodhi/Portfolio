@@ -5,7 +5,6 @@ import debounce from "lodash/debounce";
 
 export default function MyCursor() {
     const [position, setPosition] = useState({ x: 0, y: 0 });
-    const [isPointer, setIsPointer] = useState(false);
     const [isHoveringSpecialComponent, setIsHoveringSpecialComponent] = useState(false);
     const [tooltipContent, setTooltipContent] = useState<React.ReactNode>(null);
     const tooltipRef = useRef<HTMLDivElement>(null);
@@ -63,8 +62,6 @@ export default function MyCursor() {
         const target = e.target as HTMLElement;
         const targetClasses = target.classList;
 
-        setIsPointer(window.getComputedStyle(target).getPropertyValue("cursor") === "pointer");
-
         const specialComponent = specialComponents.find((component) =>
             targetClasses.contains(component.className)
         );
@@ -81,8 +78,9 @@ export default function MyCursor() {
         let requestId: number;
         const updatePosition = () => {
             if (tooltipRef.current) {
-                tooltipRef.current.style.left = `${position.x + 15}px`;
-                tooltipRef.current.style.top = `${position.y + 15}px`;
+                tooltipRef.current.style.transform = `translate(${position.x - 90}px, ${
+                    position.y - 110
+                }px)`;
             }
             requestId = requestAnimationFrame(updatePosition);
         };
@@ -97,26 +95,18 @@ export default function MyCursor() {
     return (
         <div className="hidden md:block">
             <div
-                className={`my-cursor ${isPointer ? "pointer" : ""} ${
-                    isHoveringSpecialComponent ? "special-hover" : ""
-                }`}
+                className="my-cursor"
                 style={{
-                    transform: `translate(${position.x}px, ${position.y}px)`,
+                    left: `${position.x}px`,
+                    top: `${position.y}px`,
                 }}
             ></div>
             {tooltipContent && (
                 <div
                     ref={tooltipRef}
-                    className={`tooltip-text fixed transition-opacity duration-300 ${
+                    className={`z-[999999] pointer-events-none whitespace-nowrap will-change-transform tooltip-text fixed transition-opacity duration-300 ${
                         isHoveringSpecialComponent ? "opacity-100" : "opacity-0"
                     } bg-myblack dark:bg-mywhite text-mywhite dark:text-myblack px-4 py-2 rounded-full w-44 flex items-center justify-center shadow-lg`}
-                    style={{
-                        zIndex: 999999,
-                        pointerEvents: "none",
-                        whiteSpace: "nowrap",
-                        transform: "translate(-62%, -62%)",
-                        willChange: "transform",
-                    }}
                 >
                     {tooltipContent}
                 </div>

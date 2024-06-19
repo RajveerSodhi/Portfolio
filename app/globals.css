@@ -132,11 +132,7 @@ body,
 }
 
 .tooltip-text {
-    transition: opacity 0.5s ease-in-out, left 0.35s ease-out, top 0.35s ease-out;
-}
-
-.my-cursor.special-hover {
-    visibility: hidden;
+    transition: left 0.35s ease-out, top 0.35s ease-out;
 }
 
 /* Scrolling Icons */
