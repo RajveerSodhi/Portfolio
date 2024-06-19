@@ -51,8 +51,8 @@ export const BackgroundGradientAnimation = ({
             if (!interactiveRef.current) {
                 return;
             }
-            setCurX(curX + (tgX - curX) / 45);
-            setCurY(curY + (tgY - curY) / 45);
+            setCurX(curX + (tgX - curX) / 40);
+            setCurY(curY + (tgY - curY) / 40);
             interactiveRef.current.style.transform = `translate(${Math.round(curX)}px, ${Math.round(
                 curY
             )}px)`;
