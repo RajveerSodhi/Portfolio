@@ -31,7 +31,7 @@ export default function BackCard() {
                 alt="Rajveer Sodhi Logo"
             />
             <ReactCurvedText
-                text="SCROLL DOWN 👨‍💻 TO KNOW MORE 👨‍💻"
+                text="SCROLL DOWN 🤓 TO KNOW MORE 🤔"
                 width={300}
                 height={300}
                 cx={150}
