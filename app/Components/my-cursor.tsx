@@ -1,6 +1,7 @@
 "use client";
 import { useState, useEffect, useRef } from "react";
 import { FaExternalLinkAlt, FaExpand, FaArrowDown, FaRegClock, FaGamepad } from "react-icons/fa";
+import debounce from "lodash/debounce";
 
 export default function MyCursor() {
     const [position, setPosition] = useState({ x: 0, y: 0 });
@@ -57,14 +58,13 @@ export default function MyCursor() {
         },
     ];
 
-    const handleMouseMove = (e: MouseEvent) => {
+    const handleMouseMove = debounce((e: MouseEvent) => {
         setPosition({ x: e.clientX, y: e.clientY });
         const target = e.target as HTMLElement;
         const targetClasses = target.classList;
 
         setIsPointer(window.getComputedStyle(target).getPropertyValue("cursor") === "pointer");
 
-        // Check if the target has any special component classes
         const specialComponent = specialComponents.find((component) =>
             targetClasses.contains(component.className)
         );
@@ -75,7 +75,7 @@ export default function MyCursor() {
             setIsHoveringSpecialComponent(false);
             setTooltipContent(null);
         }
-    };
+    }, 10);
 
     useEffect(() => {
         let requestId: number;
@@ -116,6 +116,7 @@ export default function MyCursor() {
                         pointerEvents: "none",
                         whiteSpace: "nowrap",
                         transform: "translate(-62%, -62%)",
+                        willChange: "transform",
                     }}
                 >
                     {tooltipContent}

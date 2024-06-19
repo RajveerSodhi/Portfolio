@@ -117,8 +117,8 @@ body,
 
 .my-cursor {
     position: fixed;
-    top: 0;
-    left: 0;
+    transform: translate3d(0,0, 0);
+    will-change: transform;
     border-radius: 50%;
     border: 2px solid #ffffff2b;
     mix-blend-mode: difference;
