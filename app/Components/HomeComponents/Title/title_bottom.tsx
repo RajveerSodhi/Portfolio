@@ -7,8 +7,9 @@ export default function TitleBottom() {
             <h2 className="text-center w-full text-[1.75rem] md:text-[2.75rem]">
                 <ReactTyped
                     strings={[
-                        "Full Stack Developer",
+                        "Front End Developer",
                         "HCI Researcher",
+                        "Software Engineer",
                         "Responsible Leader",
                         "Enthusiastic Learner",
                     ]}
