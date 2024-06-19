@@ -101,8 +101,7 @@ export default function MyCursor() {
                     isHoveringSpecialComponent ? "special-hover" : ""
                 }`}
                 style={{
-                    left: `${position.x}px`,
-                    top: `${position.y}px`,
+                    transform: `translate(${position.x}px, ${position.y}px)`,
                 }}
             ></div>
             {tooltipContent && (
