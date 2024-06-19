@@ -86,7 +86,7 @@ export default function MyCursor() {
                 className={`pointer-events-none will-change-transform z-[999999] fixed rounded-full
                     ${
                         isHoveringSpecialComponent
-                            ? " whitespace-nowrap bg-myblack dark:bg-mywhite text-mywhite dark:text-myblack px-4 py-2 w-44 flex items-center justify-center shadow-lg transition-transform ease-out duration-700"
+                            ? " whitespace-nowrap bg-myblack dark:bg-mywhite text-mywhite dark:text-myblack px-4 py-2 w-44 flex items-center justify-center shadow-lg transition-transform ease-out duration-300"
                             : "cursor-blur border-2 border-solid border-[#ffffff2b] mix-blend-difference bg-white p-2"
                     }
                 `}
