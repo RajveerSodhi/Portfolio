@@ -2,7 +2,7 @@ import Link from "next/link";
 
 export default function FooterNavbar() {
     return (
-        <span className="flex-col lg:flex-row items-center md:min-w-60 hidden md:flex">
+        <span className="flex-col lg:flex-row items-center md:min-w-60 hidden md:flex flex-wrap justify-center">
             <Link href="/" className="navLink">
                 Home
             </Link>
