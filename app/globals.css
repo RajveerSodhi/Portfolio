@@ -116,6 +116,12 @@ body,
     -webkit-backdrop-filter: blur(8px) grayscale();
 }
 
+/* Description */
+
+.highlight{
+    @apply md:text-white md:dark:text-black md:bg-gradient-to-r from-[#8a2be9] to-[#E8853E] md:p-1 md:rounded-md md:shadow-lg
+}
+
 /* Scrolling Icons */
 
 .icons-container {
