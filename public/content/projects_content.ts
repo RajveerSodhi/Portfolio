@@ -32,7 +32,7 @@ export const projects = [
     },
     {
         title: "Gestura",
-        subtitle: "Sign Langauge to English Converter",
+        subtitle: "ASL to English Converter",
         link: "Gestura",
         tech: "Python, HTML, CSS, JavaScript",
         description: [
@@ -43,7 +43,7 @@ export const projects = [
     },
     {
         title: "TransitMate",
-        subtitle: "Ride Sharing App Prototype",
+        subtitle: "Ride-Share App Prototype",
         link: "TransitMate",
         tech: "Java, XML",
         description: [
