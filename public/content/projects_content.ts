@@ -41,15 +41,16 @@ export const projects = [
             "Implemented the Google Translate and Text-to-Speech API to enhance the project's capabilities by generating multilingual text and speech outputs for the translations."
         ]
     },
+    ,
     {
-        title: "TransitMate",
-        subtitle: "Ride-Share App Prototype",
-        link: "TransitMate",
-        tech: "Java, XML",
+        title: "FlightBar",
+        subtitle: "Flight Tracker Menubar App",
+        link: "FlightBar",
+        tech: "Swift",
         description: [
-            "Engineered a high-fidelity prototype for a ride-sharing app in Android Studio, seamlessly integrating the Google Maps API.",
-            "Applied HCI fundamentals by conducting multiple rounds of requirements gathering and user testing to refine the user experience.",
-            "Utilized object-oriented principles to ensure efficient code organization, enhancing maintainability and scalability of the app."
+            "Developed a macOS menubar app using Swift that displays real-time flight data.",
+            "Utilized the FlightAware API to fetch flight data and display it in the menubar.",
+            "Implemented a map view with MapKit API to show the flight's route."
         ]
     }
 ];
