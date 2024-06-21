@@ -41,7 +41,6 @@ export const projects = [
             "Implemented the Google Translate and Text-to-Speech API to enhance the project's capabilities by generating multilingual text and speech outputs for the translations."
         ]
     },
-    ,
     {
         title: "FlightBar",
         subtitle: "Flight Tracker Menubar App",
