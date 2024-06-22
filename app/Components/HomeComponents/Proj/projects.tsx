@@ -20,7 +20,7 @@ export default function Projects() {
                     {projects.map((project, index) => (
                         <ProjectComponent key={index} {...project} />
                     ))}
-                    <Placeholder visible={showPlaceholder} />
+                    {showPlaceholder && <Placeholder />}
                 </div>
             </Accordion>
         </section>

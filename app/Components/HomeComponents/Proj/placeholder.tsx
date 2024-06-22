@@ -4,8 +4,7 @@ import { useState } from "react";
 import ReactCardFlip from "react-card-flip";
 import Tilt from "react-parallax-tilt";
 
-export default function Placeholder(props: { visible: boolean }) {
-    const { visible } = props;
+export default function Placeholder() {
     const [isFlipped, setIsFlipped] = useState(false);
 
     function flipToBack() {
@@ -18,11 +17,7 @@ export default function Placeholder(props: { visible: boolean }) {
 
     return (
         <Tilt tiltReverse={false} tiltMaxAngleX={1} tiltMaxAngleY={1} gyroscope={false}>
-            <div
-                className={`cursor-placeholder appear-animated select-none p-4 flex-col text-center justify-center items-center shadow-lg bg-[#fefefe] dark:bg-[#252525] border-1 border-solid border-[#e7e7e7] dark:border-[#454545] text-myblack dark:text-mywhite rounded-3xl w-full h-full max-h-[444px] hover:scale-[1.01] transition-transform transition-configuration hidden md:flex ${
-                    visible ? "" : "hidden"
-                }`}
-            >
+            <div className="cursor-placeholder appear-animated select-none p-4 flex-col text-center justify-center items-center shadow-lg bg-[#fefefe] dark:bg-[#252525] border-1 border-solid border-[#e7e7e7] dark:border-[#454545] text-myblack dark:text-mywhite rounded-3xl w-full h-full max-h-[444px] hover:scale-[1.01] transition-transform transition-configuration md:flex">
                 <Tilt
                     tiltReverse={false}
                     tiltMaxAngleX={7}
