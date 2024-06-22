@@ -67,5 +67,16 @@ export const projects = [
             "Utilized the FlightAware API to fetch flight data and display it in the menubar.",
             "Implemented a map view with MapKit API to show the flight's route."
         ]
+    },
+    {
+        title: "Cancer Data Analysis",
+        subtitle: "Dataset Analysis",
+        link: "Breast-Cancer-Diagnosis-in-the-State-of-Wisconsin",
+        tech: "Python, Tableau",
+        tag: "data",
+        description: [
+            "Investigated the relationships between diverse features of breast cancers and their corresponding diagnoses in a data set.",
+            "Produced a graph-rich report using the Pandas, Seaborn, MatPlotLib, and NumPy Python libraries and a robust dashboard on Tableau."
+        ]
     }
 ];
