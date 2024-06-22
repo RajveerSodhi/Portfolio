@@ -17,7 +17,6 @@ export const projects = [
         description: [
             "Created a personal website showcasing my technical skills and work experience. Also added a page showcasing iOS icon designs.",
             "Developed using the Next.ts framework in TypeScript. Implemented the Stripe API for payments."
-
         ]
     },
     {

@@ -3,14 +3,14 @@ import ProjectComponent from "./project_component";
 import { projects } from "../../../../public/content/projects_content";
 import { Accordion } from "@szhsin/react-accordion";
 import Placeholder from "./placeholder";
-import { use, useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 
 export default function Projects() {
     const [showPlaceholder, setShowPlaceholder] = useState(false);
 
     useEffect(() => {
         setShowPlaceholder(projects.length % 2 != 0);
-    }, []);
+    }, [projects]);
 
     return (
         <section className="appear-animated" id="projects">
