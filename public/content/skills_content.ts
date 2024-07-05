@@ -10,12 +10,12 @@ export const skills = [
             "TypeScript",
             "R",
             "Swift",
+            "HTML"
         ]
     },
     {
         category: "Web Development",
         skills: [
-            "HTML",
             "CSS",
             "Tailwind CSS",
             "Bootstrap",
@@ -25,6 +25,7 @@ export const skills = [
             "React.js",
             "Node.js",
             "Express.js",
+            "Three.js",
             "Axios",
             "Mongoose",
             "Netlify",
