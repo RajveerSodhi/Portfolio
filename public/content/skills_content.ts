@@ -26,6 +26,7 @@ export const skills = [
             "Node.js",
             "Express.js",
             "Three.js",
+            "jQuery",
             "Axios",
             "Mongoose",
             "Netlify",

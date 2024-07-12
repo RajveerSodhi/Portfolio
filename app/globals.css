@@ -67,6 +67,10 @@ section {
     @apply mx-1 p-2 text-myblack dark:text-mywhite rounded-full w-auto h-auto aspect-square max-w-8 max-h-8 bg-zinc-300 dark:bg-zinc-600 hover:scale-90 transition-transform duration-500 ease-in-out
 }
 
+.footer-info {
+    @apply md:hover:text-zinc-700 md:dark:hover:text-zinc-300 py-1 xl:py-0 transition-colors transition-configuration
+}
+
 /* Title Image Card - Logo */
 
 .curved-text {

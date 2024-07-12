@@ -28,7 +28,7 @@ export const projects = [
         tech: "Python, HTML, CSS, JavaScript, SQL",
         tag: "web",
         description: [
-            "Collaborated in developing a Flask-based e-learning platform, employing Agile methodologies, CI/CD practices, UML for system design, and Test-Driven Development (TDD) with Selenium for automated testing and deployment to ensure quality and performance.",
+            "Collaborated in developing a Flask-based full-stack e-learning platform, employing Agile methodologies, CI/CD practices, UML for system design, and Test-Driven Development (TDD) with Selenium for automated testing and deployment to ensure quality and performance.",
             "Implemented core features like user authentication, course management, discussion portals, assignment submissions, and grading."
         ]
     },
