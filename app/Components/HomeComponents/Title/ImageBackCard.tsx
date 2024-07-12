@@ -21,7 +21,7 @@ export default function BackCard() {
     }, [theme.resolvedTheme]);
 
     return (
-        <div className="flex justify-center shadow-lg rounded-[2.8rem] aspect-square h-[300px] w-[300px] max-h-[300px] max-w-[300px] border-1 border-mywhite bg-myblack dark:border-myblack dark:bg-mywhite select-none">
+        <div className="flex justify-center shadow-lg rounded-[2.8rem] aspect-square h-[300px] w-[300px] max-h-[300px] max-w-[300px] bg-myblack dark:bg-mywhite select-none">
             <Image
                 className="absolute top-0 left-0 right-0 bottom-0 m-auto"
                 src={logoSrc}

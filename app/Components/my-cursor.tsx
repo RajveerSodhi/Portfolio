@@ -91,9 +91,7 @@ export default function MyCursor() {
                     }
                 `}
                 style={{
-                    transform: `translate3d(${
-                        position.x - (isHoveringSpecialComponent ? 90 : 10)
-                    }px, ${position.y - 105}px, 0px)`,
+                    transform: `translate3d(${position.x - 10}px, ${position.y - 105}px, 0px)`,
                 }}
             >
                 {tooltipContent}

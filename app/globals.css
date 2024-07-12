@@ -19,7 +19,10 @@ html {
 
 .transition-configuration {
     @apply duration-500 ease-in-out
+}
 
+.card {
+    @apply text-center items-center shadow-lg bg-cardlightbg dark:bg-carddarkbg border border-solid border-cardlightborder dark:border-carddarkborder text-myblack dark:text-mywhite w-auto transition-configuration
 }
 
 section {
@@ -41,6 +44,30 @@ section {
     animation: appear ease-in-out;
     animation-timeline: view();
     animation-range: entry 0% cover 30%;
+}
+
+/* Skills */
+
+.skill::before {
+    position: absolute;
+    content: '';
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-image: linear-gradient(
+        to right,
+        #7b27d0,
+        #E8853E
+    );
+    z-index: -1;
+    transition: opacity 0.5s ease-in-out;
+    opacity: 0;
+    border-radius: 999px;
+}
+
+.skill:hover::before {
+    opacity: 1;
 }
 
 /* Navbar and Footer */
@@ -131,11 +158,11 @@ body,
 .icons-container {
     overflow: hidden;
     background-color: rgba(100, 116, 139, 0.2);
-    border-radius: 30px;
-    box-shadow: inset 0 0 20px rgba(0, 0, 0, 0.4);
+    border-radius: 2rem;
+    box-shadow: inset 0 0 1.25 rem rgba(0, 0, 0, 0.4);
     height: auto;
     border: 3px solid rgb(131, 131, 131);
-    transition: transform 0.3s ease-in-out;
+    transition: transform 0.5s ease-in-out;
 }
 
 .icons-container:hover * {
@@ -204,9 +231,9 @@ body,
 
 /* iPhone Customization Switches */
 
-.my-switch label,
-.my-switch input {
-    transition: transform 0.2s ease-in-out;
+.my-switch {
+    cursor: none;
+    transition: transform 0.5s ease-in-out;
 }
 
 .my-switch label img {
@@ -218,9 +245,8 @@ body,
     user-select: none;
 }
 
-.my-switch:hover * {
-    cursor: pointer;
-    transform: scale(1.03);
+.my-switch:hover {
+    transform: scale(1.05);
 }
 
 .my-switch input:checked {

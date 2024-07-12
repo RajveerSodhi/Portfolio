@@ -29,10 +29,10 @@ export default function Projects() {
                         <button
                             key={index}
                             onClick={() => setSelectedTag(tag)}
-                            className={`cursor-none rounded-full text-center items-center shadow-lg border-1 border-solid w-auto hover:scale-95 transition-all transition-configuration py-2 px-4 md:py-3 md:px-6 text-sm md:text-base ${
+                            className={`cursor-none rounded-full w-auto hover:scale-95 transition-all py-2 px-4 md:py-3 md:px-6 text-sm md:text-base card ${
                                 selectedTag === tag
-                                    ? "dark:bg-[#fefefe] bg-[#252525] dark:border-[#e7e7e7] border-[#454545] dark:text-myblack text-mywhite"
-                                    : "bg-[#fefefe] dark:bg-[#252525] border-[#e7e7e7] dark:border-[#454545] text-myblack dark:text-mywhite"
+                                    ? "dark:bg-cardlightbg bg-carddarkbg dark:border-cardlightborder border-carddarkborder dark:text-myblack text-mywhite"
+                                    : ""
                             }`}
                         >
                             {tag}

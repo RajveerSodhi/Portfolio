@@ -6,7 +6,7 @@ export default function OrderSuccess() {
             <a
                 download
                 href="/icons.zip"
-                className="px-16 py-3 z-40 no-underline shadow-lg bg-[#fefefe] dark:bg-[#252525] border-1 border-solid border-[#e7e7e7] dark:border-[#454545] text-myblack dark:text-mywhite rounded-full w-auto hover:scale-95 transition-configuration transition-transform"
+                className="px-16 py-3 z-40 no-underline rounded-full w-auto hover:scale-95 transition-transform card"
             >
                 Dowload Icons
             </a>

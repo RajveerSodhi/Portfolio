@@ -1,6 +1,6 @@
 "use client";
 import { useState } from "react";
-import { FaArrowDown, FaArrowRight } from "react-icons/fa6";
+import { FaArrowRight } from "react-icons/fa6";
 
 export default function ResumeView() {
     const [viewResume, setViewResume] = useState(false);
@@ -12,13 +12,17 @@ export default function ResumeView() {
                 onClick={() => setViewResume(!viewResume)}
             >
                 Or View Here{" "}
-                <span className="ml-2 text-center flex items-center justify-center">
-                    {viewResume ? <FaArrowDown /> : <FaArrowRight />}
+                <span
+                    className={`ml-2 text-center flex items-center justify-center transition-transform transition-configuration ${
+                        viewResume ? "rotate-90" : ""
+                    }`}
+                >
+                    <FaArrowRight />
                 </span>
             </div>
             <iframe
-                className={`shadow-lg w-[80vh] h-[85vh] aspect-auto rounded-2xl ${
-                    viewResume ? "block" : "hidden"
+                className={`shadow-lg w-[80vh] aspect-auto rounded-2xl transition-all transition-configuration ${
+                    viewResume ? "opacity-1 h-[85vh]" : "opacity-0 h-0"
                 }`}
                 title="Resume"
                 src="/resume.pdf"

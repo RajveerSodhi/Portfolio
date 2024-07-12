@@ -51,7 +51,7 @@ const CheckoutForm: React.FC<CheckoutFormProps> = ({
             <PaymentElement />
             <button
                 disabled={!stripe || loading}
-                className="mt-4 rounded-full py-3 px-16 shadow-lg dark:bg-[#fefefe] bg-[#252525] border-1 border-solid dark:border-[#e7e7e7] border-[#454545] dark:text-myblack text-mywhite hover:scale-95 transition-configuration transition-transform"
+                className="mt-4 rounded-full py-3 px-16 hover:scale-95 transition-transform text-center items-center shadow-lg dark:bg-cardlightbg bg-carddarkbg border border-solid dark:border-cardlightborder border-carddarkborder dark:text-myblack text-mywhite w-auto transition-configuration"
             >
                 {loading ? "Processing..." : "Submit"}
             </button>
@@ -92,7 +92,7 @@ const InjectedCheckoutForm: React.FC<InjectedCheckoutFormProps> = ({ donationAmo
             <Elements stripe={stripePromise} options={{ clientSecret }}>
                 <ElementsConsumer>
                     {({ stripe, elements }) => (
-                        <div className="p-8 mt-2 z-40 shadow-lg bg-[#fefefe] dark:bg-[#252525] border-1 border-solid border-[#e7e7e7] dark:border-[#454545] text-myblack dark:text-mywhite rounded-3xl md:w-[45rem] lg:w-[60rem] text-xl">
+                        <div className="p-8 mt-2 z-40 rounded-3xl md:w-[45rem] lg:w-[60rem] text-xl card">
                             <p className="mb-2">Amount: ${donationAmount.toFixed(2)}</p>
                             <p className="mb-2">Enter your payment information:</p>
                             <hr className="mb-4" />
