@@ -43,7 +43,7 @@ export default function LightBox(props: {
                     scrollToZoom,
                 }}
                 close={() => setOpenImage(false)}
-                slides={[{ src: `/images/project_photos/lightbox/${link}.png` }]}
+                slides={[{ src: `/images/project_photos/lightbox/${link}.webp` }]}
             />
         </>
     );

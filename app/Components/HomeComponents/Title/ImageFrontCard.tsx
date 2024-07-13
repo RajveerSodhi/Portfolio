@@ -6,13 +6,13 @@ import { useTheme } from "next-themes";
 export default function FrontCard() {
     const theme = useTheme();
 
-    const [myPhotoSrc, setMyPhotoSrc] = useState("/images/myPhoto/light.png");
+    const [myPhotoSrc, setMyPhotoSrc] = useState("/images/myPhoto/light.webp");
 
     useEffect(() => {
         if (theme.resolvedTheme === "dark") {
-            setMyPhotoSrc("/images/myPhoto/dark.png");
+            setMyPhotoSrc("/images/myPhoto/dark.webp");
         } else {
-            setMyPhotoSrc("/images/myPhoto/light.png");
+            setMyPhotoSrc("/images/myPhoto/light.webp");
         }
     }, [theme.resolvedTheme]);
 

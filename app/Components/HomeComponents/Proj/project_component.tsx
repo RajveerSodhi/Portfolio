@@ -33,7 +33,7 @@ export default function ProjectComponent(props: {
                             glareBorderRadius="1rem"
                         >
                             <Image
-                                src={`/images/project_photos/thumbnail/${link}.png`}
+                                src={`/images/project_photos/thumbnail/${link}.webp`}
                                 alt={`Project Image - ${title}`}
                                 width={400}
                                 height={400}

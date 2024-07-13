@@ -25,7 +25,7 @@ export default function ContactButton(props: { href: string; text: string }) {
             className="md:scale-100 scale-90 relative no-underline text-2xl text-center items-center hover:scale-90 transition-transform transition-configuration text-myblack dark:text-mywhite"
         >
             <Image
-                src={`/images/contact_buttons/${text}_${contactButtonTheme}.png`}
+                src={`/images/contact_buttons/${text}_${contactButtonTheme}.webp`}
                 width={170}
                 height={70}
                 priority={true}

@@ -7,7 +7,7 @@ export default function WorkImage(props: { img: string; company: string; tld: st
         <div className="cursor-website bg-mywhite w-auto h-auto min-w-[5.4rem] min-h-[5.4rem] aspect-square p-1 rounded-full flex items-center justify-center shadow-md hover:shadow-lg hover:scale-105 transition-all transition-configuration">
             <a href={`https://www.${img}.${tld}/`} target="_blank" rel="noreferrer">
                 <Image
-                    src={`/images/work_photos/${img}.png`}
+                    src={`/images/work_photos/${img}.webp`}
                     alt={company}
                     width={40}
                     height={40}

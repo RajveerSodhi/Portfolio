@@ -23,7 +23,7 @@ export default function IPhone() {
     return (
         <div className="flex flex-col justify-center items-center">
             <Image
-                src={`/images/icons_framed_screenshots/${imageSrc}.png`}
+                src={`/images/icons_framed_screenshots/${imageSrc}.webp`}
                 alt="iPhone"
                 width={375}
                 height={812}
@@ -35,7 +35,7 @@ export default function IPhone() {
                     <span>
                         <label htmlFor="iconsSwitch">
                             <Image
-                                src="/images/iphone_switch_labels/black_icons.png"
+                                src="/images/iphone_switch_labels/black_icons.webp"
                                 alt="black_icons"
                                 width={24}
                                 height={24}
@@ -57,7 +57,7 @@ export default function IPhone() {
                     <span>
                         <label htmlFor="iconsSwitch">
                             <Image
-                                src="/images/iphone_switch_labels/white_icons.png"
+                                src="/images/iphone_switch_labels/white_icons.webp"
                                 alt="white_icons"
                                 width={24}
                                 height={24}
@@ -70,7 +70,7 @@ export default function IPhone() {
                     <span>
                         <label htmlFor="wallpaperSwitch">
                             <Image
-                                src="/images/iphone_switch_labels/black_wallpaper.png"
+                                src="/images/iphone_switch_labels/black_wallpaper.webp"
                                 alt="black_wallpaper"
                                 width={24}
                                 height={48}
@@ -92,7 +92,7 @@ export default function IPhone() {
                     <span>
                         <label htmlFor="wallpaperSwitch">
                             <Image
-                                src="/images/iphone_switch_labels/white_wallpaper.png"
+                                src="/images/iphone_switch_labels/white_wallpaper.webp"
                                 alt="white_wallpaper"
                                 width={24}
                                 height={48}
