@@ -28,14 +28,14 @@ export default function Placeholder() {
                     <div onMouseOver={flipToBack} onMouseLeave={flipToFront}>
                         <ReactCardFlip isFlipped={isFlipped} flipDirection="horizontal">
                             <Image
-                                src="/images/memoji/front.jpeg"
+                                src="/images/memoji/front.webp"
                                 width={200}
                                 height={200}
                                 alt="Rajveers Memoji Working"
                                 className="rounded-full select-none shadow-xl border border-solid border-cardlightborder dark:border-carddarkborder"
                             ></Image>
                             <Image
-                                src="/images/memoji/back.jpeg"
+                                src="/images/memoji/back.webp"
                                 width={200}
                                 height={200}
                                 alt="Rajveers Memoji Yawning"

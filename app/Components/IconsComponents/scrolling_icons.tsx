@@ -5,84 +5,84 @@ export default function ScrollingIcons() {
         <div className="icons-container flex flex-col w-[100%] md:max-w-[45rem] backdrop-blur-3xl bg-mywhite/50 dark:bg-myblack/50 z-40">
             <div className="flex flex-row scrolling-icons forward">
                 <Image
-                    src="/icons/icons_light/whatsapp_light.jpg"
+                    src="/icons/icons_light/whatsapp_light.webp"
                     alt=""
                     width={75}
                     height={75}
                     className="scrolling-icon"
                 />
                 <Image
-                    src="/icons/icons_dark/email_dark.jpg"
+                    src="/icons/icons_dark/email_dark.webp"
                     alt=""
                     width={75}
                     height={75}
                     className="scrolling-icon"
                 />
                 <Image
-                    src="/icons/icons_light/arc_light.jpg"
+                    src="/icons/icons_light/arc_light.webp"
                     alt=""
                     width={75}
                     height={75}
                     className="scrolling-icon"
                 />
                 <Image
-                    src="/icons/icons_dark/to_do_dark.jpg"
+                    src="/icons/icons_dark/to_do_dark.webp"
                     alt=""
                     width={75}
                     height={75}
                     className="scrolling-icon"
                 />
                 <Image
-                    src="/icons/icons_light/messages_light.jpg"
+                    src="/icons/icons_light/messages_light.webp"
                     alt=""
                     width={75}
                     height={75}
                     className="scrolling-icon"
                 />
                 <Image
-                    src="/icons/icons_dark/crossy_road_dark.jpg"
+                    src="/icons/icons_dark/crossy_road_dark.webp"
                     alt=""
                     width={75}
                     height={75}
                     className="scrolling-icon"
                 />
                 <Image
-                    src="/icons/icons_light/slack_light.jpg"
+                    src="/icons/icons_light/slack_light.webp"
                     alt=""
                     width={75}
                     height={75}
                     className="scrolling-icon"
                 />
                 <Image
-                    src="/icons/icons_dark/clock_dark.jpg"
+                    src="/icons/icons_dark/clock_dark.webp"
                     alt=""
                     width={75}
                     height={75}
                     className="scrolling-icon"
                 />
                 <Image
-                    src="/icons/icons_light/safari_light.jpg"
+                    src="/icons/icons_light/safari_light.webp"
                     alt=""
                     width={75}
                     height={75}
                     className="scrolling-icon"
                 />
                 <Image
-                    src="/icons/icons_dark/maps_dark.jpg"
+                    src="/icons/icons_dark/maps_dark.webp"
                     alt=""
                     width={75}
                     height={75}
                     className="scrolling-icon"
                 />
                 <Image
-                    src="/icons/icons_light/letterboxd_light.jpg"
+                    src="/icons/icons_light/letterboxd_light.webp"
                     alt=""
                     width={75}
                     height={75}
                     className="scrolling-icon"
                 />
                 <Image
-                    src="/icons/icons_dark/app_store_dark.jpg"
+                    src="/icons/icons_dark/app_store_dark.webp"
                     alt=""
                     width={75}
                     height={75}
@@ -90,84 +90,84 @@ export default function ScrollingIcons() {
                 />
 
                 <Image
-                    src="/icons/icons_light/whatsapp_light.jpg"
+                    src="/icons/icons_light/whatsapp_light.webp"
                     alt=""
                     width={75}
                     height={75}
                     className="scrolling-icon"
                 />
                 <Image
-                    src="/icons/icons_dark/email_dark.jpg"
+                    src="/icons/icons_dark/email_dark.webp"
                     alt=""
                     width={75}
                     height={75}
                     className="scrolling-icon"
                 />
                 <Image
-                    src="/icons/icons_light/arc_light.jpg"
+                    src="/icons/icons_light/arc_light.webp"
                     alt=""
                     width={75}
                     height={75}
                     className="scrolling-icon"
                 />
                 <Image
-                    src="/icons/icons_dark/to_do_dark.jpg"
+                    src="/icons/icons_dark/to_do_dark.webp"
                     alt=""
                     width={75}
                     height={75}
                     className="scrolling-icon"
                 />
                 <Image
-                    src="/icons/icons_light/messages_light.jpg"
+                    src="/icons/icons_light/messages_light.webp"
                     alt=""
                     width={75}
                     height={75}
                     className="scrolling-icon"
                 />
                 <Image
-                    src="/icons/icons_dark/crossy_road_dark.jpg"
+                    src="/icons/icons_dark/crossy_road_dark.webp"
                     alt=""
                     width={75}
                     height={75}
                     className="scrolling-icon"
                 />
                 <Image
-                    src="/icons/icons_light/slack_light.jpg"
+                    src="/icons/icons_light/slack_light.webp"
                     alt=""
                     width={75}
                     height={75}
                     className="scrolling-icon"
                 />
                 <Image
-                    src="/icons/icons_dark/clock_dark.jpg"
+                    src="/icons/icons_dark/clock_dark.webp"
                     alt=""
                     width={75}
                     height={75}
                     className="scrolling-icon"
                 />
                 <Image
-                    src="/icons/icons_light/safari_light.jpg"
+                    src="/icons/icons_light/safari_light.webp"
                     alt=""
                     width={75}
                     height={75}
                     className="scrolling-icon"
                 />
                 <Image
-                    src="/icons/icons_dark/maps_dark.jpg"
+                    src="/icons/icons_dark/maps_dark.webp"
                     alt=""
                     width={75}
                     height={75}
                     className="scrolling-icon"
                 />
                 <Image
-                    src="/icons/icons_light/letterboxd_light.jpg"
+                    src="/icons/icons_light/letterboxd_light.webp"
                     alt=""
                     width={75}
                     height={75}
                     className="scrolling-icon"
                 />
                 <Image
-                    src="/icons/icons_dark/app_store_dark.jpg"
+                    src="/icons/icons_dark/app_store_dark.webp"
                     alt=""
                     width={75}
                     height={75}
@@ -177,84 +177,84 @@ export default function ScrollingIcons() {
 
             <div className="flex flex-row scrolling-icons backward">
                 <Image
-                    src="/icons/icons_dark/spotify_dark.jpg"
+                    src="/icons/icons_dark/spotify_dark.webp"
                     alt=""
                     width={75}
                     height={75}
                     className="scrolling-icon"
                 />
                 <Image
-                    src="/icons/icons_light/phone_light.jpg"
+                    src="/icons/icons_light/phone_light.webp"
                     alt=""
                     width={75}
                     height={75}
                     className="scrolling-icon"
                 />
                 <Image
-                    src="/icons/icons_dark/letterboxd_dark.jpg"
+                    src="/icons/icons_dark/letterboxd_dark.webp"
                     alt=""
                     width={75}
                     height={75}
                     className="scrolling-icon"
                 />
                 <Image
-                    src="/icons/icons_light/netflix_light.jpg"
+                    src="/icons/icons_light/netflix_light.webp"
                     alt=""
                     width={75}
                     height={75}
                     className="scrolling-icon"
                 />
                 <Image
-                    src="/icons/icons_dark/settings_dark.jpg"
+                    src="/icons/icons_dark/settings_dark.webp"
                     alt=""
                     width={75}
                     height={75}
                     className="scrolling-icon"
                 />
                 <Image
-                    src="/icons/icons_light/clock_light.jpg"
+                    src="/icons/icons_light/clock_light.webp"
                     alt=""
                     width={75}
                     height={75}
                     className="scrolling-icon"
                 />
                 <Image
-                    src="/icons/icons_dark/health_dark.jpg"
+                    src="/icons/icons_dark/health_dark.webp"
                     alt=""
                     width={75}
                     height={75}
                     className="scrolling-icon"
                 />
                 <Image
-                    src="/icons/icons_light/to_do_light.jpg"
+                    src="/icons/icons_light/to_do_light.webp"
                     alt=""
                     width={75}
                     height={75}
                     className="scrolling-icon"
                 />
                 <Image
-                    src="/icons/icons_dark/chrome_dark.jpg"
+                    src="/icons/icons_dark/chrome_dark.webp"
                     alt=""
                     width={75}
                     height={75}
                     className="scrolling-icon"
                 />
                 <Image
-                    src="/icons/icons_light/youtube_light.jpg"
+                    src="/icons/icons_light/youtube_light.webp"
                     alt=""
                     width={75}
                     height={75}
                     className="scrolling-icon"
                 />
                 <Image
-                    src="/icons/icons_dark/clock_dark.jpg"
+                    src="/icons/icons_dark/clock_dark.webp"
                     alt=""
                     width={75}
                     height={75}
                     className="scrolling-icon"
                 />
                 <Image
-                    src="/icons/icons_light/slack_light.jpg"
+                    src="/icons/icons_light/slack_light.webp"
                     alt=""
                     width={75}
                     height={75}
@@ -262,84 +262,84 @@ export default function ScrollingIcons() {
                 />
 
                 <Image
-                    src="/icons/icons_dark/spotify_dark.jpg"
+                    src="/icons/icons_dark/spotify_dark.webp"
                     alt=""
                     width={75}
                     height={75}
                     className="scrolling-icon"
                 />
                 <Image
-                    src="/icons/icons_light/phone_light.jpg"
+                    src="/icons/icons_light/phone_light.webp"
                     alt=""
                     width={75}
                     height={75}
                     className="scrolling-icon"
                 />
                 <Image
-                    src="/icons/icons_dark/letterboxd_dark.jpg"
+                    src="/icons/icons_dark/letterboxd_dark.webp"
                     alt=""
                     width={75}
                     height={75}
                     className="scrolling-icon"
                 />
                 <Image
-                    src="/icons/icons_light/netflix_light.jpg"
+                    src="/icons/icons_light/netflix_light.webp"
                     alt=""
                     width={75}
                     height={75}
                     className="scrolling-icon"
                 />
                 <Image
-                    src="/icons/icons_dark/settings_dark.jpg"
+                    src="/icons/icons_dark/settings_dark.webp"
                     alt=""
                     width={75}
                     height={75}
                     className="scrolling-icon"
                 />
                 <Image
-                    src="/icons/icons_light/clock_light.jpg"
+                    src="/icons/icons_light/clock_light.webp"
                     alt=""
                     width={75}
                     height={75}
                     className="scrolling-icon"
                 />
                 <Image
-                    src="/icons/icons_dark/health_dark.jpg"
+                    src="/icons/icons_dark/health_dark.webp"
                     alt=""
                     width={75}
                     height={75}
                     className="scrolling-icon"
                 />
                 <Image
-                    src="/icons/icons_light/to_do_light.jpg"
+                    src="/icons/icons_light/to_do_light.webp"
                     alt=""
                     width={75}
                     height={75}
                     className="scrolling-icon"
                 />
                 <Image
-                    src="/icons/icons_dark/chrome_dark.jpg"
+                    src="/icons/icons_dark/chrome_dark.webp"
                     alt=""
                     width={75}
                     height={75}
                     className="scrolling-icon"
                 />
                 <Image
-                    src="/icons/icons_light/youtube_light.jpg"
+                    src="/icons/icons_light/youtube_light.webp"
                     alt=""
                     width={75}
                     height={75}
                     className="scrolling-icon"
                 />
                 <Image
-                    src="/icons/icons_dark/clock_dark.jpg"
+                    src="/icons/icons_dark/clock_dark.webp"
                     alt=""
                     width={75}
                     height={75}
                     className="scrolling-icon"
                 />
                 <Image
-                    src="/icons/icons_light/slack_light.jpg"
+                    src="/icons/icons_light/slack_light.webp"
                     alt=""
                     width={75}
                     height={75}
@@ -349,84 +349,84 @@ export default function ScrollingIcons() {
 
             <div className="flex flex-row scrolling-icons forward">
                 <Image
-                    src="/icons/icons_light/app_store_light.jpg"
+                    src="/icons/icons_light/app_store_light.webp"
                     alt=""
                     width={75}
                     height={75}
                     className="scrolling-icon"
                 />
                 <Image
-                    src="/icons/icons_dark/arc_dark.jpg"
+                    src="/icons/icons_dark/arc_dark.webp"
                     alt=""
                     width={75}
                     height={75}
                     className="scrolling-icon"
                 />
                 <Image
-                    src="/icons/icons_light/disney+_light.jpg"
+                    src="/icons/icons_light/disney+_light.webp"
                     alt=""
                     width={75}
                     height={75}
                     className="scrolling-icon"
                 />
                 <Image
-                    src="/icons/icons_dark/canvas_dark.jpg"
+                    src="/icons/icons_dark/canvas_dark.webp"
                     alt=""
                     width={75}
                     height={75}
                     className="scrolling-icon"
                 />
                 <Image
-                    src="/icons/icons_light/maps_light.jpg"
+                    src="/icons/icons_light/maps_light.webp"
                     alt=""
                     width={75}
                     height={75}
                     className="scrolling-icon"
                 />
                 <Image
-                    src="/icons/icons_dark/whatsapp_dark.jpg"
+                    src="/icons/icons_dark/whatsapp_dark.webp"
                     alt=""
                     width={75}
                     height={75}
                     className="scrolling-icon"
                 />
                 <Image
-                    src="/icons/icons_light/email_light.jpg"
+                    src="/icons/icons_light/email_light.webp"
                     alt=""
                     width={75}
                     height={75}
                     className="scrolling-icon"
                 />
                 <Image
-                    src="/icons/icons_dark/netflix_dark.jpg"
+                    src="/icons/icons_dark/netflix_dark.webp"
                     alt=""
                     width={75}
                     height={75}
                     className="scrolling-icon"
                 />
                 <Image
-                    src="/icons/icons_light/health_light.jpg"
+                    src="/icons/icons_light/health_light.webp"
                     alt=""
                     width={75}
                     height={75}
                     className="scrolling-icon"
                 />
                 <Image
-                    src="/icons/icons_dark/messages_dark.jpg"
+                    src="/icons/icons_dark/messages_dark.webp"
                     alt=""
                     width={75}
                     height={75}
                     className="scrolling-icon"
                 />
                 <Image
-                    src="/icons/icons_light/spotify_light.jpg"
+                    src="/icons/icons_light/spotify_light.webp"
                     alt=""
                     width={75}
                     height={75}
                     className="scrolling-icon"
                 />
                 <Image
-                    src="/icons/icons_dark/instagram_dark.jpg"
+                    src="/icons/icons_dark/instagram_dark.webp"
                     alt=""
                     width={75}
                     height={75}
@@ -434,84 +434,84 @@ export default function ScrollingIcons() {
                 />
 
                 <Image
-                    src="/icons/icons_light/app_store_light.jpg"
+                    src="/icons/icons_light/app_store_light.webp"
                     alt=""
                     width={75}
                     height={75}
                     className="scrolling-icon"
                 />
                 <Image
-                    src="/icons/icons_dark/arc_dark.jpg"
+                    src="/icons/icons_dark/arc_dark.webp"
                     alt=""
                     width={75}
                     height={75}
                     className="scrolling-icon"
                 />
                 <Image
-                    src="/icons/icons_light/disney+_light.jpg"
+                    src="/icons/icons_light/disney+_light.webp"
                     alt=""
                     width={75}
                     height={75}
                     className="scrolling-icon"
                 />
                 <Image
-                    src="/icons/icons_dark/canvas_dark.jpg"
+                    src="/icons/icons_dark/canvas_dark.webp"
                     alt=""
                     width={75}
                     height={75}
                     className="scrolling-icon"
                 />
                 <Image
-                    src="/icons/icons_light/maps_light.jpg"
+                    src="/icons/icons_light/maps_light.webp"
                     alt=""
                     width={75}
                     height={75}
                     className="scrolling-icon"
                 />
                 <Image
-                    src="/icons/icons_dark/whatsapp_dark.jpg"
+                    src="/icons/icons_dark/whatsapp_dark.webp"
                     alt=""
                     width={75}
                     height={75}
                     className="scrolling-icon"
                 />
                 <Image
-                    src="/icons/icons_light/email_light.jpg"
+                    src="/icons/icons_light/email_light.webp"
                     alt=""
                     width={75}
                     height={75}
                     className="scrolling-icon"
                 />
                 <Image
-                    src="/icons/icons_dark/netflix_dark.jpg"
+                    src="/icons/icons_dark/netflix_dark.webp"
                     alt=""
                     width={75}
                     height={75}
                     className="scrolling-icon"
                 />
                 <Image
-                    src="/icons/icons_light/health_light.jpg"
+                    src="/icons/icons_light/health_light.webp"
                     alt=""
                     width={75}
                     height={75}
                     className="scrolling-icon"
                 />
                 <Image
-                    src="/icons/icons_dark/messages_dark.jpg"
+                    src="/icons/icons_dark/messages_dark.webp"
                     alt=""
                     width={75}
                     height={75}
                     className="scrolling-icon"
                 />
                 <Image
-                    src="/icons/icons_light/spotify_light.jpg"
+                    src="/icons/icons_light/spotify_light.webp"
                     alt=""
                     width={75}
                     height={75}
                     className="scrolling-icon"
                 />
                 <Image
-                    src="/icons/icons_dark/instagram_dark.jpg"
+                    src="/icons/icons_dark/instagram_dark.webp"
                     alt=""
                     width={75}
                     height={75}
@@ -521,84 +521,84 @@ export default function ScrollingIcons() {
 
             <div className="flex flex-row scrolling-icons backward">
                 <Image
-                    src="/icons/icons_dark/youtube_dark.jpg"
+                    src="/icons/icons_dark/youtube_dark.webp"
                     alt=""
                     width={75}
                     height={75}
                     className="scrolling-icon"
                 />
                 <Image
-                    src="/icons/icons_light/chrome_light.jpg"
+                    src="/icons/icons_light/chrome_light.webp"
                     alt=""
                     width={75}
                     height={75}
                     className="scrolling-icon"
                 />
                 <Image
-                    src="/icons/icons_dark/slack_dark.jpg"
+                    src="/icons/icons_dark/slack_dark.webp"
                     alt=""
                     width={75}
                     height={75}
                     className="scrolling-icon"
                 />
                 <Image
-                    src="/icons/icons_light/crossy_road_light.jpg"
+                    src="/icons/icons_light/crossy_road_light.webp"
                     alt=""
                     width={75}
                     height={75}
                     className="scrolling-icon"
                 />
                 <Image
-                    src="/icons/icons_dark/safari_dark.jpg"
+                    src="/icons/icons_dark/safari_dark.webp"
                     alt=""
                     width={75}
                     height={75}
                     className="scrolling-icon"
                 />
                 <Image
-                    src="/icons/icons_light/instagram_light.jpg"
+                    src="/icons/icons_light/instagram_light.webp"
                     alt=""
                     width={75}
                     height={75}
                     className="scrolling-icon"
                 />
                 <Image
-                    src="/icons/icons_dark/phone_dark.jpg"
+                    src="/icons/icons_dark/phone_dark.webp"
                     alt=""
                     width={75}
                     height={75}
                     className="scrolling-icon"
                 />
                 <Image
-                    src="/icons/icons_light/canvas_light.jpg"
+                    src="/icons/icons_light/canvas_light.webp"
                     alt=""
                     width={75}
                     height={75}
                     className="scrolling-icon"
                 />
                 <Image
-                    src="/icons/icons_dark/disney+_dark.jpg"
+                    src="/icons/icons_dark/disney+_dark.webp"
                     alt=""
                     width={75}
                     height={75}
                     className="scrolling-icon"
                 />
                 <Image
-                    src="/icons/icons_light/settings_light.jpg"
+                    src="/icons/icons_light/settings_light.webp"
                     alt=""
                     width={75}
                     height={75}
                     className="scrolling-icon"
                 />
                 <Image
-                    src="/icons/icons_dark/canvas_dark.jpg"
+                    src="/icons/icons_dark/canvas_dark.webp"
                     alt=""
                     width={75}
                     height={75}
                     className="scrolling-icon"
                 />
                 <Image
-                    src="/icons/icons_light/disney+_light.jpg"
+                    src="/icons/icons_light/disney+_light.webp"
                     alt=""
                     width={75}
                     height={75}
@@ -606,84 +606,84 @@ export default function ScrollingIcons() {
                 />
 
                 <Image
-                    src="/icons/icons_dark/youtube_dark.jpg"
+                    src="/icons/icons_dark/youtube_dark.webp"
                     alt=""
                     width={75}
                     height={75}
                     className="scrolling-icon"
                 />
                 <Image
-                    src="/icons/icons_light/chrome_light.jpg"
+                    src="/icons/icons_light/chrome_light.webp"
                     alt=""
                     width={75}
                     height={75}
                     className="scrolling-icon"
                 />
                 <Image
-                    src="/icons/icons_dark/slack_dark.jpg"
+                    src="/icons/icons_dark/slack_dark.webp"
                     alt=""
                     width={75}
                     height={75}
                     className="scrolling-icon"
                 />
                 <Image
-                    src="/icons/icons_light/crossy_road_light.jpg"
+                    src="/icons/icons_light/crossy_road_light.webp"
                     alt=""
                     width={75}
                     height={75}
                     className="scrolling-icon"
                 />
                 <Image
-                    src="/icons/icons_dark/safari_dark.jpg"
+                    src="/icons/icons_dark/safari_dark.webp"
                     alt=""
                     width={75}
                     height={75}
                     className="scrolling-icon"
                 />
                 <Image
-                    src="/icons/icons_light/instagram_light.jpg"
+                    src="/icons/icons_light/instagram_light.webp"
                     alt=""
                     width={75}
                     height={75}
                     className="scrolling-icon"
                 />
                 <Image
-                    src="/icons/icons_dark/phone_dark.jpg"
+                    src="/icons/icons_dark/phone_dark.webp"
                     alt=""
                     width={75}
                     height={75}
                     className="scrolling-icon"
                 />
                 <Image
-                    src="/icons/icons_light/canvas_light.jpg"
+                    src="/icons/icons_light/canvas_light.webp"
                     alt=""
                     width={75}
                     height={75}
                     className="scrolling-icon"
                 />
                 <Image
-                    src="/icons/icons_dark/disney+_dark.jpg"
+                    src="/icons/icons_dark/disney+_dark.webp"
                     alt=""
                     width={75}
                     height={75}
                     className="scrolling-icon"
                 />
                 <Image
-                    src="/icons/icons_light/settings_light.jpg"
+                    src="/icons/icons_light/settings_light.webp"
                     alt=""
                     width={75}
                     height={75}
                     className="scrolling-icon"
                 />
                 <Image
-                    src="/icons/icons_dark/canvas_dark.jpg"
+                    src="/icons/icons_dark/canvas_dark.webp"
                     alt=""
                     width={75}
                     height={75}
                     className="scrolling-icon"
                 />
                 <Image
-                    src="/icons/icons_light/disney+_light.jpg"
+                    src="/icons/icons_light/disney+_light.webp"
                     alt=""
                     width={75}
                     height={75}
