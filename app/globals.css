@@ -142,9 +142,9 @@ body,
     @apply md:scroll-smooth md:cursor-none
 }
 
-.cursor-blur {
-    backdrop-filter: blur(8px) grayscale();
-    -webkit-backdrop-filter: blur(8px) grayscale();
+.cursor-grayscale {
+    backdrop-filter: grayscale();
+    -webkit-backdrop-filter: grayscale();
 }
 
 /* Description */
