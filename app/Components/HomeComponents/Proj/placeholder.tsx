@@ -17,7 +17,7 @@ export default function Placeholder() {
 
     return (
         <Tilt tiltReverse={false} tiltMaxAngleX={1} tiltMaxAngleY={1} gyroscope={false}>
-            <div className="cursor-placeholder appear-animated select-none p-4 flex-col justify-center w-full h-full max-h-[444px] hover:scale-[1.01] transition-transform rounded-3xl md:flex card">
+            <div className="hidden cursor-placeholder appear-animated select-none p-4 flex-col justify-center w-full h-full max-h-[444px] hover:scale-[1.01] transition-transform rounded-3xl md:flex card">
                 <Tilt
                     tiltReverse={false}
                     tiltMaxAngleX={7}
