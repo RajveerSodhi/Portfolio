@@ -9,6 +9,7 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@react-three/fiber": "8.16",
     "@stripe/react-stripe-js": "^2.7.1",
     "@stripe/stripe-js": "^3.4.0",
     "@syncfusion/ej2-react-popups": "^25.2.7",
@@ -31,6 +32,7 @@
     "react-typed": "^2.0.12",
     "stripe": "^15.6.0",
     "tailwind-merge": "^2.3.0",
+    "three": "^0.166.1",
     "yet-another-react-lightbox": "^3.19.0"
   },
   "devDependencies": {
