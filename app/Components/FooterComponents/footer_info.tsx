@@ -5,7 +5,7 @@ export default function FooterInfo() {
             <span className="mx-2 hidden xl:inline-block w-[2px] h-[60%] bg-[#777777]"></span>
             <span className="footer-info">Made by Rajveer Sodhi</span>
             <span className="mx-2 hidden xl:inline-block w-[2px] h-[60%] bg-[#777777]"></span>
-            <span className="footer-info">Last Updated: July 12, 2024</span>
+            <span className="footer-info">Last Updated: July 16, 2024</span>
         </span>
     );
 }
