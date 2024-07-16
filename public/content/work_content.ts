@@ -1,13 +1,13 @@
 export const work = [
     {
-        position: "Software Developer Intern",
+        position: "Data Analyst Intern",
         company: "Data POEM",
         tld: "com",
         location: "Santa Clara, CA (Remote)",
         date: "May 2024 - Present",
         img: "datapoem",
         description: [
-            "Built connector APIs using FastAPI in Python for PostgreSQL to retrieve and transform website analytics data from various sources for an ML modelling pipeline.",
+            "Developed connector modules using FastAPI and Mage.ai to interface with PostgreSQL and S3, facilitating the retrieval and transformation of website analytics data from multiple advertisement channels for machine learning model pipelines.",
         ]
     },
     {
