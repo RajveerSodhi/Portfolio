@@ -1,5 +1,4 @@
 import { Canvas } from "@react-three/fiber";
-import { useRef } from "react";
 import { Float, RoundedBox } from "@react-three/drei";
 
 export default function WebGLElements() {

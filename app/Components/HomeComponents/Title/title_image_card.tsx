@@ -5,7 +5,6 @@ import ImageFrontCard from "./ImageFrontCard";
 import { useState } from "react";
 import Tilt from "react-parallax-tilt";
 import WebGLElements from "./webGLElements";
-import { is } from "@react-three/fiber/dist/declarations/src/core/utils";
 
 export default function ImageCard() {
     const [isFlipped, setIsFlipped] = useState(false);
