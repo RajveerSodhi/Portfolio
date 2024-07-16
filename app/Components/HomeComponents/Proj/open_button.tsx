@@ -1,6 +1,6 @@
 "use client";
 import { useState } from "react";
-import { FaExternalLinkAlt } from "react-icons/fa";
+import { HiOutlineExternalLink } from "react-icons/hi";
 
 export default function OpenButton(props: { link: string }) {
     const [hovered, setHovered] = useState(false);
@@ -14,7 +14,7 @@ export default function OpenButton(props: { link: string }) {
             onMouseEnter={() => setHovered(true)}
             onMouseLeave={() => setHovered(false)}
         >
-            <FaExternalLinkAlt className="scale-[0.8]" />
+            <HiOutlineExternalLink />
             <span
                 className={`text-lg max-h-6 transition-all transition-configuration overflow-hidden flex items-center justify-center ${
                     hovered
