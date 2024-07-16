@@ -21,7 +21,7 @@ export default function ImageCard() {
         <>
             <span
                 className={`hidden md:block absolute left-0 right-0 top-0 bottom-0 transition-all duration-300 ease-out ${
-                    isFlipped ? "scale-100" : "scale-0"
+                    isFlipped ? "scale-100" : "scale-100"
                 }`}
             >
                 <WebGLElements />
