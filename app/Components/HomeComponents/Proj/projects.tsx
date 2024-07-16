@@ -46,7 +46,7 @@ export default function Projects() {
                     {filteredProjects.map((project, index) => (
                         <ProjectComponent key={index} {...project} />
                     ))}
-                    {showPlaceholder && <Placeholder />}
+                    <span className="hidden md:flex">{showPlaceholder && <Placeholder />}</span>
                 </div>
             </Accordion>
         </section>
