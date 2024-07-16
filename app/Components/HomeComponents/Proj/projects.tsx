@@ -23,22 +23,20 @@ export default function Projects() {
         <section className="appear-animated" id="projects">
             <h1 className="title">Projects</h1>
 
-            <div>
-                <div className="flex flex-wrap justify-center items-center gap-4 pb-8">
-                    {filter.map((tag, index) => (
-                        <button
-                            key={index}
-                            onClick={() => setSelectedTag(tag)}
-                            className={`cursor-none rounded-full w-auto hover:scale-95 transition-all py-2 px-4 md:py-3 md:px-6 text-sm md:text-base card ${
-                                selectedTag === tag
-                                    ? "dark:bg-cardlightbg bg-carddarkbg dark:border-cardlightborder border-carddarkborder dark:text-myblack text-mywhite"
-                                    : ""
-                            }`}
-                        >
-                            {tag}
-                        </button>
-                    ))}
-                </div>
+            <div className="flex flex-wrap justify-center items-center gap-4 pb-8">
+                {filter.map((tag, index) => (
+                    <button
+                        key={index}
+                        onClick={() => setSelectedTag(tag)}
+                        className={`cursor-none rounded-full w-auto hover:scale-95 transition-all py-2 px-4 md:py-3 md:px-6 text-sm md:text-base card ${
+                            selectedTag === tag
+                                ? "dark:bg-cardlightbg bg-carddarkbg dark:border-cardlightborder border-carddarkborder dark:text-myblack text-mywhite"
+                                : ""
+                        }`}
+                    >
+                        {tag}
+                    </button>
+                ))}
             </div>
 
             <Accordion transition transitionTimeout={500}>
