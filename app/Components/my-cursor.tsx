@@ -1,12 +1,13 @@
 "use client";
-import { useState, useEffect } from "react";
+import { useState, useEffect, useRef, ReactNode } from "react";
 import { FaExternalLinkAlt, FaExpand, FaArrowDown, FaRegClock, FaGamepad } from "react-icons/fa";
 import debounce from "lodash/debounce";
 
 export default function MyCursor() {
     const [position, setPosition] = useState({ x: 0, y: 0 });
+    const cursorRef = useRef<HTMLDivElement>(null);
     const [isHoveringSpecialComponent, setIsHoveringSpecialComponent] = useState(false);
-    const [tooltipContent, setTooltipContent] = useState<React.ReactNode>(null);
+    const tooltipContentRef = useRef<ReactNode | null>(null);
 
     const specialComponents = [
         {
@@ -66,10 +67,18 @@ export default function MyCursor() {
         );
         if (specialComponent) {
             setIsHoveringSpecialComponent(true);
-            setTooltipContent(specialComponent.content);
+            tooltipContentRef.current = specialComponent.content;
         } else {
             setIsHoveringSpecialComponent(false);
-            setTooltipContent(null);
+            tooltipContentRef.current = null;
+        }
+
+        if (cursorRef.current) {
+            cursorRef.current.style.transform = `translate3d(
+                ${e.clientX - 10}px,
+                ${e.clientY - 105}px,
+                0px
+            )`;
         }
     }, 10);
 
@@ -81,21 +90,23 @@ export default function MyCursor() {
     }, [position]);
 
     return (
-        <div className="hidden md:block">
-            <div
-                className={`pointer-events-none will-change-transform z-[999999] fixed rounded-full
-                    ${
-                        isHoveringSpecialComponent
-                            ? " whitespace-nowrap bg-myblack dark:bg-mywhite text-mywhite dark:text-myblack px-4 py-2 w-44 flex items-center justify-center shadow-lg transition-transform ease-out duration-300"
-                            : "cursor-grayscale border-2 border-solid border-[#ffffff2b] mix-blend-difference bg-white p-2"
-                    }
-                `}
-                style={{
-                    transform: `translate3d(${position.x - 10}px, ${position.y - 105}px, 0px)`,
-                }}
+        <div
+            ref={cursorRef}
+            className={`hidden md:flex pointer-events-none will-change-transform z-[999999] fixed rounded-full transition-[width] ease-in-out duration-200
+                ${
+                    isHoveringSpecialComponent
+                        ? " whitespace-nowrap bg-myblack dark:bg-mywhite text-mywhite dark:text-myblack px-4 py-2 w-44 items-center justify-center shadow-lg transition-transform ease-out duration-300"
+                        : "cursor-grayscale border-2 border-solid border-[#ffffff2b] mix-blend-difference bg-white p-2 w-0"
+                }
+            `}
+        >
+            <span
+                className={`flex items-center transition-all ease-in-out duration-200 ${
+                    isHoveringSpecialComponent ? "visible opacity-100" : "invisible opacity-0"
+                }`}
             >
-                {tooltipContent}
-            </div>
+                {tooltipContentRef.current}
+            </span>
         </div>
     );
 }

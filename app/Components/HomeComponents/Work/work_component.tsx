@@ -26,11 +26,11 @@ export default function WorkComponent(props: {
             glareMaxOpacity={0.05}
             glareBorderRadius="1.5rem"
         >
-            <div className="p-6 hover:scale-[1.02] transition-transform rounded-3xl mt-[1.3rem] md:mt-[2.5rem] min-w-full w-auto flex flex-col justify-center appear-animated card">
+            <div className="hover:scale-[1.02] transition-transform rounded-3xl mt-[1.3rem] md:mt-[2.5rem] min-w-full w-auto flex flex-col justify-center appear-animated card">
                 <AccordionItem
                     className="w-full"
                     header={
-                        <div className="cursor-details flex items-center w-full">
+                        <div className="p-6 cursor-details flex items-center w-full">
                             <WorkImage img={img} company={company} tld={tld} />
                             <div className="cursor-details ml-4 md:ml-8 text-left">
                                 <h2 className="cursor-details text-xl md:text-3xl">{position}</h2>
@@ -41,7 +41,7 @@ export default function WorkComponent(props: {
                         </div>
                     }
                 >
-                    <div className="pt-8">
+                    <div className="px-6 pb-6 pt-2">
                         {description.map((desc, index) => (
                             <li key={index} className="mb-3 text-sm md:text-base text-left">
                                 {desc}
