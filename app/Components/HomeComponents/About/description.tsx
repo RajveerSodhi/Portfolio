@@ -14,11 +14,10 @@ export default function Description() {
                 Bolylwood dance club.
             </p>
             <p className="appear-animated mb-4">
-                I am currently a{" "}
-                <span className="highlight">Software Development Intern at Data POEM</span>, where I
-                develop APIs to retrieve and transform website analytics data. My experiences and
-                roles as an SWDev have taught me a lot about user-centric design, teamwork and
-                leadership, and agile programming practices.
+                I am currently a <span className="highlight">Data Analyst Intern at Data POEM</span>
+                , where I develop APIs to retrieve and transform website analytics data. My
+                experiences and roles as an SWDev have taught me a lot about user-centric design,
+                teamwork and leadership, and agile programming practices.
             </p>
             <p className="appear-animated mb-4">
                 I am always eager to{" "}

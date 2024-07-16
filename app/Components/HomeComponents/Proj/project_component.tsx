@@ -1,19 +1,21 @@
 "use client";
-import ProjectButton from "./project_button";
+import GitHubButton from "./github_button";
 import Image from "next/image";
 import Tilt from "react-parallax-tilt";
 import { AccordionItem } from "@szhsin/react-accordion";
 import { useState } from "react";
 import Lightbox from "./lightbox";
+import OpenButton from "./open_button";
 
 export default function ProjectComponent(props: {
     title: string;
     subtitle: string;
     link: string;
+    openLink: string;
     tech: string;
     description: string[];
 }) {
-    const { title, subtitle, link, tech, description } = props;
+    const { title, subtitle, link, openLink, tech, description } = props;
     const [openImage, setOpenImage] = useState(false);
 
     return (
@@ -58,7 +60,8 @@ export default function ProjectComponent(props: {
                             </li>
                         ))}
                     </div>
-                    <ProjectButton link={link} />
+                    <GitHubButton link={link} />
+                    {openLink != "" && <OpenButton link={openLink} />}
                 </div>
             </AccordionItem>
         </Tilt>

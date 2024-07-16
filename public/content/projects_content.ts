@@ -3,6 +3,7 @@ export const projects = [
         title: "Custom Tudum",
         subtitle: "Chrome Extension",
         link: "Custom-Tudum",
+        openLink: "https://chromewebstore.google.com/detail/custom-tudum/plkcjhmgcploglmdgbalngcnjholcamm",
         tech: "JavaScript, HTML, CSS, Manifest V3",
         tag: "web",
         description: [
@@ -14,6 +15,7 @@ export const projects = [
         title: "Portfolio",
         subtitle: "Personal Website",
         link: "Portfolio",
+        openLink: "rajveersodhi.com",
         tech: "Next.js, Tailwind CSS, TypeScript",
         tag: "web",
         description: [
@@ -25,7 +27,8 @@ export const projects = [
         title: "EduPool",
         subtitle: "E-Learning Platform",
         link: "EduPool",
-        tech: "Python, HTML, CSS, JavaScript, SQL",
+        openLink: "",
+        tech: "Python, HTML, CSS, JavaScript, MySQL",
         tag: "web",
         description: [
             "Collaborated in developing a Flask-based full-stack e-learning platform, employing Agile methodologies, CI/CD practices, UML for system design, and Test-Driven Development (TDD) with Selenium automated testing and deployment to ensure quality.",
@@ -36,6 +39,7 @@ export const projects = [
         title: "Gestura",
         subtitle: "ASL to English Converter",
         link: "Gestura",
+        openLink: "",
         tech: "Python, HTML, CSS, JavaScript",
         tag: "ML",
         description: [
@@ -48,6 +52,7 @@ export const projects = [
         title: "TransitMate",
         subtitle: "Ride-Share App Prototype",
         link: "TransitMate",
+        openLink: "",
         tech: "Java, XML",
         tag: "android",
         description: [
@@ -60,6 +65,7 @@ export const projects = [
         title: "FlightBar",
         subtitle: "Flight Tracker Menubar App",
         link: "FlightBar",
+        openLink: "https://github.com/RajveerSodhi/FlightBar/releases/",
         tech: "Swift",
         tag: "iOS and macOS",
         description: [
@@ -72,6 +78,7 @@ export const projects = [
         title: "Cancer Data Analysis",
         subtitle: "Dataset Analysis",
         link: "Breast-Cancer-Diagnosis-in-the-State-of-Wisconsin",
+        openLink: "",
         tech: "Python, Tableau",
         tag: "data",
         description: [

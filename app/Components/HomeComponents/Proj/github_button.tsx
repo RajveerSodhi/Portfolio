@@ -2,7 +2,7 @@
 import { useState } from "react";
 import { FaGithub } from "react-icons/fa";
 
-export default function ProjectButton(props: { link: string }) {
+export default function GitHubButton(props: { link: string }) {
     const [hovered, setHovered] = useState(false);
 
     return (
@@ -16,7 +16,7 @@ export default function ProjectButton(props: { link: string }) {
         >
             <FaGithub />
             <span
-                className={`text-lg max-h-6 transition-all transition-configuration overflow-hidden ${
+                className={`text-lg h-6 transition-all transition-configuration overflow-hidden flex items-center justify-center ${
                     hovered
                         ? "max-w-40 mx-2 opacity-100 visible"
                         : "max-w-0 opacity-0 mx-0 invisible"
