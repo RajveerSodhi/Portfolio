@@ -15,9 +15,9 @@ export default function Description() {
             <p className="appear-animated mb-4">
                 Most recently, I worked as a{" "}
                 <span className="highlight">Data Analyst Intern at Data POEM</span>, where I
-                spearheaded the transition of Data POEM's ETL suite to Singer. My experiences and
-                roles have taught me a lot about user-centric design, teamwork and leadership, and
-                agile programming practices.
+                spearheaded the transition of their ETL suite to Singer. My experiences and roles
+                have taught me a lot about user-centric design, teamwork and leadership, and agile
+                programming practices.
             </p>
 
             <p className="appear-animated mb-4">
