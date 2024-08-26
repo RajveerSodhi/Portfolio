@@ -92,17 +92,17 @@ export default function MyCursor() {
     return (
         <div
             ref={cursorRef}
-            className={`hidden md:flex pointer-events-none will-change-transform z-[999999] fixed rounded-full transition-[width] ease-in-out duration-200
+            className={`hidden md:flex pointer-events-none will-change-transform z-[999999] fixed rounded-full p-2 w-0 h-0 cursor-to-tooltip 
                 ${
                     isHoveringSpecialComponent
-                        ? " whitespace-nowrap bg-myblack dark:bg-mywhite text-mywhite dark:text-myblack px-4 py-2 w-44 items-center justify-center shadow-lg transition-transform ease-out duration-300"
-                        : "cursor-grayscale mix-blend-difference bg-white p-2 w-0"
+                        ? " whitespace-nowrap bg-myblack dark:bg-mywhite text-mywhite dark:text-myblack w-44 h-10 items-center justify-center shadow-lg tooltip-movement"
+                        : "cursor-grayscale mix-blend-difference bg-white"
                 }
             `}
         >
             <span
-                className={`flex items-center transition-all ease-in-out duration-200 ${
-                    isHoveringSpecialComponent ? "visible opacity-100" : "invisible opacity-0"
+                className={`flex items-center transition-all duration-300 ease-in-out ${
+                    isHoveringSpecialComponent ? "opacity-100 w-100" : "opacity-0 w-0"
                 }`}
             >
                 {tooltipContentRef.current}

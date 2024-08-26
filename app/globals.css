@@ -122,6 +122,8 @@ section {
     }
     }
 
+
+
 /* Accordion */
 
 .szh-accordion__item-btn,
@@ -139,12 +141,20 @@ section {
 html,
 body,
 * {
-    @apply md:scroll-smooth md:cursor-none
+    @apply md:scroll-smooth  md:cursor-none
 }
 
 .cursor-grayscale {
     backdrop-filter: grayscale();
     -webkit-backdrop-filter: grayscale();
+}
+
+.cursor-to-tooltip {
+    transition: width 0.2s ease-in-out, height 0.2s ease-in-out;
+}
+
+.tooltip-movement {
+    transition: width 0.2s ease-in-out, height 0.2s ease-in-out, transform 0.4s ease-out;
 }
 
 /* Description */

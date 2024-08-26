@@ -3,7 +3,7 @@ export const projects = [
         title: "Custom Tudum",
         subtitle: "Chrome Extension",
         link: "Custom-Tudum",
-        openLink: "https://chromewebstore.google.com/detail/custom-tudum/plkcjhmgcploglmdgbalngcnjholcamm",
+        openLink: "chromewebstore.google.com/detail/custom-tudum/plkcjhmgcploglmdgbalngcnjholcamm",
         tech: "JavaScript, HTML, CSS, Manifest V3",
         tag: "web",
         description: [
@@ -65,7 +65,7 @@ export const projects = [
         title: "FlightBar",
         subtitle: "Flight Tracker Menubar App",
         link: "FlightBar",
-        openLink: "https://github.com/RajveerSodhi/FlightBar/releases/",
+        openLink: "github.com/RajveerSodhi/FlightBar/releases/",
         tech: "Swift",
         tag: "iOS and macOS",
         description: [

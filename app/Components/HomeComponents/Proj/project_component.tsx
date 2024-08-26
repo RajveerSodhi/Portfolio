@@ -40,7 +40,7 @@ export default function ProjectComponent(props: {
                                 width={400}
                                 height={400}
                                 onClick={() => setOpenImage(true)}
-                                className="cursor-image mb-4 select-none min-w-full aspect-auto shadow-md hover:shadow-xl rounded-t-2xl rounded-b-md object-cover hover:scale-[1.01] transition-configuration transition-all"
+                                className="cursor-image mb-4 select-none min-w-full aspect-auto shadow-md hover:shadow-xl rounded-t-2xl rounded-b-md object-cover hover:scale-[1.01] transition-configuration transition-all max-h-[316px]"
                             />
                         </Tilt>
                         <Lightbox openImage={openImage} setOpenImage={setOpenImage} link={link} />
@@ -51,7 +51,7 @@ export default function ProjectComponent(props: {
                     </div>
                 }
             >
-                <div id="project-description" className="p-4 max-w-[448px] text-sm md:text-base">
+                <div id="project-description" className="p-4 max-w-[432px] text-sm md:text-base">
                     <h6 className="text-myblack/75 dark:text-mywhite/75">{tech}</h6>
                     <div className="text-myblack dark:text-mywhite mt-3 mb-4 md:mb-1 text-left md:text-lg">
                         {description.map((item, index) => (

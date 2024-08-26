@@ -10,6 +10,7 @@ export const skills = [
             "TypeScript",
             "R",
             "Swift",
+            "C++",
             "HTML"
         ]
     },
@@ -42,7 +43,10 @@ export const skills = [
             "JUnit",
             "Keras",
             "OpenCV",
-            "Selenium"
+            "Selenium",
+            "Postman",
+            "Singer",
+            "Mage.ai"
         ]
     },
     {
@@ -55,6 +59,7 @@ export const skills = [
             "Android Studio",
             "MySQL",
             "PostgreSQL",
+            "S3",
             "MongoDB"
         ]
     }
