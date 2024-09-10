@@ -1,5 +1,17 @@
 export const work = [
     {
+        position: "Data Analyst Intern",
+        company: "Data POEM",
+        tld: "com",
+        location: "Santa Clara, CA (Remote)",
+        date: "May 2024 - Present",
+        img: "datapoem",
+        description: [
+            "Developed scalable connector modules using Singer ETL to interface with PostgreSQL and S3, facilitating the retrieval and transformation of website analytics data from multiple advertisement channels for machine learning model pipelines.",
+            "Focused on data validation and verification to ensure the integrity of machine learning models."
+        ]
+    },
+    {
         position: "Website Administrator",
         company: "Niteo Africa",
         tld: "org",
@@ -9,18 +21,6 @@ export const work = [
         description: [
             "Administered Niteo Africa's WordPress-based website, incorporating blog posts and event information and diligently updating website plugins, resulting in a 150% increase in website viewership since assuming the role.",
             "Communicated concerns and insights to the Executive Director through detailed monthly reports to ensure regular progress."
-        ]
-    },
-    {
-        position: "Data Analyst Intern",
-        company: "Data POEM",
-        tld: "com",
-        location: "Santa Clara, CA (Remote)",
-        date: "May 2024 - Aug 2024",
-        img: "datapoem",
-        description: [
-            "Developed scalable connector modules using Singer ETL to interface with PostgreSQL and S3, facilitating the retrieval and transformation of website analytics data from multiple advertisement channels for machine learning model pipelines.",
-            "Focused on data validation and verification to ensure the integrity of machine learning models."
         ]
     },
     {
