@@ -3,7 +3,7 @@ import { useState, useEffect, useRef, ReactNode } from "react";
 import { FaExternalLinkAlt, FaExpand, FaArrowDown, FaRegClock, FaGamepad } from "react-icons/fa";
 import debounce from "lodash/debounce";
 
-export default function MyCursor() {
+export default function CursorTooltip() {
     const [position, setPosition] = useState({ x: 0, y: 0 });
     const cursorRef = useRef<HTMLDivElement>(null);
     const [isHoveringSpecialComponent, setIsHoveringSpecialComponent] = useState(false);
@@ -58,7 +58,6 @@ export default function MyCursor() {
     ];
 
     const handleMouseMove = debounce((e: MouseEvent) => {
-        setPosition({ x: e.clientX, y: e.clientY });
         const target = e.target as HTMLElement;
         const targetClasses = target.classList;
 
@@ -67,16 +66,17 @@ export default function MyCursor() {
         );
         if (specialComponent) {
             setIsHoveringSpecialComponent(true);
+            setPosition({ x: e.clientX, y: e.clientY });
             tooltipContentRef.current = specialComponent.content;
         } else {
-            setIsHoveringSpecialComponent(false);
             tooltipContentRef.current = null;
+            setIsHoveringSpecialComponent(false);
         }
 
         if (cursorRef.current) {
             cursorRef.current.style.transform = `translate3d(
-                ${e.clientX - 10}px,
-                ${e.clientY - 105}px,
+                ${e.clientX - 85}px,
+                ${e.clientY - 18}px,
                 0px
             )`;
         }
@@ -92,13 +92,11 @@ export default function MyCursor() {
     return (
         <div
             ref={cursorRef}
-            className={`hidden md:flex pointer-events-none will-change-transform z-[999999] fixed rounded-full p-2 w-0 h-0 cursor-to-tooltip 
-                ${
-                    isHoveringSpecialComponent
-                        ? " whitespace-nowrap bg-myblack dark:bg-mywhite text-mywhite dark:text-myblack w-44 h-10 items-center justify-center shadow-lg tooltip-movement"
-                        : "cursor-grayscale mix-blend-difference bg-white"
-                }
-            `}
+            className={
+                isHoveringSpecialComponent
+                    ? "hidden md:flex pointer-events-none z-[999999] fixed whitespace-nowrap rounded-full p-2 bg-myblack dark:bg-mywhite text-mywhite dark:text-myblack w-44 h-10 items-center justify-center shadow-lg tooltip-movement"
+                    : ""
+            }
         >
             <span
                 className={`flex items-center transition-all duration-300 ease-in-out ${

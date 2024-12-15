@@ -28,7 +28,7 @@ export default function Projects() {
                     <button
                         key={index}
                         onClick={() => setSelectedTag(tag)}
-                        className={`cursor-none rounded-full hover:scale-95 transition-all py-2 px-4 md:py-3 md:px-6 text-sm md:text-base text-center items-center shadow-lg border border-solid w-auto transition-configuration ${
+                        className={`rounded-full hover:scale-95 transition-all py-2 px-4 md:py-3 md:px-6 text-sm md:text-base text-center items-center shadow-lg border border-solid w-auto transition-configuration ${
                             selectedTag === tag
                                 ? "dark:bg-cardlightbg bg-carddarkbg dark:border-cardlightborder border-carddarkborder dark:text-myblack text-mywhite"
                                 : "bg-cardlightbg dark:bg-carddarkbg border-cardlightborder dark:border-carddarkborder text-myblack dark:text-mywhite"

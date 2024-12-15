@@ -1,7 +1,7 @@
 export const research = [
     {
         title: "Comparison of Unencumbered Interaction Techniques in Head Mounted Displays",
-        status: "In Review"
+        status: "ISS 2024"
     },
     {
         title: "Analysing Unencumbered Interaction Techniques in Head Mounted Displays while Walking",

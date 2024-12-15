@@ -14,19 +14,19 @@ html {
 }
 
 .title {
-    @apply mb-6 md:mb-10 text-[1.7rem] md:text-[3rem] text-center
+    @apply mb-6 md:mb-10 text-[1.7rem] md:text-[3rem] text-center;
 }
 
 .transition-configuration {
-    @apply duration-500 ease-in-out
+    @apply duration-500 ease-in-out;
 }
 
 .card {
-    @apply text-center items-center shadow-lg bg-cardlightbg dark:bg-carddarkbg border border-solid border-cardlightborder dark:border-carddarkborder text-myblack dark:text-mywhite w-auto transition-configuration
+    @apply text-center items-center shadow-lg bg-cardlightbg dark:bg-carddarkbg border border-solid border-cardlightborder dark:border-carddarkborder text-myblack dark:text-mywhite w-auto transition-configuration;
 }
 
 section {
-    @apply flex justify-center flex-col items-center text-myblack dark:text-mywhite mx-4 mt-16 md:mt-24 scroll-mt-[10rem] px-1 md:px-4
+    @apply flex justify-center flex-col items-center text-myblack dark:text-mywhite mx-4 mt-16 md:mt-24 scroll-mt-[10rem] px-1 md:px-4;
 }
 
 @keyframes appear {
@@ -50,16 +50,12 @@ section {
 
 .skill::before {
     position: absolute;
-    content: '';
+    content: "";
     top: 0;
     right: 0;
     bottom: 0;
     left: 0;
-    background-image: linear-gradient(
-        to right,
-        #7b27d0,
-        #E8853E
-    );
+    background-image: linear-gradient(to right, #7b27d0, #e8853e);
     z-index: -1;
     transition: opacity 0.5s ease-in-out;
     opacity: 0;
@@ -73,29 +69,29 @@ section {
 /* Navbar and Footer */
 
 .blurry {
-    @apply backdrop-blur-xl bg-opacity-50
+    @apply backdrop-blur-xl bg-opacity-50;
 }
 
 .blurry-nav-edge {
-    -webkit-mask-image: linear-gradient(0deg, rgba(0,0,0,0) 0%, rgba(0,0,0,1) 20%);
-    mask-image: linear-gradient(0deg, rgba(0,0,0,0) 0%, rgba(0,0,0,1) 20%);
+    -webkit-mask-image: linear-gradient(0deg, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 1) 20%);
+    mask-image: linear-gradient(0deg, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 1) 20%);
 }
 
 .blurry-footer-edge {
-    -webkit-mask-image: linear-gradient(180deg, rgba(0,0,0,0) 0%, rgba(0,0,0,1) 20%);
-    mask-image: linear-gradient(180deg, rgba(0,0,0,0) 0%, rgba(0,0,0,1) 20%);
+    -webkit-mask-image: linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 1) 20%);
+    mask-image: linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 1) 20%);
 }
 
 .navLink {
-    @apply text-myblack dark:text-mywhite no-underline font-sans text-lg mx-4 hover:scale-90 transition-transform transition-configuration
+    @apply text-myblack dark:text-mywhite no-underline font-sans text-lg mx-4 hover:scale-90 transition-transform transition-configuration;
 }
 
 .footer-social {
-    @apply mx-1 p-2 text-myblack dark:text-mywhite rounded-full w-auto h-auto aspect-square max-w-8 max-h-8 bg-zinc-300 dark:bg-zinc-600 hover:scale-90 transition-transform duration-500 ease-in-out
+    @apply mx-1 p-2 text-myblack dark:text-mywhite rounded-full w-auto h-auto aspect-square max-w-8 max-h-8 bg-zinc-300 dark:bg-zinc-600 hover:scale-90 transition-transform duration-500 ease-in-out;
 }
 
 .footer-info {
-    @apply md:hover:text-zinc-700 md:dark:hover:text-zinc-300 py-1 xl:py-0 transition-colors transition-configuration
+    @apply md:hover:text-zinc-700 md:dark:hover:text-zinc-300 py-1 xl:py-0 transition-colors transition-configuration;
 }
 
 /* Title Image Card - Logo */
@@ -104,25 +100,23 @@ section {
     -webkit-animation: spin 12s linear infinite;
     -moz-animation: spin 12s linear infinite;
     animation: spin 12s linear infinite;
-    }
-    @-moz-keyframes spin {
+}
+@-moz-keyframes spin {
     100% {
         -moz-transform: rotate(360deg);
     }
-    }
-    @-webkit-keyframes spin {
+}
+@-webkit-keyframes spin {
     100% {
         -webkit-transform: rotate(360deg);
     }
-    }
-    @keyframes spin {
+}
+@keyframes spin {
     100% {
         -webkit-transform: rotate(360deg);
         transform: rotate(360deg);
     }
-    }
-
-
+}
 
 /* Accordion */
 
@@ -136,31 +130,18 @@ section {
     transition: height 0.25s cubic-bezier(0, 0, 0, 1);
 }
 
-/* My Cursor */
+/* Tooltip Cursor */
 
-html,
-body,
-* {
-    @apply md:scroll-smooth  md:cursor-none
-}
-
-.cursor-grayscale {
-    backdrop-filter: grayscale();
-    -webkit-backdrop-filter: grayscale();
-}
-
-.cursor-to-tooltip {
-    transition: width 0.2s ease-in-out, height 0.2s ease-in-out;
+.cursor-placeholder,
+.cursor-research,
+.cursor-website,
+.cursor-image,
+.cursor-details {
+    cursor: none;
 }
 
 .tooltip-movement {
     transition: width 0.2s ease-in-out, height 0.2s ease-in-out, transform 0.4s ease-out;
-}
-
-/* Description */
-
-.highlight {
-    @apply md:text-white md:dark:text-black md:bg-gradient-to-r from-[#8a2be9] to-[#E8853E] md:p-1 md:rounded-md md:shadow-lg
 }
 
 /* Scrolling Icons */

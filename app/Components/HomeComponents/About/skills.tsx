@@ -4,7 +4,6 @@ import Skill from "./skill";
 export default function Skills() {
     return (
         <section className="text-center appear-animated md:max-w-[83rem] w-full">
-            <h2 className="title">Tech Stack</h2>
             {skills.map((skillCategory, index) => (
                 <div
                     key={index}

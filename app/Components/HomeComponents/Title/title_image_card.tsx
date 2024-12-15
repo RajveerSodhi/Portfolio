@@ -4,7 +4,6 @@ import ImageBackCard from "./ImageBackCard";
 import ImageFrontCard from "./ImageFrontCard";
 import { useState } from "react";
 import Tilt from "react-parallax-tilt";
-import WebGLElements from "./webGLElements";
 
 export default function ImageCard() {
     const [isFlipped, setIsFlipped] = useState(false);
@@ -18,33 +17,23 @@ export default function ImageCard() {
     }
 
     return (
-        <>
-            <span
-                className={`hidden xl:block absolute left-0 right-0 top-0 bottom-0 transition-all duration-300 ease-out ${
-                    isFlipped ? "scale-100" : "scale-100"
-                }`}
+        <div onMouseOver={flipToBack} onMouseLeave={flipToFront} className="my-8">
+            <Tilt
+                trackOnWindow={!isFlipped}
+                tiltReverse={true}
+                tiltMaxAngleX={8}
+                tiltMaxAngleY={8}
+                gyroscope={false}
+                glareEnable={true}
+                glareReverse={true}
+                glareMaxOpacity={0.2}
+                glareBorderRadius="2.8rem"
             >
-                <WebGLElements />
-            </span>
-
-            <div onMouseOver={flipToBack} onMouseLeave={flipToFront} className="my-8">
-                <Tilt
-                    trackOnWindow={!isFlipped}
-                    tiltReverse={true}
-                    tiltMaxAngleX={8}
-                    tiltMaxAngleY={8}
-                    gyroscope={false}
-                    glareEnable={true}
-                    glareReverse={true}
-                    glareMaxOpacity={0.2}
-                    glareBorderRadius="2.8rem"
-                >
-                    <ReactCardFlip isFlipped={isFlipped} flipDirection="horizontal">
-                        <ImageFrontCard />
-                        <ImageBackCard />
-                    </ReactCardFlip>
-                </Tilt>
-            </div>
-        </>
+                <ReactCardFlip isFlipped={isFlipped} flipDirection="horizontal">
+                    <ImageFrontCard />
+                    <ImageBackCard />
+                </ReactCardFlip>
+            </Tilt>
+        </div>
     );
 }

@@ -11,26 +11,22 @@ export const skills = [
             "R",
             "Swift",
             "C++",
-            "HTML"
         ]
     },
     {
         category: "Web Development",
         skills: [
-            "CSS",
-            "Tailwind CSS",
+            "HTML5",
+            "CSS3",
+            "TailwindCSS",
             "Bootstrap",
             "Flask",
-            "FastAPI",
             "Next.js",
-            "React.js",
-            "Node.js",
+            "React",
             "Express.js",
             "Three.js",
             "jQuery",
             "Axios",
-            "Mongoose",
-            "Netlify",
         ]
     },
     {
@@ -39,24 +35,17 @@ export const skills = [
             "Pandas",
             "Seaborn",
             "MatPlotLib",
-            "NumPy",
-            "JUnit",
             "Keras",
             "OpenCV",
             "Selenium",
-            "Postman",
-            "Singer",
             "Mage.ai"
         ]
     },
     {
-        category: "Tools",
+        category: "Data and Storage",
         skills: [
-            "Unity",
-            "GitHub",
             "Tableau",
             "Firebase",
-            "Android Studio",
             "MySQL",
             "PostgreSQL",
             "S3",

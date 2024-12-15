@@ -5,7 +5,7 @@ import "./globals.css";
 import Navbar from "./Components/NavbarComponents/navbar";
 import Footer from "./Components/FooterComponents/footer";
 import Head from "next/head";
-import MyCursor from "./Components/my-cursor";
+import CursorTooltip from "./Components/cursor_tooltip";
 import { BackgroundGradientAnimation } from "./Components/background_gradient";
 
 const point = localFont({
@@ -37,7 +37,7 @@ export default function RootLayout({
                 className={`bg-mywhite dark:bg-myblack overflow-x-hidden transition-color transition-configuration ${point.className}`}
             >
                 <BackgroundGradientAnimation />
-                <MyCursor />
+                <CursorTooltip />
                 <Providers>
                     <Navbar />
                     <main>{children}</main>

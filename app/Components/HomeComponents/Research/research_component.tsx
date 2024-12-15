@@ -10,9 +10,9 @@ export default function ResearchComponent(props: { title: string; status: string
             tiltMaxAngleX={2}
             tiltMaxAngleY={2}
             gyroscope={true}
-            className="appear-animated"
+            className="appear-animated cursor-research"
         >
-            <div className="cursor-research py-6 px-4 h-full flex flex-col rounded-3xl max-w-[29rem] w-auto hover:scale-[1.01] transition-transform card">
+            <div className="cursor-research py-6 px-4 h-full flex flex-col rounded-3xl max-w-[28rem] w-auto hover:scale-[1.01] transition-transform card">
                 <h3 className="cursor-research mb-4 text-lg md:text-2xl grow">{title}</h3>
                 <h5 className="cursor-research text-base md:text-lg text-zinc-500 dark:text-zinc-400 hover:text-myblack dark:hover:text-mywhite transition-color transition-configuration">
                     {status}
