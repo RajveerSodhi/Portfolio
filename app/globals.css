@@ -9,6 +9,14 @@ html {
     scroll-behavior: smooth !important;
 }
 
+*:focus {
+    outline: none;
+}
+
+*:focus-visible {
+    outline: none;
+}
+
 ::selection {
     @apply dark:bg-[#e8853e99] bg-[#526df599];
 }
@@ -22,7 +30,7 @@ html {
 }
 
 .card {
-    @apply text-center items-center shadow-lg bg-cardlightbg dark:bg-carddarkbg border border-solid border-cardlightborder dark:border-carddarkborder text-myblack dark:text-mywhite w-auto transition-configuration outline-none;
+    @apply text-center items-center shadow-lg bg-cardlightbg dark:bg-carddarkbg border border-solid border-cardlightborder dark:border-carddarkborder text-myblack dark:text-mywhite w-auto transition-configuration;
 }
 
 section {

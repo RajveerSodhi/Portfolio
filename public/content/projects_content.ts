@@ -3,7 +3,7 @@ export const projects = [
         title: "PocketPause",
         subtitle: "Chrome Extension",
         link: "spending-tracker",
-        openLink: "github.com/RajveerSodhi/spending-tracker",
+        openLink: "",
         tech: "JavaScript, HTML, CSS, Manifest V3",
         tag: "web",
         description: [
