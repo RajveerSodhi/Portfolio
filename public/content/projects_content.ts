@@ -1,5 +1,30 @@
 export const projects = [
     {
+        title: "PocketPause",
+        subtitle: "Chrome Extension",
+        link: "spending-tracker",
+        openLink: "github.com/RajveerSodhi/spending-tracker",
+        tech: "JavaScript, HTML, CSS, Manifest V3",
+        tag: "web",
+        description: [
+            "Developed an extension that helps users with budgeting by tracking their spending and blocking webstores based on a daily spending limit",
+            "Implemented a user-friendly interface to set favourite stores and spending limits using the Chrome Storage API",
+        ]
+    },
+    {
+        title: "FlightBar",
+        subtitle: "Flight Tracker Menubar App",
+        link: "FlightBar",
+        openLink: "github.com/RajveerSodhi/FlightBar/releases/",
+        tech: "Swift",
+        tag: "iOS and macOS",
+        description: [
+            "Developed a macOS menubar app using Swift that displays real-time flight data.",
+            "Utilized the FlightAware API to fetch flight data and display it in the menubar.",
+            "Implemented a map view with MapKit API to show the flight's route."
+        ]
+    },
+    {
         title: "Custom Tudum",
         subtitle: "Chrome Extension",
         link: "Custom-Tudum",
@@ -59,19 +84,6 @@ export const projects = [
             "Engineered a high-fidelity prototype for a ride-sharing app in Android Studio, seamlessly integrating the Google Maps API.",
             "Applied HCI fundamentals by conducting multiple rounds of requirements gathering and user testing to refine the user experience.",
             "Utilized object-oriented principles to ensure efficient code organization, enhancing maintainability and scalability of the app."
-        ]
-    },
-    {
-        title: "FlightBar",
-        subtitle: "Flight Tracker Menubar App",
-        link: "FlightBar",
-        openLink: "github.com/RajveerSodhi/FlightBar/releases/",
-        tech: "Swift",
-        tag: "iOS and macOS",
-        description: [
-            "Developed a macOS menubar app using Swift that displays real-time flight data.",
-            "Utilized the FlightAware API to fetch flight data and display it in the menubar.",
-            "Implemented a map view with MapKit API to show the flight's route."
         ]
     },
     {
