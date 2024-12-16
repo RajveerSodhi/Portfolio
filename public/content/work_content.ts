@@ -4,7 +4,7 @@ export const work = [
         company: "Data POEM",
         tld: "com",
         location: "Santa Clara, CA (Remote)",
-        date: "May 2024 - Present",
+        date: "May 2024 - Sep 2024",
         img: "datapoem",
         description: [
             "Developed scalable connector modules using Singer ETL to interface with PostgreSQL and S3, facilitating the retrieval and transformation of website analytics data from multiple advertisement channels for machine learning model pipelines.",
