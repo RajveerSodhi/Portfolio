@@ -38,14 +38,14 @@ export default function Placeholder() {
                                 width={200}
                                 height={200}
                                 alt="Rajveer Memoji Working"
-                                className="rounded-full select-none shadow-xl border border-solid border-cardlightborder dark:border-carddarkborder cursor-auto"
+                                className="cursor-placeholder rounded-full select-none shadow-xl border border-solid border-cardlightborder dark:border-carddarkborder cursor-auto"
                             ></Image>
                             <Image
                                 src="/images/memoji/back.webp"
                                 width={200}
                                 height={200}
                                 alt="Rajveer Memoji Yawning"
-                                className="rounded-full select-none shadow-xl border border-solid border-cardlightborder dark:border-carddarkborder cursor-auto"
+                                className="cursor-placeholder rounded-full select-none shadow-xl border border-solid border-cardlightborder dark:border-carddarkborder cursor-auto"
                             ></Image>
                         </ReactCardFlip>
                     </div>
