@@ -37,18 +37,6 @@ export const projects = [
         ]
     },
     {
-        title: "Portfolio",
-        subtitle: "Personal Website",
-        link: "Portfolio",
-        openLink: "rajveersodhi.com",
-        tech: "Next.js, Tailwind CSS, TypeScript",
-        tag: "web",
-        description: [
-            "Created a personal website showcasing my technical skills and work experience. Also added a page showcasing iOS icon designs.",
-            "Developed using the Next.ts framework in TypeScript. Implemented the Stripe API for payments."
-        ]
-    },
-    {
         title: "EduPool",
         subtitle: "E-Learning Platform",
         link: "EduPool",
