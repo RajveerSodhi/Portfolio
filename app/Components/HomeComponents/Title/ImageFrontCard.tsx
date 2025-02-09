@@ -9,10 +9,14 @@ export default function FrontCard() {
         setMyPhotoSrc(Math.ceil(Math.random() * 12));
     }, []);
 
-    function shuffleImage() {
+    function shuffleImageDesktop() {
         setTimeout(function () {
             setMyPhotoSrc(Math.ceil(Math.random() * 12));
         }, 800);
+    }
+
+    function shuffleImageMobile() {
+        setMyPhotoSrc(Math.ceil(Math.random() * 12));
     }
 
     return (
@@ -23,7 +27,8 @@ export default function FrontCard() {
                 width={300}
                 height={300}
                 priority={true}
-                onMouseOver={shuffleImage}
+                onMouseOver={shuffleImageDesktop}
+                onTouchStart={shuffleImageMobile}
                 alt="Rajveer Sodhi Header Photo"
             />
         </div>
