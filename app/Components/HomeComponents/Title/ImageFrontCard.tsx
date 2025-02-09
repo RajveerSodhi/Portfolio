@@ -4,20 +4,15 @@ import { useEffect, useState } from "react";
 
 export default function FrontCard() {
     const [myPhotoSrc, setMyPhotoSrc] = useState(0);
-    let hoverTimer = null;
 
     useEffect(() => {
         setMyPhotoSrc(Math.ceil(Math.random() * 12));
     }, []);
 
-    function handleMouseEnter() {
-        hoverTimer = setTimeout(() => {
+    function shuffleImage() {
+        setTimeout(function () {
             setMyPhotoSrc(Math.ceil(Math.random() * 12));
         }, 800);
-    }
-
-    function handleMouseLeave() {
-        clearTimeout(hoverTimer);
     }
 
     return (
@@ -28,8 +23,7 @@ export default function FrontCard() {
                 width={300}
                 height={300}
                 priority={true}
-                onMouseEnter={handleMouseEnter}
-                onMouseLeave={handleMouseLeave}
+                onMouseOver={shuffleImage}
                 alt="Rajveer Sodhi Header Photo"
             />
         </div>
