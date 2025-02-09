@@ -12,7 +12,7 @@ export default function FrontCard() {
     function shuffleImageDesktop() {
         setTimeout(function () {
             setMyPhotoSrc(Math.ceil(Math.random() * 12));
-        }, 800);
+        }, 600);
     }
 
     function shuffleImageMobile() {
