@@ -76,8 +76,8 @@ export const BackgroundGradientAnimation = ({
 
     return (
         <div
-            className={`blur-[86px] opacity-[0.53] pointer-events-none -z-[100] ${cn(
-                "h-screen w-screen fixed overflow-hidden top-0 left-0 bg-[linear-gradient(40deg,var(--gradient-background-start),var(--gradient-background-end))] z-[0]",
+            className={`blur-[86px] opacity-[0.53] pointer-events-none z-fix ${cn(
+                "h-screen w-screen fixed overflow-hidden top-0 left-0 bg-[linear-gradient(40deg,var(--gradient-background-start),var(--gradient-background-end))]",
                 containerClassName
             )}`}
         >
