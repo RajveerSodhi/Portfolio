@@ -1,5 +1,6 @@
 import { MdEmail } from "react-icons/md";
 import { FaGithub, FaLinkedin } from "react-icons/fa";
+import { SiBuymeacoffee } from "react-icons/si";
 
 export default function Contact() {
     return (
@@ -27,6 +28,14 @@ export default function Contact() {
                 className="footer-social"
             >
                 <FaGithub />
+            </a>
+            <a
+                href="https://buymeacoffee.com/rajveersodhi"
+                rel="noopener noreferrer"
+                target="_blank"
+                className="footer-social"
+            >
+                <SiBuymeacoffee />
             </a>
         </div>
     );
