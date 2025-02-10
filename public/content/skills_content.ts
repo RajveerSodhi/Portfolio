@@ -21,12 +21,14 @@ export const skills = [
             "TailwindCSS",
             "Bootstrap",
             "Flask",
+            "FastAPI",
             "Next.js",
             "React",
             "Express.js",
             "Three.js",
             "jQuery",
             "Axios",
+            "Figma",
         ]
     },
     {
@@ -49,6 +51,7 @@ export const skills = [
             "MySQL",
             "PostgreSQL",
             "S3",
+            "Azure",
             "MongoDB"
         ]
     }
