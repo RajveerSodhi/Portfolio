@@ -23,13 +23,13 @@ export default function AshDash() {
     };
 
     let rocksArray: any[] = [];
-    let rock1Width = 70;
+    let rock1Width = 50;
     let rock2Width = 70;
-    let rock3Width = 70;
+    let rock3Width = 100;
 
-    let rock1Height = 70;
+    let rock1Height = 40;
     let rock2Height = 70;
-    let rock3Height = 70;
+    let rock3Height = 80;
     let rockX = boardWidth;
     let rock1Y = boardHeight - rock1Height;
     let rock2Y = boardHeight - rock2Height;
