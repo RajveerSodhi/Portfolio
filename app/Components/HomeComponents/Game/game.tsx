@@ -49,6 +49,19 @@ export default function AshDash() {
     let treat1Img: HTMLImageElement;
     let treat2Img: HTMLImageElement;
 
+    let cloudsArray: any[] = [];
+    let cloud1Width = 80;
+    let cloud2Width = 72;
+
+    let cloud1Height = 80;
+    let cloud2Height = 72;
+
+    let cloudX = boardWidth;
+    let cloudY = 50;
+
+    let cloud1Img: HTMLImageElement;
+    let cloud2Img: HTMLImageElement;
+
     let rocksArray: any[] = [];
     let rock1Width = 40;
     let rock2Width = 70;
@@ -72,6 +85,10 @@ export default function AshDash() {
     let rock3Img: HTMLImageElement;
     let rock4Img: HTMLImageElement;
 
+    let rockTimeoutId: ReturnType<typeof setTimeout> | null = null;
+    let treatTimeoutId: ReturnType<typeof setTimeout> | null = null;
+    let cloudTimeoutId: ReturnType<typeof setTimeout> | null = null;
+
     let velocityX = -6;
     let velocityY = 0;
     let gravity = 0.4;
@@ -79,6 +96,7 @@ export default function AshDash() {
     let gameStarted = false;
     const [gameState, setGameState] = useState(false);
     let gameOver = false;
+    let points = 0;
     let score = 0;
 
     useEffect(() => {
@@ -126,7 +144,24 @@ export default function AshDash() {
         velocityY = 0;
         ash.x = ashX;
         ash.y = ashY;
+
         rocksArray = [];
+        treatsArray = [];
+        cloudsArray = [];
+
+        if (rockTimeoutId) {
+            clearTimeout(rockTimeoutId);
+            rockTimeoutId = null;
+        }
+        if (treatTimeoutId) {
+            clearTimeout(treatTimeoutId);
+            treatTimeoutId = null;
+        }
+        if (cloudTimeoutId) {
+            clearTimeout(cloudTimeoutId);
+            cloudTimeoutId = null;
+        }
+
         if (context && board) {
             context.clearRect(0, 0, board.width, board.height);
             if (titleImg.complete) {
@@ -155,6 +190,14 @@ export default function AshDash() {
                 context.drawImage(backgroundImg, 0, 0, boardWidth, boardHeight);
             }
 
+            for (let i = 0; i < cloudsArray.length; i++) {
+                let cloud = cloudsArray[i];
+                cloud.x += velocityX * 0.3;
+                if (cloud.img && cloud.img.complete) {
+                    context.drawImage(cloud.img, cloud.x, cloud.y, cloud.width, cloud.height);
+                }
+            }
+
             velocityY += gravity;
             ash.y = Math.min(ash.y + velocityY, ashY);
 
@@ -177,7 +220,7 @@ export default function AshDash() {
                     context.drawImage(treat.img, treat.x, treat.y, treat.width, treat.height);
                 }
                 if (detectCollision(ash, treat)) {
-                    score += 100;
+                    points += 1;
                     treatsArray.splice(i, 1);
                 }
             }
@@ -186,7 +229,7 @@ export default function AshDash() {
                 let rock = rocksArray[i];
                 rock.x += velocityX;
                 if (rock.img && rock.img.complete) {
-                    context?.drawImage(rock.img, rock.x, rock.y, rock.width, rock.height);
+                    context.drawImage(rock.img, rock.x, rock.y, rock.width, rock.height);
                 }
 
                 if (detectCollision(ash, rock)) {
@@ -220,7 +263,7 @@ export default function AshDash() {
             context.textBaseline = "middle";
             score++;
             context.fillText(
-                String(Math.floor(score / 100)),
+                String(Math.floor(score / 100) + points),
                 frameThickness + 10 + 40,
                 frameThickness + 10 + 30
             );
@@ -252,6 +295,9 @@ export default function AshDash() {
         treat1Img = loadImage("/ashdash/treats/bone1.png");
         treat2Img = loadImage("/ashdash/treats/bone2.png");
 
+        cloud1Img = loadImage("/ashdash/scene/cloud1.png");
+        cloud2Img = loadImage("/ashdash/scene/cloud2.png");
+
         scorecardImg = loadImage("/ashdash/UI/scorecard.png");
         backgroundImg = loadImage("/ashdash/scene/background.png");
         gameoverImg = loadImage("/ashdash/UI/gameover.png");
@@ -262,23 +308,30 @@ export default function AshDash() {
 
         scheduleNextRock();
         scheduleNextTreat();
+        scheduleNextCloud();
+    }
+
+    function scheduleNextRock() {
+        const delay = 800 + Math.random() * 400; // 800-1200ms
+        rockTimeoutId = setTimeout(() => {
+            placeRock();
+            scheduleNextRock();
+        }, delay);
     }
 
     function scheduleNextTreat() {
-        // 1100 - 1500ms
-        const delay = 1100 + Math.random() * 400;
-        setTimeout(() => {
+        const delay = 1100 + Math.random() * 400; // 1100-1500ms
+        treatTimeoutId = setTimeout(() => {
             placeTreat();
             scheduleNextTreat();
         }, delay);
     }
 
-    function scheduleNextRock() {
-        // 700 - 1200ms
-        const delay = 700 + Math.random() * 500;
-        setTimeout(() => {
-            placeRock();
-            scheduleNextRock();
+    function scheduleNextCloud() {
+        const delay = 1600 + Math.random() * 400; // 1600-2000ms
+        cloudTimeoutId = setTimeout(() => {
+            placeCloud();
+            scheduleNextCloud();
         }, delay);
     }
 
@@ -291,6 +344,47 @@ export default function AshDash() {
             e.preventDefault();
             velocityY = -11;
             ashImg.src = "/ashdash/ash/jump.png";
+        }
+    }
+
+    function placeCloud() {
+        if (gameOver) {
+            return;
+        }
+
+        let cloud: {
+            img: HTMLImageElement | null;
+            x: number;
+            y: number | null;
+            width: number | null;
+            height: number | null;
+        } = {
+            img: null,
+            x: cloudX,
+            y: null,
+            width: null,
+            height: null,
+        };
+
+        let placeCloudChance = Math.random();
+        if (placeCloudChance > 0.65 && cloud1Img.complete) {
+            cloud.img = cloud1Img;
+            cloud.y = cloudY + Math.random() * 70;
+            cloud.width = cloud1Width;
+            cloud.height = cloud1Height;
+        } else if (placeCloudChance > 0.3 && cloud2Img.complete) {
+            cloud.img = cloud2Img;
+            cloud.y = cloudY + Math.random() * 70;
+            cloud.width = cloud2Width;
+            cloud.height = cloud2Height;
+        }
+
+        if (cloud.img && cloud.img.complete) {
+            cloudsArray.push(cloud);
+        }
+
+        if (cloudsArray.length > 8) {
+            cloudsArray.shift();
         }
     }
 
