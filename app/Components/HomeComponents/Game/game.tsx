@@ -214,6 +214,10 @@ export default function AshDash() {
                 frameThickness + 10 + 40,
                 frameThickness + 10 + 30
             );
+
+            if (score > 0 && score % 1000 == 0) {
+                velocityX += -1;
+            }
         }
     }
 
