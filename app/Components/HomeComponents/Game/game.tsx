@@ -22,6 +22,11 @@ export default function AshDash() {
     let ashY = boardHeight - ashHeight - frameThickness;
     let ashImg: HTMLImageElement;
 
+    let currentFrame = 0;
+    let lastFrameTime = performance.now();
+    let frameDuration = 100;
+    let walkFrames: any[];
+
     let ash = {
         x: ashX,
         y: ashY,
@@ -88,7 +93,6 @@ export default function AshDash() {
     function handleKeyPress(e: KeyboardEvent) {
         if (e.code === "KeyR") {
             restartGame();
-            // startGame();
         } else if (!gameStarted && e.code === "Space") {
             startGame();
         } else {
@@ -145,11 +149,17 @@ export default function AshDash() {
             velocityY += gravity;
             ash.y = Math.min(ash.y + velocityY, ashY);
 
-            if (ash.y === ashY && ashImg.src.includes("jump.png")) {
-                ashImg.src = "/ashdash/ash/walk.gif";
+            if (ash.y === ashY) {
+                ashImg.src = "/ashdash/ash/walk0.png";
+                const now = performance.now();
+                if (now - lastFrameTime >= frameDuration) {
+                    currentFrame = (currentFrame + 1) % 4;
+                    lastFrameTime = now;
+                }
+                context.drawImage(walkFrames[currentFrame], ash.x, ash.y, ash.width, ash.height);
+            } else {
+                context.drawImage(ashImg, ash.x, ash.y, ash.width, ash.height);
             }
-
-            context?.drawImage(ashImg, ash.x, ash.y, ash.width, ash.height);
 
             for (let i = 0; i < rocksArray.length; i++) {
                 let rock = rocksArray[i];
@@ -190,14 +200,21 @@ export default function AshDash() {
     function startGame() {
         gameStarted = true;
 
-        ashImg = new Image();
-        ashImg.src = "/ashdash/ash/walk.gif";
-        ashImg.onload = () => context?.drawImage(ashImg, ash.x, ash.y, ash.width, ash.height);
+        walkFrames = [];
+        for (let i = 0; i < 4; i++) {
+            const img = new Image();
+            img.src = `/ashdash/ash/walk${i}.png`;
+            walkFrames.push(img);
+        }
+
+        ashImg = walkFrames[0];
 
         rock1Img = loadImage("/ashdash/obstacles/rock1.png");
         rock2Img = loadImage("/ashdash/obstacles/rock1.png");
         rock3Img = loadImage("/ashdash/obstacles/rock1.png");
 
+        lastFrameTime = performance.now();
+        currentFrame = 0;
         requestAnimationFrame(update);
         rockInterval = setInterval(placeRock, 1000);
     }
