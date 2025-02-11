@@ -304,7 +304,7 @@ export default function AshDash() {
 
     return (
         <section>
-            <h1>Ash Dash</h1>
+            <h4 className="text-center text-xl md:text-2xl mb-4">Meet my dog!</h4>
             <Tilt
                 tiltReverse={false}
                 tiltMaxAngleX={1}
