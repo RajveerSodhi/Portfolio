@@ -23,13 +23,13 @@ export default function AshDash() {
     };
 
     let rocksArray: any[] = [];
-    let rock1Width = 30;
-    let rock2Width = 70;
+    let rock1Width = 100;
+    let rock2Width = 100;
     let rock3Width = 100;
 
-    let rock1Height = 30;
-    let rock2Height = 50;
-    let rock3Height = 70;
+    let rock1Height = 100;
+    let rock2Height = 100;
+    let rock3Height = 100;
     let rockX = boardWidth;
     let rock1Y = boardHeight - rock1Height;
     let rock2Y = boardHeight - rock2Height;
@@ -43,6 +43,7 @@ export default function AshDash() {
     let velocityY = 0;
     let gravity = 0.3;
 
+    let gameStarted = false;
     let gameOver = false;
     let score = 0;
 
@@ -51,31 +52,36 @@ export default function AshDash() {
             board = boardRef.current;
             board.height = boardHeight;
             board.width = boardWidth;
-
             context = board.getContext("2d");
 
             if (context) {
-                ashImg = new Image();
-                ashImg.src = "/ashdash/ash/walk.gif";
-                ashImg.onload = function () {
-                    context?.drawImage(ashImg, ash.x, ash.y, ash.width, ash.height);
-                };
-
-                rock1Img = new Image();
-                rock1Img.src = "/ashdash/ash/walk.gif";
-
-                rock2Img = new Image();
-                rock2Img.src = "/ashdash/ash/walk.gif";
-
-                rock3Img = new Image();
-                rock3Img.src = "/ashdash/ash/walk.gif";
-
-                requestAnimationFrame(update);
-                setInterval(placeRock, 1000);
-                document.addEventListener("keydown", moveAsh);
+                context.font = "40px courier";
+                context.fillStyle = "black";
+                context.fillText("Press Space to Play!", 250, 140);
             }
+            document.addEventListener("keydown", handleKeyPress);
         }
+
+        return () => {
+            document.removeEventListener("keydown", handleKeyPress);
+        };
     }, []);
+
+    function handleKeyPress(e: KeyboardEvent) {
+        if (!gameStarted && e.code === "Space") {
+            startGame();
+        } else {
+            moveAsh(e);
+        }
+    }
+
+    function loadImage(src: string): HTMLImageElement {
+        const img = new Image();
+        img.src = src;
+        img.onload = () => console.log(`${src} loaded successfully.`);
+        img.onerror = () => console.error(`Failed to load ${src}`);
+        return img;
+    }
 
     function update() {
         if (gameOver) {
@@ -88,6 +94,11 @@ export default function AshDash() {
 
             velocityY += gravity;
             ash.y = Math.min(ash.y + velocityY, ashY);
+
+            if (ash.y === ashY && ashImg.src.includes("jump.png")) {
+                ashImg.src = "/ashdash/ash/walk.gif";
+            }
+
             context?.drawImage(ashImg, ash.x, ash.y, ash.width, ash.height);
 
             for (let i = 0; i < rocksArray.length; i++) {
@@ -111,6 +122,21 @@ export default function AshDash() {
         }
     }
 
+    function startGame() {
+        gameStarted = true;
+
+        ashImg = new Image();
+        ashImg.src = "/ashdash/ash/walk.gif";
+        ashImg.onload = () => context?.drawImage(ashImg, ash.x, ash.y, ash.width, ash.height);
+
+        rock1Img = loadImage("/ashdash/obstacles/rock1.png");
+        rock2Img = loadImage("/ashdash/obstacles/rock1.png");
+        rock3Img = loadImage("/ashdash/obstacles/rock1.png");
+
+        requestAnimationFrame(update);
+        setInterval(placeRock, 1000);
+    }
+
     function moveAsh(e: KeyboardEvent) {
         if (gameOver) {
             return;
@@ -118,6 +144,7 @@ export default function AshDash() {
 
         if ((e.code == "Space" || e.code == "ArrowUp") && ash.y == ashY) {
             velocityY = -10;
+            ashImg.src = "/ashdash/ash/jump.png";
         } else if (e.code == "arrowDown" && ash.y == ashY) {
             console.log("duck");
         }
@@ -143,19 +170,19 @@ export default function AshDash() {
         };
 
         let placeRockChance = Math.random();
-        if (placeRockChance > 0.9) {
+        if (placeRockChance > 0.9 && rock3Img.complete) {
             rock.img = rock3Img;
             rock.y = rock3Y;
             rock.width = rock3Width;
             rock.height = rock3Height;
             rocksArray.push(rock);
-        } else if (placeRockChance > 0.6) {
+        } else if (placeRockChance > 0.6 && rock2Img.complete) {
             rock.img = rock2Img;
             rock.y = rock2Y;
             rock.width = rock2Width;
             rock.height = rock2Height;
             rocksArray.push(rock);
-        } else if (placeRockChance > 0.1) {
+        } else if (placeRockChance > 0.1 && rock1Img.complete) {
             rock.img = rock1Img;
             rock.y = rock1Y;
             rock.width = rock1Width;
