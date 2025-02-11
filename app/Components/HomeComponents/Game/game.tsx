@@ -40,21 +40,25 @@ export default function AshDash() {
     };
 
     let rocksArray: any[] = [];
-    let rock1Width = 50;
+    let rock1Width = 40;
     let rock2Width = 70;
     let rock3Width = 100;
+    let rock4Width = 85;
 
     let rock1Height = 40;
     let rock2Height = 70;
     let rock3Height = 80;
+    let rock4Height = 75;
     let rockX = boardWidth;
     let rock1Y = boardHeight - rock1Height - frameThickness;
     let rock2Y = boardHeight - rock2Height - frameThickness;
     let rock3Y = boardHeight - rock3Height - frameThickness;
+    let rock4Y = boardHeight - rock4Height - frameThickness;
 
     let rock1Img: HTMLImageElement;
     let rock2Img: HTMLImageElement;
     let rock3Img: HTMLImageElement;
+    let rock4Img: HTMLImageElement;
 
     let velocityX = -7;
     let velocityY = 0;
@@ -227,8 +231,9 @@ export default function AshDash() {
         ashImg = walkFrames[0];
 
         rock1Img = loadImage("/ashdash/obstacles/rock1.png");
-        rock2Img = loadImage("/ashdash/obstacles/rock1.png");
-        rock3Img = loadImage("/ashdash/obstacles/rock1.png");
+        rock2Img = loadImage("/ashdash/obstacles/rock2.png");
+        rock3Img = loadImage("/ashdash/obstacles/rock3.png");
+        rock4Img = loadImage("/ashdash/obstacles/rock4.png");
 
         lastFrameTime = performance.now();
         currentFrame = 0;
@@ -268,11 +273,17 @@ export default function AshDash() {
         };
 
         let placeRockChance = Math.random();
-        if (placeRockChance > 0.85 && rock3Img.complete) {
+        if (placeRockChance > 0.95 && rock3Img.complete) {
             rock.img = rock3Img;
             rock.y = rock3Y;
             rock.width = rock3Width;
             rock.height = rock3Height;
+            rocksArray.push(rock);
+        } else if (placeRockChance > 0.85 && rock4Img.complete) {
+            rock.img = rock4Img;
+            rock.y = rock4Y;
+            rock.width = rock4Width;
+            rock.height = rock4Height;
             rocksArray.push(rock);
         } else if (placeRockChance > 0.6 && rock2Img.complete) {
             rock.img = rock2Img;
@@ -280,7 +291,7 @@ export default function AshDash() {
             rock.width = rock2Width;
             rock.height = rock2Height;
             rocksArray.push(rock);
-        } else if (placeRockChance > 35 && rock1Img.complete) {
+        } else if (placeRockChance > 0.4 && rock1Img.complete) {
             rock.img = rock1Img;
             rock.y = rock1Y;
             rock.width = rock1Width;
@@ -296,9 +307,9 @@ export default function AshDash() {
     function detectCollision(a: any, b: any) {
         return (
             a.x < b.x + b.width &&
-            a.x + a.width - 10 > b.x &&
+            a.x + a.width - 16 > b.x &&
             a.y < b.y + b.height &&
-            a.y + a.height - 10 > b.y
+            a.y + a.height - 16 > b.y
         );
     }
 
