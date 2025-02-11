@@ -1,5 +1,6 @@
 "use client";
-import { useEffect, useRef } from "react";
+import { useEffect, useRef, useState } from "react";
+import Tilt from "react-parallax-tilt";
 
 export default function AshDash() {
     const boardRef = useRef<HTMLCanvasElement>(null);
@@ -15,6 +16,10 @@ export default function AshDash() {
     let scorecardImg: HTMLImageElement;
 
     let backgroundImg: HTMLImageElement;
+
+    let titleImg: HTMLImageElement;
+
+    let gameoverImg: HTMLImageElement;
 
     let ashWidth = 128;
     let ashHeight = 128;
@@ -56,6 +61,7 @@ export default function AshDash() {
     let gravity = 0.4;
 
     let gameStarted = false;
+    const [gameState, setGameState] = useState(false);
     let gameOver = false;
     let score = 0;
     let rockInterval: ReturnType<typeof setInterval> | null = null;
@@ -68,16 +74,15 @@ export default function AshDash() {
             context = board.getContext("2d");
 
             if (context) {
-                context.font = "40px courier";
-                context.fillStyle = "black";
-                context.fillText("Press Space to Play!", 250, 140);
-            }
+                titleImg = new Image();
+                titleImg.src = "/ashdash/UI/title.png";
+                frameImg = new Image();
+                frameImg.src = "/ashdash/UI/frame.png";
 
-            frameImg = new Image();
-            frameImg.src = "/ashdash/UI/frame.png";
-            frameImg.onload = function () {
-                context?.drawImage(frameImg, 0, 0, boardWidth, boardHeight);
-            };
+                titleImg.onload = function () {
+                    context?.drawImage(titleImg, 0, 0, boardWidth, boardHeight);
+                };
+            }
 
             document.addEventListener("keydown", handleKeyPress);
         }
@@ -103,6 +108,7 @@ export default function AshDash() {
     function restartGame() {
         gameOver = false;
         gameStarted = false;
+        setGameState(false);
         score = 0;
         velocityY = 0;
         ash.x = ashX;
@@ -114,9 +120,9 @@ export default function AshDash() {
         }
         if (context && board) {
             context.clearRect(0, 0, board.width, board.height);
-            context.font = "40px courier";
-            context.fillStyle = "black";
-            context.fillText("Press Space to Play!", 250, 140);
+            if (titleImg.complete) {
+                context.drawImage(titleImg, 0, 0, boardWidth, boardHeight);
+            }
         }
     }
 
@@ -136,7 +142,10 @@ export default function AshDash() {
         scorecardImg.src = "/ashdash/UI/scorecard.png";
 
         backgroundImg = new Image();
-        backgroundImg.src = "/ashdash/UI/background.png";
+        backgroundImg.src = "/ashdash/scene/background.png";
+
+        gameoverImg = new Image();
+        gameoverImg.src = "/ashdash/UI/gameover.png";
 
         if (context) {
             requestAnimationFrame(update);
@@ -169,10 +178,17 @@ export default function AshDash() {
                 if (detectCollision(ash, rock)) {
                     gameOver = true;
                     ashImg.src =
-                        ash.y == ashY ? "/ashdash/ash/walk-end.png" : "/ashdash/ash/jump-end.png";
+                        ash.y == ashY
+                            ? `/ashdash/ash/walk-end${currentFrame}.png`
+                            : "/ashdash/ash/jump-end.png";
+
                     ashImg.onload = function () {
                         context?.drawImage(ashImg, ash.x, ash.y, ash.width, ash.height);
                     };
+
+                    if (gameoverImg.complete) {
+                        context.drawImage(gameoverImg, 260, 98, 380, 105);
+                    }
                 }
             }
 
@@ -199,6 +215,7 @@ export default function AshDash() {
 
     function startGame() {
         gameStarted = true;
+        setGameState(true);
 
         walkFrames = [];
         for (let i = 0; i < 4; i++) {
@@ -228,8 +245,6 @@ export default function AshDash() {
             e.preventDefault();
             velocityY = -11;
             ashImg.src = "/ashdash/ash/jump.png";
-        } else if (e.code == "arrowDown" && ash.y == ashY) {
-            console.log("duck");
         }
     }
 
@@ -290,7 +305,20 @@ export default function AshDash() {
     return (
         <section>
             <h1>Ash Dash</h1>
-            <canvas className="rounded-xl h-[300px] w-[900px] bg-red-500" ref={boardRef}></canvas>
+            <Tilt
+                tiltReverse={false}
+                tiltMaxAngleX={1}
+                tiltMaxAngleY={1}
+                gyroscope={false}
+                tiltEnable={!gameState}
+            >
+                <canvas
+                    className={`rounded-xl h-[300px] w-[900px] bg-white shadow-md transition-all duration-200 ease-in-out ${
+                        gameState ? "scale-[1.05] mt-4" : ""
+                    }`}
+                    ref={boardRef}
+                ></canvas>
+            </Tilt>
         </section>
     );
 }
