@@ -221,6 +221,7 @@ export default function AshDash() {
                 }
                 if (detectCollision(ash, treat)) {
                     points += 1;
+                    playSound("treat", 0.3);
                     treatsArray.splice(i, 1);
                 }
             }
@@ -234,6 +235,8 @@ export default function AshDash() {
 
                 if (detectCollision(ash, rock)) {
                     gameOver = true;
+                    playSound("end", 0.3);
+                    stopSound("bgm");
                     ashImg.src =
                         ash.y == ashY
                             ? `/ashdash/ash/walk-end${currentFrame}.png`
@@ -277,6 +280,7 @@ export default function AshDash() {
     function startGame() {
         gameStarted = true;
         setGameState(true);
+        playSound("bgm", 0.1);
 
         walkFrames = [];
         for (let i = 0; i < 4; i++) {
@@ -490,6 +494,23 @@ export default function AshDash() {
         );
     }
 
+    function playSound(name: string, volume: number) {
+        const sound = document.getElementById(name) as HTMLAudioElement;
+        if (sound && typeof sound.play === "function") {
+            sound.currentTime = 0;
+            sound.volume = volume;
+            sound.play();
+        }
+    }
+
+    function stopSound(name: string) {
+        const sound = document.getElementById(name) as HTMLAudioElement;
+        if (sound && typeof sound.pause === "function") {
+            sound.pause();
+            sound.currentTime = 0;
+        }
+    }
+
     return (
         <section>
             <h4 className="text-center text-xl md:text-2xl mb-4">Meet my dog!</h4>
@@ -507,6 +528,17 @@ export default function AshDash() {
                     ref={boardRef}
                 ></canvas>
             </Tilt>
+            <audio id="treat" preload="auto">
+                <source src="/ashdash/audio/treat.mp3" type="audio/mpeg" />
+            </audio>
+
+            <audio id="end" preload="auto">
+                <source src="/ashdash/audio/end.mp3" type="audio/mpeg" />
+            </audio>
+
+            <audio id="bgm" preload="auto" loop>
+                <source src="/ashdash/audio/bgm.mp3" type="audio/mpeg" />
+            </audio>
         </section>
     );
 }
