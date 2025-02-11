@@ -14,17 +14,14 @@ export default function AshDash() {
     let frameThickness = 10;
 
     let scorecardImg: HTMLImageElement;
-
     let backgroundImg: HTMLImageElement;
-
     let titleImg: HTMLImageElement;
-
     let gameoverImg: HTMLImageElement;
 
     let ashWidth = 128;
     let ashHeight = 128;
     let ashX = 60;
-    let ashY = boardHeight - ashHeight - frameThickness;
+    let ashY = boardHeight - ashHeight - frameThickness * 2;
     let ashImg: HTMLImageElement;
 
     let currentFrame = 0;
@@ -39,6 +36,19 @@ export default function AshDash() {
         width: ashWidth,
     };
 
+    let treatsArray: any[] = [];
+    let treat1Width = 48;
+    let treat2Width = 48;
+
+    let treat1Height = 36;
+    let treat2Height = 48;
+
+    let treatX = boardWidth;
+    let treatY = boardHeight / 3 - frameThickness;
+
+    let treat1Img: HTMLImageElement;
+    let treat2Img: HTMLImageElement;
+
     let rocksArray: any[] = [];
     let rock1Width = 40;
     let rock2Width = 70;
@@ -49,18 +59,20 @@ export default function AshDash() {
     let rock2Height = 70;
     let rock3Height = 80;
     let rock4Height = 75;
+
     let rockX = boardWidth;
-    let rock1Y = boardHeight - rock1Height - frameThickness;
-    let rock2Y = boardHeight - rock2Height - frameThickness;
-    let rock3Y = boardHeight - rock3Height - frameThickness;
-    let rock4Y = boardHeight - rock4Height - frameThickness;
+
+    let rock1Y = boardHeight - rock1Height - frameThickness * 2;
+    let rock2Y = boardHeight - rock2Height - frameThickness * 2;
+    let rock3Y = boardHeight - rock3Height - frameThickness * 2;
+    let rock4Y = boardHeight - rock4Height - frameThickness * 2;
 
     let rock1Img: HTMLImageElement;
     let rock2Img: HTMLImageElement;
     let rock3Img: HTMLImageElement;
     let rock4Img: HTMLImageElement;
 
-    let velocityX = -7;
+    let velocityX = -6;
     let velocityY = 0;
     let gravity = 0.4;
 
@@ -68,7 +80,6 @@ export default function AshDash() {
     const [gameState, setGameState] = useState(false);
     let gameOver = false;
     let score = 0;
-    let rockInterval: ReturnType<typeof setInterval> | null = null;
 
     useEffect(() => {
         if (boardRef.current) {
@@ -93,9 +104,6 @@ export default function AshDash() {
 
         return () => {
             document.removeEventListener("keydown", handleKeyPress);
-            if (rockInterval) {
-                clearInterval(rockInterval);
-            }
         };
     }, []);
 
@@ -114,14 +122,11 @@ export default function AshDash() {
         gameStarted = false;
         setGameState(false);
         score = 0;
+        velocityX = -6;
         velocityY = 0;
         ash.x = ashX;
         ash.y = ashY;
         rocksArray = [];
-        if (rockInterval) {
-            clearInterval(rockInterval);
-            rockInterval = null;
-        }
         if (context && board) {
             context.clearRect(0, 0, board.width, board.height);
             if (titleImg.complete) {
@@ -141,15 +146,6 @@ export default function AshDash() {
         if (gameOver || !gameStarted) {
             return;
         }
-
-        scorecardImg = new Image();
-        scorecardImg.src = "/ashdash/UI/scorecard.png";
-
-        backgroundImg = new Image();
-        backgroundImg.src = "/ashdash/scene/background.png";
-
-        gameoverImg = new Image();
-        gameoverImg.src = "/ashdash/UI/gameover.png";
 
         if (context) {
             requestAnimationFrame(update);
@@ -174,10 +170,24 @@ export default function AshDash() {
                 context.drawImage(ashImg, ash.x, ash.y, ash.width, ash.height);
             }
 
+            for (let i = treatsArray.length - 1; i >= 0; i--) {
+                let treat = treatsArray[i];
+                treat.x += velocityX;
+                if (treat.img && treat.img.complete) {
+                    context.drawImage(treat.img, treat.x, treat.y, treat.width, treat.height);
+                }
+                if (detectCollision(ash, treat)) {
+                    score += 100;
+                    treatsArray.splice(i, 1);
+                }
+            }
+
             for (let i = 0; i < rocksArray.length; i++) {
                 let rock = rocksArray[i];
                 rock.x += velocityX;
-                context?.drawImage(rock.img, rock.x, rock.y, rock.width, rock.height);
+                if (rock.img && rock.img.complete) {
+                    context?.drawImage(rock.img, rock.x, rock.y, rock.width, rock.height);
+                }
 
                 if (detectCollision(ash, rock)) {
                     gameOver = true;
@@ -239,10 +249,37 @@ export default function AshDash() {
         rock3Img = loadImage("/ashdash/obstacles/rock3.png");
         rock4Img = loadImage("/ashdash/obstacles/rock4.png");
 
+        treat1Img = loadImage("/ashdash/treats/bone1.png");
+        treat2Img = loadImage("/ashdash/treats/bone2.png");
+
+        scorecardImg = loadImage("/ashdash/UI/scorecard.png");
+        backgroundImg = loadImage("/ashdash/scene/background.png");
+        gameoverImg = loadImage("/ashdash/UI/gameover.png");
+
         lastFrameTime = performance.now();
         currentFrame = 0;
         requestAnimationFrame(update);
-        rockInterval = setInterval(placeRock, 1000);
+
+        scheduleNextRock();
+        scheduleNextTreat();
+    }
+
+    function scheduleNextTreat() {
+        // 1100 - 1500ms
+        const delay = 1100 + Math.random() * 400;
+        setTimeout(() => {
+            placeTreat();
+            scheduleNextTreat();
+        }, delay);
+    }
+
+    function scheduleNextRock() {
+        // 700 - 1200ms
+        const delay = 700 + Math.random() * 500;
+        setTimeout(() => {
+            placeRock();
+            scheduleNextRock();
+        }, delay);
     }
 
     function moveAsh(e: KeyboardEvent) {
@@ -254,6 +291,48 @@ export default function AshDash() {
             e.preventDefault();
             velocityY = -11;
             ashImg.src = "/ashdash/ash/jump.png";
+        }
+    }
+
+    function placeTreat() {
+        if (gameOver) {
+            return;
+        }
+
+        let treat: {
+            img: HTMLImageElement | null;
+            x: number;
+            y: number | null;
+            width: number | null;
+            height: number | null;
+        } = {
+            img: null,
+            x: treatX,
+            y: null,
+            width: null,
+            height: null,
+        };
+
+        let placeTreatChance = Math.random();
+        if (placeTreatChance > 0.85 && treat1Img.complete) {
+            treat.img = treat1Img;
+            treat.y = Math.random() <= 0.5 ? rock2Y : treatY;
+            treat.width = treat1Width;
+            treat.height = treat1Height;
+        } else if (placeTreatChance > 0.7 && treat2Img.complete) {
+            treat.img = treat2Img;
+            treat.y = Math.random() <= 0.5 ? rock2Y : treatY;
+            treat.width = treat2Width;
+            treat.height = treat2Height;
+        }
+
+        let overlapsRock = rocksArray.some((rock) => detectCollision(rock, treat));
+        if (!overlapsRock && treat.img && treat.img.complete) {
+            treatsArray.push(treat);
+        }
+
+        if (treatsArray.length > 8) {
+            treatsArray.shift();
         }
     }
 
@@ -282,28 +361,28 @@ export default function AshDash() {
             rock.y = rock3Y;
             rock.width = rock3Width;
             rock.height = rock3Height;
-            rocksArray.push(rock);
         } else if (placeRockChance > 0.85 && rock4Img.complete) {
             rock.img = rock4Img;
             rock.y = rock4Y;
             rock.width = rock4Width;
             rock.height = rock4Height;
-            rocksArray.push(rock);
         } else if (placeRockChance > 0.6 && rock2Img.complete) {
             rock.img = rock2Img;
             rock.y = rock2Y;
             rock.width = rock2Width;
             rock.height = rock2Height;
-            rocksArray.push(rock);
         } else if (placeRockChance > 0.4 && rock1Img.complete) {
             rock.img = rock1Img;
             rock.y = rock1Y;
             rock.width = rock1Width;
             rock.height = rock1Height;
+        }
+
+        if (rock.img && rock.img.complete) {
             rocksArray.push(rock);
         }
 
-        if (rocksArray.length > 20) {
+        if (rocksArray.length > 8) {
             rocksArray.shift();
         }
     }
