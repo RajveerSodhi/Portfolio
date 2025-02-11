@@ -11,7 +11,7 @@ export default function AshDash() {
 
     let ashWidth = 128;
     let ashHeight = 128;
-    let ashX = 50;
+    let ashX = 60;
     let ashY = boardHeight - ashHeight;
     let ashImg: HTMLImageElement;
 
@@ -23,13 +23,13 @@ export default function AshDash() {
     };
 
     let rocksArray: any[] = [];
-    let rock1Width = 100;
-    let rock2Width = 100;
-    let rock3Width = 100;
+    let rock1Width = 70;
+    let rock2Width = 70;
+    let rock3Width = 70;
 
-    let rock1Height = 100;
-    let rock2Height = 100;
-    let rock3Height = 100;
+    let rock1Height = 70;
+    let rock2Height = 70;
+    let rock3Height = 70;
     let rockX = boardWidth;
     let rock1Y = boardHeight - rock1Height;
     let rock2Y = boardHeight - rock2Height;
@@ -39,13 +39,14 @@ export default function AshDash() {
     let rock2Img: HTMLImageElement;
     let rock3Img: HTMLImageElement;
 
-    let velocityX = -1;
+    let velocityX = -7;
     let velocityY = 0;
-    let gravity = 0.3;
+    let gravity = 0.4;
 
     let gameStarted = false;
     let gameOver = false;
     let score = 0;
+    let rockInterval: ReturnType<typeof setInterval> | null = null;
 
     useEffect(() => {
         if (boardRef.current) {
@@ -64,14 +65,41 @@ export default function AshDash() {
 
         return () => {
             document.removeEventListener("keydown", handleKeyPress);
+            if (rockInterval) {
+                clearInterval(rockInterval);
+            }
         };
     }, []);
 
     function handleKeyPress(e: KeyboardEvent) {
-        if (!gameStarted && e.code === "Space") {
+        if (e.code === "KeyR") {
+            restartGame();
+            // startGame();
+        } else if (!gameStarted && e.code === "Space") {
             startGame();
         } else {
             moveAsh(e);
+        }
+    }
+
+    function restartGame() {
+        // Reset game variables.
+        gameOver = false;
+        gameStarted = false;
+        score = 0;
+        velocityY = 0;
+        ash.x = ashX;
+        ash.y = ashY;
+        rocksArray = [];
+        if (rockInterval) {
+            clearInterval(rockInterval);
+            rockInterval = null;
+        }
+        if (context && board) {
+            context.clearRect(0, 0, board.width, board.height);
+            context.font = "40px courier";
+            context.fillStyle = "black";
+            context.fillText("Press Space to Play!", 250, 140);
         }
     }
 
@@ -84,7 +112,7 @@ export default function AshDash() {
     }
 
     function update() {
-        if (gameOver) {
+        if (gameOver || !gameStarted) {
             return;
         }
 
@@ -108,12 +136,19 @@ export default function AshDash() {
 
                 if (detectCollision(ash, rock)) {
                     gameOver = true;
-                    ashImg.src = "/ashdash/ash/end.png";
+                    ashImg.src =
+                        ash.y == ashY ? "/ashdash/ash/walk-end.png" : "/ashdash/ash/jump-end.png";
                     ashImg.onload = function () {
                         context?.drawImage(ashImg, ash.x, ash.y, ash.width, ash.height);
                     };
                 }
             }
+
+            context.strokeStyle = "blue";
+            context.strokeRect(ash.x, ash.y, ash.width, ash.height); // Ash's boundary
+            rocksArray.forEach((rock) =>
+                context?.strokeRect(rock.x, rock.y, rock.width, rock.height)
+            );
 
             context.fillStyle = "black";
             context.font = "20px courier";
@@ -134,16 +169,17 @@ export default function AshDash() {
         rock3Img = loadImage("/ashdash/obstacles/rock1.png");
 
         requestAnimationFrame(update);
-        setInterval(placeRock, 1000);
+        rockInterval = setInterval(placeRock, 1000);
     }
 
     function moveAsh(e: KeyboardEvent) {
-        if (gameOver) {
+        if (gameOver || !gameStarted) {
             return;
         }
 
         if ((e.code == "Space" || e.code == "ArrowUp") && ash.y == ashY) {
-            velocityY = -10;
+            e.preventDefault();
+            velocityY = -11;
             ashImg.src = "/ashdash/ash/jump.png";
         } else if (e.code == "arrowDown" && ash.y == ashY) {
             console.log("duck");
@@ -176,13 +212,13 @@ export default function AshDash() {
             rock.width = rock3Width;
             rock.height = rock3Height;
             rocksArray.push(rock);
-        } else if (placeRockChance > 0.6 && rock2Img.complete) {
+        } else if (placeRockChance > 0.7 && rock2Img.complete) {
             rock.img = rock2Img;
             rock.y = rock2Y;
             rock.width = rock2Width;
             rock.height = rock2Height;
             rocksArray.push(rock);
-        } else if (placeRockChance > 0.1 && rock1Img.complete) {
+        } else if (placeRockChance > 0.5 && rock1Img.complete) {
             rock.img = rock1Img;
             rock.y = rock1Y;
             rock.width = rock1Width;
@@ -190,7 +226,7 @@ export default function AshDash() {
             rocksArray.push(rock);
         }
 
-        if (rocksArray.length > 5) {
+        if (rocksArray.length > 20) {
             rocksArray.shift();
         }
     }
@@ -198,16 +234,16 @@ export default function AshDash() {
     function detectCollision(a: any, b: any) {
         return (
             a.x < b.x + b.width &&
-            a.y + a.width > b.x &&
+            a.x + a.width - 10 > b.x &&
             a.y < b.y + b.height &&
-            a.y + a.height > b.y
+            a.y + a.height - 10 > b.y
         );
     }
 
     return (
         <section>
             <h1>Ash Dash</h1>
-            <canvas className="rounded-3xl bg-red-500" ref={boardRef}></canvas>
+            <canvas className="rounded-3xl h-[300px] w-[900px] bg-red-500" ref={boardRef}></canvas>
         </section>
     );
 }
