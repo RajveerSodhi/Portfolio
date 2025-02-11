@@ -236,19 +236,19 @@ export default function AshDash() {
         };
 
         let placeRockChance = Math.random();
-        if (placeRockChance > 0.9 && rock3Img.complete) {
+        if (placeRockChance > 0.85 && rock3Img.complete) {
             rock.img = rock3Img;
             rock.y = rock3Y;
             rock.width = rock3Width;
             rock.height = rock3Height;
             rocksArray.push(rock);
-        } else if (placeRockChance > 0.7 && rock2Img.complete) {
+        } else if (placeRockChance > 0.6 && rock2Img.complete) {
             rock.img = rock2Img;
             rock.y = rock2Y;
             rock.width = rock2Width;
             rock.height = rock2Height;
             rocksArray.push(rock);
-        } else if (placeRockChance > 0.5 && rock1Img.complete) {
+        } else if (placeRockChance > 35 && rock1Img.complete) {
             rock.img = rock1Img;
             rock.y = rock1Y;
             rock.width = rock1Width;
