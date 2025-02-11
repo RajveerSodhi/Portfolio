@@ -15,7 +15,7 @@ export default function Home() {
             <Research />
             <About />
             <Contact />
-            <AshDash />
+            {/* <AshDash /> */}
         </>
     );
 }
