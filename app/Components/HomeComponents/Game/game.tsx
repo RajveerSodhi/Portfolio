@@ -9,10 +9,17 @@ export default function AshDash() {
     let boardHeight = 300;
     let context: CanvasRenderingContext2D | null;
 
+    let frameImg: HTMLImageElement;
+    let frameThickness = 10;
+
+    let scorecardImg: HTMLImageElement;
+
+    let backgroundImg: HTMLImageElement;
+
     let ashWidth = 128;
     let ashHeight = 128;
     let ashX = 60;
-    let ashY = boardHeight - ashHeight;
+    let ashY = boardHeight - ashHeight - frameThickness;
     let ashImg: HTMLImageElement;
 
     let ash = {
@@ -31,9 +38,9 @@ export default function AshDash() {
     let rock2Height = 70;
     let rock3Height = 80;
     let rockX = boardWidth;
-    let rock1Y = boardHeight - rock1Height;
-    let rock2Y = boardHeight - rock2Height;
-    let rock3Y = boardHeight - rock3Height;
+    let rock1Y = boardHeight - rock1Height - frameThickness;
+    let rock2Y = boardHeight - rock2Height - frameThickness;
+    let rock3Y = boardHeight - rock3Height - frameThickness;
 
     let rock1Img: HTMLImageElement;
     let rock2Img: HTMLImageElement;
@@ -60,6 +67,13 @@ export default function AshDash() {
                 context.fillStyle = "black";
                 context.fillText("Press Space to Play!", 250, 140);
             }
+
+            frameImg = new Image();
+            frameImg.src = "/ashdash/UI/frame.png";
+            frameImg.onload = function () {
+                context?.drawImage(frameImg, 0, 0, boardWidth, boardHeight);
+            };
+
             document.addEventListener("keydown", handleKeyPress);
         }
 
@@ -83,7 +97,6 @@ export default function AshDash() {
     }
 
     function restartGame() {
-        // Reset game variables.
         gameOver = false;
         gameStarted = false;
         score = 0;
@@ -106,7 +119,6 @@ export default function AshDash() {
     function loadImage(src: string): HTMLImageElement {
         const img = new Image();
         img.src = src;
-        img.onload = () => console.log(`${src} loaded successfully.`);
         img.onerror = () => console.error(`Failed to load ${src}`);
         return img;
     }
@@ -116,9 +128,19 @@ export default function AshDash() {
             return;
         }
 
+        scorecardImg = new Image();
+        scorecardImg.src = "/ashdash/UI/scorecard.png";
+
+        backgroundImg = new Image();
+        backgroundImg.src = "/ashdash/UI/background.png";
+
         if (context) {
             requestAnimationFrame(update);
             context?.clearRect(0, 0, board.width, board.height);
+
+            if (backgroundImg.complete) {
+                context.drawImage(backgroundImg, 0, 0, boardWidth, boardHeight);
+            }
 
             velocityY += gravity;
             ash.y = Math.min(ash.y + velocityY, ashY);
@@ -144,16 +166,24 @@ export default function AshDash() {
                 }
             }
 
-            context.strokeStyle = "blue";
-            context.strokeRect(ash.x, ash.y, ash.width, ash.height); // Ash's boundary
-            rocksArray.forEach((rock) =>
-                context?.strokeRect(rock.x, rock.y, rock.width, rock.height)
-            );
+            if (frameImg.complete) {
+                context.drawImage(frameImg, 0, 0, boardWidth, boardHeight);
+            }
 
-            context.fillStyle = "black";
-            context.font = "20px courier";
+            if (scorecardImg.complete) {
+                context?.drawImage(scorecardImg, frameThickness + 10, frameThickness + 10, 80, 48);
+            }
+
+            context.fillStyle = "white";
+            context.font = "25px courier";
+            context.textAlign = "center";
+            context.textBaseline = "middle";
             score++;
-            context.fillText(String(Math.floor(score / 100)), 5, 20);
+            context.fillText(
+                String(Math.floor(score / 100)),
+                frameThickness + 10 + 40,
+                frameThickness + 10 + 30
+            );
         }
     }
 
@@ -243,7 +273,7 @@ export default function AshDash() {
     return (
         <section>
             <h1>Ash Dash</h1>
-            <canvas className="rounded-3xl h-[300px] w-[900px] bg-red-500" ref={boardRef}></canvas>
+            <canvas className="rounded-xl h-[300px] w-[900px] bg-red-500" ref={boardRef}></canvas>
         </section>
     );
 }
