@@ -13,7 +13,7 @@ module.exports = {
         colors: {
             mywhite: "#f5f5f5",
             cardlightbg: "#fefefe",
-            carddarkbg:"#252525",
+            carddarkbg:"#202020",
             cardlightborder: "#e7e7e7",
             carddarkborder: "#454545",
             myblack: "#27272A",

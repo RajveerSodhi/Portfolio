@@ -3,6 +3,7 @@ import Link from "next/link";
 import Tilt from "react-parallax-tilt";
 import LogoButton from "./logo_button";
 import ThemeSwitch from "./theme_switch";
+import GradientToggle from "../Gradient/GradientToggle";
 
 export default function DesktopNavbar() {
     return (
@@ -36,8 +37,13 @@ export default function DesktopNavbar() {
                         </Link>
                     </nav>
                 </Tilt>
-                <span className="text-3xl text-myblack/70 hover:scale-90 dark:text-mywhite/70 absolute right-0 pr-6 pt-2 transition-transform transition-configuration">
-                    <ThemeSwitch />
+                <span className="text-3xl text-myblack/70 dark:text-mywhite/70 absolute flex flex-row gap-4 right-0 pr-6 pt-2">
+                    <span className="cursor-pointer hover:scale-90 transition-transform transition-configuration">
+                        <GradientToggle />
+                    </span>
+                    <span className="cursor-pointer hover:scale-90 transition-transform transition-configuration">
+                        <ThemeSwitch />
+                    </span>
                 </span>
             </div>
         </div>

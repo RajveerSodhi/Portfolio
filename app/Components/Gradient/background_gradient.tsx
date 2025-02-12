@@ -1,6 +1,6 @@
 "use client";
 import { useEffect, useState } from "react";
-import { cn } from "../utils/cn";
+import { cn } from "../../utils/cn";
 
 export const BackgroundGradientAnimation = ({
     firstColor = "76, 156, 255",
