@@ -43,32 +43,13 @@ export const BackgroundGradientAnimation = ({
     return (
         <div
             style={{ willChange: "transform, opacity" }}
-            className={`blur-[86px] opacity-[0.53] pointer-events-none z-fix ${cn(
+            className={`blur-[35px] dark:blur-[80px] opacity-[0.65] dark:opacity-[0.4] pointer-events-none z-fix ${cn(
                 "h-screen w-screen fixed overflow-hidden top-0 left-0 bg-[linear-gradient(40deg,var(--gradient-background-start),var(--gradient-background-end))]",
                 containerClassName
             )}`}
         >
-            <svg className="hidden">
-                <defs>
-                    <filter id="blurMe">
-                        <feGaussianBlur in="SourceGraphic" stdDeviation="7" result="blur" />
-                        <feColorMatrix
-                            in="blur"
-                            mode="matrix"
-                            values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 14 -6"
-                            result="goo"
-                        />
-                        <feBlend in="SourceGraphic" in2="goo" />
-                    </filter>
-                </defs>
-            </svg>
             <div className={cn("", className)}>{children}</div>
-            <div
-                className={cn(
-                    "gradients-container h-full w-full blur-lg",
-                    isSafari ? "blur-2xl" : "[filter:url(#blurMe)_blur(30px)]"
-                )}
-            >
+            <div className="gradients-container h-full w-full blur-2xl">
                 <div
                     className={cn(
                         `absolute [background:radial-gradient(circle_at_center,_var(--first-color)_0,_var(--first-color)_50%)_no-repeat]`,
