@@ -548,7 +548,7 @@ export default function AshDash() {
     }
 
     return (
-        <section className="hidden md:visible">
+        <section className="hidden md:flex">
             <h4 className="text-center text-xl md:text-2xl mb-4">Meet my dog!</h4>
             <Tilt
                 tiltReverse={false}
