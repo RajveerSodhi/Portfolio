@@ -341,7 +341,7 @@ export default function AshDash() {
     }
 
     function scheduleNextRock() {
-        const delay = 800 + Math.random() * 400; // 800-1200ms
+        const delay = 800 + Math.random() * 500; // 800-1300ms
         rockTimeoutId = setTimeout(() => {
             placeRock();
             scheduleNextRock();
@@ -349,7 +349,7 @@ export default function AshDash() {
     }
 
     function scheduleNextTreat() {
-        const delay = 1100 + Math.random() * 400; // 1100-1500ms
+        const delay = 1000 + Math.random() * 500; // 1000-1500ms
         treatTimeoutId = setTimeout(() => {
             placeTreat();
             scheduleNextTreat();
@@ -371,7 +371,7 @@ export default function AshDash() {
 
         if ((e.code == "Space" || e.code == "ArrowUp") && ash.y == ashY) {
             e.preventDefault();
-            velocityY = -11;
+            velocityY = -12;
             ashImg.src = "/ashdash/ash/jump.png";
         }
     }
