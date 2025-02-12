@@ -21,7 +21,7 @@ export default function ResumeView() {
                 </span>
             </div>
             <iframe
-                className={`shadow-lg w-[80vh] aspect-auto rounded-2xl transition-all transition-configuration ${
+                className={`shadow-lg w-[80vh] aspect-auto rounded-xl transition-all transition-configuration ${
                     viewResume ? "opacity-1 h-[85vh]" : "opacity-0 h-0"
                 }`}
                 title="Resume"

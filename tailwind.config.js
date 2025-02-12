@@ -13,10 +13,10 @@ module.exports = {
         colors: {
             mywhite: "#f5f5f5",
             cardlightbg: "#fefefe",
-            carddarkbg:"#191919",
+            carddarkbg:"#161616",
             cardlightborder: "#e7e7e7",
             carddarkborder: "#454545",
-            myblack: "#181818",
+            myblack: "#191919",
             gradientdarkbg: "#090909",
             gradientdarkcardbg: "#121212",
         },
