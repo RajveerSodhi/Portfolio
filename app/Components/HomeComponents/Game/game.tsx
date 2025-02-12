@@ -1,9 +1,11 @@
 "use client";
 import { useEffect, useRef, useState } from "react";
 import Tilt from "react-parallax-tilt";
+import { FaVolumeUp, FaVolumeMute } from "react-icons/fa";
 
 export default function AshDash() {
     const boardRef = useRef<HTMLCanvasElement>(null);
+    const soundButtonRef = useRef<HTMLButtonElement>(null);
 
     let board: any;
     let boardWidth = 900;
@@ -89,15 +91,19 @@ export default function AshDash() {
     let treatTimeoutId: ReturnType<typeof setTimeout> | null = null;
     let cloudTimeoutId: ReturnType<typeof setTimeout> | null = null;
 
-    let velocityX = -6;
+    let velocityX = 5;
     let velocityY = 0;
     let gravity = 0.4;
 
     let gameStarted = false;
-    const [gameState, setGameState] = useState(false);
     let gameOver = false;
     let points = 0;
     let score = 0;
+
+    const [gameState, setGameState] = useState(false);
+    const [soundOn, setSoundOn] = useState(true);
+
+    const soundOnRef = useRef(soundOn);
 
     useEffect(() => {
         if (boardRef.current) {
@@ -125,9 +131,21 @@ export default function AshDash() {
         };
     }, []);
 
+    useEffect(() => {
+        soundOnRef.current = soundOn;
+        if (soundOnRef.current && gameState) {
+            playSound("bgm", 0.05);
+        } else {
+            stopSound("bgm");
+        }
+    }, [soundOn]);
+
     function handleKeyPress(e: KeyboardEvent) {
+        e.preventDefault();
         if (e.code === "KeyR") {
             restartGame();
+        } else if (e.code == "KeyM") {
+            toggleSound();
         } else if (!gameStarted && e.code === "Space") {
             startGame();
         } else {
@@ -139,8 +157,9 @@ export default function AshDash() {
         gameOver = false;
         gameStarted = false;
         setGameState(false);
+        stopSound("bgm");
         score = 0;
-        velocityX = -6;
+        velocityX = -5;
         velocityY = 0;
         ash.x = ashX;
         ash.y = ashY;
@@ -221,7 +240,9 @@ export default function AshDash() {
                 }
                 if (detectCollision(ash, treat)) {
                     points += 1;
-                    playSound("treat", 0.3);
+                    if (soundOnRef.current) {
+                        playSound("treat", 0.15);
+                    }
                     treatsArray.splice(i, 1);
                 }
             }
@@ -235,7 +256,9 @@ export default function AshDash() {
 
                 if (detectCollision(ash, rock)) {
                     gameOver = true;
-                    playSound("end", 0.3);
+                    if (soundOnRef.current) {
+                        playSound("end", 0.15);
+                    }
                     stopSound("bgm");
                     ashImg.src =
                         ash.y == ashY
@@ -280,7 +303,9 @@ export default function AshDash() {
     function startGame() {
         gameStarted = true;
         setGameState(true);
-        playSound("bgm", 0.1);
+        if (soundOnRef.current) {
+            playSound("bgm", 0.05);
+        }
 
         walkFrames = [];
         for (let i = 0; i < 4; i++) {
@@ -495,6 +520,10 @@ export default function AshDash() {
     }
 
     function playSound(name: string, volume: number) {
+        if (!soundOnRef.current) {
+            return;
+        }
+
         const sound = document.getElementById(name) as HTMLAudioElement;
         if (sound && typeof sound.play === "function") {
             sound.currentTime = 0;
@@ -509,6 +538,13 @@ export default function AshDash() {
             sound.pause();
             sound.currentTime = 0;
         }
+    }
+
+    function toggleSound() {
+        setSoundOn((prevSoundOn) => {
+            const newSoundState = !prevSoundOn;
+            return newSoundState;
+        });
     }
 
     return (
@@ -528,6 +564,17 @@ export default function AshDash() {
                     ref={boardRef}
                 ></canvas>
             </Tilt>
+            <div className="w-[900px] flex items-end justify-end text-white text-3xl py-8">
+                <button
+                    onClick={() => {
+                        toggleSound();
+                        soundButtonRef.current?.blur();
+                    }}
+                    ref={soundButtonRef}
+                >
+                    {soundOn ? <FaVolumeUp /> : <FaVolumeMute />}
+                </button>
+            </div>
             <audio id="treat" preload="auto">
                 <source src="/ashdash/audio/treat.mp3" type="audio/mpeg" />
             </audio>
