@@ -65,12 +65,12 @@ export default function AshDash() {
     let cloud2Img: HTMLImageElement;
 
     let rocksArray: any[] = [];
-    let rock1Width = 35;
+    let rock1Width = 45;
     let rock2Width = 65;
     let rock3Width = 95;
     let rock4Width = 80;
 
-    let rock1Height = 35;
+    let rock1Height = 45;
     let rock2Height = 65;
     let rock3Height = 75;
     let rock4Height = 70;
