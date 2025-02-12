@@ -1,10 +1,22 @@
 export const projects = [
     {
+        title: "OriginalFlix",
+        subtitle: "Database REST API",
+        link: "OrignialFlix",
+        openLink: "https://www.originalflix.dev",
+        tech: "FastAPI, React, Azure Postgres",
+        tag: "web",
+        description: [
+            "Built a FastAPI-powered REST API backed by a PostgreSQL database (SQLAlchemy) containing streaming-platform originals scraped from Wikipedia with BeautifulSoup4.",
+            "Deployed via a React frontend on Vercel and the API on Heroku, ensuring scalability and ease of maintenance."
+        ]
+    },
+    {
         title: "PocketPause",
         subtitle: "Chrome Extension",
         link: "spending-tracker",
         openLink: "https://chromewebstore.google.com/detail/pocketpause/hnnpejadlkpchlfhifnkaboflaaogphg",
-        tech: "JavaScript, HTML, CSS, Manifest V3",
+        tech: "JavaScript, HTML5, Manifest V3",
         tag: "web",
         description: [
             "Developed an extension that helps users with budgeting by tracking their spending and blocking webstores based on a daily spending limit",
@@ -16,7 +28,7 @@ export const projects = [
         subtitle: "Flight Tracker Menubar App",
         link: "FlightBar",
         openLink: "github.com/RajveerSodhi/FlightBar/releases/",
-        tech: "Swift",
+        tech: "Swift, Redis, FastAPI",
         tag: "iOS and macOS",
         description: [
             "Developed a macOS menubar app using Swift that displays real-time flight data.",
@@ -29,7 +41,7 @@ export const projects = [
         subtitle: "Chrome Extension",
         link: "Custom-Tudum",
         openLink: "chromewebstore.google.com/detail/custom-tudum/plkcjhmgcploglmdgbalngcnjholcamm",
-        tech: "JavaScript, HTML, CSS, Manifest V3",
+        tech: "JavaScript, HTML5, Manifest V3",
         tag: "web",
         description: [
             "Developed a Chrome extension with MV3 that allows users to customize the Netflix Tudum sound with their own audio files.",
@@ -41,7 +53,7 @@ export const projects = [
         subtitle: "E-Learning Platform",
         link: "EduPool",
         openLink: "",
-        tech: "Python, HTML, CSS, JavaScript, MySQL",
+        tech: "Flask, HTML5, JavaScript, MySQL",
         tag: "web",
         description: [
             "Collaborated in developing a Flask-based full-stack e-learning platform, employing Agile methodologies, CI/CD practices, UML for system design, and Test-Driven Development (TDD) with Selenium automated testing and deployment to ensure quality.",
@@ -53,7 +65,7 @@ export const projects = [
         subtitle: "ASL to English Converter",
         link: "Gestura",
         openLink: "",
-        tech: "Python, HTML, CSS, JavaScript",
+        tech: "Python, HTML5, Node.js",
         tag: "ML",
         description: [
             "BC Hacks 5.0 Hackathon Winner",
