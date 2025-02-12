@@ -2,8 +2,8 @@ export const projects = [
     {
         title: "OriginalFlix",
         subtitle: "Database REST API",
-        link: "OrignialFlix",
-        openLink: "https://www.originalflix.dev",
+        link: "OriginalFlix",
+        openLink: "www.originalflix.dev",
         tech: "FastAPI, React, Azure Postgres",
         tag: "web",
         description: [
@@ -15,7 +15,7 @@ export const projects = [
         title: "PocketPause",
         subtitle: "Chrome Extension",
         link: "spending-tracker",
-        openLink: "https://chromewebstore.google.com/detail/pocketpause/hnnpejadlkpchlfhifnkaboflaaogphg",
+        openLink: "chromewebstore.google.com/detail/pocketpause/hnnpejadlkpchlfhifnkaboflaaogphg",
         tech: "JavaScript, HTML5, Manifest V3",
         tag: "web",
         description: [
