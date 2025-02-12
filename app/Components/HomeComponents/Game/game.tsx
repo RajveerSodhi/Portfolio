@@ -93,7 +93,7 @@ export default function AshDash() {
 
     let velocityX = -6;
     let velocityY = 0;
-    let gravity = 0.4;
+    let gravity = 0.38;
 
     let gameStarted = false;
     let gameOver = false;
@@ -159,6 +159,7 @@ export default function AshDash() {
         setGameState(false);
         stopSound("bgm");
         score = 0;
+        points = 0;
         velocityX = -5;
         velocityY = 0;
         ash.x = ashX;
@@ -341,7 +342,7 @@ export default function AshDash() {
     }
 
     function scheduleNextRock() {
-        const delay = 900 + Math.random() * 500; // 900-1400ms
+        const delay = 1000 + Math.random() * 500; // 100-1500ms
         rockTimeoutId = setTimeout(() => {
             placeRock();
             scheduleNextRock();
