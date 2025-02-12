@@ -33,8 +33,12 @@ html {
     @apply text-center items-center shadow-lg bg-cardlightbg dark:bg-carddarkbg border border-solid border-cardlightborder dark:border-carddarkborder text-myblack dark:text-mywhite w-auto transition-configuration;
 }
 
+.gradient-disabled body {
+    @apply dark:bg-gradientdarkbg;
+}
+
 .gradient-disabled .card {
-    @apply bg-carddarkbgAlt border-carddarkborder;
+    @apply dark:bg-gradientdarkcardbg;
 }
 
 section {

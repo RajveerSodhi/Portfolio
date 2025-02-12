@@ -13,11 +13,12 @@ module.exports = {
         colors: {
             mywhite: "#f5f5f5",
             cardlightbg: "#fefefe",
-            carddarkbg:"#202020",
+            carddarkbg:"#191919",
             cardlightborder: "#e7e7e7",
             carddarkborder: "#454545",
-            myblack: "#27272A",
-            carddarkbgAlt: "#000000",
+            myblack: "#181818",
+            gradientdarkbg: "#090909",
+            gradientdarkcardbg: "#121212",
         },
         animation: {
             first: "moveVertical 50s ease infinite",
