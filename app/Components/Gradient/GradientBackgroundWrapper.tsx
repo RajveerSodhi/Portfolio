@@ -3,7 +3,7 @@ import { useGradient } from "./GradientContext";
 import { BackgroundGradientAnimation } from "./background_gradient";
 
 export default function GradientBackgroundWrapper() {
-    const { gradientEnabled } = useGradient();
+    const { gradientDisabled } = useGradient();
 
-    return gradientEnabled ? <BackgroundGradientAnimation /> : null;
+    return gradientDisabled ? null : <BackgroundGradientAnimation />;
 }

@@ -1,29 +1,35 @@
 "use client";
-import { createContext, useState, useContext } from "react";
+import { createContext, useState, useContext, useEffect } from "react";
 
 interface GradientContextType {
-    gradientEnabled: boolean;
+    gradientDisabled: boolean;
     toggleGradient: () => void;
 }
 
-// Create the context with a default value
 const GradientContext = createContext<GradientContextType | undefined>(undefined);
 
-// Provider component
 export const GradientProvider = ({ children }: { children: React.ReactNode }) => {
-    const [gradientEnabled, setGradientEnabled] = useState(true);
+    const [gradientDisabled, setGradientDisabled] = useState(false);
 
-    // Function to toggle the state
-    const toggleGradient = () => setGradientEnabled((prev) => !prev);
+    useEffect(() => {
+        if (gradientDisabled) {
+            document.documentElement.classList.add("gradient-disabled");
+        } else {
+            document.documentElement.classList.remove("gradient-disabled");
+        }
+    }, [gradientDisabled]);
+
+    const toggleGradient = () => {
+        setGradientDisabled((prev) => !prev);
+    };
 
     return (
-        <GradientContext.Provider value={{ gradientEnabled, toggleGradient }}>
+        <GradientContext.Provider value={{ gradientDisabled, toggleGradient }}>
             {children}
         </GradientContext.Provider>
     );
 };
 
-// Custom hook for easy access
 export const useGradient = () => {
     const context = useContext(GradientContext);
     if (!context) throw new Error("useGradient must be used within a GradientProvider");

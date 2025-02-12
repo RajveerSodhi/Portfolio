@@ -17,6 +17,7 @@ module.exports = {
             cardlightborder: "#e7e7e7",
             carddarkborder: "#454545",
             myblack: "#27272A",
+            carddarkbgAlt: "#000000",
         },
         animation: {
             first: "moveVertical 50s ease infinite",
@@ -62,7 +63,11 @@ module.exports = {
         },
         },
     },
-    plugins: [],
+    plugins: [
+        function ({ addVariant }) {
+            addVariant("gradient", "&.gradient-disabled");
+        },
+    ],
     darkMode: 'selector',
 }
 
