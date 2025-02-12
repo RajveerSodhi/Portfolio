@@ -91,7 +91,7 @@ export default function AshDash() {
     let treatTimeoutId: ReturnType<typeof setTimeout> | null = null;
     let cloudTimeoutId: ReturnType<typeof setTimeout> | null = null;
 
-    let velocityX = -5;
+    let velocityX = -6;
     let velocityY = 0;
     let gravity = 0.4;
 
