@@ -91,9 +91,13 @@ export default function AshDash() {
     let treatTimeoutId: ReturnType<typeof setTimeout> | null = null;
     let cloudTimeoutId: ReturnType<typeof setTimeout> | null = null;
 
+    let rockTimeoutBase = 1000;
+    let treatTimeoutBase = 1000;
+    let cloudTimeoutBase = 1600;
+
     let velocityX = -6;
     let velocityY = 0;
-    let gravity = 0.38;
+    let gravity = 0.385;
 
     let gameStarted = false;
     let gameOver = false;
@@ -297,6 +301,9 @@ export default function AshDash() {
 
             if (score > 0 && score % 1000 == 0) {
                 velocityX += -1;
+                rockTimeoutBase -= 35;
+                treatTimeoutBase -= 35;
+                cloudTimeoutBase -= 22.5;
             }
         }
     }
@@ -342,7 +349,7 @@ export default function AshDash() {
     }
 
     function scheduleNextRock() {
-        const delay = 1000 + Math.random() * 500; // 100-1500ms
+        const delay = rockTimeoutBase + Math.random() * 500;
         rockTimeoutId = setTimeout(() => {
             placeRock();
             scheduleNextRock();
@@ -350,7 +357,7 @@ export default function AshDash() {
     }
 
     function scheduleNextTreat() {
-        const delay = 1000 + Math.random() * 500; // 1000-1500ms
+        const delay = treatTimeoutBase + Math.random() * 500;
         treatTimeoutId = setTimeout(() => {
             placeTreat();
             scheduleNextTreat();
@@ -358,7 +365,7 @@ export default function AshDash() {
     }
 
     function scheduleNextCloud() {
-        const delay = 1600 + Math.random() * 400; // 1600-2000ms
+        const delay = cloudTimeoutBase + Math.random() * 400;
         cloudTimeoutId = setTimeout(() => {
             placeCloud();
             scheduleNextCloud();
@@ -413,7 +420,7 @@ export default function AshDash() {
             cloudsArray.push(cloud);
         }
 
-        if (cloudsArray.length > 8) {
+        if (cloudsArray.length > 10) {
             cloudsArray.shift();
         }
     }
