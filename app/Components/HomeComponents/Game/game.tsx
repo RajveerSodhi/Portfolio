@@ -564,7 +564,7 @@ export default function AshDash() {
                     ref={boardRef}
                 ></canvas>
             </Tilt>
-            <div className="w-[900px] flex items-end justify-end text-white text-3xl py-8">
+            <div className="w-[900px] flex items-end justify-end text-myblack dark:text-mywhite text-3xl py-8">
                 <button
                     onClick={() => {
                         toggleSound();
