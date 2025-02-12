@@ -66,12 +66,12 @@ export default function AshDash() {
 
     let rocksArray: any[] = [];
     let rock1Width = 45;
-    let rock2Width = 65;
-    let rock3Width = 95;
+    let rock2Width = 60;
+    let rock3Width = 90;
     let rock4Width = 80;
 
     let rock1Height = 45;
-    let rock2Height = 65;
+    let rock2Height = 60;
     let rock3Height = 75;
     let rock4Height = 70;
 
@@ -341,7 +341,7 @@ export default function AshDash() {
     }
 
     function scheduleNextRock() {
-        const delay = 800 + Math.random() * 500; // 800-1300ms
+        const delay = 900 + Math.random() * 500; // 900-1400ms
         rockTimeoutId = setTimeout(() => {
             placeRock();
             scheduleNextRock();
