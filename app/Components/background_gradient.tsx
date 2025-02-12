@@ -9,7 +9,7 @@ export const BackgroundGradientAnimation = ({
     fourthColor = "255, 197, 90",
     fifthColor = "255, 99, 99",
     size = "100%",
-    blendingValue = "hard-light",
+    blendingValue = "soft-light",
     children,
     className,
     containerClassName,
@@ -33,7 +33,7 @@ export const BackgroundGradientAnimation = ({
         document.body.style.setProperty("--fifth-color", fifthColor);
         document.body.style.setProperty("--size", size);
         document.body.style.setProperty("--blending-value", blendingValue);
-    }, []);
+    }, [firstColor, secondColor, thirdColor, fourthColor, fifthColor, size, blendingValue]);
 
     const [isSafari, setIsSafari] = useState(false);
     useEffect(() => {
@@ -42,6 +42,7 @@ export const BackgroundGradientAnimation = ({
 
     return (
         <div
+            style={{ willChange: "transform, opacity" }}
             className={`blur-[86px] opacity-[0.53] pointer-events-none z-fix ${cn(
                 "h-screen w-screen fixed overflow-hidden top-0 left-0 bg-[linear-gradient(40deg,var(--gradient-background-start),var(--gradient-background-end))]",
                 containerClassName
@@ -50,11 +51,11 @@ export const BackgroundGradientAnimation = ({
             <svg className="hidden">
                 <defs>
                     <filter id="blurMe">
-                        <feGaussianBlur in="SourceGraphic" stdDeviation="10" result="blur" />
+                        <feGaussianBlur in="SourceGraphic" stdDeviation="7" result="blur" />
                         <feColorMatrix
                             in="blur"
                             mode="matrix"
-                            values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 18 -8"
+                            values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 14 -6"
                             result="goo"
                         />
                         <feBlend in="SourceGraphic" in2="goo" />
@@ -65,7 +66,7 @@ export const BackgroundGradientAnimation = ({
             <div
                 className={cn(
                     "gradients-container h-full w-full blur-lg",
-                    isSafari ? "blur-2xl" : "[filter:url(#blurMe)_blur(40px)]"
+                    isSafari ? "blur-2xl" : "[filter:url(#blurMe)_blur(30px)]"
                 )}
             >
                 <div
