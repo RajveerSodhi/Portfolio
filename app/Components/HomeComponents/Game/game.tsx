@@ -244,7 +244,7 @@ export default function AshDash() {
                     context.drawImage(treat.img, treat.x, treat.y, treat.width, treat.height);
                 }
                 if (detectCollision(ash, treat)) {
-                    points += 1;
+                    points += 2;
                     if (soundOnRef.current) {
                         playSound("treat", 0.15);
                     }
@@ -302,7 +302,7 @@ export default function AshDash() {
             if (score > 0 && score % 1000 == 0) {
                 velocityX += -1;
                 rockTimeoutBase -= 35;
-                treatTimeoutBase -= 35;
+                treatTimeoutBase -= 30;
                 cloudTimeoutBase -= 22.5;
             }
         }
