@@ -5,6 +5,7 @@ import { RiMenu4Fill } from "react-icons/ri";
 import { RiCloseFill } from "react-icons/ri";
 import LogoButton from "./logo_button";
 import ThemeSwitch from "./theme_switch";
+import GradientToggle from "../Gradient/GradientToggle";
 
 export default function PhoneNavbar() {
     const [isCollapsed, setIsCollapsed] = useState(true);
@@ -63,13 +64,20 @@ export default function PhoneNavbar() {
                     >
                         {isCollapsed ? <RiMenu4Fill /> : <RiCloseFill />}
                     </button>
-                    <span
-                        className={`text-3xl text-myblack/70 hover:text-myblack dark:text-mywhite/70 dark:hover:text-mywhite transition-colors transition-configuration pt-2 ${
+                    <div
+                        className={`text-3xl text-myblack/70 hover:text-myblack dark:text-mywhite/70 dark:hover:text-mywhite transition-colors transition-configuration pt-2 mb-1 ${
                             isCollapsed ? "hidden" : ""
                         }`}
                     >
                         <ThemeSwitch />
-                    </span>
+                    </div>
+                    <div
+                        className={`text-3xl text-myblack/70 hover:text-myblack dark:text-mywhite/70 dark:hover:text-mywhite transition-colors transition-configuration pt-2 mt-1 ${
+                            isCollapsed ? "hidden" : ""
+                        }`}
+                    >
+                        <GradientToggle />
+                    </div>
                 </span>
             </nav>
         </div>
