@@ -25,6 +25,7 @@ export default function AshDash() {
     let ashX = 60;
     let ashY = boardHeight - ashHeight - frameThickness * 2;
     let ashImg: HTMLImageElement;
+    let jumpImg: HTMLImageElement;
 
     let currentFrame = 0;
     let lastFrameTime = performance.now();
@@ -226,7 +227,6 @@ export default function AshDash() {
             ash.y = Math.min(ash.y + velocityY, ashY);
 
             if (ash.y === ashY) {
-                ashImg.src = "/ashdash/ash/walk0.png";
                 const now = performance.now();
                 if (now - lastFrameTime >= frameDuration) {
                     currentFrame = (currentFrame + 1) % 4;
@@ -234,7 +234,7 @@ export default function AshDash() {
                 }
                 context.drawImage(walkFrames[currentFrame], ash.x, ash.y, ash.width, ash.height);
             } else {
-                context.drawImage(ashImg, ash.x, ash.y, ash.width, ash.height);
+                context.drawImage(jumpImg, ash.x, ash.y, ash.width, ash.height);
             }
 
             for (let i = treatsArray.length - 1; i >= 0; i--) {
@@ -322,6 +322,9 @@ export default function AshDash() {
             walkFrames.push(img);
         }
 
+        jumpImg = new Image();
+        jumpImg.src = "/ashdash/ash/jump.png";
+
         ashImg = walkFrames[0];
 
         rock1Img = loadImage("/ashdash/obstacles/rock1.png");
@@ -380,7 +383,6 @@ export default function AshDash() {
         if ((e.code == "Space" || e.code == "ArrowUp") && ash.y == ashY) {
             e.preventDefault();
             velocityY = -12;
-            ashImg.src = "/ashdash/ash/jump.png";
         }
     }
 
