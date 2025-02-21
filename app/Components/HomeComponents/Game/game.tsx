@@ -301,9 +301,9 @@ export default function AshDash() {
 
             if (score > 0 && score % 1000 == 0) {
                 velocityX += -1;
-                rockTimeoutBase -= 35;
-                treatTimeoutBase -= 30;
-                cloudTimeoutBase -= 22.5;
+                rockTimeoutBase -= 50;
+                treatTimeoutBase -= 35;
+                cloudTimeoutBase -= 25;
             }
         }
     }
