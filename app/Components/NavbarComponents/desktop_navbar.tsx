@@ -38,11 +38,13 @@ export default function DesktopNavbar() {
                     </nav>
                 </Tilt>
                 <span className="text-3xl text-myblack/70 dark:text-mywhite/70 absolute flex flex-row gap-4 right-0 pr-6 pt-2">
-                    <span className="cursor-pointer hover:scale-90 transition-transform transition-configuration">
+                    <span className="cursor-pointer hover:scale-90 transition-transform transition-configuration navtooltip">
                         <GradientToggle />
+                        <span className="navtooltiptext">Toggle Gradient</span>
                     </span>
-                    <span className="cursor-pointer hover:scale-90 transition-transform transition-configuration">
+                    <span className="cursor-pointer hover:scale-90 transition-transform transition-configuration navtooltip">
                         <ThemeSwitch />
+                        <span className="navtooltiptext">Toggle Theme</span>
                     </span>
                 </span>
             </div>
