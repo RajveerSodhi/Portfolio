@@ -174,6 +174,10 @@ export default function AshDash() {
         treatsArray = [];
         cloudsArray = [];
 
+        rockTimeoutBase = 1000;
+        treatTimeoutBase = 1000;
+        cloudTimeoutBase = 1000;
+
         if (rockTimeoutId) {
             clearTimeout(rockTimeoutId);
             rockTimeoutId = null;
