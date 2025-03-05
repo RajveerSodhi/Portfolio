@@ -3,7 +3,7 @@ export const projects = [
         title: "Aura Desktop",
         subtitle: "Weather Viz App",
         link: "Aura-Desktop",
-        openLink: "https://rajveer87.gumroad.com/l/aura-desktop",
+        openLink: "rajveer87.gumroad.com/l/aura-desktop",
         tech: "FastAPI, SwiftUI, Redis",
         tag: "iOS and macOS",
         showGit: false,
