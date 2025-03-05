@@ -1,5 +1,18 @@
 export const projects = [
     {
+        title: "Aura Desktop",
+        subtitle: "Weather Viz App",
+        link: "Aura-Desktop",
+        openLink: "https://rajveer87.gumroad.com/l/aura-desktop",
+        tech: "FastAPI, SwiftUI, Redis",
+        tag: "iOS and macOS",
+        description: [
+            "Developed a macOS app that displays live weather animations on the desktop.",
+            "Features customizable weather effects including rain and snow, using data from the Open-Meteo API.",
+            "Implemented a FastAPI server for the backend with Redis cacheing."
+        ]
+    },
+    {
         title: "OriginalFlix",
         subtitle: "Database REST API",
         link: "OriginalFlix",
@@ -28,12 +41,12 @@ export const projects = [
         subtitle: "Flight Tracker Menubar App",
         link: "FlightBar",
         openLink: "github.com/RajveerSodhi/FlightBar/releases/",
-        tech: "Swift, Redis, FastAPI",
+        tech: "SwiftUI, Redis, FastAPI",
         tag: "iOS and macOS",
         description: [
             "Developed a macOS menubar app using Swift that displays real-time flight data.",
-            "Utilized the FlightAware API to fetch flight data and display it in the menubar.",
-            "Implemented a map view with MapKit API to show the flight's route."
+            "Utilized the Aviation-Edge API to fetch flight data and display it in the menubar.",
+            "Implemented a FastAPI server for the backend with Redis cacheing."
         ]
     },
     {
