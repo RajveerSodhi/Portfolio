@@ -14,8 +14,9 @@ export default function ProjectComponent(props: {
     openLink: string;
     tech: string;
     description: string[];
+    showGit: boolean;
 }) {
-    const { title, subtitle, link, openLink, tech, description } = props;
+    const { title, subtitle, link, openLink, tech, description, showGit } = props;
     const [openImage, setOpenImage] = useState(false);
 
     return (
@@ -60,7 +61,7 @@ export default function ProjectComponent(props: {
                             </li>
                         ))}
                     </div>
-                    <GitHubButton link={link} />
+                    {showGit && <GitHubButton link={link} />}
                     {openLink != "" && <OpenButton link={openLink} />}
                 </div>
             </AccordionItem>
