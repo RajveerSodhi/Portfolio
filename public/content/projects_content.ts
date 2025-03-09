@@ -43,7 +43,7 @@ export const projects = [
         title: "FlightBar",
         subtitle: "Flight Tracker Menubar App",
         link: "FlightBar",
-        openLink: "github.com/RajveerSodhi/FlightBar/releases/",
+        openLink: "rajveer87.gumroad.com/l/flightbar",
         tech: "SwiftUI, Redis, FastAPI",
         tag: "iOS and macOS",
         showGit: false,
