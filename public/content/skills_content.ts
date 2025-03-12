@@ -28,7 +28,9 @@ export const skills = [
             "Three.js",
             "jQuery",
             "Axios",
-            "Figma",
+            "Nuxt.js",
+            "PHP",
+            "Figma"
         ]
     },
     {
@@ -40,7 +42,8 @@ export const skills = [
             "Keras",
             "OpenCV",
             "Selenium",
-            "Mage.ai"
+            "Mage.ai",
+            "BeautifulSoup4"
         ]
     },
     {
@@ -52,7 +55,8 @@ export const skills = [
             "PostgreSQL",
             "S3",
             "Azure",
-            "MongoDB"
+            "MongoDB",
+            "Redis"
         ]
     }
 ]
