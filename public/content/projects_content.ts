@@ -1,5 +1,19 @@
 export const projects = [
     {
+        title: "FlightBar",
+        subtitle: "Flight Tracker Menubar App",
+        link: "FlightBar",
+        openLink: "apps.apple.com/ca/app/flightbar/id6743351003?mt=12",
+        tech: "SwiftUI, Redis, FastAPI",
+        tag: "iOS and macOS",
+        showGit: false,
+        description: [
+            "Developed a macOS menubar app using Swift that displays real-time flight data.",
+            "Utilized the Aviation-Edge API to fetch flight data and display it in the menubar.",
+            "Implemented a FastAPI server for the backend with Redis cacheing."
+        ]
+    },
+    {
         title: "Aura Desktop",
         subtitle: "Weather Viz App",
         link: "Aura-Desktop",
@@ -37,20 +51,6 @@ export const projects = [
         description: [
             "Developed an extension that helps users with budgeting by tracking their spending and blocking webstores based on a daily spending limit",
             "Implemented a user-friendly interface to set favourite stores and spending limits using the Chrome Storage API",
-        ]
-    },
-    {
-        title: "FlightBar",
-        subtitle: "Flight Tracker Menubar App",
-        link: "FlightBar",
-        openLink: "rajveer87.gumroad.com/l/flightbar",
-        tech: "SwiftUI, Redis, FastAPI",
-        tag: "iOS and macOS",
-        showGit: false,
-        description: [
-            "Developed a macOS menubar app using Swift that displays real-time flight data.",
-            "Utilized the Aviation-Edge API to fetch flight data and display it in the menubar.",
-            "Implemented a FastAPI server for the backend with Redis cacheing."
         ]
     },
     {
