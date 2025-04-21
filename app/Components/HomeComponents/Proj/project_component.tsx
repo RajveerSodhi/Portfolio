@@ -6,6 +6,8 @@ import { AccordionItem } from "@szhsin/react-accordion";
 import { useState } from "react";
 import Lightbox from "./lightbox";
 import OpenButton from "./open_button";
+import { FaRegCalendar } from "react-icons/fa";
+import { FaCode } from "react-icons/fa6";
 
 export default function ProjectComponent(props: {
     title: string;
@@ -15,9 +17,33 @@ export default function ProjectComponent(props: {
     tech: string;
     description: string[];
     showGit: boolean;
+    datestamp: string;
 }) {
-    const { title, subtitle, link, openLink, tech, description, showGit } = props;
+    const { title, subtitle, link, openLink, tech, description, showGit, datestamp } = props;
     const [openImage, setOpenImage] = useState(false);
+
+    const formattedDate = (datestamp: string) => {
+        const dateArray = datestamp.split("-");
+        const monthsDict: { [key: string]: string } = {
+            "01": "Jan",
+            "02": "Feb",
+            "03": "Mar",
+            "04": "Apr",
+            "05": "May",
+            "06": "Jun",
+            "07": "Jul",
+            "08": "Aug",
+            "09": "Sep",
+            "10": "Oct",
+            "11": "Nov",
+            "12": "Dec",
+        };
+
+        const year = dateArray[0].substring(2, 4);
+        const month = monthsDict[dateArray[1]];
+
+        return month + " '" + year;
+    };
 
     return (
         <Tilt tiltReverse={false} tiltMaxAngleX={1} tiltMaxAngleY={1} gyroscope={false}>
@@ -41,7 +67,7 @@ export default function ProjectComponent(props: {
                                 width={400}
                                 height={400}
                                 onClick={() => setOpenImage(true)}
-                                className="cursor-image mb-4 select-none min-w-full aspect-auto shadow-md hover:shadow-xl rounded-t-2xl rounded-b-md object-cover hover:scale-[1.01] transition-configuration transition-all max-h-[316px]"
+                                className="cursor-image dated mb-4 select-none min-w-full aspect-auto shadow-md hover:shadow-xl rounded-t-2xl rounded-b-md object-cover hover:scale-[1.01] transition-configuration transition-all max-h-[316px]"
                             />
                         </Tilt>
                         <Lightbox openImage={openImage} setOpenImage={setOpenImage} link={link} />
@@ -52,8 +78,18 @@ export default function ProjectComponent(props: {
                     </div>
                 }
             >
-                <div id="project-description" className="p-4 max-w-[432px] text-sm md:text-base">
-                    <h6 className="text-myblack/75 dark:text-mywhite/75">{tech}</h6>
+                <div
+                    id="project-description"
+                    className="p-4 pt-0 max-w-[432px] text-sm md:text-base"
+                >
+                    <h6 className="text-myblack/75 dark:text-mywhite/75">
+                        <FaCode className="inline mr-3 mb-1 text-black dark:text-white" />
+                        {tech}
+                    </h6>
+                    <h6 className="text-myblack/75 dark:text-mywhite/75 mt-1">
+                        <FaRegCalendar className="inline mr-3 mb-1 text-black dark:text-white" />
+                        {formattedDate(datestamp)}
+                    </h6>
                     <div className="text-myblack dark:text-mywhite mt-3 mb-4 md:mb-1 text-left md:text-lg">
                         {description.map((item, index) => (
                             <li className="mb-3" key={index}>

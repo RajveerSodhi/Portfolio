@@ -9,6 +9,7 @@ export default function Projects() {
     const [showPlaceholder, setShowPlaceholder] = useState(false);
     const [selectedTag, setSelectedTag] = useState("all");
     const filter = ["all", "android", "data", "iOS and macOS", "ML", "web"];
+    const sort = ["Sort Alphabetically", "Sort by Date"];
 
     const filteredProjects =
         selectedTag === "all"
