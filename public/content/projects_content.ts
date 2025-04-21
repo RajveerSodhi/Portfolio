@@ -1,5 +1,30 @@
 export const projects = [
     {
+        title: "Handmade Goods",
+        subtitle: "Full-Stack E-Commerce Site",
+        link: "Handmade-Goods",
+        tech: "HTML5, MySQL, PHP, JavaScript",
+        tag: "web",
+        showGit: true,
+        description: [
+            "Created a full-stack e-commerce platform using PHP, MySQL, JavaScript, and AJAX, featuring user authentication, dynamic product listings, and persistent shopping carts.",
+            "Integrated Stripe Checkout with webhook support for secure payments, and built admin tools for moderation and analytics using Chart.js.",
+            "Designed responsive, user-friendly interfaces with dark mode, live search, and reusable components, ensuring modular architecture and accessibility."
+        ]
+    },
+    {
+        title: "ClearJar",
+        subtitle: "AI-Budgeting Capstone Project",
+        link: "ClearJar-Capstone",
+        tech: "Next.js, PostgreSQL, Prisma, Pinecone",
+        tag: "web",
+        showGit: true,
+        description: [
+            "Developed a full-stack budgeting platform for my final-year capstone to help users visualize and manage spending habits using AI-driven insights and a user context-aware chatbot powered by Gemini.",
+            "Engineered a vector-based transaction retrieval system by embedding and storing user financial data from Plaid in Pinecone and PostgreSQL for fast, semantic querying."
+        ]
+    },
+    {
         title: "FlightBar",
         subtitle: "Flight Tracker Menubar App",
         link: "FlightBar",
