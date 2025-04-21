@@ -4,17 +4,41 @@ import { projects } from "../../../../public/content/projects_content";
 import { Accordion } from "@szhsin/react-accordion";
 import Placeholder from "./placeholder";
 import { useEffect, useState } from "react";
+import { TiSortAlphabetically } from "react-icons/ti";
+import { FaRegCalendar, FaLongArrowAltDown, FaLongArrowAltUp } from "react-icons/fa";
 
 export default function Projects() {
     const [showPlaceholder, setShowPlaceholder] = useState(false);
     const [selectedTag, setSelectedTag] = useState("all");
-    const filter = ["all", "android", "data", "iOS and macOS", "ML", "web"];
-    const sort = ["Sort Alphabetically", "Sort by Date"];
+    const [selectedSort, setSelectedSort] = useState("Sort by Date");
+    const [selectedDownDirection, setSelectedDownDirection] = useState(false);
 
-    const filteredProjects =
-        selectedTag === "all"
+    const filters = ["all", "android", "data", "iOS and macOS", "ML", "web"];
+    const sorts = ["Sort by Date", "Sort Alphabetically"];
+
+    const filteredProjects = [
+        ...(selectedTag === "all"
             ? projects
-            : projects.filter((project) => project.tag === selectedTag);
+            : projects.filter((project) => project.tag === selectedTag)),
+    ];
+
+    filteredProjects.sort(selectedSort === "Sort by Date" ? sortByDate : sortByAlphabet);
+
+    function sortByDate(a, b) {
+        if (selectedDownDirection) {
+            return a.datestamp.localeCompare(b.datestamp);
+        } else {
+            return -a.datestamp.localeCompare(b.datestamp);
+        }
+    }
+
+    function sortByAlphabet(a, b) {
+        if (selectedDownDirection) {
+            return a.title.localeCompare(b.title);
+        } else {
+            return -a.title.localeCompare(b.title);
+        }
+    }
 
     useEffect(() => {
         setShowPlaceholder(filteredProjects.length % 2 != 0);
@@ -25,7 +49,7 @@ export default function Projects() {
             <h1 className="title">Projects</h1>
 
             <div className="flex flex-wrap justify-center items-center gap-4 pb-8">
-                {filter.map((tag, index) => (
+                {filters.map((tag, index) => (
                     <button
                         key={index}
                         onClick={() => setSelectedTag(tag)}
@@ -36,6 +60,39 @@ export default function Projects() {
                         }`}
                     >
                         {tag}
+                    </button>
+                ))}
+            </div>
+
+            <div className="flex justify-center items-center gap-8 mb-8 px-6 py-2 card rounded-full">
+                <button
+                    onClick={() => setSelectedDownDirection(!selectedDownDirection)}
+                    className="hover:scale-90 p-0 transition-all text-base md:text-lg transition-configuration dark:text-mywhite text-myblack text-nowrap"
+                >
+                    <FaLongArrowAltDown
+                        className={`inline transition-transform transition-configuration ${
+                            selectedDownDirection ? "" : "-rotate-180"
+                        }`}
+                    />
+                </button>
+
+                <span className="block w-[2px] h-[26px] bg-[#777777]"></span>
+
+                {sorts.map((sortBy, index) => (
+                    <button
+                        key={index}
+                        onClick={() => setSelectedSort(sortBy)}
+                        className={`hover:scale-90 p-0 transition-all text-base md:text-lg mb-1 transition-configuration dark:text-mywhite text-myblack text-nowrap ${
+                            selectedSort === sortBy
+                                ? "dark:text-mywhite text-myblack"
+                                : "dark:text-mywhite/60 text-myblack/60"
+                        }`}
+                    >
+                        {sortBy == "Sort by Date" ? (
+                            <FaRegCalendar className="inline" />
+                        ) : (
+                            <TiSortAlphabetically className="inline" />
+                        )}
                     </button>
                 ))}
             </div>
