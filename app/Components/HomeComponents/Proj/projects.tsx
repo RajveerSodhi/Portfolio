@@ -7,6 +7,18 @@ import { useEffect, useState } from "react";
 import { TiSortAlphabetically } from "react-icons/ti";
 import { FaRegCalendar, FaLongArrowAltDown, FaLongArrowAltUp } from "react-icons/fa";
 
+type Project = {
+    title: string;
+    subtitle: string;
+    link: string;
+    openLink: string;
+    tech: string;
+    tag: string;
+    showGit: boolean;
+    datestamp: string;
+    description: string[];
+};
+
 export default function Projects() {
     const [showPlaceholder, setShowPlaceholder] = useState(false);
     const [projectsNum, setProjectsNum] = useState(6);
@@ -25,7 +37,7 @@ export default function Projects() {
     const filteredLength = filteredProjects.length;
     filteredProjects.sort(selectedSort === "Sort by Date" ? sortByDate : sortByAlphabet);
 
-    function sortByDate(a, b) {
+    function sortByDate(a: Project, b: Project) {
         if (selectedDownDirection) {
             return a.datestamp.localeCompare(b.datestamp);
         } else {
@@ -33,7 +45,7 @@ export default function Projects() {
         }
     }
 
-    function sortByAlphabet(a, b) {
+    function sortByAlphabet(a: Project, b: Project) {
         if (selectedDownDirection) {
             return a.title.localeCompare(b.title);
         } else {
