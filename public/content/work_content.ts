@@ -16,7 +16,7 @@ export const work = [
         company: "Niteo Africa",
         tld: "org",
         location: "Kelowna, BC",
-        date: "Sep 2023 - Present",
+        date: "Sep 2023 - Apr 2025",
         img: "niteo",
         description: [
             "Administered Niteo Africa's WordPress-based website, incorporating blog posts and event information and diligently updating website plugins, resulting in a 150% increase in website viewership since assuming the role.",

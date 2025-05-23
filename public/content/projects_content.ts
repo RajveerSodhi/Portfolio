@@ -1,16 +1,16 @@
 export const projects = [
     {
-        title: "Aura Desktop",
+        title: "Mossum",
         subtitle: "Weather Viz App",
         link: "Aura-Desktop",
-        openLink: "rajveer87.gumroad.com/l/aura-desktop",
+        openLink: "apps.apple.com/ca/app/mossum/id6745731153?mt=12",
         tech: "FastAPI, SwiftUI, Redis",
         tag: "iOS and macOS",
         showGit: false,
         datestamp: "2025-05",
         description: [
             "Developed a macOS app that displays live weather animations on the desktop.",
-            "Features customizable weather effects including rain and snow, using data from the Open-Meteo API.",
+            "Features customizable weather effects including rain and snow, using data from the WeatherKit API.",
             "Implemented a FastAPI server for the backend with Redis cacheing."
         ]
     },
@@ -33,10 +33,10 @@ export const projects = [
         title: "ClearJar",
         subtitle: "AI-Budgeting Capstone Project",
         link: "ClearJar-Capstone",
-        openLink: "",
+        openLink: "drive.google.com/file/d/1l_By_3ogDPeURnWLTn04Z6gflrIMjHuQ/view?usp=sharing",
         tech: "Next.js, PostgreSQL, Prisma, Pinecone",
         tag: "web",
-        showGit: true,
+        showGit: false,
         datestamp: "2025-04",
         description: [
             "Developed a full-stack budgeting platform for my final-year capstone to help users visualize and manage spending habits using AI-driven insights and a user context-aware chatbot powered by Gemini.",

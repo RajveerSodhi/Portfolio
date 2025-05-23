@@ -28,7 +28,6 @@ export const skills = [
             "Three.js",
             "jQuery",
             "Axios",
-            "Nuxt.js",
             "PHP",
             "Figma"
         ]
