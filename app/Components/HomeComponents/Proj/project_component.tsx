@@ -62,12 +62,12 @@ export default function ProjectComponent(props: {
                             glareBorderRadius="1rem"
                         >
                             <Image
-                                src={`/images/project_photos/thumbnail/${link}.webp`}
+                                src={`/images/project_photos/${link}.webp`}
                                 alt={`Project Image - ${title}`}
                                 width={400}
                                 height={400}
                                 onClick={() => setOpenImage(true)}
-                                className="cursor-image dated mb-4 select-none min-w-full aspect-auto shadow-md hover:shadow-xl rounded-t-2xl rounded-b-md object-cover hover:scale-[1.01] transition-configuration transition-all max-h-[316px]"
+                                className="cursor-image mb-4 select-none w-[400px] h-[316px] shadow-md hover:shadow-xl rounded-t-2xl rounded-b-md object-cover object-center hover:scale-[1.01] transition-configuration transition-all"
                             />
                         </Tilt>
                         <Lightbox openImage={openImage} setOpenImage={setOpenImage} link={link} />
