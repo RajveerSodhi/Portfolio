@@ -1,5 +1,20 @@
 export const projects = [
     {
+        title: "Wordle Clone",
+        subtitle: "Puzzle Game",
+        link: "Wordle-Clone",
+        openLink: "wordle.rajveersodhi.com",
+        tech: "React, Framer Motion",
+        tag: "web",
+        showGit: true,
+        datestamp: "2025-06",
+        description: [
+            "Built a full-featured Wordle clone with support for custom puzzle sharing via encoded URLs.",
+            "Implemented smooth transitions and animations using Framer Motion.",
+            "Designed dynamic routing and random puzzle generation with React Router."
+        ]
+    },
+    {
         title: "Mossum",
         subtitle: "Weather Viz App",
         link: "Aura-Desktop",
