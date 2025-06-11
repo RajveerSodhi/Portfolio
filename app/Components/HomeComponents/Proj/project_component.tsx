@@ -92,7 +92,7 @@ export default function ProjectComponent(props: {
                     </h6>
                     <div className="text-myblack dark:text-mywhite mt-3 mb-4 md:mb-1 text-left md:text-lg">
                         {description.map((item, index) => (
-                            <li className="mb-3" key={index}>
+                            <li className="mb-3 list-inside" key={index}>
                                 {item}
                             </li>
                         ))}
