@@ -1,3 +1,4 @@
+import Certificates from "./Certificates";
 import Description from "./description";
 import Skills from "./skills";
 
@@ -7,6 +8,7 @@ export default function About() {
             <h1 className="title">About Me</h1>
             <Description />
             <Skills />
+            <Certificates />
         </section>
     );
 }
