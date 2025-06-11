@@ -1,4 +1,4 @@
-import Certificates from "./Certificates";
+import Certificates from "./certificates";
 import Description from "./description";
 import Skills from "./skills";
 

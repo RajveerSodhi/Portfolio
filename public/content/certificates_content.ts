@@ -7,7 +7,7 @@ export const certificates = [
     //     link: "",
     // },
     {
-        name: "UX Design",
+        name: "Google UX Design",
         issuer: "Google",
         date: "2025-05",
         credentialID: "OSXX22YZOSAJ",
