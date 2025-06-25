@@ -1,11 +1,11 @@
 export const certificates = [
-    // {
-    //     name: "Extended Reality for Everybody",
-    //     issuer: "University of Michigan",
-    //     date: "2025-06",
-    //     credentialID: "",
-    //     link: "",
-    // },
+    {
+        name: "Extended Reality for Everybody",
+        issuer: "University of Michigan (Coursera)",
+        date: "2025-06",
+        credentialID: "",
+        link: "https://coursera.org/share/39d675f65427ea2a7abad62c9f5338c1",
+    },
     {
         name: "Google UX Design",
         issuer: "Google (Coursera)",
