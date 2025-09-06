@@ -14,12 +14,11 @@ export default function TitleBottom() {
             </h2>
 
             <p className="text-center md:w-[75%] lg:w-[60%] mt-[4rem] text-xl leading-loose">
-                I&apos;m a final-year Computer Science student at the University of British
-                Columbia, interested in{" "}
+                I&apos;m a ScM Computer Science student at Brown Univeristy, interested in{" "}
                 <span className="hidden md:inline">Human-Computer Interaction</span>
                 <span className="md:hidden inline">HCI</span> and{" "}
-                <span className="hidden md:inline">Artificial Intelligence</span>
-                <span className="md:hidden inline">AI</span>.
+                <span className="hidden md:inline">Machine Learning</span>
+                <span className="md:hidden inline">ML</span>.
             </p>
         </div>
     );
