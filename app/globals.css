@@ -9,6 +9,11 @@ html {
     scroll-behavior: smooth !important;
 }
 
+
+* {
+    cursor: none !important;
+}
+
 *:focus {
     outline: none;
 }
@@ -30,7 +35,7 @@ html {
 }
 
 .card {
-    @apply text-center items-center shadow-lg bg-cardlightbg dark:bg-carddarkbg border border-solid border-cardlightborder dark:border-carddarkborder text-myblack dark:text-mywhite w-auto transition-configuration;
+    @apply text-center items-center shadow-lg bg-cardlightbg/80 dark:bg-carddarkbg/80 border border-solid border-cardlightborder dark:border-carddarkborder text-myblack dark:text-mywhite w-auto transition-configuration;
 }
 
 .gradient-disabled body {
@@ -176,8 +181,21 @@ section {
     cursor: none;
 }
 
+.cursor-tooltip {
+    @apply whitespace-nowrap bg-myblack dark:bg-mywhite text-mywhite dark:text-myblack rounded-full px-3 py-2  shadow-lg flex items-center justify-center transition-all duration-150 ease-out
+}
+
+.custom-cursor {
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background-color: transparent;
+    -webkit-backdrop-filter: blur(7px) invert(100%) grayscale(100%);
+    backdrop-filter: blur(7px) invert(100%) grayscale(100%);
+}
+
 .tooltip-movement {
-    transition: transform 0.18s ease-out;
+    transition: transform 0.2s ease-out;
 }
 
 /* Scrolling Icons */

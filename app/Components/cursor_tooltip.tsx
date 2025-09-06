@@ -9,7 +9,6 @@ import {
     FaUniversity,
 } from "react-icons/fa";
 import { PiCertificateBold } from "react-icons/pi";
-import debounce from "lodash/debounce";
 
 const specialComponents = [
     {
@@ -81,57 +80,85 @@ export default function CursorTooltip() {
     const cursorRef = useRef<HTMLDivElement>(null);
     const [hoveringSpecialComponent, setHoveringSpecialComponent] = useState("");
     const tooltipContentRef = useRef<ReactNode | null>(null);
+    const showingTooltip = hoveringSpecialComponent !== "";
+    const rafRef = useRef<number | null>(null);
+    const lastPos = useRef({ x: 0, y: 0 });
 
-    const handleMouseMove = useCallback(
-        debounce((e: MouseEvent) => {
-            const target = e.target as HTMLElement;
-            const targetClasses = target.classList;
+    useEffect(() => {
+        const el = cursorRef.current;
+        if (!el) return;
 
-            const specialComponent = specialComponents.find((component) =>
-                targetClasses.contains(component.className)
-            );
+        const onMove = (e: PointerEvent) => {
+            lastPos.current.x = e.clientX;
+            lastPos.current.y = e.clientY;
 
-            if (specialComponent) {
-                setHoveringSpecialComponent(specialComponent.className);
-                tooltipContentRef.current = specialComponent.content;
-            } else {
-                tooltipContentRef.current = null;
+            if (rafRef.current == null) {
+                rafRef.current = requestAnimationFrame(() => {
+                    el.style.transform = `translate3d(${lastPos.current.x}px, ${lastPos.current.y}px, 0)`;
+                    rafRef.current = null;
+                });
+            }
+        };
+
+        window.addEventListener("pointermove", onMove, { passive: true });
+        return () => {
+            window.removeEventListener("pointermove", onMove);
+            if (rafRef.current) cancelAnimationFrame(rafRef.current);
+        };
+    }, []);
+
+    const onOver = useCallback(
+        (e: Event) => {
+            const t = e.target as HTMLElement | null;
+            if (!t) return;
+
+            // allow matching if the class is on a parent
+            const selector = specialComponents.map((s) => `.${s.className}`).join(", ");
+            const host = t.closest?.(selector) as HTMLElement | null;
+
+            if (host) {
+                const match = specialComponents.find((s) => host.classList.contains(s.className))!;
+                if (match.className !== hoveringSpecialComponent) {
+                    setHoveringSpecialComponent(match.className);
+                    tooltipContentRef.current = match.content;
+                }
+            } else if (hoveringSpecialComponent !== "") {
                 setHoveringSpecialComponent("");
+                tooltipContentRef.current = null;
             }
-
-            if (cursorRef.current) {
-                cursorRef.current.style.transform = `translate3d(${e.clientX - 85}px, ${
-                    e.clientY - 18
-                }px, 0px)`;
-            }
-        }, 8),
-        []
+        },
+        [hoveringSpecialComponent]
     );
 
     useEffect(() => {
-        window.addEventListener("mousemove", handleMouseMove);
-        return () => {
-            window.removeEventListener("mousemove", handleMouseMove);
-            handleMouseMove.cancel && handleMouseMove.cancel();
-        };
-    }, [handleMouseMove]);
+        window.addEventListener("mouseover", onOver, true); // capture phase helps
+        return () => window.removeEventListener("mouseover", onOver, true);
+    }, [onOver]);
 
     return (
         <div
             ref={cursorRef}
-            className={
-                hoveringSpecialComponent != ""
-                    ? "hidden md:flex pointer-events-none z-[999999] fixed whitespace-nowrap rounded-full p-2 bg-myblack dark:bg-mywhite text-mywhite dark:text-myblack w-44 h-10 items-center justify-center shadow-lg tooltip-movement"
-                    : ""
-            }
+            aria-hidden
+            className={`fixed z-[999999] pointer-events-none -translate-x-1/2 -translate-y-1/2
+                [@media(pointer:coarse)]:hidden ${showingTooltip ? "tooltip-movement" : ""}`}
+            style={{ inset: 0 }}
         >
-            <span
-                className={`flex items-center ${
-                    hoveringSpecialComponent != "" ? "opacity-100 w-100" : "opacity-0 w-0"
-                }`}
+            {/* Default cursor */}
+            <div className={`custom-cursor ${showingTooltip ? "opacity-0" : "opacity-100"}`} />
+
+            {/* Tooltip cursor */}
+            <div
+                style={{ transform: "translate(0%, calc(-50%))" }}
+                className={`cursor-tooltip 
+                    ${
+                        showingTooltip
+                            ? "opacity-100 scale-100 translate-y-[-20px]"
+                            : "opacity-0 scale-90 translate-y-[-20px]"
+                    }
+                    w-44 h-10`}
             >
                 {tooltipContentRef.current}
-            </span>
+            </div>
         </div>
     );
 }
