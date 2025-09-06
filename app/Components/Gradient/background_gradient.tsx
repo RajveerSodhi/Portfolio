@@ -3,13 +3,11 @@ import { useEffect, useState } from "react";
 import { cn } from "../../utils/cn";
 
 export const BackgroundGradientAnimation = ({
-    firstColor = "76, 156, 255",
-    secondColor = "236, 115, 255",
+    firstColor = "45, 100, 220",
+    secondColor = "255, 99, 99",
     thirdColor = "149, 255, 208",
-    fourthColor = "255, 197, 90",
-    fifthColor = "255, 99, 99",
-    size = "100%",
-    blendingValue = "soft-light",
+    fourthColor = "255, 240, 120",
+    size = "70vmax",
     children,
     className,
     containerClassName,
@@ -18,9 +16,7 @@ export const BackgroundGradientAnimation = ({
     secondColor?: string;
     thirdColor?: string;
     fourthColor?: string;
-    fifthColor?: string;
     size?: string;
-    blendingValue?: string;
     children?: React.ReactNode;
     className?: string;
     containerClassName?: string;
@@ -30,10 +26,8 @@ export const BackgroundGradientAnimation = ({
         document.body.style.setProperty("--second-color", secondColor);
         document.body.style.setProperty("--third-color", thirdColor);
         document.body.style.setProperty("--fourth-color", fourthColor);
-        document.body.style.setProperty("--fifth-color", fifthColor);
         document.body.style.setProperty("--size", size);
-        document.body.style.setProperty("--blending-value", blendingValue);
-    }, [firstColor, secondColor, thirdColor, fourthColor, fifthColor, size, blendingValue]);
+    }, [firstColor, secondColor, thirdColor, fourthColor, size]);
 
     const [isSafari, setIsSafari] = useState(false);
     useEffect(() => {
@@ -42,8 +36,7 @@ export const BackgroundGradientAnimation = ({
 
     return (
         <div
-            style={{ willChange: "transform, opacity" }}
-            className={`blur-[35px] dark:blur-[80px] opacity-[0.65] dark:opacity-[0.4] pointer-events-none z-fix ${cn(
+            className={`opacity-[0.7] scale-[1.4] dark:opacity-[0.3] pointer-events-none z-fix ${cn(
                 "h-screen w-screen fixed overflow-hidden top-0 left-0 bg-[linear-gradient(40deg,var(--gradient-background-start),var(--gradient-background-end))]",
                 containerClassName
             )}`}
@@ -52,8 +45,8 @@ export const BackgroundGradientAnimation = ({
             <div className="gradients-container h-full w-full blur-2xl">
                 <div
                     className={cn(
-                        `absolute [background:radial-gradient(circle_at_center,_var(--first-color)_0,_var(--first-color)_50%)_no-repeat]`,
-                        `[mix-blend-mode:var(--blending-value)] w-[var(--size)] h-[var(--size)] top-[calc(50%-var(--size)/2)] left-[calc(50%-var(--size)/2)]`,
+                        `absolute [background:radial-gradient(circle_at_center,_rgba(var(--first-color),_0.8)_0,_rgba(var(--first-color),_0)_50%)_no-repeat]`,
+                        `w-[var(--size)] h-[var(--size)] top-[calc(50%-var(--size)/2)] left-[calc(50%-var(--size)/2)]`,
                         `[transform-origin:center_center]`,
                         `animate-first`,
                         `opacity-100`
@@ -62,7 +55,7 @@ export const BackgroundGradientAnimation = ({
                 <div
                     className={cn(
                         `absolute [background:radial-gradient(circle_at_center,_rgba(var(--second-color),_0.8)_0,_rgba(var(--second-color),_0)_50%)_no-repeat]`,
-                        `[mix-blend-mode:var(--blending-value)] w-[var(--size)] h-[var(--size)] top-[calc(50%-var(--size)/2)] left-[calc(50%-var(--size)/2)]`,
+                        `w-[var(--size)] h-[var(--size)] top-[calc(50%-var(--size)/2)] left-[calc(50%-var(--size)/2)]`,
                         `[transform-origin:calc(50%-400px)]`,
                         `animate-second`,
                         `opacity-100`
@@ -71,7 +64,7 @@ export const BackgroundGradientAnimation = ({
                 <div
                     className={cn(
                         `absolute [background:radial-gradient(circle_at_center,_rgba(var(--third-color),_0.8)_0,_rgba(var(--third-color),_0)_50%)_no-repeat]`,
-                        `[mix-blend-mode:var(--blending-value)] w-[var(--size)] h-[var(--size)] top-[calc(50%-var(--size)/2)] left-[calc(50%-var(--size)/2)]`,
+                        `w-[var(--size)] h-[var(--size)] top-[calc(50%-var(--size)/2)] left-[calc(50%-var(--size)/2)]`,
                         `[transform-origin:calc(50%+400px)]`,
                         `animate-third`,
                         `opacity-100`
@@ -80,19 +73,10 @@ export const BackgroundGradientAnimation = ({
                 <div
                     className={cn(
                         `absolute [background:radial-gradient(circle_at_center,_rgba(var(--fourth-color),_0.8)_0,_rgba(var(--fourth-color),_0)_50%)_no-repeat]`,
-                        `[mix-blend-mode:var(--blending-value)] w-[var(--size)] h-[var(--size)] top-[calc(50%-var(--size)/2)] left-[calc(50%-var(--size)/2)]`,
+                        `w-[var(--size)] h-[var(--size)] top-[calc(50%-var(--size)/2)] left-[calc(50%-var(--size)/2)]`,
                         `[transform-origin:calc(50%-200px)]`,
                         `animate-fourth`,
                         `opacity-70`
-                    )}
-                ></div>
-                <div
-                    className={cn(
-                        `absolute [background:radial-gradient(circle_at_center,_rgba(var(--fifth-color),_0.8)_0,_rgba(var(--fifth-color),_0)_50%)_no-repeat]`,
-                        `[mix-blend-mode:var(--blending-value)] w-[var(--size)] h-[var(--size)] top-[calc(50%-var(--size)/2)] left-[calc(50%-var(--size)/2)]`,
-                        `[transform-origin:calc(50%-800px)_calc(50%+800px)]`,
-                        `animate-fifth`,
-                        `opacity-100`
                     )}
                 ></div>
             </div>
