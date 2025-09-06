@@ -1,5 +1,5 @@
 import { certificates } from "../../../../public/content/certificates_content";
-import Certificate from "./certificate_component";
+import Certificate from "./certificate";
 
 export default function Certificates() {
     return (

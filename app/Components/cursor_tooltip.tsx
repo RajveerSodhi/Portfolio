@@ -1,6 +1,13 @@
 "use client";
 import { useState, useEffect, useRef, ReactNode, useCallback } from "react";
-import { FaExternalLinkAlt, FaExpand, FaArrowDown, FaRegClock, FaGamepad } from "react-icons/fa";
+import {
+    FaExternalLinkAlt,
+    FaExpand,
+    FaArrowDown,
+    FaRegClock,
+    FaGamepad,
+    FaUniversity,
+} from "react-icons/fa";
 import { PiCertificateBold } from "react-icons/pi";
 import debounce from "lodash/debounce";
 
@@ -38,6 +45,15 @@ const specialComponents = [
             <>
                 View Certificate
                 <PiCertificateBold className="ml-2 text-xl" />
+            </>
+        ),
+    },
+    {
+        className: "cursor-school",
+        content: (
+            <>
+                Studying Hard
+                <FaUniversity className="ml-2 text-xl" />
             </>
         ),
     },
