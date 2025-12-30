@@ -19,14 +19,14 @@ export const projects = [
         subtitle: "Weather Viz App",
         link: "Aura-Desktop",
         openLink: "apps.apple.com/ca/app/mossum/id6745731153?mt=12",
-        tech: "FastAPI, SwiftUI, Redis",
+        tech: "FastAPI, SwiftUI, Redis, SwiftData",
         tag: "iOS and macOS",
         showGit: false,
         datestamp: "2025-05",
         description: [
-            "Developed a macOS app that displays live weather animations on the desktop.",
-            "Features customizable weather effects including rain and snow, using data from the WeatherKit API.",
-            "Implemented a FastAPI server for the backend with Redis cacheing."
+            "Shipped a macOS app that displays live, customizable weather animations on the desktop using SpriteKit and the WeatherKit API.",
+            "Designed a FastAPI backend with Redis caching and versioned FAQ synchronization, enabling offline persistence via SwiftData.",
+            "Reached 2,700+ downloads and 30+ weeks in the top weather app charts on the Mac App Store."
         ]
     },
     {
@@ -68,16 +68,15 @@ export const projects = [
         showGit: false,
         datestamp: "2025-02",
         description: [
-            "Developed a macOS menubar app using Swift that displays real-time flight data.",
-            "Utilized the Aviation-Edge API to fetch flight data and display it in the menubar.",
-            "Implemented a FastAPI server for the backend with Redis cacheing."
+            "Built a real-time flight tracker app backed by a FastAPI server with Redis caching to reduce latency and external API calls.",
+            "Currently with 700+ downloads on the Mac App Store."
         ]
     },
     {
         title: "OriginalFlix",
         subtitle: "Database REST API",
         link: "OriginalFlix",
-        openLink: "www.originalflix.dev",
+        openLink: "www.originalflix.rajveersodhi.com",
         tech: "FastAPI, React, Azure Postgres",
         tag: "web",
         showGit: true,
