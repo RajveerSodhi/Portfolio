@@ -6,7 +6,12 @@ export default function TitleBottom() {
         <div className="flex justify-center flex-col items-center z-10">
             <h2 className="text-center w-full text-[1.75rem] md:text-[2.75rem]">
                 <ReactTyped
-                    strings={["Full Stack Developer", "HCI Researcher", "Data Scientist"]}
+                    strings={[
+                        "Full Stack Engineer",
+                        "Swift Developer",
+                        "HCI Researcher",
+                        "Data Science Intern",
+                    ]}
                     typeSpeed={40}
                     loop
                     backDelay={1800}

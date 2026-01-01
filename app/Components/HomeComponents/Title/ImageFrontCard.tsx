@@ -5,9 +5,9 @@ import { useEffect, useState } from "react";
 export default function FrontCard() {
     const [myPhotoSrc, setMyPhotoSrc] = useState(0);
 
-    useEffect(() => {
-        setMyPhotoSrc(Math.ceil(Math.random() * 12));
-    }, []);
+    // useEffect(() => {
+    //     setMyPhotoSrc(Math.ceil(Math.random() * 12));
+    // }, []);
 
     function shuffleImageDesktop() {
         setTimeout(function () {
