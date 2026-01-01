@@ -3,21 +3,17 @@ export const skills = [
         category: "Languages",
         skills: [
             "Python",
-            "Java",
-            "C#",
-            "Kotlin",
+            "Swift",
             "JavaScript",
             "TypeScript",
+            "Java",
             "R",
-            "Swift",
-            "C++",
         ]
     },
     {
         category: "Web Development",
         skills: [
             "HTML5",
-            "CSS3",
             "TailwindCSS",
             "Bootstrap",
             "Flask",
@@ -37,7 +33,7 @@ export const skills = [
         skills: [
             "Pandas",
             "Seaborn",
-            "MatPlotLib",
+            "Matplotlib",
             "Keras",
             "OpenCV",
             "Selenium",
@@ -49,13 +45,10 @@ export const skills = [
         category: "Data and Storage",
         skills: [
             "Tableau",
-            "Firebase",
             "MySQL",
             "PostgreSQL",
-            "S3",
             "Azure",
-            "MongoDB",
-            "Redis"
+            "Redis",
         ]
     }
 ]
