@@ -17,7 +17,7 @@ export default function School(props: {
             tiltMaxAngleX={3}
             tiltMaxAngleY={2}
             gyroscope={true}
-            className={`hover:scale-[1.02] flex-row p-2 min-w-[380px] transition-transform rounded-full flex justify-start gap-3 items-center appear-animated card cursor-school`}
+            className={`hover:scale-[1.02] flex-shrink-0 min-w-[380px] flex-row p-2 transition-transform rounded-full text-nowrap flex justify-start gap-3 items-center appear-animated card cursor-school`}
         >
             <div
                 className={`cursor-school bg-mywhite w-auto h-auto min-w-[50px] min-h-[50px] aspect-square p-1 rounded-full flex items-center justify-center shadow-md`}
