@@ -33,7 +33,7 @@ export const work = [
         description: [
             "Conducted a study in Human-Computer Interaction (HCI) with 20 participants to compare cutting-edge command selection techniques using head-mounted displays, such as Hand-Proximate User Interface (HPUI) and gaze-tracked input.",
             "Explored the principles of In-Vehicle Infotainment Systems and built implementations of HPUI with C# and the Unity XR Toolkit.",
-            "Investigated the usablity of unencumbered interaction techniques for head mounted displays while walking."
+            "Investigated the usability of unencumbered interaction techniques for head mounted displays while walking."
         ]
     },
     {

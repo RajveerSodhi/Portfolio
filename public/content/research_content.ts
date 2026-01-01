@@ -5,7 +5,7 @@ export const research = [
         link: "https://doi.org/10.1145/3698146"
     },
     {
-        title: "Analysing Unencumbered Interaction Techniques in Head Mounted Displays while Walking",
+        title: "Analyzing Unencumbered Interaction Techniques in Head Mounted Displays while Walking",
         status: "In Progress",
         link: ""
     }
