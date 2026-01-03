@@ -25,8 +25,9 @@ export const projects = [
         datestamp: "2025-05",
         description: [
             "Shipped a macOS app that displays live, customizable weather animations on the desktop using SpriteKit and the WeatherKit API.",
-            "Designed a FastAPI backend with Redis caching and versioned FAQ synchronization, enabling offline persistence via SwiftData.",
-            "Reached 2,700+ downloads and 30+ weeks in the top weather app charts on the Mac App Store."
+            "Designed a FastAPI backend with Redis caching to reduce latency and external API calls.",
+            "Implemented versioned FAQ synchronization, enabling offline persistence in the app via SwiftData.",
+            "Reached 2,700+ downloads and 30+ weeks in the top weather app charts on the Mac App Store.",
         ]
     },
     {
@@ -68,8 +69,10 @@ export const projects = [
         showGit: false,
         datestamp: "2025-02",
         description: [
-            "Built a real-time flight tracker app backed by a FastAPI server with Redis caching to reduce latency and external API calls.",
-            "Currently with 700+ downloads on the Mac App Store."
+            "Built a flight tracker app backed by a FastAPI server that aggregates aviation, airport, airline, and weather data into a unified response.",
+            "Implemented data validation, sanitization, and fallback logic to handle inconsistent data from external APIs.",
+            "Added Redis caching with tiered TTLs (seconds up to days) to balance real-time updates, scheduled data, and long-lived assets.",
+            "Currently with 700+ downloads on the Mac App Store.",
         ]
     },
     {
