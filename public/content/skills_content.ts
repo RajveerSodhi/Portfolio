@@ -7,48 +7,57 @@ export const skills = [
             "JavaScript",
             "TypeScript",
             "Java",
-            "R",
         ]
     },
     {
-        category: "Web Development",
+        category: "Frontend",
         skills: [
-            "HTML5",
-            "TailwindCSS",
-            "Bootstrap",
-            "Flask",
-            "FastAPI",
-            "Next.js",
             "React",
+            "Next.js",
+            "HTML",
+            "Tailwind CSS",
+        ]
+    },
+    {
+        category: "Backend",
+        skills: [
+            "FastAPI",
+            "Flask",
+            "Node.js",
             "Express.js",
-            "Three.js",
-            "jQuery",
-            "Axios",
             "PHP",
-            "Figma"
         ]
     },
     {
-        category: "Frameworks and Libraries",
+        category: "Databases and ORMs",
         skills: [
-            "Pandas",
-            "Seaborn",
-            "Matplotlib",
-            "Keras",
-            "OpenCV",
-            "Selenium",
-            "Mage.ai",
-            "BeautifulSoup4"
-        ]
-    },
-    {
-        category: "Data and Storage",
-        skills: [
-            "Tableau",
             "MySQL",
             "PostgreSQL",
-            "Azure",
             "Redis",
+            "Prisma",
+            "SQLAlchemy",
+            "SwiftData",
         ]
-    }
+    },
+    {
+        category: "Data and Pipelines",
+        skills: [
+            "R",
+            "Pandas",
+            "Numpy",
+            "Seaborn",
+            "Pinecone",
+            "Mage.ai",
+        ]
+    },
+    {
+        category: "Tooling",
+        skills: [
+            "Git",
+            "Docker",
+            "Render",
+            "Netlify",
+            "Vercel",
+        ]
+    },
 ]
