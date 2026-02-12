@@ -18,7 +18,7 @@
     "axios": "^1.13.5",
     "clsx": "^2.1.1",
     "framer-motion": "^11.2.10",
-    "lodash": "^4.17.21",
+    "lodash": "^4.17.23",
     "mdb-react-ui-kit": "^8.0.0",
     "next": "^16.1.5",
     "next-themes": "^0.3.0",
