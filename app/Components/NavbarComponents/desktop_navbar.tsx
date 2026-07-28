@@ -26,15 +26,18 @@ export default function DesktopNavbar() {
                         <Link href="/">
                             <LogoButton />
                         </Link>
+                        <Link href="/#certifications" className="navLink">
+                            Certificates
+                        </Link>
                         <Link href="/#about" className="navLink">
                             About
                         </Link>
                         <Link href="/#contact" className="navLink">
                             Contact
                         </Link>
-                        <Link href="/Icons" className="navLink">
+                        {/* <Link href="/Icons" className="navLink">
                             Icons
-                        </Link>
+                        </Link> */}
                     </nav>
                 </Tilt>
                 <span className="text-3xl text-myblack/70 dark:text-mywhite/70 absolute flex flex-row gap-4 right-0 pr-6 pt-2">

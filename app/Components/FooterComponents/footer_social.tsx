@@ -29,14 +29,14 @@ export default function Contact() {
             >
                 <FaGithub />
             </a>
-            <a
+            {/* <a
                 href="https://buymeacoffee.com/rajveersodhi"
                 rel="noopener noreferrer"
                 target="_blank"
                 className="footer-social"
             >
                 <SiBuymeacoffee />
-            </a>
+            </a> */}
         </div>
     );
 }

@@ -1,5 +1,6 @@
 import Research from "./Components/HomeComponents/Research/research";
 import Title from "./Components/HomeComponents/Title/title";
+import Certifications from "./Components/HomeComponents/Certifications/certificates";
 import Work from "./Components/HomeComponents/Work/work";
 import Projects from "./Components/HomeComponents/Proj/projects";
 import About from "./Components/HomeComponents/About/about";
@@ -13,6 +14,7 @@ export default function Home() {
             <Work />
             <Projects />
             <Research />
+            <Certifications />
             <About />
             <Contact />
             <AshDash />

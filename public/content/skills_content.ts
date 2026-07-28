@@ -7,6 +7,7 @@ export const skills = [
             "JavaScript",
             "TypeScript",
             "Java",
+            "SQL",
         ]
     },
     {
@@ -19,17 +20,21 @@ export const skills = [
         ]
     },
     {
-        category: "Backend",
+        category: "Backend and Data",
         skills: [
             "FastAPI",
             "Flask",
             "Node.js",
             "Express.js",
             "PHP",
+            "Pinecone",
+            "Pandas",
+            "NumPy",
+            "R",
         ]
     },
     {
-        category: "Databases and ORMs",
+        category: "Databases and Tools",
         skills: [
             "MySQL",
             "PostgreSQL",
@@ -37,27 +42,10 @@ export const skills = [
             "Prisma",
             "SQLAlchemy",
             "SwiftData",
-        ]
-    },
-    {
-        category: "Data and Pipelines",
-        skills: [
-            "R",
-            "Pandas",
-            "Numpy",
-            "Seaborn",
-            "Pinecone",
-            "Mage.ai",
-        ]
-    },
-    {
-        category: "Tooling",
-        skills: [
             "Git",
             "Docker",
-            "Render",
-            "Netlify",
-            "Vercel",
+            "AWS",
+            "Mage.ai",
         ]
     },
 ]

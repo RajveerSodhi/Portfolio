@@ -3,7 +3,7 @@ export default function FooterInfo() {
         <span className="flex flex-col xl:flex-row items-center text-center justify-center md:min-w-60">
             <span className="footer-info">Made with ❤️ and caffeine by Rajveer Sodhi</span>
             <span className="mx-2 hidden xl:inline-block w-[2px] h-[60%] bg-[#777777]"></span>
-            <span className="footer-info">Last Updated: Jan 3, 2026</span>
+            <span className="footer-info">Last Updated: Jul 28, 2026</span>
         </span>
     );
 }

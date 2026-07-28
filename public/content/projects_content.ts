@@ -19,7 +19,7 @@ export const projects = [
         subtitle: "Weather Viz App",
         link: "Aura-Desktop",
         openLink: "apps.apple.com/ca/app/mossum/id6745731153?mt=12",
-        tech: "FastAPI, SwiftUI, Redis, SwiftData",
+        tech: "FastAPI, SwiftUI, SpriteKit, Redis, SwiftData",
         tag: "iOS and macOS",
         showGit: false,
         datestamp: "2025-05",
@@ -64,7 +64,7 @@ export const projects = [
         subtitle: "Flight Tracker Menubar App",
         link: "FlightBar",
         openLink: "apps.apple.com/ca/app/flightbar/id6743351003?mt=12",
-        tech: "SwiftUI, Redis, FastAPI",
+        tech: "SwiftUI, Redis, FastAPI, SwiftData",
         tag: "iOS and macOS",
         showGit: false,
         datestamp: "2025-02",
@@ -72,7 +72,7 @@ export const projects = [
             "Built a flight tracker app backed by a FastAPI server that aggregates aviation, airport, airline, and weather data into a unified response.",
             "Implemented data validation, sanitization, and fallback logic to handle inconsistent data from external APIs.",
             "Added Redis caching with tiered TTLs (seconds up to days) to balance real-time updates, scheduled data, and long-lived assets.",
-            "Currently with 700+ downloads on the Mac App Store.",
+            "Currently with 900+ downloads on the Mac App Store.",
         ]
     },
     {

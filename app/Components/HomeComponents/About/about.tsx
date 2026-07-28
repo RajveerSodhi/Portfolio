@@ -1,4 +1,3 @@
-import Certificates from "./certificates";
 import Education from "./education";
 import Description from "./description";
 import Skills from "./skills";
@@ -10,7 +9,6 @@ export default function About() {
             <Education />
             <Description />
             <Skills />
-            <Certificates />
         </section>
     );
 }
