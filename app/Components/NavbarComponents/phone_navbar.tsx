@@ -43,6 +43,13 @@ export default function PhoneNavbar() {
                     >
                         Research
                     </Link>
+                    <Link
+                        href="/#certifications"
+                        className="navLink py-1"
+                        onClick={() => handleCollapse()}
+                    >
+                        Certifications
+                    </Link>
                     <Link href="/#about" className="navLink py-1" onClick={() => handleCollapse()}>
                         About
                     </Link>
@@ -53,9 +60,9 @@ export default function PhoneNavbar() {
                     >
                         Contact
                     </Link>
-                    <Link href="/Icons" className="navLink py-1" onClick={() => handleCollapse()}>
+                    {/* <Link href="/Icons" className="navLink py-1" onClick={() => handleCollapse()}>
                         Icons
-                    </Link>
+                    </Link> */}
                 </span>
                 <span className="absolute top-0 right-0 p-4">
                     <button
