@@ -15,15 +15,18 @@ export default function FooterNavbar() {
             <Link href="/#research" className="navLink">
                 Research
             </Link>
+            <Link href="/#certifications" className="navLink">
+                Certifications
+            </Link>
             <Link href="/#about" className="navLink">
                 About
             </Link>
             <Link href="/#contact" className="navLink">
                 Contact
             </Link>
-            <Link href="/Icons" className="navLink">
+            {/* <Link href="/Icons" className="navLink">
                 Icons
-            </Link>
+            </Link> */}
         </span>
     );
 }
