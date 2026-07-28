@@ -4,9 +4,9 @@ export default function Description() {
     return (
         <section className="text-center w-full md:w-[75%] lg:w-[60%] text-sm md:text-xl leading-loose mt-0">
             <p className="appear-animated mb-4">
-                I am pursuing <em>ScM CS</em> at Brown with a focus on AI/ML. I am deeply passionate
-                about research in HCI, with one publication and two more currently in progress. I
-                also love being an active member of my community through my{" "}
+                I am pursuing <em>ScM CS</em> at Brown University. I am deeply passionate about
+                research in HCI, with one publication and another currently in progress. I also love
+                being an active member of my community through my{" "}
                 <a
                     href="https://www.instagram.com/suo.filmsociety/"
                     target="_blank"
