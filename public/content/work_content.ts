@@ -4,11 +4,12 @@ export const work = [
         company: "Avahi",
         tld: "ai",
         location: "Remote",
-        date: "May 2026 - Sep 2026",
+        date: "May 2026 - Dec 2026",
         img: "avahi",
         description: [
             "Developed code analysis and transformation modules for Neuron Migrate, a static analysis engine that helps migrate PyTorch/CUDA codebases to AWS Inferentia 2.",
-            "Led the design and architecture of an internal PMO dashboard to replace a manual Jira, Excel, and PowerPoint reporting pipeline with centralized project, revenue, delay, and resourcing views for leadership across 30+ active projects."
+            "Contributed to Apex Flow, an AWS-native AI platform that automates presales deliverables, including a secure Otter.ai-to-Bedrock Knowledge Base ingestion pipeline.",
+            "Led the design and architecture of an internal PMO dashboard to replace a manual Jira, Excel, and PowerPoint reporting pipeline with centralized project, revenue, delay, and resourcing views for leadership across 90+ active projects."
         ]
     },
     {
